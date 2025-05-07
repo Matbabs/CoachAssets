@@ -3,6 +3,14 @@
     {
       "tag": "statodynamique + proprioception",
       "description": "statodynamique bras: 4 séries & 6 répétitions enchainées, avec 5min de récup. entre les séries\n\nstatodynamique jambes: 2 séries & 6 répétitions enchainées, avec 5min de récup. entre les séries\n\nsuspension avec micro-mobilité plantaire: 3 séries de 30 secondes avec 1min de récup. entre les séries"
+    },
+    {
+      "tag": "concentrique maximal",
+      "description": "concentrique max. bras: 1 série & 3 répétitions, avec 3min de récup. entre les répétitions"
+    },
+    {
+      "tag": "isométrique totale + proprioception",
+      "description": "circuits blocs ou voies bras: 1 série & 3 circuits, avec 5min de récup. entre les circuits\n\ncore crawl statique alterné: 3 séries de 30 secondes par côté, avec 1min de récup. entre les séries"
     }
   ]
 }
