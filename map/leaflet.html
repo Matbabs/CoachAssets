@@ -39,6 +39,7 @@
       var map = L.map("map", {
         zoomControl: false,
       }).fitWorld();
+      var markers = [];
 
       window.addMarker = (pos) => {
         var marker = L.marker(pos).addTo(map);
