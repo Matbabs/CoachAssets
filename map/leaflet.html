@@ -33,7 +33,7 @@
     <script>
       var map = L.map("map", {
         zoomControl: false,
-      }).locate({ setView: true, maxZoom: 12 });
+      }).setView([##LAT##, ##LNG##], 10);
 
       L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
         maxZoom: 19,
