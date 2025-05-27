@@ -39,6 +39,23 @@
       var map = L.map("map", {
         zoomControl: false,
       }).fitWorld();
+
+      window.addMarker = (pos) => {
+        var marker = L.marker(pos).addTo(map);
+        markers.push(marker);
+      };
+      window.removeAllMarkers = () => {
+        markers.forEach((marker) => {
+          map.removeLayer(marker);
+        });
+        markers = [];
+      };
+      window.setView = (pos) => {
+        window.removeAllMarkers();
+        window.addMarker(pos);
+        map.setView(pos, 16);
+      };
+
       var outdoorsLayer = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
