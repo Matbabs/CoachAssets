@@ -36,12 +36,9 @@
       }
     </style>
     <script>
-      <!-- const USER_POS = [##LAT##, ##LNG##] -->
-      const USER_POS = [48.1125691, -1.6190968];
       var map = L.map("map", {
         zoomControl: false,
-      }).setView(USER_POS, 16);
-      L.marker(USER_POS).addTo(map);
+      }).fitWorld();
       var outdoorsLayer = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
