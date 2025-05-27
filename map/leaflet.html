@@ -31,15 +31,29 @@
       }
     </style>
     <script>
+      <!-- const USER_POS = [##LAT##, ##LNG##] -->
+      const USER_POS = [48.1125691, -1.6190968];
       var map = L.map("map", {
         zoomControl: false,
-      }).setView([##LAT##, ##LNG##], 16);
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-        maxZoom: 19,
-        attribution:
-          '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-      }).addTo(map);
-      L.marker([##LAT##, ##LNG##]).addTo(map)
+      }).setView(USER_POS, 16);
+      L.marker(USER_POS).addTo(map);
+      var outdoorsLayer = L.tileLayer(
+        "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
+        {
+          maxZoom: 19,
+        }
+      ).addTo(map);
+      var satLayer = L.tileLayer(
+        "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg",
+        {
+          maxZoom: 19,
+        }
+      );
+      var baseLayers = {
+        Outdoors: outdoorsLayer,
+        Satellite: satLayer,
+      };
+      L.control.layers(baseLayers).addTo(map);
     </script>
   </body>
 </html>
