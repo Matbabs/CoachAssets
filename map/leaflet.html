@@ -38,7 +38,7 @@
       }).setView(USER_POS, 16);
       L.marker(USER_POS).addTo(map);
       var outdoorsLayer = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png",
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
           maxZoom: 19,
         }
