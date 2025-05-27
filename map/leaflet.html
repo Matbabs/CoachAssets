@@ -28,6 +28,11 @@
       #map {
         height: 100%;
         width: 100%;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
       }
     </style>
     <script>
@@ -41,12 +46,14 @@
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         {
           maxZoom: 19,
+          detectRetina: true,
         }
       ).addTo(map);
       var satLayer = L.tileLayer(
         "https://data.geopf.fr/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
         {
           maxZoom: 19,
+          detectRetina: true,
         }
       );
       var baseLayers = {
