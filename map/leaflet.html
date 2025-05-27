@@ -38,13 +38,13 @@
       }).setView(USER_POS, 16);
       L.marker(USER_POS).addTo(map);
       var outdoorsLayer = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/outdoors/{z}/{x}/{y}{r}.png",
+        "https://tiles.stadiamaps.com/tiles/osm_bright/{z}/{x}/{y}{r}.png",
         {
           maxZoom: 19,
         }
       ).addTo(map);
       var satLayer = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_satellite/{z}/{x}/{y}{r}.jpg",
+        "https://data.geopf.fr/wmts?REQUEST=GetTile&SERVICE=WMTS&VERSION=1.0.0&&TILEMATRIXSET=PM&LAYER=ORTHOIMAGERY.ORTHOPHOTOS&TILEMATRIX={z}&TILEROW={y}&TILECOL={x}",
         {
           maxZoom: 19,
         }
