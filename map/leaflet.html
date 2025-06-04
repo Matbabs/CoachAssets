@@ -1,0 +1,200 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        width: 100%;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+      .pulse {
+        border: 2px solid #7f5d00;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        box-shadow: 0 0 5px 0 #8f8156;
+        animation: pulsate 1s infinite;
+      }
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .marker {
+        border: 2px solid white;
+        background: #ffc000;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .button {
+        background: #ffc000;
+        border: none;
+        padding: 7.5px;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        text-transform: uppercase;
+      }
+    </style>
+    <script>
+      var map = L.map("map", {
+        zoomControl: false,
+      }).setView([46.6061, 1.8753], 5);
+      var userMarker = undefined;
+      var markers = [];
+      var classic = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+          maxZoom: 19,
+          detectRetina: true,
+        }
+      ).addTo(map);
+      var isClassic = true;
+      var satellite = L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+          attribution:
+            "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        }
+      );
+      var pulseIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="pulse"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10.5, 10.5],
+      });
+      var markerIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10.5, 10.5],
+      });
+
+      // LOCAL FUNCTIONS
+      function postMessage(msg) {
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(msg);
+        } else if (window.top) {
+          window.top.postMessage(msg);
+        }
+      }
+      function updateCoords() {
+        msg = JSON.stringify({
+          type: "coords",
+          data: map.getCenter(),
+        });
+        postMessage(msg);
+      }
+      function closeWindows() {
+        msg = JSON.stringify({
+          type: "close",
+        });
+        postMessage(msg);
+      }
+      function openGps(lat, lng) {
+        msg = JSON.stringify({
+          type: "gps",
+          data: {
+            lat: lat,
+            lng: lng,
+          },
+        });
+        postMessage(msg);
+      }
+      function generatePopup(marker) {
+        let popup = `<b>${marker.name}</b><br>${marker.description}`;
+        if (marker.dates) {
+          popup += `<br><br>${marker.dates}`;
+        }
+        if (marker.contact) {
+          popup += `<br><br>${marker.contact}`;
+        }
+        popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
+        return popup;
+      }
+      map.on("move", updateCoords);
+      map.on("click", closeWindows);
+      updateCoords();
+
+      // BRIDGE FUNCTIONS
+      function addMarker(pos, markerStr) {
+        const marker = L.marker(pos, {
+          icon: markerIcon,
+        }).addTo(map);
+        marker.bindPopup(generatePopup(markerStr));
+        markers.push(marker);
+      }
+      function removeAllMarkers() {
+        markers.forEach((marker) => {
+          map.removeLayer(marker);
+        });
+        markers = [];
+      }
+      function locate(pos) {
+        if (userMarker) {
+          map.removeLayer(userMarker);
+        }
+        userMarker = L.marker(pos, { icon: pulseIcon }).addTo(map);
+      }
+      function setView(pos, zoom) {
+        map.setView(pos, zoom);
+      }
+      function switchMap() {
+        if (isClassic) {
+          map.removeLayer(classic);
+          satellite.addTo(map);
+        } else {
+          map.removeLayer(satellite);
+          classic.addTo(map);
+        }
+        for (let i = 0; i < document.styleSheets.length; i++) {
+          for (let j = 0; j < document.styleSheets[i].rules.length; j++) {
+            if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
+              document.styleSheets[i].rules[j].style.borderColor = !isClassic
+                ? "#7f5d00"
+                : "#ffc000";
+            }
+          }
+        }
+        isClassic = !isClassic;
+        let msg = JSON.stringify({
+          type: "isClassic",
+          data: isClassic,
+        });
+        postMessage(msg);
+      }
+    </script>
+  </body>
+</html>
