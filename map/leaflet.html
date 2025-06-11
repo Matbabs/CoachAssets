@@ -71,15 +71,14 @@
     <script>
       var map = L.map("map", {
         zoomControl: false,
+        minZoom: 4,
+        maxZoom: 19,
+        detectRetina: true,
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
       var classic = L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          maxZoom: 19,
-          detectRetina: true,
-        }
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       ).addTo(map);
       var isClassic = true;
       var satellite = L.tileLayer(
