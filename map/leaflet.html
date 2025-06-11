@@ -73,12 +73,17 @@
         zoomControl: false,
         minZoom: 4,
         maxZoom: 19,
-        detectRetina: true,
+        maxBounds: L.latLngBounds([
+          [85, -180],
+          [-85, 180],
+        ]),
+        maxBoundsViscosity: 1.0,
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
       var classic = L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png"
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { detectRetina: true }
       ).addTo(map);
       var isClassic = true;
       var satellite = L.tileLayer(
