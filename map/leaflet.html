@@ -148,7 +148,7 @@
       updateCoords();
 
       // BRIDGE FUNCTIONS
-      function addMarker(pos, markerStr, color) {
+      function addMarker(pos, markerStr, color = "#ffc000") {
         const marker = L.marker(pos, {
           icon: L.divIcon({
             className: "css-icon",
