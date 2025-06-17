@@ -154,12 +154,15 @@
       updateCoords();
 
       // BRIDGE FUNCTIONS
-      function addMarker(pos, markerStr) {
+      function addMarker(pos, markerStr, color) {
         const marker = L.marker(pos, {
           icon: markerIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr));
         markers.push(marker);
+        document
+          .querySelectorAll(".marker")
+          .forEach((e) => (e.style.background = color));
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
