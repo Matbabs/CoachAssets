@@ -100,6 +100,12 @@
         iconSize: [20, 20],
         iconAnchor: [10.5, 10.5],
       });
+      var markerIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10.5, 10.5],
+      });
 
       // LOCAL FUNCTIONS
       function postMessage(msg) {
@@ -150,12 +156,7 @@
       // BRIDGE FUNCTIONS
       function addMarker(pos, markerStr, color = "#ffc000") {
         const marker = L.marker(pos, {
-          icon: L.divIcon({
-            className: "css-icon",
-            html: '<div class="marker"></div>',
-            iconSize: [20, 20],
-            iconAnchor: [10.5, 10.5],
-          }),
+          icon: markerIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr));
         markers.push(marker);
