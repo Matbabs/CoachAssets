@@ -154,7 +154,7 @@
       updateCoords();
 
       // BRIDGE FUNCTIONS
-      function addMarker(pos, markerStr, color = "#ffc000") {
+      function addMarker(pos, markerStr, color) {
         const marker = L.marker(pos, {
           icon: markerIcon,
         }).addTo(map);
