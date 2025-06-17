@@ -152,13 +152,16 @@
         const marker = L.marker(pos, {
           icon: L.divIcon({
             className: "css-icon",
-            html: `<div class="marker" style="background-color: ${color};"></div>`,
+            html: '<div class="marker"></div>',
             iconSize: [20, 20],
             iconAnchor: [10.5, 10.5],
           }),
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr));
         markers.push(marker);
+        document
+          .querySelectorAll(".marker")
+          .forEach((e) => (e.style.background = color));
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
