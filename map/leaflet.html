@@ -160,9 +160,6 @@
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr));
         markers.push(marker);
-        document
-          .querySelectorAll(".marker")
-          .forEach((e) => (e.style.background = color));
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
