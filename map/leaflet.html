@@ -100,12 +100,6 @@
         iconSize: [20, 20],
         iconAnchor: [10.5, 10.5],
       });
-      var markerIcon = L.divIcon({
-        className: "css-icon",
-        html: '<div class="marker"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
-      });
 
       // LOCAL FUNCTIONS
       function postMessage(msg) {
@@ -154,9 +148,14 @@
       updateCoords();
 
       // BRIDGE FUNCTIONS
-      function addMarker(pos, markerStr) {
+      function addMarker(pos, markerStr, color) {
         const marker = L.marker(pos, {
-          icon: markerIcon,
+          icon: L.divIcon({
+            className: "css-icon",
+            html: `<div class="marker" style="background: ${color}"></div>`,
+            iconSize: [20, 20],
+            iconAnchor: [10.5, 10.5],
+          }),
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr));
         markers.push(marker);
