@@ -143,6 +143,12 @@
         if (marker.dates) {
           popup += `<br><br>${marker.dates}`;
         }
+        if (marker.dateIn) {
+          popup += `<br><br>Début: ${marker.dateIn}`;
+        }
+        if (marker.dateOut) {
+          popup += `<br>Fin: ${marker.dateOut}`;
+        }
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
         }
