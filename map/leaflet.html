@@ -140,14 +140,11 @@
       }
       function generatePopup(marker) {
         let popup = `<b>${marker.name}</b><br>${marker.description}`;
-        if (marker.dates) {
-          popup += `<br><br>${marker.dates}`;
-        }
         if (marker.dateIn) {
-          popup += `<br><br>Début: ${marker.dateIn}`;
+          popup += `<br><br>Début: ${marker.dateIn} - ${marker.timeIn}`;
         }
         if (marker.dateOut) {
-          popup += `<br>Fin: ${marker.dateOut}`;
+          popup += `<br>Fin: ${marker.dateOut} - ${marker.timeOut}`;
         }
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
