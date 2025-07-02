@@ -1,11 +1,11 @@
-# **Foire Aux Questions (FAQ) – ABLOC**
+# **Foire Aux Questions (FAQ) – A BLOC**
 
 ## **1. Généralités**
-### **Qu’est-ce que ABLOC ?**
-ABLOC est une application conçue pour les aventuriers et les passionnés d’exploration. Elle propose des programmes d’entraînement personnalisés, des conseils d’experts, des outils d’évaluation et une communauté active pour partager des spots, des sessions et des bivouacs.
+### **Qu’est-ce que A BLOC ?**
+A BLOC est une application conçue pour les aventuriers et les passionnés d’exploration. Elle propose des programmes d’entraînement personnalisés, des conseils d’experts, des outils d’évaluation et une communauté active pour partager des spots, des sessions et des bivouacs.
 
-### **Qui peut utiliser ABLOC ?**
-L’application s’adresse à tous ceux qui cherchent à se dépasser, que ce soit en randonnée, en escalade, en trail ou en aventure en plein air. Que vous soyez débutant ou expert, ABLOC s’adapte à votre niveau.
+### **Qui peut utiliser A BLOC ?**
+L’application s’adresse à tous ceux qui cherchent à se dépasser, que ce soit en randonnée, en escalade, en trail ou en aventure en plein air. Que vous soyez débutant ou expert, A BLOC s’adapte à votre niveau.
 
 ---
 
@@ -56,7 +56,7 @@ Envoyez un e-mail à **matissebabonneau@gmail.com** avec une description détail
 ---
 
 ## **6. Contact et Support**
-### **Comment contacter l’équipe ABLOC ?**
+### **Comment contacter l’équipe A BLOC ?**
 - **E-mail** : matissebabonneau@gmail.com
 
 ---
