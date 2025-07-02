@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Puissance Cardiaque",
+      "description": "Puissance Cardiaque \n\n 📊 1 série = 10 minutes de 30-30"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Isométrique Totale",
+      "description": "Circuits Blocs ou Voies Bras \n\n 📊 2 séries de 3 circuits, avec 10min de récup. entre les séries et 5min de récup. entre les circuits"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Puissance Cardiaque + Proprioception",
+      "description": "Puissance Cardiaque \n\n 📊 1 série = 10 minutes de 30-30 \n\n Appuis croisés suspendus \n\n 📊 3 séries de 3 répétitions par bras avec 1min30 de récup. entre les séries"
     }
   ]
 }
