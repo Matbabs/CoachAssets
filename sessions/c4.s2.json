@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Isométrique Totale",
+      "description": "Circuits Blocs ou Voies Bras \n\n 📊 2 séries de 3 circuits, avec 10min de récup. entre les séries et 5min de récup. entre les circuits"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Isométrique Max. (1 bras) ",
+      "description": "Isométrique Max. (1 bras) \n\n 📊 1 série & 3 répétitions, avec 3min de récup. entre les répétitions"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Concentrique Maximal ",
+      "description": "Concentrique Max. Bras \n\n 📊 1 série & 3 répétitions, avec 3min de récup. entre les répétitions"
     }
   ]
 }
