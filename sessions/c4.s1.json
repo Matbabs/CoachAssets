@@ -1,16 +1,24 @@
 {
   "days": [
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Isométrique Max. (1 bras)",
+      "description": "Isométrique Max. (1 bras) |
+📊 1 série & 3 répétitions, avec 3min de récup. entre les répétitions
+"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Statodynamique + Proprioception",
+      "description": "Statodynamique Bras |
+📊 2 séries & 6 répétitions enchainées, avec 5min de récup. entre les séries
+Core Crawl Statique Alterné |
+📊 3 séries de 30 secondes par côté, avec 1min de récup. entre les séries
+"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Gainage Global",
+      "description": "Gainage Global | 
+📊 3 séries & 3 répétitions, avec 10min de récup. entre les séries et 5min de récup. entre les répétitions
+"
     }
   ]
 }
