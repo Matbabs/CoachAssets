@@ -171,6 +171,7 @@
 
       // BRIDGE FUNCTIONS
       function addMarker(pos, markerStr, color, distanceToUser) {
+        console.log(distanceToUser);
         const marker = L.marker(pos, {
           icon: markerIcon,
         }).addTo(map);
