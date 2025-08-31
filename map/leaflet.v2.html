@@ -132,7 +132,7 @@
         msg = JSON.stringify({
           type: "visit",
           data: {
-            markerId: markerId,
+            id: markerId,
           },
         });
         postMessage(msg);
@@ -159,9 +159,7 @@
           popup += `<br><br>${marker.contact}`;
         }
         if (distanceToUser >= 0 && distanceToUser <= 50) {
-          popup += `<br><br><button onclick="visitMarker(${JSON.stringify(
-            marker.id
-          )})" class="button">visiter</button>`;
+          popup += `<br><br><button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
         } else {
           popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
         }
