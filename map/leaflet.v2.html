@@ -175,7 +175,7 @@
         }
         if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
           popup += `<br><br><button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
-        } else {
+        } else if (distanceToUser > MARKER_RADIUS_LIMIT) {
           popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
         }
         return popup;
