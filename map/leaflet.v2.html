@@ -194,6 +194,9 @@
         document
           .querySelectorAll(".marker")
           .forEach((e) => (e.style.background = color));
+        document
+          .querySelectorAll(".marker-visited")
+          .forEach((e) => (e.style.background = color));
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
