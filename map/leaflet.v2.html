@@ -69,6 +69,7 @@
       }
     </style>
     <script>
+      const MARKER_RADIUS_LIMIT = 50;
       var map = L.map("map", {
         zoomControl: false,
         minZoom: 2,
@@ -158,7 +159,7 @@
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
         }
-        if (distanceToUser >= 0 && distanceToUser <= 50) {
+        if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
           popup += `<br><br><button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
         } else {
           popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
@@ -178,7 +179,9 @@
         markers.push(marker);
         document
           .querySelectorAll(".marker")
-          .forEach((e) => (e.style.background = color));
+          .forEach(
+            (e) => (e.style.background = distanceToUser === -2 ? "red" : color)
+          );
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
