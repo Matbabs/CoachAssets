@@ -187,7 +187,7 @@
       // BRIDGE FUNCTIONS
       function addMarker(pos, markerStr, color, distanceToUser) {
         const marker = L.marker(pos, {
-          icon: distanceToUser === -2 ? markerVisitedIcon : customIcon,
+          icon: distanceToUser === -2 ? markerVisitedIcon : markerIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr, Number(distanceToUser)));
         markers.push(marker);
