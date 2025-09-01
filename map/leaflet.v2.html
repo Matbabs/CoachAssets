@@ -179,9 +179,8 @@
         markers.push(marker);
         document
           .querySelectorAll(".marker")
-          .forEach(
-            (e) => (e.style.background = distanceToUser === -2 ? "red" : color)
-          );
+          .forEach((e) => (e.style.background = color));
+        marker.background = "red";
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
