@@ -58,6 +58,9 @@
         border-radius: 100%;
         box-shadow: 0 0 5px 0 #8f8156;
       }
+      .marker-visited {
+        border: 2px solid #ffc000;
+      }
       .button {
         background: #ffc000;
         border: none;
@@ -109,7 +112,7 @@
       });
       var markerVisitedIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker" style="background-color: red"></div>',
+        html: '<div class="marker-visited"></div>',
         iconSize: [20, 20],
         iconAnchor: [10.5, 10.5],
       });
