@@ -179,16 +179,13 @@
       // BRIDGE FUNCTIONS
       function addMarker(pos, markerStr, color, distanceToUser) {
         const marker = L.marker(pos, {
-          icon: markerIcon,
+          icon: distanceToUser === -2 ? markerVisitedIcon : customIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerStr, Number(distanceToUser)));
         markers.push(marker);
         document
           .querySelectorAll(".marker")
           .forEach((e) => (e.style.background = color));
-        if (distanceToUser === -2) {
-          marker.setIcon(markerVisitedIcon);
-        }
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
