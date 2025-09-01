@@ -107,6 +107,12 @@
         iconSize: [20, 20],
         iconAnchor: [10.5, 10.5],
       });
+      var markerVisitedIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker" style="background-color: red"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10.5, 10.5],
+      });
 
       // LOCAL FUNCTIONS
       function postMessage(msg) {
@@ -180,7 +186,9 @@
         document
           .querySelectorAll(".marker")
           .forEach((e) => (e.style.background = color));
-        marker.background = "red";
+        if (distanceToUser === -2) {
+          marker.setIcon(markerVisitedIcon);
+        }
       }
       function removeAllMarkers() {
         markers.forEach((marker) => {
