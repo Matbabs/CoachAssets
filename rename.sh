@@ -1,0 +1,1 @@
+find . -type f -name "*c7*" -exec rename 's/c7/c1/g' {} +
