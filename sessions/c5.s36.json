@@ -1,1 +1,16 @@
-
+{
+  "days": [
+    {
+      "tag": "xxx",
+      "description": "xxx"
+    },
+    {
+      "tag": "xxx",
+      "description": "xxx"
+    },
+    {
+      "tag": "xxx",
+      "description": "xxx"
+    }
+  ]
+}
