@@ -1,17 +1,17 @@
 {
   "days": [
-    "OBJECTIF N°3 : 3 Tractions à 1 bras\n\n    Recommence ta semaine jusqu'à réussir ta traction  à 1 bras avant de passer à la suite du programme"
+    "OBJECTIF N°3 : 3 Tractions à 1 bras\n\n    Recommence ta semaine jusqu'à réussir ta traction à 1 bras. Elle arrive bientôt !"
     {
-      "tag": "Traction privilégié",
-      "description": "Traction à un bras privilégié\n\n📊 4 séries & 5 répétitions / bras, avec 5min de récup. entre les séries"
+      "tag": "Demi-Traction",
+      "description": "Traction 1 bras départ 90°…\n\n📊 4 séries & 4 répétitions / bras, avec 5min de récup. entre les séries"
     },
     {
-      "tag": "Défi des 3 traction à un bras, avec élastique",
-      "description": "Traction à un bras, mains sur le poignet\n\n📊 4 séries & 5 répétitions / bras, avec 5min de récup. entre les séries"
+      "tag": "Départ sauté",
+      "description": "Traction 1 bras sauté\n\n📊 4 séries & 3 répétitions / bras, avec 5min de récup. entre les séries"
     },
     {
-      "tag": "Défi des 20 Tractions",
-      "description": "Traction un bras, avec élastique\n\n📊 4 séries & 3 répétitions / bras, avec 5min de récup. entre les séries"
+      "tag": "Défi de la traction à un bras",
+      "description": "1 Tractions par bras\n\n📊 3 séries & 3 répétitions, avec 5min de récup. entre les séries"
     }
   ]
 }
