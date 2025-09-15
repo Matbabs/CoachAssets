@@ -1,16 +1,28 @@
 {
   "days": [
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Pliométrie Moyenne + Gainage Postérieur",
+      "description": "Pliométrie Moyenne | 
+📊 3 séries & 5 répétitions, avec 5 à 7min de récup. entre les séries
+Gainage Postérieur |
+📊 6 boucles & 3min de récup. entre
+"
     },
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Contrasté + Gainage Antérieur",
+      "description": "Tractions un bras + deux bras |
+📊 2 séries & 3 répétitions, avec 10min de récup. entre les séries et 3min entre les répétitions
+Gainage Antérieur |
+📊 6 boucles & 3min de récup. entre
+"
     },
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Statodynamique + Proprioception",
+      "description": "Statodynamique Hybride Bras |
+📊 3 séries & 3 répétitions enchainées, avec 5min de récup. entre les séries
+Suspension scapulaire instable |
+📊 2 séries de 5 répétitions avec 1min30 de récup. entre les séries
+"
     }
   ]
 }
