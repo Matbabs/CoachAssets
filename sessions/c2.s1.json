@@ -1,16 +1,27 @@
 {
   "days": [
-    {
-      "tag": "XXX",
-      "description": "XXX"
+    OBJECTIF N°1 : 20 Tractions à 2 bras
+    Recommence ta semaine jusqu'à réussir tes 20 tractions avant de passer à la suite du programme{
+      "tag": "Volume & Endurance",
+      "description": "Tractions classiques
+📊 5 séries & X répétitions, avec 3min de récup. entre les séries
+Tractions pyramide
+📊 Monter et descendre de 1, 2, 3 (…) 3, 2, 1 tractions avec 30s de repos à chaque série
+"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Force Maximale",
+      "description": "Tractions prise serrée
+📊 4 séries & X répétitions, avec 2min de récup. entre les séries
+Contrôle à  « muerte »
+📊 4 séries & 1 répétition / bras, avec 3min de récup. entre les séries
+"
     },
     {
-      "tag": "XXX",
-      "description": "XXX"
+      "tag": "Défi des 20 Tractions",
+      "description": "Traction max.
+📊 Fais le plus de tractions possibles en une série et note ton score
+"
     }
   ]
 }
