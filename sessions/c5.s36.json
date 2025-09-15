@@ -1,16 +1,28 @@
 {
   "days": [
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Contrasté + Gainage Antérieur",
+      "description": "Tractions un bras + deux bras |
+📊 1 série & 3 répétitions, avec 10min de récup. entre les séries et 3min entre les répétitions
+Gainage Antérieur |
+📊 6 boucles & 3min de récup. entre
+"
     },
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Concentrique Maximal + Gainage Postérieur",
+      "description": "Concentrique Max. Bras | 
+📊 3 séries & 3 répétitions, avec 10min de récup. entre les séries et 3min de récup. entre les répétitions
+Gainage Postérieur |
+📊 6 boucles & 3min de récup. entre
+"
     },
     {
-      "tag": "xxx",
-      "description": "xxx"
+      "tag": "Isométrique Max. (2 bras) + Proprioception",
+      "description": "Isométrique Max. Doigts (2 bras) | 
+📊 1 série & 3 répétitions, avec 3min de récup. entre les répétitions
+Core Crawl Statique Alterné |
+📊 3 séries de 30 secondes par côté, avec 1min de récup. entre les séries
+"
     }
   ]
 }
