@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Intervalles aérobies (Z3)",
+      "description": "6 x 3 min en Z3 (récupération 2 min en Z1)\n\n📊 Protocole :\n→ 3 min en Z3 (75-85% FC max, effort soutenu mais contrôlé)\n→ Récupération : 2 min en Z1 (pédalage très léger)\n→ Répéter 6 fois\n\n👉 Objectif : Stimuler la capacité aérobie et améliorer l’efficacité du système cardiovasculaire."
+    },
+    {
+      "tag": "Test lactique (Z4)",
+      "description": "3 x 8 min en Z4 (récupération 4 min) + 1h en Z2\n\n📊 Protocole :\n→ 8 min en Z4 (85-95% FC max, seuil lactique)\n→ Récupération : 4 min en Z1-Z2 (récupération active)\n→ Répéter 3 fois, puis 1h en Z2 pour éliminer les lactates\n\n👉 Objectif : Augmenter la tolérance à l’effort intense et retarder l’accumulation de lactate."
+    },
+    {
+      "tag": "Sortie mixte (Z3 + Z5)",
+      "description": "2h30 avec 20 min en Z3 + 5 x 1 min en Z5\n\n📊 Structure :\n→ 2h en Z2 (endurance de base)\n→ 20 min en Z3 (effort soutenu)\n→ 5 x 1 min en Z5 (sprint maximal, récupération 3 min en Z1)\n\n👉 Objectif : Travailler à la fois l’endurance et la puissance anaérobie (filière énergétique mixte)."
+    }
+  ]
+}
