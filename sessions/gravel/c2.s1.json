@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Endurance fondamentale (Z2)",
-      "description": "2h en Z2 (terrain plat)\n\n📊 Protocole :\n<br/> → 2 heures en endurance fondamentale (Z2, 60-70% FC max).\n<br/> → Terrain : Plat ou faux-plat descendant pour maintenir une allure régulière.\n<br/> → Cadence : 80-90 RPM pour solliciter le système cardiovasculaire sans forcer.\n\n👉 Objectif : Construire une base aérobie solide et habituer le corps à la durée."
+      "description": "2h en Z2 (terrain plat)\n\n📊 Protocole :\n → 2 heures en endurance fondamentale (Z2, 60-70% FC max).\n → Terrain : Plat ou faux-plat descendant pour maintenir une allure régulière.\n → Cadence : 80-90 RPM pour solliciter le système cardiovasculaire sans forcer.\n\n👉 Objectif : Construire une base aérobie solide et habituer le corps à la durée."
     },
     {
       "tag": "Z2 + danseuse (renforcement)",
-      "description": "1h30 en Z2 + 6 x 1 min en danseuse\n\n📊 Protocole :\n<br/> → 1h30 en Z2 (endurance de base).\n<br/> → 6 x 1 min en danseuse (renforcement spécifique, grand plateau, cadence 60-70 RPM).\n<br/> → Récupération : 2 min en Z2 assis entre chaque série.\n\n👉 Objectif : Améliorer la force-endurance et la stabilité du pédalage."
+      "description": "1h30 en Z2 + 6 x 1 min en danseuse\n\n📊 Protocole :\n → 1h30 en Z2 (endurance de base).\n → 6 x 1 min en danseuse (renforcement spécifique, grand plateau, cadence 60-70 RPM).\n → Récupération : 2 min en Z2 assis entre chaque série.\n\n👉 Objectif : Améliorer la force-endurance et la stabilité du pédalage."
     },
     {
       "tag": "Sortie longue (test ravitaillement)",
-      "description": "3h en Z2 (ravitaillement test)\n\n📊 Protocole :\n<br/> → 3 heures en Z2 sur terrain varié (plat à vallonné léger).\n<br/> → Test de ravitaillement :\n  <br/> - Boire toutes les 20 min (500 ml/h).\n  <br/> - Manger toutes les 45 min (30-60 g de glucides/h : barres, bananes, gels).\n<br/> → Simuler les conditions de course (sacoche, bidons, vêtements).\n\n👉 Objectif : Habituer le corps à gérer l’effort long et affiner sa stratégie de ravitaillement."
+      "description": "3h en Z2 (ravitaillement test)\n\n📊 Protocole :\n → 3 heures en Z2 sur terrain varié (plat à vallonné léger).\n → Test de ravitaillement :\n   - Boire toutes les 20 min (500 ml/h).\n   - Manger toutes les 45 min (30-60 g de glucides/h : barres, bananes, gels).\n → Simuler les conditions de course (sacoche, bidons, vêtements).\n\n👉 Objectif : Habituer le corps à gérer l’effort long et affiner sa stratégie de ravitaillement."
     }
   ]
 }
