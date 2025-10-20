@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Test FTP",
-      "description": "Test FTP (20 min max)\n\n📊 Échauffement progressif (15-20 min en Z1-Z2)\n→ 20 min à fond (puissance max soutenue)\n→ Retour au calme (10 min en Z1)\n\n1h en Z2 pour récupérer (fréquence cardiaque contrôlée, allure modérée)."
+      "description": "Test FTP (20 min max)\n\n📊 Échauffement progressif (15-20 min en Z1-Z2)\n<br/> → 20 min à fond (puissance max soutenue)\n<br/> → Retour au calme (10 min en Z1)\n\n1h en Z2 pour récupérer (fréquence cardiaque contrôlée, allure modérée)."
     },
     {
       "tag": "5 km chrono",
-      "description": "5 km chrono (terrain mixte)\n\n📊 Échauffement (15 min en Z2 + 3 accélérations progressives)\n→ 5 km en effort maximal (terrain varié : plat, faux-plat, courtes côtes)\n→ Analyse post-séance :\n  - Zones de fréquence cardiaque (FC)\n  - Puissance moyenne/maximale\n  - Temps passé dans chaque zone (Z3-Z5)\n\nRetour au calme (10-15 min en Z1)."
+      "description": "5 km chrono (terrain mixte)\n\n📊 Échauffement (15 min en Z2 + 3 accélérations progressives)\n<br/> → 5 km en effort maximal (terrain varié : plat, faux-plat, courtes côtes)\n<br/> → Analyse post-séance :\n  <br/> - Zones de fréquence cardiaque (FC)\n  <br/> - Puissance moyenne/maximale\n  <br/> - Temps passé dans chaque zone (Z3-Z5)\n\nRetour au calme (10-15 min en Z1)."
     },
     {
       "tag": "Sortie Z2 + transitions",
-      "description": "Sortie Z2 (2h) avec 5 x 1 min en Z4\n\n📊 Base : 2h en endurance fondamentale (Z2) (FC stable, conversation possible).\n\nIntervalles :\n→ 5 x 1 min en Z4 (effort soutenu, ~90% FTP)\n→ Récupération : 3 min en Z2 entre chaque intervalle\n\nObjectif : Travailler les transitions d’allure et la récupération active.\n\nVariante : Ajouter 2-3 sprints courts (10-15 sec) en fin de sortie si forme bonne."
+      "description": "Sortie Z2 (2h) avec 5 x 1 min en Z4\n\n📊 Base : 2h en endurance fondamentale (Z2) (FC stable, conversation possible).\n\nIntervalles :\n<br/> → 5 x 1 min en Z4 (effort soutenu, ~90% FTP)\n<br/> → Récupération : 3 min en Z2 entre chaque intervalle\n\nObjectif : Travailler les transitions d’allure et la récupération active.\n\nVariante : Ajouter 2-3 sprints courts (10-15 sec) en fin de sortie si forme bonne."
     }
   ]
 }
