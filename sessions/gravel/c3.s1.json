@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Intervalles Z4 courts",
-      "description": "**3 × 10 min Z4 (récup 5 min Z1)**\n\n📊 **Protocole** :\n→ **Échauffement** : 20 min Z2 + 3 accélérations progressives (15 sec Z3).\n→ **3 × 10 min en Z4** (88-94% FC max) :\n  - Récupération : 5 min en Z1 entre chaque intervalle.\n  - Terrain : Plat ou faux-plat régulier.\n  - Cadence : 85-95 RPM.\n→ **Retour au calme** : 15 min Z1 + étirements.\n\n👉 *Objectif* : Améliorer la **puissance au seuil lactique** et la capacité à **évacuer le lactate** pendant les récupérations."
+      "description": "3 x 10 min Z4 (récup 5 min Z1)\n\n📊 Protocole :\n→ Échauffement : 20 min Z2 + 3 accélérations progressives (15 sec Z3).\n→ 3 x 10 min en Z4 (88-94% FC max) :\n  - Récupération : 5 min en Z1 entre chaque intervalle.\n  - Terrain : Plat ou faux-plat régulier.\n  - Cadence : 85-95 RPM.\n→ Retour au calme : 15 min Z1 + étirements.\n\n👉 Objectif : Améliorer la puissance au seuil lactique et la capacité à évacuer le lactate pendant les récupérations."
     },
     {
       "tag": "Seuil prolongé",
-      "description": "**2 × 20 min Z4 (terrain régulier)**\n\n📊 **Protocole** :\n→ **Échauffement** : 25 min Z2 + 4 accélérations (20 sec Z3-Z4).\n→ **2 × 20 min en Z4** (88-94% FC max) :\n  - Récupération : 10 min Z1-Z2 entre les intervalles.\n  - Terrain : Plat ou circuit régulier (ex : boucle de 5-10 km).\n  - Cadence : 80-90 RPM (assis pour économiser l’énergie).\n→ **Retour au calme** : 20 min Z1 + étirements dynamiques.\n\n👉 *Objectif* : Développer l’**endurance de force** et simuler les **efforts longs en course** (ex : échappée, montée prolongée)."
+      "description": "2 x 20 min Z4 (terrain régulier)\n\n📊 Protocole :\n→ Échauffement : 25 min Z2 + 4 accélérations (20 sec Z3-Z4).\n→ 2 x 20 min en Z4 (88-94% FC max) :\n  - Récupération : 10 min Z1-Z2 entre les intervalles.\n  - Terrain : Plat ou circuit régulier (ex : boucle de 5-10 km).\n  - Cadence : 80-90 RPM (assis pour économiser l’énergie).\n→ Retour au calme : 20 min Z1 + étirements dynamiques.\n\n👉 Objectif : Développer l’endurance de force et simuler les efforts longs en course (ex : échappée, montée prolongée)."
     },
     {
       "tag": "Endurance + seuil",
-      "description": "**2h Z2 + 2 × 8 min Z4**\n\n📊 **Protocole** :\n→ **2h en Z2** (60-70% FC max) :\n  - Terrain : Mixte (plat + faux-plats).\n→ **2 × 8 min en Z4** (90-94% FC max) :\n  - Récupération : 4 min Z1-Z2.\n  - Placement : Après 1h de Z2.\n  - Cadence : 90+ RPM (danseuse recommandée).\n→ **Retour au calme** : 10 min Z1 + étirements statiques.\n\n👉 *Objectif* : Combiner **endurance fondamentale** et **travail au seuil**, et tester la **stratégie nutritionnelle** (ex : gels pendant les Z4)."
+      "description": "2h Z2 + 2 x 8 min Z4\n\n📊 Protocole :\n→ 2h en Z2 (60-70% FC max) :\n  - Terrain : Mixte (plat + faux-plats).\n→ 2 x 8 min en Z4 (90-94% FC max) :\n  - Récupération : 4 min Z1-Z2.\n  - Placement : Après 1h de Z2.\n  - Cadence : 90+ RPM (danseuse recommandée).\n→ Retour au calme : 10 min Z1 + étirements statiques.\n\n👉 Objectif : Combiner endurance fondamentale et travail au seuil, et tester la stratégie nutritionnelle (ex : gels pendant les Z4)."
     }
   ]
 }
