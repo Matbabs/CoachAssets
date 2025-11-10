@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "VO₂max pur (S2)",
+      "description": "6 x 3 min Z5 (récup 3 min)\n\n📊 Protocole :\n→ Échauffement : 25 min progressif (Z1 → Z2 → Z3) + 2 x 1 min en Z4 (récup 1 min).\n→ Intervalles :\n  - 6 x 3 min en Z5 (95-100% FC max) avec 3 min récupération en Z1 entre chaque.\n  - Allure : Maximale soutenable sur la durée, RPE 8-9/10.\n  - Cadence : 85-95 RPM pour un bon équilibre puissance/endurance.\n→ Récupération finale : 15 min en Z1 + étirements (quadriceps, fessiers).\n\n👉 Objectif : Développer spécifiquement la VO2 max avec des efforts de durée optimale. Améliorer la capacité à maintenir des intensités élevées."
+    },
+    {
+      "tag": "Intervalles 30/30 (S2)",
+      "description": "10 x (30s Z5 + 30s Z1)\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 4 x 20 sec en Z5 (récup 40 sec).\n→ Intervalles :\n  - 10 répétitions de : 30 sec en Z5 (effort maximal) + 30 sec en Z1 (récupération active).\n  - Pas de pause entre les répétitions (enchaînement continu).\n  - Cadence : 90-100 RPM pour une activation rapide.\n→ Récupération finale : 10 min en Z1 + étirements (mollets, ischios).\n\n👉 Objectif : Travailler la récupération rapide entre efforts intenses. Développer la puissance aérobie maximale avec des temps de récupération courts."
+    },
+    {
+      "tag": "Sortie vallonnée (S2)",
+      "description": "2h avec 5 x 2 min Z5\n\n📊 Protocole :\n→ Base : 2h en Z2 sur parcours vallonné (dénivelé modéré).\n→ Efforts Z5 :\n  - 5 x 2 min en Z5 sur des montées courtes (4-6% de pente idéalement).\n  - Récupération : 5-8 min en Z1/Z2 entre chaque effort (descente ou plat).\n  - Position : Assis ou danseuse selon la pente.\n→ Nutrition : Hydratation régulière + apport glucidique à mi-parcours.\n→ Post-sortie : 10 min en Z1 + auto-évaluation.\n\n👉 Objectif : Appliquer les efforts de VO2 max en conditions réelles de course. Travailler la puissance en montée."
+    }
+  ]
+}

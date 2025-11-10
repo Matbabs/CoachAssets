@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Sprints courts explosifs (S1)",
+      "description": "10 x 20s sprint (démarrage arrêté, récup 2 min)\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 5 accélérations progressives de 10 sec.\n→ Sprints :\n  - 10 x 20 sec sprint maximal depuis arrêt complet.\n  - Récupération : 2 min en Z1 entre chaque sprint.\n  - Technique : Départ explosif, passage rapide des vitesses.\n→ Récupération finale : 10 min en Z1 + étirements des muscles explosifs.\n\n👉 Objectif : Développer la puissance explosive et la capacité d'accélération. Travail spécifique pour les attaques et démarrages en course."
+    },
+    {
+      "tag": "Puissance en danseuse (S1)",
+      "description": "5 x 1 min Z5 (danseuse) + 1h Z2\n\n📊 Protocole :\n→ Échauffement : 15 min progressif (Z1 → Z2).\n→ Intervalles :\n  - 5 x 1 min en Z5 exclusivement en danseuse.\n  - Récupération : 3 min en Z2 entre chaque effort.\n  - Focus : Technique de danseuse optimale (bassin stable, pédalage rond).\n→ Endurance : 1h en Z2 après les intervalles.\n\n👉 Objectif : Améliorer la puissance spécifique en position debout. Renforcer les muscles stabilisateurs et la technique de danseuse."
+    },
+    {
+      "tag": "Sprints tactiques (S1)",
+      "description": "2h avec sprints en haut des montées\n\n📊 Protocole :\n→ Base : 2h en Z2 sur parcours vallonné.\n→ Sprints :\n  - 6-8 sprints de 15-20 sec déclenchés dans les 50 derniers mètres des montées.\n  - Récupération : Descente ou plat suivant pour récupération active.\n  - Objectif : reproduction de situations de course.\n→ Nutrition : Hydratation régulière + gel à 1h15.\n\n👉 Objectif : Développer la capacité à sprinter en fatigue, comme en fin de montée. Travail spécifique aux situations de course."
+    }
+  ]
+}

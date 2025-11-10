@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Résistance PMA (S3)",
+      "description": "5 x 2 min Z5 (récup 2 min) + 1h Z2\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 2 accélérations de 1 min en Z4.\n→ Intervalles :\n  - 5 x 2 min en Z5 (PMA) avec récupération courte de 2 min en Z1.\n  - Ratio travail/récupération de 1:1 pour maximiser la charge.\n  - Terrain : Montée modérée ou faux-plat montant.\n→ Endurance : 1h en Z2 après les intervalles.\n\n👉 Objectif : Développer la capacité à maintenir des efforts à PMA avec récupération réduite. Augmenter la résistance à la fatigue."
+    },
+    {
+      "tag": "Intervalles 30/15 (S3)",
+      "description": "8 x (30s Z6 + 15s Z1)\n\n📊 Protocole :\n→ Échauffement : 25 min progressif (Z1 → Z2 → Z3) complet.\n→ Intervalles :\n  - 8 séries de 30 sec en Z6 (supra-maximal) suivies de 15 sec en Z1.\n  - Pas de récupération entre les séries.\n  - Total : 6 min d'effort fractionné très intense.\n→ Récupération : 15 min en Z1 après les intervalles.\n\n👉 Objectif : Améliorer la tolérance aux lactates et la récupération rapide. Travail spécifique pour les changements de rythme en course."
+    },
+    {
+      "tag": "Endurance puissance (S3)",
+      "description": "3h avec 15 montées courtes à fond\n\n📊 Protocole :\n→ Base : 3h en Z2 sur parcours très vallonné.\n→ Montées :\n  - 15 montées courtes (30 sec à 2 min) attaquées à fond.\n  - Récupération : Descente ou plat suivant naturellement.\n  - Objectif : accumulation d'efforts en fatigue.\n→ Nutrition : Hydratation régulière + 2 gels (1h et 2h).\n\n👉 Objectif : Développer la capacité à produire des efforts intenses en état de fatigue avancée. Simulation de course sur parcours accidenté."
+    }
+  ]
+}
