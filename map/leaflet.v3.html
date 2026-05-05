@@ -109,7 +109,7 @@
       var markers = [];
       var classic = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-        { detectRetina: true }
+        { detectRetina: true },
       ).addTo(map);
       var isClassic = true;
       var satellite = L.tileLayer(
@@ -117,7 +117,7 @@
         {
           attribution:
             "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
-        }
+        },
       );
       var pulseIcon = L.divIcon({
         className: "css-icon",
@@ -180,6 +180,15 @@
         });
         postMessage(msg);
       }
+      function signalMarker(markerId) {
+        msg = JSON.stringify({
+          type: "signal",
+          data: {
+            id: markerId,
+          },
+        });
+        postMessage(msg);
+      }
       function openGps(lat, lng) {
         msg = JSON.stringify({
           type: "gps",
@@ -205,6 +214,9 @@
           popup += `<br><br><button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
         } else if (distanceToUser > MARKER_RADIUS_LIMIT) {
           popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
+        }
+        if (marker.user) {
+          popup += `<br><br><button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
         }
         return popup;
       }
@@ -233,8 +245,8 @@
                 ? markerVisitedIconUser
                 : markerVisitedIcon
               : markerObj.user
-              ? markerIconUser
-              : markerIcon,
+                ? markerIconUser
+                : markerIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
         markers.push(marker);
