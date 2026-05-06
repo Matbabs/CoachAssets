@@ -201,10 +201,10 @@
       }
       function generatePopup(marker, distanceToUser) {
         let popup = `<b>${marker.name}</b><br>${marker.description}`;
-        if (marker.dateIn) {
+        if (marker.dateIn && marker.timeIn) {
           popup += `<br><br>Début: ${marker.dateIn} - ${marker.timeIn}`;
         }
-        if (marker.dateOut) {
+        if (marker.dateOut && marker.timeOut) {
           popup += `<br>Fin: ${marker.dateOut} - ${marker.timeOut}`;
         }
         if (marker.contact) {
