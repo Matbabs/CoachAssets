@@ -31,6 +31,22 @@
       },
       "link": "https://www.instagram.com/cyprienbossut/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@KAYOOESCALADE",
+      "name": "Kayoo",
+      "title": "Vidéaste & Speaker",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/kayoo.jpg",
+      "tagline": "Le speaker officiel de la culture grimpe.",
+      "description": "Entre actus, sciences de l’escalade et vannes envoyées à pleine vitesse, Kayoo transforme chaque sujet grimpe en épisode impossible à regarder sérieusement sans lâcher un rire.",
+      "statistics": {
+        "divine": 1,
+        "force": 2,
+        "humor": 4,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/kayooescalade/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
