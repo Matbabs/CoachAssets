@@ -143,6 +143,54 @@
       },
       "link": "https://www.instagram.com/mimo_grimpe/",
       "socials": ["Instagram"]
+    },
+    {
+      "handle": "@PASTROPEMMABLE",
+      "name": "bleaukemon go 🧗🏼‍♀️",
+      "title": "Grimpeuse & Créatrice",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/pastro.jpg",
+      "tagline": "Strap, strass et faux cils… puis destruction de réglettes.",
+      "description": "Derrière son image de princesse ultra soignée, Emma cache une force monstrueuse et une grimpe capable de broyer les prises les plus méchantes.",
+      "statistics": {
+        "divine": 4,
+        "force": 3,
+        "humor": 4,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/pastropemmable/",
+      "socials": ["Instagram"]
+    },
+    {
+      "handle": "@JU_ESCALADE",
+      "name": "Juliette",
+      "title": "Grimpeuse",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ju_escalade.jpg",
+      "tagline": "Pas là pour enfiler des perles.",
+      "description": "Quand Juliette entre dans la salle, les prises savent déjà qu’elles vont souffrir.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 2,
+        "iq": 1
+      },
+      "link": "https://www.instagram.com/ju_escalade/",
+      "socials": ["Instagram"]
+    },
+    {
+      "handle": "@LOU_CRIMP",
+      "name": "Louise de Hemptinne",
+      "title": "Grimpeuse & Créatrice",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/lou_crimp.jpg",
+      "tagline": "La cadette la plus stylée du game.",
+      "description": "Entre tops en série et aisance insolente sur les blocs, Louise donne l’impression que chaque salle est une simple kermesse géante où tout devient beaucoup trop facile.",
+      "statistics": {
+        "divine": 4,
+        "force": 2,
+        "humor": 4,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/lou_crimp/",
+      "socials": ["Instagram"]
     }
   ]
 }
