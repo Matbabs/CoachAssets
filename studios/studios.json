@@ -111,6 +111,22 @@
       },
       "link": "https://www.instagram.com/mejdi_schalck/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@LESFRERESMAWEMOFFICIEL",
+      "name": "Les Frères Mawem",
+      "title": "Grimpeurs Olympiques",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mawem.jpg",
+      "tagline": "Les anciens qui ont inspiré toute une génération.",
+      "description": "Après les Jeux Olympiques, les frères Mawem continuent de transmettre les valeurs de la grimpe à travers leurs projets, leur bienveillance et leur énergie positive. Toujours là pour faire bouger les lignes avec du partage, de l’humain et du « Vertical Footing ».",
+      "statistics": {
+        "divine": 1,
+        "force": 4,
+        "humor": 3,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/lesfreresmawemofficiel/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
