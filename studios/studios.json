@@ -95,6 +95,22 @@
       },
       "link": "https://www.instagram.com/mellowclimbing/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@MEJDI_SCHALCK",
+      "name": "Mejdi Schalck",
+      "title": "Grimpeur Pro",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mejdi.jpg",
+      "tagline": "Le tigre électrique de l’équipe de France.",
+      "description": "Entre compétitions internationales, entraînements explosifs et moments de vie hors tapis de compétition, Mejdi partage l’intensité du haut niveau avec une énergie impossible à canaliser.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 1,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/mejdi_schalck/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
