@@ -15,6 +15,22 @@
       },
       "link": "https://www.instagram.com/vincent_grimpe/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@CYPRIENBOSSUT",
+      "name": "Cyprien Bossut",
+      "title": "Grimpeur",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/cyprien_bossut.jpg",
+      "tagline": "Le kangourou de la bande.",
+      "description": "Toujours en train de bondir d’un volume à l’autre, Cyprien transforme chaque bloc en terrain de jeu. Plus le mouv est loin… plus il a envie d’essayer.",
+      "statistics": {
+        "divine": 4,
+        "force": 3,
+        "humor": 1,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/cyprienbossut/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
