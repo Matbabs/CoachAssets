@@ -79,6 +79,22 @@
       },
       "link": "https://www.instagram.com/papel.pedro/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@MELLOWCLIMBING",
+      "name": "Mellow",
+      "title": "Média & Collectif",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mellow.jpg",
+      "tagline": "Quand la grimpe devient du cinéma.",
+      "description": "Des images léchées, des paysages incroyables et une esthétique millimétrée, Mellow Climbing transforme chaque session en film d’aventure outdoor.",
+      "statistics": {
+        "divine": 3,
+        "force": 4,
+        "humor": 1,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/mellowclimbing/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
