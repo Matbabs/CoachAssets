@@ -63,6 +63,22 @@
       },
       "link": "https://www.instagram.com/cote_bloc/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@PAPEL.PEDRO",
+      "name": "Papel.pedro",
+      "title": "Conteur & Grimpeur",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/papel.jpg",
+      "tagline": "Du fin fond de sa cabane à la réunion, c’est le grimpeur qui te raconte l’escalade comme une légende.",
+      "description": "Entre humour, philosophie de parking et culture grimpe, Papel peut transformer une simple anecdote de falaise en histoire que toute la salle retiendra.",
+      "statistics": {
+        "divine": 1,
+        "force": 3,
+        "humor": 4,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/papel.pedro/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
