@@ -127,6 +127,22 @@
       },
       "link": "https://www.instagram.com/lesfreresmawemofficiel/",
       "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@MIMO_GRIMPE",
+      "name": "Salomé",
+      "title": "Grimpeuse & Créatrice",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mimo.jpg",
+      "tagline": "La grimpeuse bien-être qui progresse sans jamais lâcher.",
+      "description": "Entre entraînement, bienveillance et vie parisienne, Mimo partage son évolution avec authenticité et motive sa communauté à repousser ses propres limites.",
+      "statistics": {
+        "divine": 3,
+        "force": 2,
+        "humor": 3,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/mimo_grimpe/",
+      "socials": ["Instagram"]
     }
   ]
 }
