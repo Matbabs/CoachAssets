@@ -1,0 +1,18 @@
+{
+  "studios": [
+    {
+      "handle": "@VINCENT_GRIMPE",
+      "name": "Vincent Rollo | Escalade",
+      "title": "Coach",
+      "tagline": "Le coach toujours en no foot qui transforme chaque session en masterclass.",
+      "description": "Entre gros essais, conseils techniques et rencontres avec sa communauté, Vincent mélange pédagogie et intensité dans des vidéos où tout le monde finit par essayer “juste un dernier run”.",
+      "statistics": {
+        "divine": 1,
+        "force": 4,
+        "humor": 3,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/vincent_grimpe/"
+    }
+  ]
+}
