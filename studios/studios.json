@@ -12,7 +12,8 @@
         "humor": 3,
         "iq": 2
       },
-      "link": "https://www.instagram.com/vincent_grimpe/"
+      "link": "https://www.instagram.com/vincent_grimpe/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
     }
   ]
 }
