@@ -1,8 +1,8 @@
 {
   "days": [
     {
-      "tag": "Test FTP (S4)",
-      "description": "Test FTP (20 min à fond) pour évaluer la progression\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 3 x 1 min en Z4 (récup 1 min).\n→ Test :\n  - 20 min à fond (allure la plus élevée possible, comme un contre-la-montre).\n  - Position : Aéro (sur le cintre bas) ou assis en grand plateau.\n  - Terrain : Plat ou home-trainer pour une puissance constante.\n→ Calcul FTP :\n  - FTP = 95% de la puissance moyenne sur 20 min (ou 90-95% FC max moyenne).\n→ Post-test : 15 min en Z1 + étirements (ischios, dos, épaules).\n\n👉 Objectif : Mesurer l’amélioration de la puissance aérobie depuis le début du cycle. Comparer avec le test initial (S1) pour ajuster les zones d’entraînement."
+      "tag": "TestPC(S4)",
+      "description": "TestPC(20 min à fond) pour évaluer la progression\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 3 x 1 min en Z4 (récup 1 min).\n→ Test :\n  - 20 min à fond (allure la plus élevée possible, comme un contre-la-montre).\n  - Position : Aéro (sur le cintre bas) ou assis en grand plateau.\n  - Terrain : Plat ou home-trainer pour une puissance constante.\n→ CalculPC:\n  -PC= 95% de la puissance moyenne sur 20 min (ou 90-95% FC max moyenne).\n→ Post-test : 15 min en Z1 + étirements (ischios, dos, épaules).\n\n👉 Objectif : Mesurer l’amélioration de la puissance aérobie depuis le début du cycle. Comparer avec le test initial (S1) pour ajuster les zones d’entraînement."
     },
     {
       "tag": "Montée référence (S4)",
