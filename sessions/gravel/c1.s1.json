@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Test 3 min (PMA)",
-      "description": "Test de puissance maximale aérobie (3 min à fond)\n\n📊 Échauffement progressif (20 min en Z1-Z2)\n → 3 min à fond (effort maximal constant, idéal pour simuler un franchissement de côte raide chargé)\n → Retour au calme (15 min en Z1)\n\nObjectif : Mesurer la capacité explosive et la consommation maximale d'oxygène."
+      "description": "Test de puissance maximale aérobie (3 min à fond)\n\n📊 Échauffement progressif (20 min en Z1-Z2)\n → 3 min à fond (effort maximal constant, idéal pour simuler un franchissement de côte raide chargé)\n → Retour au calme (15 min en Z1)\n\nObjectif : Mesurer la capacité explosive et la consommation maximale d'oxygène (VO2max)."
     },
     {
-      "tag": "Sortie Z2 + transitions",
-      "description": "Sortie Z2 (2h) avec 5 x 1 min en Z4\n\n📊 Base : 2h en endurance fondamentale (Z2) (FC stable, conversation possible).\n\nIntervalles :\n → 5 x 1 min en Z4 (effort soutenu, ~90% FTP / allure de montée longue)\n → Récupération : 3 min en Z2 entre chaque intervalle\n\nObjectif : Travailler les transitions d’allure et la récupération active avec l'inertie du vélo de bikepacking."
+      "tag": "Sortie Z2 (Endurance)",
+      "description": "Sortie 100% endurance fondamentale (2h)\n\n📊 Base : 2h en zone 2 (Z2) stricte (FC stable, conversation très facile).\n\nL'objectif ici est de rester exclusivement en endurance sans aucune intensité. Cela permet de développer le métabolisme des graisses et de récupérer activement du test de la veille tout en préparant celui du lendemain.\n\nObjectif : Construire la base aérobie sans générer de fatigue nerveuse."
     },
     {
       "tag": "Test 12 min (Seuil)",
-      "description": "Test 12 min (Endurance de puissance)\n\n📊 Échauffement (20 min en Z2 + 3 accélérations progressives de 30 sec)\n → 12 min en effort maximal soutenu (terrain plat ou montée régulière, allure de course contre-la-montre)\n → Analyse post-séance :\n   - Puissance moyenne et FC moyenne\n   - Capacité à maintenir un rythme élevé malgré la fatigue\n\nRetour au calme (15 min en Z1)."
+      "description": "Test 12 min (Endurance de puissance)\n\n📊 Échauffement (20 min en Z2 + 3 accélérations progressives de 30 sec)\n → 12 min en effort maximal soutenu (allure la plus élevée possible maintenue de façon constante)\n → Analyse post-séance :\n   - Puissance moyenne et FC moyenne\n   - Capacité à maintenir un rythme élevé sous l'effet de la fatigue cumulée\n\nRetour au calme (15 min en Z1)."
     }
   ]
 }
