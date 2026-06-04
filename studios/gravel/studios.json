@@ -11,7 +11,7 @@
         "divine": 4,
         "force": 5,
         "humor": 1,
-        "iq": 3
+        "iq": 5
       },
       "link": "https://www.instagram.com/stevenlehyaric/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -22,11 +22,11 @@
       "title": "Ex-Pro & Gravel Rider",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/pierre_rolland.jpg",
       "tagline": "La légende du Tour qui a trouvé son bonheur dans l'ultra.",
-      "description": "Ancien grimpeur d’élite du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
+      "description": "Ancien grimpeur du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
       "statistics": {
-        "divine": 5,
+        "divine": 4,
         "force": 4,
-        "humor": 3,
+        "humor": 4,
         "iq": 3
       },
       "link": "https://www.instagram.com/pierre_rolland_cyclisme/",
@@ -40,10 +40,10 @@
       "tagline": "Le métronome de l'ultra-distance.",
       "description": "Spécialiste de l'ultra-cyclisme et des courses gravel les plus exigeantes, Victor est une machine de régularité. Entre records de distance et préparation millimétrée, il incarne la nouvelle génération de l'endurance pure.",
       "statistics": {
-        "divine": 3,
-        "force": 5,
+        "divine": 4,
+        "force": 4,
         "humor": 2,
-        "iq": 5
+        "iq": 4
       },
       "link": "https://www.instagram.com/victorbozo/",
       "socials": ["Instagram", "Strava"]
@@ -57,9 +57,9 @@
       "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
       "statistics": {
         "divine": 3,
-        "force": 5,
-        "humor": 3,
-        "iq": 3
+        "force": 4,
+        "humor": 2,
+        "iq": 2
       },
       "link": "https://www.instagram.com/quentinruel1/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -72,10 +72,10 @@
       "tagline": "Celle qui trace la route pour toutes les autres.",
       "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
       "statistics": {
-        "divine": 2,
+        "divine": 3,
         "force": 3,
-        "humor": 2,
-        "iq": 3
+        "humor": 3,
+        "iq": 2
       },
       "link": "https://www.instagram.com/noemie_rochard/",
       "socials": ["Instagram", "YouTube"]
@@ -90,8 +90,8 @@
       "statistics": {
         "divine": 2,
         "force": 2,
-        "humor": 4,
-        "iq": 3
+        "humor": 5,
+        "iq": 4
       },
       "link": "https://www.instagram.com/lesrookies/",
       "socials": ["Instagram", "Podcast", "YouTube"]
@@ -107,7 +107,7 @@
         "divine": 3,
         "force": 2,
         "humor": 2,
-        "iq": 4
+        "iq": 5
       },
       "link": "https://www.instagram.com/jeannelepoix/",
       "socials": ["Instagram", "Blog"]
@@ -121,9 +121,9 @@
       "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
       "statistics": {
         "divine": 3,
-        "force": 3,
+        "force": 4,
         "humor": 2,
-        "iq": 3
+        "iq": 5
       },
       "link": "https://www.instagram.com/bikingman_ultra/",
       "socials": ["Instagram", "YouTube", "Podcast"]
