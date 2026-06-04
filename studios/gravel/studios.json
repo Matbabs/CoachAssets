@@ -33,6 +33,22 @@
       "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
+      "handle": "@VICTORBOSONI",
+      "name": "Victor Bosoni",
+      "title": "Athlète Elite & Ultra",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/victor_bosoni.jpg",
+      "tagline": "Le métronome de l'ultra-distance.",
+      "description": "Spécialiste de l'ultra-cyclisme et des courses gravel les plus exigeantes, Victor est une machine de régularité. Entre records de distance et préparation millimétrée, il incarne la nouvelle génération de l'endurance pure.",
+      "statistics": {
+        "divine": 3,
+        "force": 5,
+        "humor": 2,
+        "iq": 5
+      },
+      "link": "https://www.instagram.com/victorbosoni/",
+      "socials": ["Instagram", "Strava"]
+    },
+    {
       "handle": "@QUENTIN_RUEL",
       "name": "Quentin Ruel",
       "title": "Athlète & Ultra-Cycliste",
