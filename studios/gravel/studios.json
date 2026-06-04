@@ -8,13 +8,61 @@
       "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
       "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
       "statistics": {
-        "divine": 4,
-        "force": 4,
+        "divine": 5,
+        "force": 5,
         "humor": 1,
         "iq": 3
       },
       "link": "https://www.instagram.com/stevenlehyaric/",
       "socials": ["Instagram", "YouTube", "Strava"]
+    },  "studios": [
+    {
+      "handle": "@PIERREROLLANDCYCLISME",
+      "name": "Pierre Rolland",
+      "title": "Ex-Pro & Gravel Rider",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/pierre_rolland.jpg",
+      "tagline": "La légende du Tour qui a trouvé son bonheur dans la poussière.",
+      "description": "Ancien grimpeur d’élite du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 3,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/pierrerollandcyclisme/",
+      "socials": ["Instagram", "YouTube", "Strava"]
+    },
+    {
+      "handle": "@QUENTIN_RUEL",
+      "name": "Quentin Ruel",
+      "title": "Athlète & Ultra-Cycliste",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/quentin_ruel.jpg",
+      "tagline": "Du parquet au gravier, sans jamais freiner.",
+      "description": "Basketteur pro reconverti dans l’ultra-distance, Quentin apporte une énergie de dingue à chaque défi. Il grimpe les cols comme il dunk : avec une puissance pure et un mental d’acier capable d’avaler des milliers de kilomètres.",
+      "statistics": {
+        "divine": 2,
+        "force": 4,
+        "humor": 3,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/quentin_ruel/",
+      "socials": ["Instagram", "YouTube", "Strava"]
+    },
+    {
+      "handle": "@NOEMIE_ROCHARD",
+      "name": "Noémie Rochard",
+      "title": "Aventurière & Créatrice",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/noemie_rochard.jpg",
+      "tagline": "Celle qui trace la route pour toutes les autres.",
+      "description": "Passionnée de bikepacking et de bivouacs sauvages, Noémie documente ses traversées avec une authenticité rare. Elle inspire une communauté grandissante à oser l'aventure à vélo, peu importe le niveau.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/noemie_rochard/",
+      "socials": ["Instagram", "YouTube"]
     },
     {
       "handle": "@LESROOKIES",
@@ -33,22 +81,6 @@
       "socials": ["Instagram", "Podcast", "YouTube"]
     },
     {
-      "handle": "@MATHILDE_ET_SACHA",
-      "name": "Mathilde et Sacha",
-      "title": "Vidéastes d'Aventure",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mathilde_sacha.jpg",
-      "tagline": "Le duo qui te donne envie de tout plaquer pour vivre en tente.",
-      "description": "Des images de drones à couper le souffle et une esthétique parfaite. Ils parcourent le monde à vélo pour prouver que l'aventure est juste au bout de la roue avant.",
-      "statistics": {
-        "divine": 4,
-        "force": 3,
-        "humor": 2,
-        "iq": 3
-      },
-      "link": "https://www.instagram.com/mathilde_et_sacha/",
-      "socials": ["Instagram", "YouTube"]
-    },
-    {
       "handle": "@JEANNELEPOIX",
       "name": "Jeanne Lepoix",
       "title": "Designer & Aventurière",
@@ -63,54 +95,6 @@
       },
       "link": "https://www.instagram.com/jeannelepoix/",
       "socials": ["Instagram", "Blog"]
-    },
-    {
-      "handle": "@PERRINEFAGES",
-      "name": "Perrine Fages",
-      "title": "Ultra-Cycliste",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/perrine_fages.jpg",
-      "tagline": "Plus c'est dur, plus elle sourit.",
-      "description": "De la BikingMan à la Race Across France, Perrine est une machine d'endurance qui enchaîne les cols mythiques comme si c'était une balade au parc.",
-      "statistics": {
-        "divine": 2,
-        "force": 4,
-        "humor": 3,
-        "iq": 2
-      },
-      "link": "https://www.instagram.com/perrinefages/",
-      "socials": ["Instagram", "Strava"]
-    },
-    {
-      "handle": "@LE_BRAQUET_DE_LA_LIBERTE",
-      "name": "Gwilherm | Braquet de la Liberté",
-      "title": "Conteur de Routes",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/braquet_liberte.jpg",
-      "tagline": "Le poète du bitume et des chemins creux.",
-      "description": "Gwilherm raconte le vélo avec une plume et un angle unique. Entre test de matos pointu et récits de sorties épiques sous la pluie, c'est l'essence même du cyclisme plaisir.",
-      "statistics": {
-        "divine": 2,
-        "force": 3,
-        "humor": 3,
-        "iq": 4
-      },
-      "link": "https://www.instagram.com/le_braquet_de_la_liberte/",
-      "socials": ["Instagram", "YouTube"]
-    },
-    {
-      "handle": "@ALICEETLEVELO",
-      "name": "Alice et le vélo",
-      "title": "Voyageuse à Vélo",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/alice_velo.jpg",
-      "tagline": "La bienveillance sur deux roues.",
-      "description": "Alice partage ses conseils pour débuter le bikepacking, ses itinéraires préférés et sa vision d'un cyclisme accessible et joyeux.",
-      "statistics": {
-        "divine": 2,
-        "force": 2,
-        "humor": 4,
-        "iq": 3
-      },
-      "link": "https://www.instagram.com/aliceetlevelo/",
-      "socials": ["Instagram", "YouTube", "TikTok"]
     },
     {
       "handle": "@BIKINGMAN_ULTRA",
