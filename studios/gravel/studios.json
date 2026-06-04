@@ -8,8 +8,8 @@
       "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
       "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
       "statistics": {
-        "divine": 5,
-        "force": 4,
+        "divine": 4,
+        "force": 5,
         "humor": 1,
         "iq": 3
       },
@@ -17,7 +17,7 @@
       "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
-      "handle": "@PIERRE_ROLLAND_CYCLISME",
+      "handle": "@PIERRE_ROLLAND",
       "name": "Pierre Rolland",
       "title": "Ex-Pro & Gravel Rider",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/pierre_rolland.jpg",
