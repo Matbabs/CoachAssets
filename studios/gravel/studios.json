@@ -9,7 +9,7 @@
       "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
       "statistics": {
         "divine": 5,
-        "force": 5,
+        "force": 4,
         "humor": 1,
         "iq": 3
       },
@@ -21,10 +21,10 @@
       "name": "Pierre Rolland",
       "title": "Ex-Pro & Gravel Rider",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/pierre_rolland.jpg",
-      "tagline": "La légende du Tour qui a trouvé son bonheur dans la poussière.",
+      "tagline": "La légende du Tour qui a trouvé son bonheur dans l'ultra.",
       "description": "Ancien grimpeur d’élite du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
       "statistics": {
-        "divine": 4,
+        "divine": 5,
         "force": 4,
         "humor": 3,
         "iq": 3
@@ -37,11 +37,11 @@
       "name": "Quentin Ruel",
       "title": "Athlète & Ultra-Cycliste",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/quentin_ruel.jpg",
-      "tagline": "Du parquet au gravier, sans jamais freiner.",
-      "description": "Basketteur pro reconverti dans l’ultra-distance, Quentin apporte une énergie de dingue à chaque défi. Il grimpe les cols comme il dunk : avec une puissance pure et un mental d’acier capable d’avaler des milliers de kilomètres.",
+      "tagline": "Du bitume au gravier, sans jamais freiner.",
+      "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
       "statistics": {
-        "divine": 2,
-        "force": 4,
+        "divine": 3,
+        "force": 5,
         "humor": 3,
         "iq": 3
       },
@@ -54,9 +54,9 @@
       "title": "Aventurière & Créatrice",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/noemie_rochard.jpg",
       "tagline": "Celle qui trace la route pour toutes les autres.",
-      "description": "Passionnée de bikepacking et de bivouacs sauvages, Noémie documente ses traversées avec une authenticité rare. Elle inspire une communauté grandissante à oser l'aventure à vélo, peu importe le niveau.",
+      "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
       "statistics": {
-        "divine": 3,
+        "divine": 2,
         "force": 3,
         "humor": 2,
         "iq": 3
@@ -70,7 +70,7 @@
       "title": "Le Crew Gravel",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/les_rookies.jpg",
       "tagline": "Le gravel, la bière et les copains.",
-      "description": "Portés par Sébastien, Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
+      "description": "Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
       "statistics": {
         "divine": 2,
         "force": 2,
@@ -105,7 +105,7 @@
       "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
       "statistics": {
         "divine": 3,
-        "force": 4,
+        "force": 3,
         "humor": 2,
         "iq": 3
       },
