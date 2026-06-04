@@ -1,0 +1,132 @@
+{
+  "studios": [
+    {
+      "handle": "@STEVENLEHYARIC",
+      "name": "Steven Le Hyaric",
+      "title": "Aventurier Ultra",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/steven_le_hyaric.jpg",
+      "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
+      "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 1,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/stevenlehyaric/",
+      "socials": ["Instagram", "YouTube", "Strava"]
+    },
+    {
+      "handle": "@LESROOKIES",
+      "name": "Les Rookies",
+      "title": "Le Crew Gravel",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/les_rookies.jpg",
+      "tagline": "Le gravel, la bière et les copains.",
+      "description": "Portés par Sébastien, Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
+      "statistics": {
+        "divine": 2,
+        "force": 2,
+        "humor": 4,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/lesrookies/",
+      "socials": ["Instagram", "Podcast", "YouTube"]
+    },
+    {
+      "handle": "@MATHILDE_ET_SACHA",
+      "name": "Mathilde et Sacha",
+      "title": "Vidéastes d'Aventure",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/mathilde_sacha.jpg",
+      "tagline": "Le duo qui te donne envie de tout plaquer pour vivre en tente.",
+      "description": "Des images de drones à couper le souffle et une esthétique parfaite. Ils parcourent le monde à vélo pour prouver que l'aventure est juste au bout de la roue avant.",
+      "statistics": {
+        "divine": 4,
+        "force": 3,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/mathilde_et_sacha/",
+      "socials": ["Instagram", "YouTube"]
+    },
+    {
+      "handle": "@JEANNELEPOIX",
+      "name": "Jeanne Lepoix",
+      "title": "Designer & Aventurière",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/jeanne_lepoix.jpg",
+      "tagline": "L'art de l'itinérance à vélo.",
+      "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
+      "statistics": {
+        "divine": 3,
+        "force": 2,
+        "humor": 2,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/jeannelepoix/",
+      "socials": ["Instagram", "Blog"]
+    },
+    {
+      "handle": "@PERRINEFAGES",
+      "name": "Perrine Fages",
+      "title": "Ultra-Cycliste",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/perrine_fages.jpg",
+      "tagline": "Plus c'est dur, plus elle sourit.",
+      "description": "De la BikingMan à la Race Across France, Perrine est une machine d'endurance qui enchaîne les cols mythiques comme si c'était une balade au parc.",
+      "statistics": {
+        "divine": 2,
+        "force": 4,
+        "humor": 3,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/perrinefages/",
+      "socials": ["Instagram", "Strava"]
+    },
+    {
+      "handle": "@LE_BRAQUET_DE_LA_LIBERTE",
+      "name": "Gwilherm | Braquet de la Liberté",
+      "title": "Conteur de Routes",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/braquet_liberte.jpg",
+      "tagline": "Le poète du bitume et des chemins creux.",
+      "description": "Gwilherm raconte le vélo avec une plume et un angle unique. Entre test de matos pointu et récits de sorties épiques sous la pluie, c'est l'essence même du cyclisme plaisir.",
+      "statistics": {
+        "divine": 2,
+        "force": 3,
+        "humor": 3,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/le_braquet_de_la_liberte/",
+      "socials": ["Instagram", "YouTube"]
+    },
+    {
+      "handle": "@ALICEETLEVELO",
+      "name": "Alice et le vélo",
+      "title": "Voyageuse à Vélo",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/alice_velo.jpg",
+      "tagline": "La bienveillance sur deux roues.",
+      "description": "Alice partage ses conseils pour débuter le bikepacking, ses itinéraires préférés et sa vision d'un cyclisme accessible et joyeux.",
+      "statistics": {
+        "divine": 2,
+        "force": 2,
+        "humor": 4,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/aliceetlevelo/",
+      "socials": ["Instagram", "YouTube", "TikTok"]
+    },
+    {
+      "handle": "@BIKINGMAN_ULTRA",
+      "name": "Axel Carion",
+      "title": "Organisateur & Explorateur",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/axel_carion.jpg",
+      "tagline": "Le boss final de l'ultra-distance en autonomie.",
+      "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
+      "statistics": {
+        "divine": 3,
+        "force": 4,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/bikingman_ultra/",
+      "socials": ["Instagram", "YouTube", "Podcast"]
+    }
+  ]
+}
