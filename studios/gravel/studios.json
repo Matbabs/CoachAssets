@@ -4,7 +4,7 @@
       "handle": "@STEVENLEHYARIC",
       "name": "Steven Le Hyaric",
       "title": "Aventurier Ultra",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/steven_le_hyaric.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/steven.jpg",
       "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
       "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
       "statistics": {
@@ -17,10 +17,10 @@
       "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
-      "handle": "@PIERREROLLANDCYCLISME",
+      "handle": "@PIERRE_ROLLAND_CYCLISME",
       "name": "Pierre Rolland",
       "title": "Ex-Pro & Gravel Rider",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/pierre_rolland.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/pierre_rolland.jpg",
       "tagline": "La légende du Tour qui a trouvé son bonheur dans l'ultra.",
       "description": "Ancien grimpeur d’élite du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
       "statistics": {
@@ -36,7 +36,7 @@
       "handle": "@VICTORBOSONI",
       "name": "Victor Bosoni",
       "title": "Athlète Elite & Ultra",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/victor_bosoni.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/victor_bosoni.jpg",
       "tagline": "Le métronome de l'ultra-distance.",
       "description": "Spécialiste de l'ultra-cyclisme et des courses gravel les plus exigeantes, Victor est une machine de régularité. Entre records de distance et préparation millimétrée, il incarne la nouvelle génération de l'endurance pure.",
       "statistics": {
@@ -52,7 +52,7 @@
       "handle": "@QUENTIN_RUEL",
       "name": "Quentin Ruel",
       "title": "Athlète & Ultra-Cycliste",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/quentin_ruel.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/quentin_ruel.jpg",
       "tagline": "Du bitume au gravier, sans jamais freiner.",
       "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
       "statistics": {
@@ -68,7 +68,7 @@
       "handle": "@NOEMIE_ROCHARD",
       "name": "Noémie Rochard",
       "title": "Aventurière & Créatrice",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/noemie_rochard.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/noemie_rochard.jpg",
       "tagline": "Celle qui trace la route pour toutes les autres.",
       "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
       "statistics": {
@@ -84,7 +84,7 @@
       "handle": "@LESROOKIES",
       "name": "Les Rookies",
       "title": "Le Crew Gravel",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/les_rookies.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/les_rookies.jpg",
       "tagline": "Le gravel, la bière et les copains.",
       "description": "Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
       "statistics": {
@@ -100,7 +100,7 @@
       "handle": "@JEANNELEPOIX",
       "name": "Jeanne Lepoix",
       "title": "Designer & Aventurière",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/jeanne_lepoix.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/jeanne_lepoix.jpg",
       "tagline": "L'art de l'itinérance à vélo.",
       "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
       "statistics": {
@@ -116,7 +116,7 @@
       "handle": "@BIKINGMAN_ULTRA",
       "name": "Axel Carion",
       "title": "Organisateur & Explorateur",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/axel_carion.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/axel_carion.jpg",
       "tagline": "Le boss final de l'ultra-distance en autonomie.",
       "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
       "statistics": {
