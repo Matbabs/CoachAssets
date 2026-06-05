@@ -229,7 +229,7 @@
         }
         if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
           popup += `<button onclick="visitMarker('${marker.id}')" class="button">+10 points</button>`;
-        } else {
+        } else if (distanceToUser >= 0) {
           popup += `<button disabled class="button disabled">+10 points</button>`;
         }
         if (marker.user) {
