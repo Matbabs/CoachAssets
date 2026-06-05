@@ -223,14 +223,14 @@
         }
         popup += `<div class="actions">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
+          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">itinéraire</button>`;
         } else {
-          popup += `<button disabled class="button disabled">enmenez-moi</button>`;
+          popup += `<button disabled class="button disabled">itinéraire</button>`;
         }
         if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
+          popup += `<button onclick="visitMarker('${marker.id}')" class="button">+10 points</button>`;
         } else {
-          popup += `<button disabled class="button disabled">visiter</button>`;
+          popup += `<button disabled class="button disabled">+10 points</button>`;
         }
         if (marker.user) {
           popup += `<button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
