@@ -82,9 +82,15 @@
         border-radius: 100%;
         box-shadow: 0 0 5px 0 #8f8156;
       }
+      .actions {
+        margin-top: 7.5px;
+        display: flex;
+        flex-flow: "row wrap";
+        gap: 5px;
+      }
       .button {
         background: #ffc000;
-        border: none;
+        border: 1px solid #ffc000;
         padding: 7.5px;
         color: white;
         font-weight: bold;
@@ -92,7 +98,9 @@
         text-transform: uppercase;
       }
       .disabled {
-        background: grey;
+        background: white;
+        border: 1px solid grey;
+        color: grey;
       }
     </style>
     <script>
@@ -213,7 +221,7 @@
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
         }
-        popup += `<div style="display: flex; flex-flow: 'row wrap'; gap: 5px">`;
+        popup += `<div class="actions">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
           popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
         } else {
