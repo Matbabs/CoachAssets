@@ -215,16 +215,16 @@
         }
         popup += `<div style="display: flex; flex-flow: 'row wrap'; gap: 5px">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
-          popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
+          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
         } else {
-          popup += `<br><br><button disabled class="button disabled">enmenez-moi</button>`;
+          popup += `<button disabled class="button disabled">enmenez-moi</button>`;
         }
         if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
-          popup += `<br><br><button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
+          popup += `<button onclick="visitMarker('${marker.id}')" class="button">visiter</button>`;
         } else {
-          popup += `<br><br><button disabled class="button disabled">visiter</button>`;
+          popup += `<button disabled class="button disabled">visiter</button>`;
         }
-        popup += `<br><br><button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
+        popup += `<button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
         popup += "</div>";
         return popup;
       }
