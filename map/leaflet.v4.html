@@ -213,6 +213,7 @@
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
         }
+        popup += `<div style="display: flex; flex-flow: 'row wrap'; gap: 5px">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
           popup += `<br><br><button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">enmenez-moi</button>`;
         } else {
@@ -224,6 +225,7 @@
           popup += `<br><br><button disabled class="button disabled">visiter</button>`;
         }
         popup += `<br><br><button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
+        popup += "</div>";
         return popup;
       }
       function userColor(color) {
