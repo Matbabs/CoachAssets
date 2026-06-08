@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "TestPC(S4)",
-      "description": "TestPC(20 min à fond) pour évaluer la progression\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 3 x 1 min en Z4 (récup 1 min).\n→ Test :\n  - 20 min à fond (allure la plus élevée possible, comme un contre-la-montre).\n  - Position : Aéro (sur le cintre bas) ou assis en grand plateau.\n  - Terrain : Plat ou home-trainer pour une puissance constante.\n→ CalculPC:\n  -PC= 95% de la puissance moyenne sur 20 min (ou 90-95% FC max moyenne).\n→ Post-test : 15 min en Z1 + étirements (ischios, dos, épaules).\n\n👉 Objectif : Mesurer l’amélioration de la puissance aérobie depuis le début du cycle. Comparer avec le test initial (S1) pour ajuster les zones d’entraînement."
+      "tag": "SV1 Entretien",
+      "description": "1h dont 2 x 10 min en SV1\n\n📊 Séance légère pour garder le moteur en marche sans accumuler de fatigue.\n\nObjectif : Rappel physiologique du seuil aérobie."
     },
     {
-      "tag": "Montée référence (S4)",
-      "description": "Montée chronométrée (comparaison avec S1)\n\n📊 Protocole :\n→ Échauffement : 30 min en Z2 + 3 x 30 sec en Z4 (récup 1 min).\n→ Effort :\n  - Montée de référence (même parcours qu’en S1, ex : 5-10 km à 5-8%).\n  - Allure : Maximale soutenue (Z4-Z5, comme en course).\n  - Position : Assis ou danseuse selon préférence (mais identique à S1 pour comparaison).\n→ Mesures :\n  - Temps, FC moyenne/max, puissance (si capteur), perception de l’effort (RPE).\n→ Récupération : 10 min en Z1 + étirements (mollets, quadriceps).\n\n👉 Objectif : Évaluer les progrès en montée (gain de temps, FC plus basse à même allure). Identifier les points forts/faibles (ex : endurance vs explosivité)."
+      "tag": "Récupération Active",
+      "description": "45 min en Zone 1 (Moulinage)\n\n📊 Cadence haute (>95 RPM), aucune pression sur les pédales.\n\nObjectif : Éliminer les tensions musculaires et favoriser la circulation sanguine."
     },
     {
-      "tag": "Sortie libre (S4)",
-      "description": "2h en Z2 + 3 x 10 min Z4 (évaluation de la tenue d’effort)\n\n📊 Protocole :\n→ Base : 2h en Z2 (60-70% FC max) sur parcours varié (plat + faux-plats).\n→ Intervalles Z4 :\n  - 3 x 10 min en Z4 (88-94% FC max) avec 5 min de récup en Z2 entre chaque.\n  - Allure : Régulière, comme un tempo soutenu (phrases courtes, respiration contrôlée).\n→ Terrain : Route plate ou faux-plat pour maintenir une intensité constante.\n→ Nutrition : 1 gel (30g glucides) avant les intervalles + hydratation toutes les 15 min.\n→ Post-sortie : 10 min en Z1 + auto-évaluation (fatigue, récupération perçue).\n\n👉 Objectif : Tester la capacité à tenir un effort soutenu (Z4) après une longue sortie en endurance. Comparer avec les sorties similaires en S1/S2 pour voir l’amélioration de l’endurance à haute intensité."
+      "tag": "Rappel de Puissance (CP)",
+      "description": "1h dont 3 x 3 min @CP\n\n📊 Protocole :\n → 3 efforts courts à puissance critique pour ne pas perdre l'influx nerveux.\n → Récupération longue : 6 min entre les efforts.\n\nObjectif : Valider la fraîcheur physique et préparer le bloc suivant."
     }
   ]
 }

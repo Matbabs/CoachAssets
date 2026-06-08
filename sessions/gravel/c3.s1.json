@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Intervalles Z4 courts",
-      "description": "3 x 10 min Z4 (récup 5 min Z1)\n\n📊 Protocole :\n→ Échauffement : 20 min Z2 + 3 accélérations progressives (15 sec Z3).\n→ 3 x 10 min en Z4 (88-94% FC max) :\n  - Récupération : 5 min en Z1 entre chaque intervalle.\n  - Terrain : Plat ou faux-plat régulier.\n  - Cadence : 85-95 RPM.\n→ Retour au calme : 15 min Z1 + étirements.\n\n👉 Objectif : Améliorer la puissance au seuil lactique et la capacité à évacuer le lactate pendant les récupérations."
+      "tag": "SV1 - Endurance de Force",
+      "description": "1h30 dont 3 x 15 min en zone SV1 (Haut de Z2 / Bas de Z3)\n\n📊 Protocole :\n → Échauffement : 20 min Z2.\n → Travail : 3 séries de 15 min à l'allure SV1 (respiration rythmée mais contrôlée, peut parler par phrases courtes).\n → Cadence : 70-80 RPM pour solliciter la force.\n → Récupération : 5 min entre les séries.\n\nObjectif : Repousser le premier seuil ventilatoire pour économiser le glycogène."
     },
     {
-      "tag": "Seuil prolongé",
-      "description": "2 x 20 min Z4 (terrain régulier)\n\n📊 Protocole :\n→ Échauffement : 25 min Z2 + 4 accélérations (20 sec Z3-Z4).\n→ 2 x 20 min en Z4 (88-94% FC max) :\n  - Récupération : 10 min Z1-Z2 entre les intervalles.\n  - Terrain : Plat ou circuit régulier (ex : boucle de 5-10 km).\n  - Cadence : 80-90 RPM (assis pour économiser l’énergie).\n→ Retour au calme : 20 min Z1 + étirements dynamiques.\n\n👉 Objectif : Développer l’endurance de force et simuler les efforts longs en course (ex : échappée, montée prolongée)."
+      "tag": "Z2 Fondamentale",
+      "description": "2h en Zone 2 stricte\n\n📊 Focus : Fluidité (90 RPM) et gestion de l'hydratation.\n\nObjectif : Maintenir le volume aérobie sans fatigue résiduelle pour la séance de SST."
     },
     {
-      "tag": "Endurance + seuil",
-      "description": "2h Z2 + 2 x 8 min Z4\n\n📊 Protocole :\n→ 2h en Z2 (60-70% FC max) :\n  - Terrain : Mixte (plat + faux-plats).\n→ 2 x 8 min en Z4 (90-94% FC max) :\n  - Récupération : 4 min Z1-Z2.\n  - Placement : Après 1h de Z2.\n  - Cadence : 90+ RPM (danseuse recommandée).\n→ Retour au calme : 10 min Z1 + étirements statiques.\n\n👉 Objectif : Combiner endurance fondamentale et travail au seuil, et tester la stratégie nutritionnelle (ex : gels pendant les Z4)."
+      "tag": "SST (Sweet Spot Training)",
+      "description": "1h15 dont 2 x 20 min en Sweet Spot (88-94% de la puissance critique)\n\n📊 Protocole :\n → Échauffement : 15 min progressif.\n → Travail : 2 x 20 min à l'intensité 'confortablement dur'. C'est la zone charnière entre le foncier et le seuil.\n → Récupération : 8 min en Z1 entre les blocs.\n\nObjectif : Augmenter la densité mitochondriale et la tolérance à l'effort prolongé."
     }
   ]
 }

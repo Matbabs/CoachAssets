@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Over-Under",
-      "description": "3 x (3 min Z5 + 2 min Z3) avec récup 5 min entre les séries\n\n📊 Protocole :\n→ Échauffement : 20 min en Z2 (60-70% FC max) + 3 accélérations progressives (15 sec en Z4).\n→ Séries Over-Under :\n  - 3 x (3 min en Z5 (95-100% FC max, sprint maximal) + 2 min en Z3 (76-87% FC max, tempo soutenu)).\n  - Récupération : 5 min en Z1-Z2 entre chaque série (pédalage léger, hydratation).\n→ Terrain : Plat ou faux-plat pour éviter les variations d’intensité involontaires.\n→ Cadence : 90-100 RPM en Z5, 80-90 RPM en Z3.\n→ Position : Danseuse en Z5 pour maximiser la puissance, assis en Z3.\n\n👉 Objectif : Améliorer la tolérance à la lactatémie et la capacité à enchaîner des efforts explosifs (Z5) avec des phases de récupération active (Z3). Simule les accélérations en course."
+      "tag": "Over-Under (Fluctuations de Seuil)",
+      "description": "1h30 dont 3 x (2 min Over / 2 min Under)\n\n📊 Protocole :\n → Bloc de 12 min répété 3 fois :\n   - 2 min à 105% CP (Over)\n   - 2 min à 90% CP (Under)\n → Récupération : 6 min entre les blocs de 12 min.\n\nObjectif : Apprendre au corps à récupérer de l'acide lactique tout en restant à une intensité élevée (spécifique aux relances en bikepacking)."
     },
     {
-      "tag": "CLM simulé",
-      "description": "30 min à allure maximale (Z4 haute / Z5 basse)\n\n📊 Protocole :\n→ Échauffement : 30 min progressif (Z1 → Z2 → Z3) + 3 x 1 min en Z4 avec 1 min de récup.\n→ Effort :\n  - 30 min en Z4 haute (90-94% FC max) ou Z5 basse (95% FC max) selon niveau.\n  - Allure : La plus régulière possible (utiliser un capteur de puissance si disponible).\n  - Position : Aéro (sur le cintre bas) pour simuler les conditions de contre-la-montre.\n→ Terrain : Route plate ou circuit sans virages serrés.\n→ Nutrition : 1 gel (25-30g glucides) à 15 min et hydratation toutes les 10 min.\n→ Retour au calme : 15 min en Z1 + étirements (quadriceps, ischios, dos).\n\n👉 Objectif : Travailler la puissance soutenue et la gestion de l’effort en solitude, comme en CLM. Valider la stratégie de pacing et la résistance mentale."
+      "tag": "Z2 Longue (Soutien)",
+      "description": "3h en Zone 2\n\n📊 Focus : Tester l'alimentation de course sur une sortie de 3h après les séances d'intervalles de début de semaine.\n\nObjectif : Capacité à maintenir la Z2 sur fatigue musculaire."
     },
     {
-      "tag": "Sortie technique",
-      "description": "2h en Z2 avec 5 x 1 min Z5 (sprints)\n\n📊 Protocole :\n→ Base : 2h en Z2 (60-70% FC max) sur parcours technique (virages, descentes, montées courtes).\n→ Sprints :\n  - 5 x 1 min en Z5 (95-100% FC max) avec 5 min de récup en Z2 entre chaque.\n  - Déclenchement : Sur signal (ex : panneau, sommet de côte) ou en relais avec un partenaire.\n→ Terrain : Mixte (plat pour les sprints, vallonné pour le travail technique).\n→ Focus :\n  - Position : Danseuse en sprint, assis en récupération.\n  - Cadence : 100+ RPM en Z5, 80-90 RPM en Z2.\n  - Sécurité : Anticiper les freinages et les trajectoires en groupe.\n→ Variante : Remplacer 1-2 sprints par des démarrages en côte (10-15 sec en Z5).\n\n👉 Objectif : Développer la puissance explosive, la réactivité et la maîtrise du vélo en conditions variables. Idéal pour les courses avec des arrivées en sprint ou des changements de rythme."
+      "tag": "SST Intensif",
+      "description": "1h45 dont 3 x 20 min en Sweet Spot\n\n📊 Protocole :\n → 3 blocs de 20 min à 90% de la CP.\n → Récupération courte : 5 min entre les blocs.\n\nObjectif : Volume maximal à haute intensité sous-critique avant la semaine de récupération."
     }
   ]
 }

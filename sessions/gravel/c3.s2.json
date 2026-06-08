@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "S2 - Intervalles Z4 en cote",
-      "description": "4 x 8 min Z4 en cote (recuperation descente legere en Z1-Z2)\n\nProtocole :\n- Echauffement : 30 min Z2 + 4 accelerations progressives (20 sec Z3-Z4) sur terrain plat.\n- 4 x 8 min en Z4 (88-94% FC max) :\n  - Terrain : Cote reguliere (5-8% de denivele, 3-6 km/h de moins qu'en plat).\n  - Cadence : 60-75 RPM (assis, engagement des muscles posterieurs).\n  - Recuperation : Descente en Z1-Z2 (pedalage leger, sans forcer).\n  - Position : Mains en haut du cintre pour ouvrir la cage thoracique.\n- Retour au calme : 15 min Z1 + etirements (dos, hanches, mollets).\n\nObjectif : Renforcer la puissance en monte et ameliorer l'efficacite neuromusculaire sur des pentes prolongees."
+      "tag": "SV2 - Seuil Anaérobie",
+      "description": "1h15 dont 4 x 8 min au Seuil (Z4)\n\n📊 Protocole :\n → Échauffement : 20 min avec 2 accélérations de 1 min.\n → Travail : 4 séries de 8 min précisément à votre puissance de test 12 min (SV2).\n → Récupération : 4 min (ratio 2:1).\n\nObjectif : Améliorer le recyclage des lactates et la puissance stable."
     },
     {
-      "tag": "S2 - Seuil progressif en monte",
-      "description": "10-15-20 min Z4 en cote (recuperation 10 min Z1-Z2 entre chaque)\n\nProtocole :\n- Echauffement : 35 min Z2 + 5 accelerations (30 sec Z4) sur faux-plat.\n- Serie progressive :\n  - 10 min Z4 (88% FC max) : Montee moderee (4-6%).\n  - Recuperation : 10 min Z1-Z2 (descente ou plat).\n  - 15 min Z4 (90% FC max) : Montee plus raide (6-8%).\n  - Recuperation : 10 min Z1-Z2.\n  - 20 min Z4 (92% FC max) : Montee exigeante (7-10%), rythme constant.\n- Retour au calme : 20 min Z1 + automassage (rouleau pour les jambes).\n\nObjectif : Developper l'endurance de force et la capacite a maintenir un effort long en monte, en simulant les ascensions en course."
+      "tag": "Z2 Endurance Active",
+      "description": "2h15 en Zone 2\n\n📊 Terrain : Vallonné si possible pour travailler les transitions de puissance naturelles.\n\nObjectif : Accumuler de la fatigue périphérique sur les fibres lentes."
     },
     {
-      "tag": "S2 - Endurance et seuils en monte",
-      "description": "3h Z2 + 3 x 5 min Z4 en cote (recuperation 3 min Z1)\n\nProtocole :\n- 3h en Z2 (60-70% FC max) :\n  - Terrain : Parcours vallonne (alternance montees douces et plats).\n  - Nutrition : Teste gels/boissons iso (1 par heure) + hydratation reguliere.\n- 3 x 5 min Z4 (90-94% FC max) :\n  - Placement : Apres 2h de Z2, sur des cotes courtes (3-5 min, 6-10%).\n  - Cadence : 70-80 RPM (assis, poussee puissante).\n  - Recuperation : 3 min Z1 en descente ou plat.\n- Retour au calme : 10 min Z1 + etirements (chaine posterieure).\n\nObjectif : Combiner endurance fondamentale et resistance en monte, tout en optimisant la gestion de l'effort et des reserves energetiques sur longues sorties."
+      "tag": "Intervalles CP (Puissance Critique)",
+      "description": "1h10 dont 5 x 5 min @105% CP\n\n📊 Protocole :\n → Travail : 5 séries de 5 min juste au-dessus de la puissance critique (légèrement au-dessus de l'allure test 12 min).\n → Récupération : 5 min en Z1 (récupération complète).\n\nObjectif : 'Tirer' la puissance critique vers le haut en travaillant légèrement en sur-régime."
     }
   ]
 }
