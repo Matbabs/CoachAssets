@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Intervalles courts Z5 (S1)",
-      "description": "10 x 1 min Z5 (récup 1 min Z1) + 5 x 2 min Z5 (récup 2 min)\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 3 x 30 sec en Z4 (récup 30 sec).\n→ Intervalles :\n  - 10 x 1 min en Z5 (95-100% FC max) avec 1 min récupération en Z1 entre chaque.\n  - 5 x 2 min en Z5 avec 2 min récupération en Z1 entre chaque.\n  - Cadence : 90-100 RPM pour maximiser la puissance.\n→ Récupération finale : 15 min en Z1 + étirements (quadriceps, mollets).\n\n👉 Objectif : Développer la VO2 max et la capacité à produire de hautes intensités. Améliorer la récupération entre les efforts intenses."
+      "tag": "Micro-Intervalles (30/30)",
+      "description": "1h15 dont 2 séries de (10 x 30s Z5 / 30s Z1)\n\n📊 Échauffement : 20 min Z2.\n → Travail : 2 blocs de 10 répétitions (30 sec à 110-120% PMA / 30 sec de récupération pédalage léger).\n → Récupération entre les blocs : 5 min Z1.\n\n👉 Objectif : Augmenter la consommation d'oxygène sans accumuler trop de fatigue lactique."
     },
     {
-      "tag": "Récupération active (S1)",
-      "description": "Sortie légère 1h Z1\n\n📊 Protocole :\n→ Durée : 1h en Z1 (50-60% FC max) sur parcours plat et tranquille.\n→ Allure : Pédalage souple, conversation facile.\n→ Cadence : 90-100 RPM pour favoriser la récupération.\n→ Focus : Relâchement musculaire et évacuation des toxines.\n→ Post-sortie : Étirements doux (ensemble du bas du corps) + hydratation.\n\n👉 Objectif : Favoriser la récupération après la séance intense de la veille. Préparer le corps pour la sortie endurance + sprints du lendemain."
+      "tag": "PMA Soutenue (Intervalles courts)",
+      "description": "1h20 dont 5 x 3 min en Z5\n\n📊 Échauffement : 20 min progressive.\n → Travail : 5 répétitions de 3 min en Z5 (PMA), cadence élevée (95+ RPM).\n → Récupération : 3 min en Z2 entre chaque effort.\n\n👉 Objectif : Apprendre au corps à maintenir un débit d'oxygène maximal sur une durée intermédiaire."
     },
     {
-      "tag": "Sortie endurance + sprints (S1)",
-      "description": "2h Z2 + 6 x 30s Z5\n\n📊 Protocole :\n→ Base : 2h en Z2 (60-70% FC max) sur parcours plat ou légèrement vallonné.\n→ Sprints Z5 :\n  - 6 x 30 sec en Z5 (effort maximal) avec 4 min de récupération en Z2 entre chaque.\n  - Départ lancé, position aérodynamique pour maximiser la puissance.\n  - Effort explosif mais contrôlé (RPE 9/10).\n→ Nutrition : Hydratation régulière + gel énergétique à mi-parcours.\n→ Post-sortie : 10 min en Z1 + auto-évaluation (fatigue musculaire, récupération).\n\n👉 Objectif : Combiner endurance fondamentale et développement de la puissance anaérobie. Travailler la capacité à produire des efforts intenses en fin de sortie."
+      "tag": "Endurance active + Bosses",
+      "description": "2h30 en Z2 avec 4 bosses explosives\n\n📊 Sortie de fond en Z2.\n → Travail : Sur le parcours, choisir 4 bosses de 1 à 2 min et les monter au sprint (Z6) pour finir en haut à bloc.\n → Récupération : Totale entre les bosses (min 15 min Z2).\n\n👉 Objectif : Simuler les relances nécessaires en bikepacking lors de changements de topographie."
     }
   ]
 }
