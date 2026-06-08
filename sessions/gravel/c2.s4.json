@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Endurance + intervalles Z4",
-      "description": "2h30 en Z2 + 3 x 3 min en Z4\n\n📊 Protocole :\n→ 2h30 en Z2 (60-70% FC max, endurance fondamentale).\n→ 3 x 3 min en Z4 (88-94% FC max, effort soutenu) :\n  - Récupération : 3 min en Z1-Z2 entre chaque intervalle.\n→ Terrain : Plat ou faux-plat pour maintenir une intensité constante.\n→ Cadence : 80-90 RPM en Z2, 90-100 RPM en Z4.\n\n👉 Objectif : Combiner endurance de base et travail au seuil pour améliorer la capacité à soutenir des efforts intenses après une longue sortie."
+      "tag": "Récupération active",
+      "description": "1h00 en Z1 (Moulinage)\n\n📊 Protocole :\n → 1 heure sur terrain parfaitement plat.\n → Intensité : Zone 1 (très facile).\n → Cadence : Souple, sans aucune résistance dans les pédales.\n\n👉 Objectif : Favoriser la circulation sanguine et l'élimination des toxines."
     },
     {
-      "tag": "Sortie groupe (relais)",
-      "description": "2h en Z2 avec relais\n\n📊 Protocole :\n→ 2 heures en Z2 (60-70% FC max) en groupe.\n→ Relais :\n  - Alternance à l’avant du peloton toutes les 5-10 min (30 sec à 2 min d’effort en tête).\n  - Intensité en tête : Z3-Z4 (simulation d’échappée ou de rythme soutenu).\n→ Terrain : Parcours plat ou légèrement vallonné pour faciliter les rotations.\n→ Communication : Signaler les changements de rythme et les obstacles.\n\n👉 Objectif : Travailler la coordination en groupe, l’efficacité énergétique en roulement, et la gestion des accélérations."
+      "tag": "Entretien & Tonus",
+      "description": "1h15 en mode plaisir\n\n📊 Protocole :\n → 1h15 sans regarder le cardio.\n → Dynamisme : 3 à 4 sprints très courts (6 sec) pour garder de la tonicité.\n → Focus : Sensations et plaisir de rouler léger.\n\n👉 Objectif : Maintenir le système nerveux éveillé sans générer de fatigue."
     },
     {
-      "tag": "Sortie très longue (nutrition)",
-      "description": "5h en Z2 (objectif distance/nutrition)\n\n📊 Protocole :\n→ 5 heures en Z2 (60-70% FC max) avec objectif distance (ex : 100-120 km selon niveau).\n→ Terrain : Mixte (plat, faux-plats, vallonné léger) pour varier les sollicitations.\n→ Nutrition :\n  - Glucides : 70-90 g/h (mix solide/liquide).\n  - Hydratation : 600-800 ml/h + électrolytes.\n  - Test : Nouveaux produits (gels, barres) ou stratégies (ex : ravitaillement toutes les 30 min).\n→ Matériel : Vérifier usure pneus, freins, et emporter kit de réparation complet.\n\n👉 Objectif : Valider la capacité à tenir la distance et affiner la stratégie nutritionnelle pour les longues sorties ou compétitions."
+      "tag": "Sortie Café & Sociale",
+      "description": "2h00 tranquille\n\n📊 Protocole :\n → 2 heures à allure balade.\n → Terrain : Forêt ou routes calmes.\n → État d'esprit : Finir avec une sensation de fraîcheur totale.\n\n👉 Objectif : Recharger les batteries mentales pour le cycle suivant."
     }
   ]
 }

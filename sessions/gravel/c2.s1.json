@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Endurance fondamentale (Z2)",
-      "description": "2h en Z2 (terrain plat)\n\n📊 Protocole :\n → 2 heures en endurance fondamentale (Z2, 60-70% FC max).\n → Terrain : Plat ou faux-plat descendant pour maintenir une allure régulière.\n → Cadence : 80-90 RPM pour solliciter le système cardiovasculaire sans forcer.\n\n👉 Objectif : Construire une base aérobie solide et habituer le corps à la durée."
+      "tag": "Endurance & Éveil",
+      "description": "1h15 en Z2 + 3 accélérations\n\n📊 Protocole :\n → 1h15 en endurance fondamentale (Z2).\n → Terrain : Plat.\n → Cadence : Fluide (85-95 RPM).\n → Bonus : Intégrer 3 accélérations de 30 secondes (haute cadence) pour réveiller les jambes.\n\n👉 Objectif : Travailler la fluidité du pédalage et la base aérobie."
     },
     {
-      "tag": "Z2 + danseuse (renforcement)",
-      "description": "1h30 en Z2 + 6 x 1 min en danseuse\n\n📊 Protocole :\n → 1h30 en Z2 (endurance de base).\n → 6 x 1 min en danseuse (renforcement spécifique, grand plateau, cadence 60-70 RPM).\n → Récupération : 2 min en Z2 assis entre chaque série.\n\n👉 Objectif : Améliorer la force-endurance et la stabilité du pédalage."
+      "tag": "Z2 & Technique en bosses",
+      "description": "1h30 en terrain vallonné\n\n📊 Protocole :\n → 1h30 en Z2.\n → Terrain : Vallonné (bosses modérées).\n → Technique : Maintenir la Z2 dans les montées (ne pas s'essouffler). Travail de la danseuse pour relancer.\n\n👉 Objectif : Apprendre à gérer son intensité malgré les changements de relief."
     },
     {
-      "tag": "Sortie longue (test ravitaillement)",
-      "description": "3h en Z2 (ravitaillement test)\n\n📊 Protocole :\n → 3 heures en Z2 sur terrain varié (plat à vallonné léger).\n → Test de ravitaillement :\n   - Boire toutes les 20 min (500 ml/h).\n   - Manger toutes les 45 min (30-60 g de glucides/h : barres, bananes, gels).\n → Simuler les conditions de course (sacoche, bidons, vêtements).\n\n👉 Objectif : Habituer le corps à gérer l’effort long et affiner sa stratégie de ravitaillement."
+      "tag": "Sortie longue (Fondations)",
+      "description": "3h en Z2 (Régularité)\n\n📊 Protocole :\n → 3 heures en endurance pure (Z2).\n → Focus : Position stable et confort sur la selle.\n → Nutrition : Valider la stratégie de ravitaillement (manger toutes les 45 min).\n\n👉 Objectif : Développer l'endurance de base et tester l'ergonomie du vélo."
     }
   ]
 }

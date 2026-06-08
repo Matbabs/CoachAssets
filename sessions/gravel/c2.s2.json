@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Endurance gravier (Z2)",
-      "description": "2h en Z2 sur gravier\n\n📊 Protocole :\n→ 2 heures en endurance fondamentale (Z2, 60-70% FC max) sur terrain de gravier.\n→ Terrain : Mix de chemins stables et sections techniques (petits cailloux, ornières légères).\n→ Cadence : 70-80 RPM (plus bas qu’en route pour gérer les irrégularités).\n→ Focus : Maîtrise du vélo, lecture du terrain, position relâchée.\n\n👉 Objectif : Développer l’endurance spécifique gravier et la stabilité sur sols instables."
+      "tag": "Endurance active (Charge légère)",
+      "description": "1h30 en Z2 avec sacoches\n\n📊 Protocole :\n → 1h30 en Z2.\n → Équipement : Vélo légèrement chargé (sacoche de selle ou de cadre).\n → Focus : Stabilité du vélo et répartition du poids.\n\n👉 Objectif : S'habituer au comportement du vélo sous charge modérée."
     },
     {
-      "tag": "Fartlek (accélérations libres)",
-      "description": "1h45 en Z2 avec 5 accélérations (30s à 2 min)\n\n📊 Protocole :\n→ 1h45 en Z2 (base aérobie).\n→ 5 accélérations libres :\n  - Durée : 30s à 2 min (varier à chaque répétition).\n  - Intensité : Z4-Z5 (effort soutenu à maximal).\n  - Récupération : Retour en Z2 jusqu’à stabilisation de la FC (2-4 min).\n→ Terrain : Parcours varié (plat, faux-plats, descentes douces).\n\n👉 Objectif : Travailler les changements de rythme et la réactivité cardiovasculaire."
+      "tag": "Tempo Bikepacking (Z3)",
+      "description": "2h00 incluant 3 x 15 min en Z3\n\n📊 Protocole :\n → 2 heures au total.\n → Travail : 3 blocs de 15 min en Zone 3 (allure de voyage soutenue).\n → Récupération : 5 min en Z2 entre les blocs.\n\n👉 Objectif : Travailler le rythme de croisière que l'on tient sur de longues ascensions."
     },
     {
-      "tag": "Sortie longue + Z3 (endurance renforcée)",
-      "description": "3h30 en Z2 + 2 x 10 min en Z3\n\n📊 Protocole :\n→ 3h30 en Z2 (endurance de base).\n→ 2 x 10 min en Z3 (75-85% FC max) :\n  - Terrain : Faux-plat montant ou plat avec vent de face.\n  - Récupération : 5 min en Z1-Z2 entre les séries.\n→ Ravitaillement : 60-80g de glucides/h + 500-700 ml d’eau/h.\n\n👉 Objectif : Renforcer l’endurance aérobie et habituer le corps aux efforts prolongés en Z3."
+      "tag": "Sortie longue (Volume)",
+      "description": "4h sur terrain varié\n\n📊 Protocole :\n → 4 heures en Z2 dominante.\n → Terrain : Inclure du dénivelé si possible.\n → Gestion : Rester sous le seuil d'essoufflement, même en haut des cols.\n\n👉 Objectif : Augmenter la capacité de résistance à la fatigue."
     }
   ]
 }

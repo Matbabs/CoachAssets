@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Alternance Z2/Z3",
-      "description": "2h en alternance Z2/Z3 (10 min par bloc)\n\n📊 Protocole :\n→ 10 min en Z2 (60-70% FC max, endurance fondamentale).\n→ 10 min en Z3 (75-85% FC max, effort soutenu).\n→ Répéter 6 fois (total : 2h).\n→ Terrain : Plat à légèrement vallonné pour maintenir une intensité constante.\n→ Cadence : 80-90 RPM en Z2, 70-80 RPM en Z3.\n\n👉 Objectif : Améliorer la transition entre endurance et seuil aérobie, et habituer le corps aux changements de rythme."
+      "tag": "Force en endurance",
+      "description": "1h45 en Z2 (Basse cadence)\n\n📊 Protocole :\n → 1h45 en Z2 sur faux-plats.\n → Travail : Utiliser un gros braquet pour maintenir une cadence de 60-70 RPM.\n → Focus : Gainage et force musculaire sans monter en cardio.\n\n👉 Objectif : Renforcer les muscles posturaux et la puissance musculaire brute."
     },
     {
-      "tag": "Sortie à jeun (Z2)",
-      "description": "2h en Z2 sans petit-déjeuner\n\n📊 Protocole :\n→ 2 heures en Z2 (60-70% FC max) à jeun (eau et électrolytes autorisés).\n→ Horaire idéal : Tôt le matin, après un jeûne nocturne de 10-12h.\n→ Terrain : Plat ou faux-plat descendant pour limiter l’effort.\n→ Hydratation : 500 ml/h d’eau + électrolytes (sodium, potassium).\n→ Ravitaillement d’urgence : Gel ou barre en cas d’hypoglycémie (à emporter).\n\n👉 Objectif : Stimuler l’adaptation métabolique (utilisation des graisses) et renforcer la résistance à la faim en effort long."
+      "tag": "Spécifique Bikepacking (Poids réel)",
+      "description": "2h15 en configuration voyage\n\n📊 Protocole :\n → 2h15 avec le poids réel (équipement complet).\n → Travail : Relances en sortie de virage et pilotage en descente avec le vélo lourd.\n\n👉 Objectif : Valider la maniabilité du vélo et l'ajustement final du matériel."
     },
     {
-      "tag": "Sortie longue vallonnée (Z2)",
-      "description": "4h en Z2 (terrain vallonné)\n\n📊 Protocole :\n→ 4 heures en Z2 (60-70% FC max) sur un parcours avec dénivelé modéré (500-800 m D+).\n→ Terrain : Montées courtes (3-5%) et descentes techniques pour travailler la variété d’effort.\n→ Ravitaillement :\n  - Glucides : 60-90 g/h (mix de solides et liquides).\n  - Hydratation : 600-800 ml/h (eau + boisson iso).\n→ Matériel : Vérifier freins, pneus (pression adaptée au vallonné).\n\n👉 Objectif : Développer l’endurance spécifique pour les parcours avec dénivelé et tester la gestion de l’effort sur la durée."
+      "tag": "L'Étape Reine (Simulation)",
+      "description": "5h à 6h en Z2 (Test ultime)\n\n📊 Protocole :\n → 5h à 6h d'effort continu en Z2.\n → Focus : Mental et digestion sur le long terme.\n → Règle d'or : Finir à la même allure qu'au départ.\n\n👉 Objectif : Valider la résistance psychologique et le système digestif."
     }
   ]
 }
