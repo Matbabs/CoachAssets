@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Pilotage (technique)",
-      "description": "Slalom + freinage (1h sur parking/gravier)\n\n📊 Exercices :\n → Slalom entre plots/cônes (espacés de 3-5m)\n → Freinages progressifs (avant/arrière, contrôle de la dérive)\n → Virages serrés en position basse (genou extérieur au sol)\n\n👉 Objectif : Améliorer la maîtrise du vélo et la confiance en terrain instable."
+      "tag": "Maniabilité et Stabilité (Vélo chargé)",
+      "description": "Travail d'équilibre et de trajectoire (1h sur route calme ou parking)\n\n📊 Exercices :\n → Slalom serré à basse vitesse : Apprendre à gérer l'inertie des sacoches.\n → Freinages d'urgence : Maîtriser la distance d'arrêt avec le poids supplémentaire (répartition avant/arrière).\n → Trajectoires en descente : Anticiper les virages et choisir la ligne la plus fluide pour conserver l'élan.\n\n👉 Objectif : Gagner en confiance avec un vélo lesté et optimiser la sécurité en descente."
     },
     {
-      "tag": "Montées courtes (puissance)",
-      "description": "5 x 2 min en Z4 (côte à 6-8%)\n\n📊 Effort : 2 min en Z4 (85-95% FC max) sur une côte courte et raide.\n → Récupération : Descente en roulant doucement (2-3 min).\n\n👉 Objectif : Travailler la puissance en montée et la récupération active."
+      "tag": "Force et Seuil (Gestion de la PC)",
+      "description": "5 x 3 min à la Puissance Critique (côte à 4-6%)\n\n📊 Effort : 3 min en Z4 (95-105% de la PC / 85-92% FC max).\n → Cadence : 60-70 tr/min pour simuler le passage d'un col chargé.\n → Récupération : 3 min de descente en roue libre ou pédalage très souple (Z1).\n\n👉 Objectif : Augmenter la puissance au seuil et apprendre à passer des bosses sans entamer le réservoir W'."
     },
     {
-      "tag": "Sortie technique (endurance + variations)",
-      "description": "2h sur gravier avec changements de rythme\n\n📊 Structure :\n → 80% du temps en Z2 (endurance de base)\n → 20% en accélérations libres (30 sec à 2 min, Z3-Z4)\n → Intègre des passages techniques (rochers, ornières, virages serrés)\n\n👉 Objectif : Habituer le corps aux variations d’effort et aux terrains accidentés."
+      "tag": "Sortie typée \"Voyage\" (Endurance et Tempo)",
+      "description": "2h30 sur route avec variations de relief\n\n📊 Structure :\n → Base : 80% du temps en Z2 (60-80% PC) pour l'économie d'énergie.\n → Bosses : Passer les montées en Z3 (80-95% PC) sans jamais dépasser la PC pour protéger le glycogène.\n → Descentes : Travail de l'aérodynamisme et du relâchement musculaire.\n\n👉 Objectif : Simuler une étape de voyage en gérant son allure sur la durée et en optimisant l'inertie du vélo."
     }
   ]
 }
