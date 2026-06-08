@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Test puissance maximale (S4)",
-      "description": "Test sprint : 5 x 10s max (mesurer puissance pic)\n\n📊 Protocole :\n→ Échauffement : 30 min progressif (Z1 → Z2 → Z3) + 5 accélérations progressives.\n→ Tests :\n  - 5 x 10 sec sprint maximal avec récupération complète de 5 min entre chaque.\n  - Mesure : Puissance maximale, vitesse pic, temps pour atteindre le pic.\n  - Conditions : Vent arrière ou parcours plat identique pour tous les tests.\n→ Récupération : 15 min en Z1 très léger.\n\n👉 Objectif : Évaluer la progression de la puissance explosive sur 10 secondes. Comparaison avec les tests précédents."
+      "tag": "Affûtage : Rappel de Force",
+      "description": "1h00 dont 3 x 3 min Force modérée\n\n📊 Travail spécifique : 3 répétitions de 3 min en Z3 à 50 RPM.\n → Objectif : Rappel musculaire sans fatigue nerveuse.\n\n👉 Objectif : Garder les muscles actifs tout en restaurant les réserves de glycogène."
     },
     {
-      "tag": "Sortie de récupération active (S4)",
-      "description": "Sortie libre : 2h avec 10 accélérations\n\n📊 Protocole :\n→ Base : 2h en Z1/Z2 très confortable sur parcours plat.\n→ Accélérations :\n  - 10 accélérations progressives de 30 sec (Z1 → Z3) avec récupération de 3 min.\n  - Objectif : Activation musculaire sans fatigue.\n  - Pas d'effort maximal, maintien du confort.\n→ Focus : Pédalage rond et détente.\n\n👉 Objectif : Récupération active avec stimulation légère. Préparation pour le test final."
+      "tag": "Affûtage : Vitesse & Influx",
+      "description": "1h00 dont 5 x 6s Sprints Hyper-véloces\n\n📊 Travail spécifique : 5 sprints très courts (6 sec).\n → Cadence : Maximale (>120 RPM).\n → Récupération : 5 min totale entre chaque.\n\n👉 Objectif : Réveiller le système nerveux et l'agilité musculaire avant le départ."
     },
     {
-      "tag": "Récupération complète (S4)",
-      "description": "Récup complète : 1h Z1 + auto-massage\n\n📊 Protocole :\n→ Vélo : 1h en Z1 très léger (50-60% FC max) sur home-trainer ou parcours plat.\n→ Auto-massage :\n  - 20 min de massage des jambes (quadriceps, ischio, mollets).\n  - Outils : rouleau, balle de massage, huile si nécessaire.\n  - Focus : zones tendues identifiées pendant le cycle.\n→ Hydratation : Abondante pendant et après.\n\n👉 Objectif : Optimiser la récupération après le cycle d'entraînement. Préparation physique et mentale pour la suite."
+      "tag": "Sortie Libre : Agilité & Vérification",
+      "description": "1h30 Zone 1 / Zone 2\n\n📊 Travail spécifique : Sortie plaisir avec le vélo chargé tel qu'il sera au départ.\n → Consigne : Quelques relances souples en danseuse pour vérifier le matériel et les sensations.\n\n👉 Objectif : Arriver frais, confiant et avec un vélo parfaitement réglé."
     }
   ]
 }

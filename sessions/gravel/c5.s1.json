@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Sprints courts explosifs (S1)",
-      "description": "10 x 20s sprint (démarrage arrêté, récup 2 min)\n\n📊 Protocole :\n→ Échauffement : 20 min progressif (Z1 → Z2 → Z3) + 5 accélérations progressives de 10 sec.\n→ Sprints :\n  - 10 x 20 sec sprint maximal depuis arrêt complet.\n  - Récupération : 2 min en Z1 entre chaque sprint.\n  - Technique : Départ explosif, passage rapide des vitesses.\n→ Récupération finale : 10 min en Z1 + étirements des muscles explosifs.\n\n👉 Objectif : Développer la puissance explosive et la capacité d'accélération. Travail spécifique pour les attaques et démarrages en course."
+      "tag": "Neuromusculaire : Sprints Arrêtés",
+      "description": "1h15 dont 10 sprints départ arrêté\n\n📊 Travail spécifique : 10 répétitions de 10 secondes à intensité MAXIMALE.\n → Protocole : À l'arrêt complet ou vitesse marche, grand braquet. Sprint de 10s en danseuse en tirant fort sur le cintre.\n → Récupération : 3 min en Zone 1 entre chaque effort.\n\n👉 Objectif : Recruter un maximum de fibres musculaires pour vaincre l'inertie du vélo chargé."
     },
     {
-      "tag": "Puissance en danseuse (S1)",
-      "description": "5 x 1 min Z5 (danseuse) + 1h Z2\n\n📊 Protocole :\n→ Échauffement : 15 min progressif (Z1 → Z2).\n→ Intervalles :\n  - 5 x 1 min en Z5 exclusivement en danseuse.\n  - Récupération : 3 min en Z2 entre chaque effort.\n  - Focus : Technique de danseuse optimale (bassin stable, pédalage rond).\n→ Endurance : 1h en Z2 après les intervalles.\n\n👉 Objectif : Améliorer la puissance spécifique en position debout. Renforcer les muscles stabilisateurs et la technique de danseuse."
+      "tag": "Force Max : SFR (Seuil de Force de Réserve)",
+      "description": "1h30 dont 5 x 4 min en Force Basse Cadence\n\n📊 Travail spécifique : 5 répétitions de 4 min en Zone 3 (Tempo) à 40-50 RPM.\n → Terrain : Côte régulière (4-6%).\n → Consigne : Dos fixe, mains aux cocottes, pas de balancement du corps. Tout vient des jambes.\n\n👉 Objectif : Renforcer les tendons et la force musculaire brute spécifique à la grimpe lente."
     },
     {
-      "tag": "Sprints tactiques (S1)",
-      "description": "2h avec sprints en haut des montées\n\n📊 Protocole :\n→ Base : 2h en Z2 sur parcours vallonné.\n→ Sprints :\n  - 6-8 sprints de 15-20 sec déclenchés dans les 50 derniers mètres des montées.\n  - Récupération : Descente ou plat suivant pour récupération active.\n  - Objectif : reproduction de situations de course.\n→ Nutrition : Hydratation régulière + gel à 1h15.\n\n👉 Objectif : Développer la capacité à sprinter en fatigue, comme en fin de montée. Travail spécifique aux situations de course."
+      "tag": "Explosivité : Sortie Vallonnée & Relances",
+      "description": "2h30 avec 12 relances explosives\n\n📊 Travail spécifique : Sur un parcours varié, à chaque sommet de bosse ou sortie de virage, faire un sprint de 15s.\n → Intensité : Zone 6 (Anaérobie).\n → Cadence : Passer de 50 à 110 RPM le plus vite possible.\n\n👉 Objectif : Travailler la capacité à changer de rythme malgré la fatigue et le poids du matériel."
     }
   ]
 }
