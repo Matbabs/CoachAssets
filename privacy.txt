@@ -1,42 +1,38 @@
-Politique de confidentialité
+POLITIQUE DE CONFIDENTIALITÉ - A BLOC
 
-Notre application "A BLOC" est conçue pour fournir des programmes d'entraînement personnalisés. Nous sommes engagés à protéger la confidentialité et la sécurité des informations personnelles de nos utilisateurs.
+Dernière mise à jour : 09-06-2026
 
-Informations collectées
+L'application "A BLOC" est dédiée aux sports outdoor. Nous accordons une importance capitale à la protection de vos données personnelles. Cette politique détaille quelles données nous collectons et comment nous les protégeons.
 
-Nous collectons les informations suivantes lorsque vous créez un compte sur notre application :
-- Adresse e-mail
-- Mot de passe (haché et sécurisé)
+1. INFORMATIONS COLLECTÉES
 
-Utilisation des informations
+Nous collectons les données suivantes pour assurer le bon fonctionnement du service :
+- Identifiants : Adresse e-mail, pseudonyme (ID utilisateur) et mot de passe (haché et sécurisé).
+- Contenu utilisateur (Optionnel) : Photos de profil si vous choisissez d'en ajouter une.
+- Localisation : Données de géolocalisation pour les fonctionnalités de suivi des activités sportives en extérieur.
 
-Nous utilisons les informations collectées pour :
-- Créer et gérer votre compte sur notre application
-- Vous permettre d'accéder à nos programmes d'entraînement personnalisés
-- Vous envoyer des notifications et des mises à jour concernant nos services (par exemple, des rappels de séances d'entraînement)
+2. UTILISATION DES DONNÉES
 
-Sécurité des informations
+Vos données sont utilisées exclusivement pour :
+- La gestion de votre compte et votre authentification sécurisée.
+- La personnalisation de votre expérience (affichage du pseudo et de la photo).
+- Le fonctionnement technique des fonctionnalités outdoor liées à la localisation.
+- L'envoi de notifications importantes concernant vos entraînements.
 
-Nous prenons des mesures de sécurité raisonnables pour protéger vos informations personnelles contre les accès non autorisés, la modification, la divulgation ou la destruction. Ces mesures comprennent :
-- Le hachage et le salage des mots de passe
-- L'utilisation de protocoles de communication sécurisés (HTTPS)
-- La mise en place de mesures de sécurité pour protéger nos serveurs
+3. SÉCURITÉ ET CHIFFREMENT
 
-Partage des informations
+Toutes les données sont chiffrées lors de leur transfert entre l'application et nos serveurs via le protocole HTTPS. Les mots de passe sont hachés avec des algorithmes sécurisés (salage) et ne sont jamais stockés en clair.
 
-Nous ne partageons pas vos informations personnelles avec des tiers, sauf dans les cas suivants :
-- Pour nous conformer aux lois et règlements en vigueur
-- Pour protéger notre application et nos utilisateurs contre les utilisations abusives ou frauduleuses
+4. PARTAGE DES DONNÉES
 
-Droits des utilisateurs
+Nous ne partageons, ne vendons et ne louons aucune de vos données personnelles à des tiers ou à des organisations externes à des fins commerciales.
 
-Vous avez les droits suivants concernant vos informations personnelles :
-- Droit d'accès : vous pouvez demander à accéder à vos informations personnelles
-- Droit de rectification : vous pouvez demander à rectifier vos informations personnelles si elles sont inexactes ou incomplètes
-- Droit à l'oubli : vous pouvez demander à supprimer votre compte et vos informations personnelles associées
+5. SUPPRESSION DES DONNÉES ET DROITS
 
-Contact
+Conformément à la réglementation (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
+- Suppression du compte : Vous pouvez demander la suppression complète de votre compte et de toutes les données associées directement via les paramètres de l'application.
+- Lien de support : Si vous n'avez plus accès à l'application, vous pouvez utiliser notre page dédiée : https://matbabs.github.io/deletion.html ou nous contacter par e-mail.
 
-Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité, veuillez nous contacter à "matissebabonneau@gmail.com".
+6. CONTACT
 
-27-05-2025
+Pour toute question relative à vos données : matissebabonneau@gmail.com
