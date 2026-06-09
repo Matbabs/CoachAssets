@@ -1,0 +1,45 @@
+POLITIQUE DE CONFIDENTIALITÉ - A BLOC
+
+Dernière mise à jour : 09-06-2026
+
+L'application "A BLOC" est dédiée aux sports outdoor. Nous accordons une importance capitale à la protection de vos données personnelles. Cette politique détaille quelles données nous collectons, comment nous les protégeons et combien de temps nous les conservons.
+
+1. INFORMATIONS COLLECTÉES
+
+Nous collectons les données suivantes pour assurer le bon fonctionnement du service :
+- Identifiants : Adresse e-mail, pseudonyme (ID utilisateur) et mot de passe (haché et sécurisé).
+- Contenu utilisateur (Optionnel) : Photos de profil si vous choisissez d'en ajouter une.
+- Localisation : Données de géolocalisation pour les fonctionnalités de suivi des activités sportives en extérieur.
+
+2. UTILISATION DES DONNÉES
+
+Vos données sont utilisées exclusivement pour :
+- La gestion de votre compte et votre authentification sécurisée.
+- La personnalisation de votre expérience (affichage du pseudo et de la photo).
+- Le fonctionnement technique des fonctionnalités outdoor liées à la localisation.
+- L'envoi de notifications importantes concernant vos entraînements.
+
+3. CONSERVATION DES DONNÉES (RETENTION)
+
+Conformément aux exigences de Google Play, nous appliquons les règles de conservation suivantes :
+- Comptes actifs : Vos données sont conservées tant que votre compte est actif et que vous utilisez nos services.
+- Suppression sur demande : Si vous demandez la suppression de votre compte, toutes vos données personnelles (e-mail, pseudonyme, photos, localisation) sont définitivement supprimées de nos bases de données actives dans un délai maximum de 30 jours.
+- Inactivité : Pour garantir la sécurité de vos données, les comptes inactifs depuis plus de 24 mois (sans connexion de l'utilisateur) sont automatiquement supprimés.
+
+4. SÉCURITÉ ET CHIFFREMENT
+
+Toutes les données sont chiffrées lors de leur transfert entre l'application et nos serveurs via le protocole HTTPS. Les mots de passe sont hachés avec des algorithmes sécurisés (salage) et ne sont jamais stockés en clair.
+
+5. PARTAGE DES DONNÉES
+
+Nous ne partageons, ne vendons et ne louons aucune de vos données personnelles à des tiers ou à des organisations externes à des fins commerciales.
+
+6. SUPPRESSION DES DONNÉES ET DROITS
+
+Conformément à la réglementation (RGPD), vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
+- Suppression du compte : Vous pouvez demander la suppression complète de votre compte et de toutes les données associées directement via les paramètres de l'application.
+- Lien de support : Si vous n'avez plus accès à l'application, vous pouvez utiliser notre page dédiée : https://matbabs.github.io/deletion.html ou nous contacter par e-mail.
+
+7. CONTACT
+
+Pour toute question relative à vos données : matissebabonneau@gmail.com
