@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Footing tonique",
+      "description": "1h10 en Zone 2 incluant 6 accélérations\n\n📊 Allure : Z2 dominante\n → Focus : Cadence 180 ppm\n\nObjectif : Garder du tonus musculaire pendant la phase de charge."
+    },
+    {
+      "tag": "VMA Longue",
+      "description": "20 min Échauffement + 5 x 3 min (Z4+)\n\n📊 Allure : 90-95% VMA (Seuil haut)\n → Récup : 1min30 trot lent\n\nObjectif : Travailler le temps de soutien à haute intensité."
+    },
+    {
+      "tag": "Sortie longue (2h45)",
+      "description": "2h45 sur sentiers techniques (Z2)\n\n📊 Terrain : Pierriers et racines\n → Focus : Vigilance et agilité\n\nObjectif : Développer le pied montagnard en fatigue."
+    }
+  ]
+}

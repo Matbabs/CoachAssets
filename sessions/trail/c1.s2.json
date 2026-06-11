@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Footing + Côtes",
+      "description": "50 min en Z2 incluant 5 x 100m en côte\n\n📊 Allure : Z2 (FC 60-75%) dominante\n → Côtes : Effort intense (Z4-Z5) en poussée active\n\nObjectif : Réveiller la force musculaire et la puissance de poussée."
+    },
+    {
+      "tag": "Régénération (Z2)",
+      "description": "45 min en Endurance Fondamentale stricte\n\n📊 Allure : Rester sous les 75% de FC max\n → Focus : Silence du pas et légèreté\n\nObjectif : Récupération active et travail de l'économie de course."
+    },
+    {
+      "tag": "Sortie longue (1h15)",
+      "description": "1h15 sur terrain varié (sentiers)\n\n📊 Allure : Z2 (FC 60-75%)\n → Travail technique : Pose de pied en descente\n\nObjectif : Accumuler du temps de soutien et développer le pied montagnard."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Endurance longue",
+      "description": "1h15 en Zone 2 (FC 60-75%)\n\n📊 Terrain : Sentiers vallonnés\n → Focus : Stabilité du tronc\n\nObjectif : Maintenir une foulée dynamique malgré le relief."
+    },
+    {
+      "tag": "VMA Courte (30/30)",
+      "description": "20 min Échauffement + 2 séries de (10 x 30s Z5 / 30s Z1)\n\n📊 Intensité : 100-105% VMA\n → Récup entre les séries : 3 min trot Z1\n\nObjectif : Muscler le cœur et augmenter la consommation d'oxygène."
+    },
+    {
+      "tag": "Sortie longue (2h15)",
+      "description": "2h15 sur terrain varié (Z2)\n\n📊 Dénivelé : Successions de petites bosses\n → Focus : Relance au sommet\n\nObjectif : Apprendre à ne pas s'écrouler après une difficulté."
+    }
+  ]
+}

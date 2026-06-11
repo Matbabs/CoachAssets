@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Test VMA (6 min)",
+      "description": "Test de Vitesse Maximale Aérobie (6 min à fond)\n\n📊 20 min Échauffement progressif (Z1-Z2)\n → 6 min en effort maximal (allure maximale soutenue sur plat)\n → 15 min Retour au calme en Z1\n\nObjectif : Évaluer votre moteur aérobie de base et définir vos allures d'entraînement."
+    },
+    {
+      "tag": "Footing Z2 (Endurance)",
+      "description": "Footing 45 min en Endurance Fondamentale (Z2)\n\n📊 Allure : FC 60-75% de ta FC max / 60-75% de ta VMA\n\nObjectif : Construire votre socle d'endurance sans fatiguer vos muscles."
+    },
+    {
+      "tag": "Sortie Z2 (Légèreté)",
+      "description": "Sortie 1h00 en Endurance (Z2)\n\n📊 Allure : Z2 stricte\n → Inclure 3 accélérations de 15 sec en fin de séance pour le tonus\n\nObjectif : Habituer les articulations aux chocs répétés et travailler la qualité du pied."
+    }
+  ]
+}

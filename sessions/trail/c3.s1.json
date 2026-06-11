@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Footing dynamique",
+      "description": "1h00 en Zone 2 (FC 60-75%)\n\n📊 Inclure 4 accélérations de 15 sec sur le plat\n → Focus : Pose médio-pied\n\nObjectif : Préparer le corps au travail de vitesse."
+    },
+    {
+      "tag": "Économie de course",
+      "description": "20 min Échauffement + 10 x 400m à 95% VMA\n\n📊 Allure : Rapide mais contrôlée (FC 92-95%)\n → Récup : 1 min de trot Z1\n\nObjectif : Améliorer le rendement à haute vitesse."
+    },
+    {
+      "tag": "Sortie longue (2h00)",
+      "description": "2h00 sur terrain varié (Z2)\n\n📊 Terrain : Alternance montées douces et plat\n → Focus : Respiration nasale\n\nObjectif : Améliorer l'efficacité aérobie pure."
+    }
+  ]
+}

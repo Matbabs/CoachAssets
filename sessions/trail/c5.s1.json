@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Footing de base",
+      "description": "1h00 en Zone 2 (FC 60-75%)\n\n📊 Terrain : Sentier roulant\n → Focus : Relâchement du souffle\n\nObjectif : Perfectionner le geste sans fatigue."
+    },
+    {
+      "tag": "Rappel VMA",
+      "description": "20 min Échauffement + 10 x 300m à 100% VMA\n\n📊 Allure : Rapide mais sans sprint\n → Récup : 1 min trot Z1\n\nObjectif : Garder le moteur éveillé."
+    },
+    {
+      "tag": "Sortie entretien (2h00)",
+      "description": "2h00 sur terrain varié (Z2)\n\n📊 Focus : Sensations et plaisir\n\nObjectif : Maintenir le temps de soutien sans dommages."
+    }
+  ]
+}

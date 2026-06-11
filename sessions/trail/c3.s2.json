@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Endurance technique",
+      "description": "1h15 en Zone 2 technique\n\n📊 Terrain : Singles étroits et sinueux\n → Focus : Agilité du bassin\n\nObjectif : Travailler le pilotage en terrain changeant."
+    },
+    {
+      "tag": "Seuil progressif",
+      "description": "20 min Échauffement + 2 x 15 min progressives\n\n📊 Bloc : 5 min Z3 -> 5 min Z3+ -> 5 min Z4 (Seuil)\n → Récup : 5 min de trot Z2\n\nObjectif : Muscler la volonté et la tenue de fin de course."
+    },
+    {
+      "tag": "Sortie longue (2h15)",
+      "description": "2h15 avec ascension régulière\n\n📊 Intensité : Z2 dominante\n → Focus : Régularité du pas en montée\n\nObjectif : Stabiliser la FC lors des longues ascensions."
+    }
+  ]
+}

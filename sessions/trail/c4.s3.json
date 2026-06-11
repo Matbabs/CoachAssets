@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Footing spécifique",
+      "description": "1h15 en Zone 2 technique\n\n📊 Inclure 15 min de gammes au milieu\n\nObjectif : Renforcer la puissance du pied et le rebond."
+    },
+    {
+      "tag": "Seuil en côte",
+      "description": "20 min Échauffement + 3 x 10 min Seuil (Z4) en côte\n\n📊 Allure : Soutenue (5-8%)\n → Récup : Redescente trot lent\n\nObjectif : Améliorer la puissance spécifique ascensionnelle."
+    },
+    {
+      "tag": "Pic volume (3h30)",
+      "description": "3h30 de Trail (ou 20-25 km) en montagne\n\n📊 Dénivelé : >1000m D+\n → Focus : Test nutrition et sac\n\nObjectif : Validation finale de la résistance longue."
+    }
+  ]
+}

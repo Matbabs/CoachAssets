@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Récupération",
+      "description": "40 min en Zone 1 / début de Zone 2\n\n📊 Allure : Très lent, aucun essoufflement\n\nObjectif : Drainer les muscles et assimiler le cycle de travail."
+    },
+    {
+      "tag": "Sport porté doux",
+      "description": "30 à 45 min de vélo ou natation (optionnel)\n\n📊 Intensité : Z1 uniquement\n\nObjectif : Zéro impact au sol pour soulager les articulations."
+    },
+    {
+      "tag": "Footing tonique",
+      "description": "45 min en Zone 2 (FC 60-75%)\n\n📊 Inclure 4 accélérations de 10 sec au milieu\n\nObjectif : Garder le tonus sans accumuler de fatigue."
+    }
+  ]
+}

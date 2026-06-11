@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Endurance pure",
+      "description": "1h10 en Zone 2 (FC 60-75%)\n\n📊 Terrain : Forêt ou parc roulant\n → Focus : Cadence et relâchement\n\nObjectif : Construire le moteur de fond."
+    },
+    {
+      "tag": "Seuil en montée",
+      "description": "20 min Échauffement + 3 x 8 min Seuil (Z4) en côte\n\n📊 Allure : Soutenue, essoufflement marqué\n → Récup : Redescente en trot lent (Z1)\n\nObjectif : Augmenter la vitesse de croisière en montée."
+    },
+    {
+      "tag": "Sortie longue (1h45)",
+      "description": "1h45 avec dénivelé (Z2)\n\n📊 Terrain : Montagneux ou très vallonné\n → Focus : Technique de descente\n\nObjectif : Travailler l'engagement et la souplesse en descente."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Endurance de base",
+      "description": "1h00 en Zone 2 (FC 60-75%)\n\n📊 Terrain : Plat ou forêt roulante\n → Focus : Cadence de pas (viser 170+ ppm)\n\nObjectif : Travailler l'économie par une cadence élevée."
+    },
+    {
+      "tag": "Seuil Aérobie (SV1)",
+      "description": "20 min Échauffement + 4 x 3 min Seuil (Z4)\n\n📊 Allure Seuil : FC 85-92% / Allure 10km\n → Récup : 2 min de trot lent (Z1) entre les blocs\n\nObjectif : Booster la capacité à recycler l'acide lactique."
+    },
+    {
+      "tag": "Sortie longue (1h30)",
+      "description": "1h30 en terrain spécifique Trail\n\n📊 Allure : Z2 dominante, montées en marche active\n → Focus : Gestion de l'effort en côte\n\nObjectif : Habituer le corps au dénivelé technique."
+    }
+  ]
+}
