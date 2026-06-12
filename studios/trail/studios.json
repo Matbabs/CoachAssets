@@ -2,16 +2,16 @@
   "studios": [
     {
       "handle": "@CLEMQUICOURT",
-      "name": "Clémentine Geoffray",
-      "title": "Championne du Monde & Skyrunner",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/clementine_geoffray.jpg",
-      "tagline": "La reine du trail court et des sommets techniques.",
-      "description": "Sacrée championne du monde de trail court, Clémentine brille par son agilité et sa vitesse sur les sentiers les plus escarpés. Sa technique en descente et sa relance en font une adversaire redoutable.",
+      "name": "Clément Deffrenne",
+      "title": "Traileur & Créateur de Contenu",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/clemquicourt.jpg",
+      "tagline": "Courir vite, mais surtout rigoler fort.",
+      "description": "Le trublion du trail français. Clément allie de solides performances sur les sentiers à un humour décapant et une autodérision rafraîchissante. Ne vous fiez pas à ses blagues, ses jambes tournent très vite sur le plat.",
       "statistics": {
-        "divine": 5,
-        "force": 4,
-        "humor": 3,
-        "iq": 4
+        "divine": 4,
+        "force": 3,
+        "humor": 5,
+        "iq": 3
       },
       "link": "https://www.instagram.com/clemquicourt/",
       "socials": ["Instagram", "Strava"]
@@ -22,12 +22,12 @@
       "title": "Ultra-Traileur & Aventurier",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/thomas_piot.jpg",
       "tagline": "Courir loin, partager l'effort et inspirer la commu.",
-      "description": "Amoureux des grands espaces et des défis d'endurance, Thomas partage ses aventures d'ultra-trail avec authenticité. Toujours prêt à repousser ses limites tout en gardant une incroyable proximité avec sa communauté.",
+      "description": "Amoureux des grands espaces et des défis d'endurance, Thomas partage ses aventures d'ultra-trail avec authenticité. Un coureur solide, polyvalent, toujours prêt à monter au refuge.",
       "statistics": {
         "divine": 3,
         "force": 4,
         "humor": 4,
-        "iq": 3
+        "iq": 4
       },
       "link": "https://www.instagram.com/thomassiot/",
       "socials": ["Instagram", "Strava", "YouTube"]
@@ -38,11 +38,11 @@
       "title": "Skyrunner & Grimpeur Explosif",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/theo_detienne.jpg",
       "tagline": "Plus c'est raide, plus ça va vite.",
-      "description": "Spécialiste du skyrunning et des formats courts et explosifs. Théo adore quand la pente s'élève et que le terrain devient technique. Un tempérament de feu pour dompter la montagne.",
+      "description": "Spécialiste du skyrunning, Théo est chez lui quand le terrain devient vertical. Une foulée bondissante et une lecture de terrain chirurgicale pour dompter les sommets.",
       "statistics": {
-        "divine": 4,
-        "force": 4,
-        "humor": 4,
+        "divine": 5,
+        "force": 5,
+        "humor": 3,
         "iq": 5
       },
       "link": "https://www.instagram.com/theodetienne/",
@@ -54,7 +54,7 @@
       "title": "Élite Ultra-Trail & Aventurier",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/mathieu_blanchard.jpg",
       "tagline": "De Koh-Lanta aux podiums des plus grands ultra-trails mondiaux.",
-      "description": "Ancien aventurier devenu l'un des meilleurs ultra-traileurs de la planète. Mathieu allie une préparation millimétrée, une force mentale hors norme et une régularité impressionnante sur les formats les plus exigeants comme l'UTMB.",
+      "description": "Une machine de précision. Mathieu allie une préparation millimétrée, une foulée très économe et une aisance redoutable sur les sentiers techniques en ultra.",
       "statistics": {
         "divine": 4,
         "force": 5,
@@ -70,7 +70,7 @@
       "title": "Le Punisher de l'Ultra-Trail",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/alexandre_boucheix.jpg",
       "tagline": "Du bitume parisien aux sommets, l'ultra sans chichi.",
-      "description": "Connu sous le pseudonyme de Casquette Verte, Alexandre enchaîne les ultra-trails à un rythme effréné tout en s'entraînant dans les rues de Paris et les marches de Montmartre. De l'humour, beaucoup de bière, mais surtout un mental d'acier.",
+      "description": "Inépuisable. Casquette Verte enchaîne les kilomètres avec un style unique et une force mentale d'acier, transformant n'importe quel sentier en terrain de jeu.",
       "statistics": {
         "divine": 3,
         "force": 5,
@@ -79,6 +79,86 @@
       },
       "link": "https://www.instagram.com/casquetteverte/",
       "socials": ["Instagram", "Strava"]
+    },
+    {
+      "handle": "@NOUCHKA.DIET",
+      "name": "Nouchka Simic",
+      "title": "Diététicienne & Traileuse",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/nouchka_diet.jpg",
+      "tagline": "La nutrition au service de la performance et du plaisir.",
+      "description": "Elle court avec le sourire et une approche scientifique. Une foulée équilibrée et une grande curiosité pour les sentiers escarpés.",
+      "statistics": {
+        "divine": 4,
+        "force": 3,
+        "humor": 4,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/nouchka.diet/",
+      "socials": ["Instagram", "TikTok"]
+    },
+    {
+      "handle": "@ELLE_PLUS",
+      "name": "Estelle Perreto",
+      "title": "Traileuse & Prof de Yoga",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/elle_plus.jpg",
+      "tagline": "L'harmonie du corps et de l'esprit au cœur du Beaufortain.",
+      "description": "La fluidité incarnée. Son passé de prof de yoga lui confère une agilité remarquable sur les passages techniques de montagne.",
+      "statistics": {
+        "divine": 5,
+        "force": 4,
+        "humor": 3,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/esprits_outdoor/",
+      "socials": ["Instagram", "Blog"]
+    },
+    {
+      "handle": "@JULIE_GNR",
+      "name": "Julie Garnier",
+      "title": "Aventurière d'Ultra-Endurance",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/julie_gnr.jpg",
+      "tagline": "Repousser ses limites, un sentier après l'autre.",
+      "description": "Déterminée et tenace, Julie ne lâche rien. Une traileuse qui s'exprime pleinement sur les parcours longs et exigeants en montagne.",
+      "statistics": {
+        "divine": 3,
+        "force": 4,
+        "humor": 3,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/julie_gnr/",
+      "socials": ["Instagram", "Strava"]
+    },
+    {
+      "handle": "@BLANDINELHIRONDEL",
+      "name": "Blandine L'hirondel",
+      "title": "Double Championne du Monde",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/blandine_lhirondel.jpg",
+      "tagline": "La force tranquille du trail mondial.",
+      "description": "Une athlète hors norme. Sa foulée est aussi légère qu'efficace, et elle possède une aisance naturelle sur les crêtes les plus techniques du monde.",
+      "statistics": {
+        "divine": 5,
+        "force": 5,
+        "humor": 3,
+        "iq": 5
+      },
+      "link": "https://www.instagram.com/blandinelhirondel/",
+      "socials": ["Instagram", "Strava"]
+    },
+    {
+      "handle": "@SISSICUSSOT",
+      "name": "Sylvaine Cussot",
+      "title": "Ultra-Traileuse & Rayon de Soleil",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/sissi_cuissot.jpg",
+      "tagline": "Courir avec le sourire, peu importe les kilomètres.",
+      "description": "Figure incontournable de l'ultra, Sissi est capable de passer partout avec une énergie communicative. Sa gestion de course en montagne est une leçon pour beaucoup.",
+      "statistics": {
+        "divine": 3,
+        "force": 4,
+        "humor": 5,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/sissicussot/",
+      "socials": ["Instagram", "YouTube", "Blog"]
     }
   ]
 }
