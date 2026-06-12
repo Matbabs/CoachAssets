@@ -1,132 +1,84 @@
 {
   "studios": [
     {
-      "handle": "@STEVENLEHYARIC",
-      "name": "Steven Le Hyaric",
-      "title": "Aventurier Ultra",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/steven.jpg",
-      "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
-      "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
+      "handle": "@CLEMQUICOURT",
+      "name": "Clémentine Geoffray",
+      "title": "Championne du Monde & Skyrunner",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/clementine_geoffray.jpg",
+      "tagline": "La reine du trail court et des sommets techniques.",
+      "description": "Sacrée championne du monde de trail court, Clémentine brille par son agilité et sa vitesse sur les sentiers les plus escarpés. Sa technique en descente et sa relance en font une adversaire redoutable.",
       "statistics": {
-        "divine": 4,
-        "force": 5,
-        "humor": 1,
-        "iq": 5
+        "divine": 5,
+        "force": 4,
+        "humor": 3,
+        "iq": 4
       },
-      "link": "https://www.instagram.com/stevenlehyaric/",
-      "socials": ["Instagram", "YouTube", "Strava"]
+      "link": "https://www.instagram.com/clemquicourt/",
+      "socials": ["Instagram", "Strava"]
     },
     {
-      "handle": "@PIERRE_ROLLAND",
-      "name": "Pierre Rolland",
-      "title": "Ex-Pro & Gravel Rider",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/pierre_rolland.jpg",
-      "tagline": "La légende du Tour qui a trouvé son bonheur dans l'ultra.",
-      "description": "Ancien grimpeur du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
+      "handle": "@THOMASSIOT",
+      "name": "Thomas Piot",
+      "title": "Ultra-Traileur & Aventurier",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/thomas_piot.jpg",
+      "tagline": "Courir loin, partager l'effort et inspirer la commu.",
+      "description": "Amoureux des grands espaces et des défis d'endurance, Thomas partage ses aventures d'ultra-trail avec authenticité. Toujours prêt à repousser ses limites tout en gardant une incroyable proximité avec sa communauté.",
       "statistics": {
-        "divine": 4,
+        "divine": 3,
         "force": 4,
         "humor": 4,
         "iq": 3
       },
-      "link": "https://www.instagram.com/pierre_rolland_cyclisme/",
-      "socials": ["Instagram", "YouTube", "Strava"]
+      "link": "https://www.instagram.com/thomassiot/",
+      "socials": ["Instagram", "Strava", "YouTube"]
     },
     {
-      "handle": "@VICTORBOSO",
-      "name": "Victor Bosoni",
-      "title": "Athlète Elite & Ultra",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/victor_bosoni.jpg",
-      "tagline": "Le métronome de l'ultra-distance.",
-      "description": "Spécialiste de l'ultra-cyclisme et des courses gravel les plus exigeantes, Victor est une machine de régularité. Entre records de distance et préparation millimétrée, il incarne la nouvelle génération de l'endurance pure.",
+      "handle": "@THEODETIENNE",
+      "name": "Théo Detienne",
+      "title": "Skyrunner & Grimpeur Explosif",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/theo_detienne.jpg",
+      "tagline": "Plus c'est raide, plus ça va vite.",
+      "description": "Spécialiste du skyrunning et des formats courts et explosifs. Théo adore quand la pente s'élève et que le terrain devient technique. Un tempérament de feu pour dompter la montagne.",
       "statistics": {
         "divine": 4,
         "force": 4,
-        "humor": 2,
-        "iq": 4
+        "humor": 4,
+        "iq": 5
       },
-      "link": "https://www.instagram.com/victorbozo/",
+      "link": "https://www.instagram.com/theodetienne/",
       "socials": ["Instagram", "Strava"]
     },
     {
-      "handle": "@QUENTINRUEL1",
-      "name": "Quentin Ruel",
-      "title": "Athlète & Ultra-Cycliste",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/quentin_ruel.jpg",
-      "tagline": "Du bitume au gravier, sans jamais freiner.",
-      "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
+      "handle": "@MATHIEU__BLANCHARD",
+      "name": "Mathieu Blanchard",
+      "title": "Élite Ultra-Trail & Aventurier",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/mathieu_blanchard.jpg",
+      "tagline": "De Koh-Lanta aux podiums des plus grands ultra-trails mondiaux.",
+      "description": "Ancien aventurier devenu l'un des meilleurs ultra-traileurs de la planète. Mathieu allie une préparation millimétrée, une force mentale hors norme et une régularité impressionnante sur les formats les plus exigeants comme l'UTMB.",
       "statistics": {
-        "divine": 3,
+        "divine": 4,
         "force": 5,
-        "humor": 2,
-        "iq": 2
+        "humor": 3,
+        "iq": 5
       },
-      "link": "https://www.instagram.com/quentinruel1/",
+      "link": "https://www.instagram.com/mathieu__blanchard/",
       "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
-      "handle": "@NOEMIE_ROCHARD",
-      "name": "Noémie Rochard",
-      "title": "Aventurière & Créatrice",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/noemie_rochard.jpg",
-      "tagline": "Celle qui trace la route pour toutes les autres.",
-      "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
+      "handle": "@CASQUETTEVERTE",
+      "name": "Alexandre Boucheix",
+      "title": "Le Punisher de l'Ultra-Trail",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/alexandre_boucheix.jpg",
+      "tagline": "Du bitume parisien aux sommets, l'ultra sans chichi.",
+      "description": "Connu sous le pseudonyme de Casquette Verte, Alexandre enchaîne les ultra-trails à un rythme effréné tout en s'entraînant dans les rues de Paris et les marches de Montmartre. De l'humour, beaucoup de bière, mais surtout un mental d'acier.",
       "statistics": {
         "divine": 3,
-        "force": 3,
-        "humor": 3,
-        "iq": 2
-      },
-      "link": "https://www.instagram.com/noemie_rochard/",
-      "socials": ["Instagram", "YouTube"]
-    },
-    {
-      "handle": "@LESROOKIES",
-      "name": "Les Rookies",
-      "title": "Le Crew Gravel",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/les_rookies.jpg",
-      "tagline": "Le gravel, la bière et les copains.",
-      "description": "Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
-      "statistics": {
-        "divine": 2,
-        "force": 2,
+        "force": 5,
         "humor": 5,
         "iq": 4
       },
-      "link": "https://www.instagram.com/lesrookies/",
-      "socials": ["Instagram", "Podcast", "YouTube"]
-    },
-    {
-      "handle": "@JEANNELEPOIX",
-      "name": "Jeanne Lepoix",
-      "title": "Designer & Aventurière",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/jeannelepoix.jpg",
-      "tagline": "L'art de l'itinérance à vélo.",
-      "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
-      "statistics": {
-        "divine": 3,
-        "force": 2,
-        "humor": 2,
-        "iq": 5
-      },
-      "link": "https://www.instagram.com/jeannelepoix/",
-      "socials": ["Instagram", "Blog"]
-    },
-    {
-      "handle": "@BIKINGMAN_ULTRA",
-      "name": "Axel Carion",
-      "title": "Organisateur & Explorateur",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/axel_carion.jpg",
-      "tagline": "Le boss final de l'ultra-distance en autonomie.",
-      "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
-      "statistics": {
-        "divine": 3,
-        "force": 4,
-        "humor": 2,
-        "iq": 5
-      },
-      "link": "https://www.instagram.com/bikingman_ultra/",
-      "socials": ["Instagram", "YouTube", "Podcast"]
+      "link": "https://www.instagram.com/casquetteverte/",
+      "socials": ["Instagram", "Strava"]
     }
   ]
 }
