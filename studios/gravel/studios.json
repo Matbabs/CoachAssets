@@ -17,6 +17,22 @@
       "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
+      "handle": "@NOEMIE_ROCHARD",
+      "name": "Noémie Rochard",
+      "title": "Aventurière & Créatrice",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/noemie_rochard.jpg",
+      "tagline": "Celle qui trace la route pour toutes les autres.",
+      "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 3,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/noemie_rochard/",
+      "socials": ["Instagram", "YouTube"]
+    },
+    {
       "handle": "@PIERRE_ROLLAND",
       "name": "Pierre Rolland",
       "title": "Ex-Pro & Gravel Rider",
@@ -31,6 +47,22 @@
       },
       "link": "https://www.instagram.com/pierre_rolland_cyclisme/",
       "socials": ["Instagram", "YouTube", "Strava"]
+    },
+    {
+      "handle": "@JEANNELEPOIX",
+      "name": "Jeanne Lepoix",
+      "title": "Designer & Aventurière",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/jeannelepoix.jpg",
+      "tagline": "L'art de l'itinérance à vélo.",
+      "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
+      "statistics": {
+        "divine": 3,
+        "force": 2,
+        "humor": 2,
+        "iq": 5
+      },
+      "link": "https://www.instagram.com/jeannelepoix/",
+      "socials": ["Instagram", "Blog"]
     },
     {
       "handle": "@VICTORBOSO",
@@ -49,38 +81,6 @@
       "socials": ["Instagram", "Strava"]
     },
     {
-      "handle": "@QUENTINRUEL1",
-      "name": "Quentin Ruel",
-      "title": "Athlète & Ultra-Cycliste",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/quentin_ruel.jpg",
-      "tagline": "Du bitume au gravier, sans jamais freiner.",
-      "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
-      "statistics": {
-        "divine": 3,
-        "force": 5,
-        "humor": 2,
-        "iq": 2
-      },
-      "link": "https://www.instagram.com/quentinruel1/",
-      "socials": ["Instagram", "YouTube", "Strava"]
-    },
-    {
-      "handle": "@NOEMIE_ROCHARD",
-      "name": "Noémie Rochard",
-      "title": "Aventurière & Créatrice",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/noemie_rochard.jpg",
-      "tagline": "Celle qui trace la route pour toutes les autres.",
-      "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
-      "statistics": {
-        "divine": 3,
-        "force": 3,
-        "humor": 3,
-        "iq": 2
-      },
-      "link": "https://www.instagram.com/noemie_rochard/",
-      "socials": ["Instagram", "YouTube"]
-    },
-    {
       "handle": "@LESROOKIES",
       "name": "Les Rookies",
       "title": "Le Crew Gravel",
@@ -97,20 +97,20 @@
       "socials": ["Instagram", "Podcast", "YouTube"]
     },
     {
-      "handle": "@JEANNELEPOIX",
-      "name": "Jeanne Lepoix",
-      "title": "Designer & Aventurière",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/jeannelepoix.jpg",
-      "tagline": "L'art de l'itinérance à vélo.",
-      "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
+      "handle": "@QUENTINRUEL1",
+      "name": "Quentin Ruel",
+      "title": "Athlète & Ultra-Cycliste",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/quentin_ruel.jpg",
+      "tagline": "Du bitume au gravier, sans jamais freiner.",
+      "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
       "statistics": {
         "divine": 3,
-        "force": 2,
+        "force": 5,
         "humor": 2,
-        "iq": 5
+        "iq": 2
       },
-      "link": "https://www.instagram.com/jeannelepoix/",
-      "socials": ["Instagram", "Blog"]
+      "link": "https://www.instagram.com/quentinruel1/",
+      "socials": ["Instagram", "YouTube", "Strava"]
     },
     {
       "handle": "@BIKINGMAN_ULTRA",
