@@ -81,22 +81,6 @@
       "socials": ["Instagram", "TikTok"]
     },
     {
-      "handle": "@ELLE_PLUS",
-      "name": "Estelle Perreto",
-      "title": "Traileuse & Prof de Yoga",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/elle_plus.jpg",
-      "tagline": "L'harmonie du corps et de l'esprit au cœur du Beaufortain.",
-      "description": "La fluidité incarnée. Son passé de prof de yoga lui confère une agilité remarquable sur les passages techniques de montagne.",
-      "statistics": {
-        "divine": 5,
-        "force": 4,
-        "humor": 3,
-        "iq": 4
-      },
-      "link": "https://www.instagram.com/esprits_outdoor/",
-      "socials": ["Instagram", "Blog"]
-    },
-    {
       "handle": "@JULIE_GNR",
       "name": "Julie Garnier",
       "title": "Aventurière d'Ultra-Endurance",
