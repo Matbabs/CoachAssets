@@ -8,10 +8,10 @@
       "tagline": "L'homme qui ne dort jamais et qui traverse les déserts en pignon fixe.",
       "description": "Recordman, conférencier et expert de l'extrême. Steven transforme chaque coup de pédale en une quête spirituelle, que ce soit dans l'Himalaya ou à travers l'Afrique.",
       "statistics": {
-        "divine": 4,
-        "force": 5,
+        "divine": 3,
+        "force": 4,
         "humor": 1,
-        "iq": 5
+        "iq": 4
       },
       "link": "https://www.instagram.com/stevenlehyaric/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -24,10 +24,10 @@
       "tagline": "Celle qui trace la route pour toutes les autres.",
       "description": "Noémie écume les courses FFC et les cyclosportives. Elle documente son quotidien de cycliste, que ce soit pour frotter en course ou pour envoyer du lourd en gravel.",
       "statistics": {
-        "divine": 3,
-        "force": 3,
-        "humor": 3,
-        "iq": 2
+        "divine": 2,
+        "force": 2,
+        "humor": 2,
+        "iq": 1
       },
       "link": "https://www.instagram.com/noemie_rochard/",
       "socials": ["Instagram", "YouTube"]
@@ -35,15 +35,15 @@
     {
       "handle": "@PIERRE_ROLLAND",
       "name": "Pierre Rolland",
-      "title": "Ex-Pro & Gravel Rider",
+      "title": "Ex-Pro & Cycliste Gravel",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/pierre_rolland.jpg",
       "tagline": "La légende du Tour qui a trouvé son bonheur dans l'ultra.",
       "description": "Ancien grimpeur du peloton pro, Pierre a troqué le bitume lisse pour les chemins de gravel. Entre anecdotes de carrière et nouveaux défis en autonomie, il partage sa passion avec un enthousiasme qui donne envie de grimper n'importe quel col.",
       "statistics": {
-        "divine": 4,
-        "force": 4,
-        "humor": 4,
-        "iq": 3
+        "divine": 3,
+        "force": 3,
+        "humor": 3,
+        "iq": 2
       },
       "link": "https://www.instagram.com/pierre_rolland_cyclisme/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -56,10 +56,10 @@
       "tagline": "L'art de l'itinérance à vélo.",
       "description": "Designer de métier, Jeanne porte un regard esthétique et technique sur le cyclotourisme. Ses montages sont des modèles de précision et d'inspiration.",
       "statistics": {
-        "divine": 3,
-        "force": 2,
-        "humor": 2,
-        "iq": 5
+        "divine": 2,
+        "force": 1,
+        "humor": 1,
+        "iq": 4
       },
       "link": "https://www.instagram.com/jeannelepoix/",
       "socials": ["Instagram", "Blog"]
@@ -67,15 +67,15 @@
     {
       "handle": "@VICTORBOSO",
       "name": "Victor Bosoni",
-      "title": "Athlète Elite & Ultra",
+      "title": "Athlète Élite & Ultra",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/victor_bosoni.jpg",
       "tagline": "Le métronome de l'ultra-distance.",
       "description": "Spécialiste de l'ultra-cyclisme et des courses gravel les plus exigeantes, Victor est une machine de régularité. Entre records de distance et préparation millimétrée, il incarne la nouvelle génération de l'endurance pure.",
       "statistics": {
-        "divine": 4,
-        "force": 4,
-        "humor": 2,
-        "iq": 4
+        "divine": 3,
+        "force": 3,
+        "humor": 1,
+        "iq": 3
       },
       "link": "https://www.instagram.com/victorbozo/",
       "socials": ["Instagram", "Strava"]
@@ -83,15 +83,15 @@
     {
       "handle": "@LESROOKIES",
       "name": "Les Rookies",
-      "title": "Le Crew Gravel",
+      "title": "L'Équipe Gravel",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/gravel/les_rookies.jpg",
       "tagline": "Le gravel, la bière et les copains.",
       "description": "Les Rookies prônent un cyclisme décomplexé. Pas besoin de watts si tu as du style et une bonne trace GPX en forêt.",
       "statistics": {
-        "divine": 2,
-        "force": 2,
-        "humor": 5,
-        "iq": 4
+        "divine": 1,
+        "force": 1,
+        "humor": 4,
+        "iq": 3
       },
       "link": "https://www.instagram.com/lesrookies/",
       "socials": ["Instagram", "Podcast", "YouTube"]
@@ -104,10 +104,10 @@
       "tagline": "Du bitume au gravier, sans jamais freiner.",
       "description": "Quentin enchaîne les courses FFC et les cyclosportives avec détermination. Entre deux attaques, il explore les frontières du gravel de compétition avec une puissance explosive.",
       "statistics": {
-        "divine": 3,
-        "force": 5,
-        "humor": 2,
-        "iq": 2
+        "divine": 2,
+        "force": 4,
+        "humor": 1,
+        "iq": 1
       },
       "link": "https://www.instagram.com/quentinruel1/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -120,10 +120,10 @@
       "tagline": "Le boss final de l'ultra-distance en autonomie.",
       "description": "Fondateur des championnats BikingMan, Axel a ouvert des voies là où personne n'osait poser un pneu. Un mentor pour tous ceux qui veulent tester leurs limites.",
       "statistics": {
-        "divine": 3,
-        "force": 4,
-        "humor": 2,
-        "iq": 5
+        "divine": 2,
+        "force": 3,
+        "humor": 1,
+        "iq": 4
       },
       "link": "https://www.instagram.com/bikingman_ultra/",
       "socials": ["Instagram", "YouTube", "Podcast"]

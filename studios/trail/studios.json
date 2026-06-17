@@ -8,10 +8,10 @@
       "tagline": "Courir vite, mais surtout rigoler fort.",
       "description": "Le trublion du trail français. Clément allie de solides performances sur les sentiers à un humour décapant et une autodérision rafraîchissante. Ne vous fiez pas à ses blagues, ses jambes tournent très vite sur le plat.",
       "statistics": {
-        "divine": 4,
-        "force": 3,
-        "humor": 5,
-        "iq": 3
+        "divine": 3,
+        "force": 2,
+        "humor": 4,
+        "iq": 2
       },
       "link": "https://www.instagram.com/clemquicourt/",
       "socials": ["Instagram", "Strava"]
@@ -24,10 +24,10 @@
       "tagline": "La nutrition au service de la performance et du plaisir.",
       "description": "Elle court avec le sourire et une approche scientifique. Une foulée équilibrée et une grande curiosité pour les sentiers escarpés.",
       "statistics": {
-        "divine": 4,
-        "force": 3,
-        "humor": 4,
-        "iq": 3
+        "divine": 3,
+        "force": 2,
+        "humor": 3,
+        "iq": 2
       },
       "link": "https://www.instagram.com/nouchka.diet/",
       "socials": ["Instagram", "TikTok"]
@@ -35,15 +35,15 @@
     {
       "handle": "@THEODETIENNE",
       "name": "Théo Detienne",
-      "title": "Skyrunner & Grimpeur Explosif",
+      "title": "Coureur de cimes & Grimpeur Explosif",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/theo_detienne.jpg",
       "tagline": "Plus c'est raide, plus ça va vite.",
-      "description": "Spécialiste du skyrunning, Théo est chez lui quand le terrain devient vertical. Une foulée bondissante et une lecture de terrain chirurgicale pour dompter les sommets.",
+      "description": "Spécialiste du skyrunning, Théo est chez lui quand le terrain devient vertical. Une foulée bondissante et une lecture de terrain chirurgicale pour dompter les cimes.",
       "statistics": {
-        "divine": 5,
-        "force": 5,
-        "humor": 3,
-        "iq": 5
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 4
       },
       "link": "https://www.instagram.com/theodetienne/",
       "socials": ["Instagram", "Strava"]
@@ -56,10 +56,10 @@
       "tagline": "Repousser ses limites, un sentier après l'autre.",
       "description": "Déterminée et tenace, Julie ne lâche rien. Une traileuse qui s'exprime pleinement sur les parcours longs et exigeants en montagne.",
       "statistics": {
-        "divine": 3,
-        "force": 4,
-        "humor": 3,
-        "iq": 4
+        "divine": 2,
+        "force": 3,
+        "humor": 2,
+        "iq": 3
       },
       "link": "https://www.instagram.com/julie_gnr/",
       "socials": ["Instagram", "Strava"]
@@ -72,10 +72,10 @@
       "tagline": "De Koh-Lanta aux podiums des plus grands ultra-trails mondiaux.",
       "description": "Une machine de précision. Mathieu allie une préparation millimétrée, une foulée très économe et une aisance redoutable sur les sentiers techniques en ultra.",
       "statistics": {
-        "divine": 4,
-        "force": 5,
-        "humor": 3,
-        "iq": 5
+        "divine": 3,
+        "force": 4,
+        "humor": 2,
+        "iq": 4
       },
       "link": "https://www.instagram.com/mathieu__blanchard/",
       "socials": ["Instagram", "YouTube", "Strava"]
@@ -88,10 +88,10 @@
       "tagline": "La force tranquille du trail mondial.",
       "description": "Une athlète hors norme. Sa foulée est aussi légère qu'efficace, et elle possède une aisance naturelle sur les crêtes les plus techniques du monde.",
       "statistics": {
-        "divine": 5,
-        "force": 5,
-        "humor": 3,
-        "iq": 5
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 4
       },
       "link": "https://www.instagram.com/blandinelhirondel/",
       "socials": ["Instagram", "Strava"]
@@ -102,12 +102,12 @@
       "title": "Le Punisher de l'Ultra-Trail",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/alexandre_boucheix.jpg",
       "tagline": "Du bitume parisien aux sommets, l'ultra sans chichi.",
-      "description": "Inépuisable. Casquette Verte enchaîne les kilomètres with un style unique et une force mentale d'acier, transformant n'importe quel sentier en terrain de jeu.",
+      "description": "Inépuisable. Casquette Verte enchaîne les kilomètres avec un style unique et une force mentale d'acier, transformant n'importe quel sentier en terrain de jeu.",
       "statistics": {
-        "divine": 3,
-        "force": 5,
-        "humor": 5,
-        "iq": 4
+        "divine": 2,
+        "force": 4,
+        "humor": 4,
+        "iq": 3
       },
       "link": "https://www.instagram.com/casquetteverte/",
       "socials": ["Instagram", "Strava"]
@@ -117,13 +117,13 @@
       "name": "Sylvaine Cussot",
       "title": "Ultra-Traileuse & Rayon de Soleil",
       "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/trail/sissi_cuissot.jpg",
-      "tagline": "Courir with le sourire, peu importe les kilomètres.",
-      "description": "Figure incontournable de l'ultra, Sissi est capable de passer partout with une énergie communicative. Sa gestion de course en montagne est une leçon pour beaucoup.",
+      "tagline": "Courir avec le sourire, peu importe les kilomètres.",
+      "description": "Figure incontournable de l'ultra, Sissi est capable de passer partout avec une énergie communicative. Sa gestion de course en montagne est une leçon pour beaucoup.",
       "statistics": {
-        "divine": 3,
-        "force": 4,
-        "humor": 5,
-        "iq": 4
+        "divine": 2,
+        "force": 3,
+        "humor": 4,
+        "iq": 3
       },
       "link": "https://www.instagram.com/sissicussot/",
       "socials": ["Instagram", "YouTube", "Blog"]
