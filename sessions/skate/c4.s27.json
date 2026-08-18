@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "STREET | Varial Kickflip",
+      "description": "Le varial flip combine un pop shove-it et un kickflip. Maîtrise ces deux tricks avant de t'y attaquer.\n\n📊 3 séries & 5 répétitions, avec 2min de récup. entre les séries"
+    },
+    {
+      "tag": "PARK | Backside Tailside",
+      "description": "Le backside tailside est un trick technique qui consiste à venir caler ton tail sur le coping après un 180° backside.\n\n📊 3 séries & 5 répétitions, avec 2min de récup. entre les séries"
+    },
+    {
+      "tag": "LEDGE | Backside Tail Slide Fakie",
+      "description": "Le backside tail slide fakie reprend le même principe que le backside tail slide, mais la sortie se fait en fakie.\n\n📊 3 séries & 3 répétitions, avec 2min de récup. entre les séries"
+    }
+  ]
+}

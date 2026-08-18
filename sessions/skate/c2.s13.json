@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "STREET | Fakie Ollie",
+      "description": "Le fakie ollie est un ollie exécuté en roulant en position fakie. C'est un trick fondamental.\n\n📊 3 séries & 5 répétitions, avec 2min de récup. entre les séries"
+    },
+    {
+      "tag": "PARK | Smith Grind",
+      "description": "Le smith grind consiste à caler le truck arrière sur le coping tout en gardant les roues avant dans la rampe.\n\n📊 3 séries & 3 répétitions, avec 2min de récup. entre les séries"
+    },
+    {
+      "tag": "LEDGE | Boardslide",
+      "description": "Le boardslide consiste à glisser perpendiculairement au ledge, les pieds au centre de la planche.\n\n📊 3 séries & 3 répétitions, avec 2min de récup. entre les séries"
+    }
+  ]
+}
