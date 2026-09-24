@@ -4,14 +4,14 @@
       "handle": "@AURELIENGIRAUD",
       "name": "Aurélien Giraud",
       "title": "Pro Street & Champion du Monde",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/aurelien_giraud.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/aurelien.jpg",
       "tagline": "La foudre lyonnaise qui pulvérise les plus gros gaps.",
       "description": "Champion du monde de street skateboarding et leader du skate français aux Jeux Olympiques. Aurélien repousse les lois de la gravité avec des pops stratosphériques et un engagement total sur les plus gros rails de la planète.",
       "statistics": {
         "divine": 3,
         "force": 4,
         "humor": 1,
-        "iq": 3
+        "iq": 2
       },
       "link": "https://www.instagram.com/aureliengiraud/",
       "socials": ["Instagram", "YouTube", "TikTok"]
@@ -20,7 +20,7 @@
       "handle": "@JOSEPH_GARBACCIO",
       "name": "Joseph Garbaccio",
       "title": "Pro Skateur & Créateur",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/joseph_garbaccio.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/joseph.jpg",
       "tagline": "La créativité normande au service du street et du fun.",
       "description": "Multiple champion de France de street et athlète olympique. Joseph allie une maîtrise technique hors norme sur tous les spots à une passion communicative pour le partage à travers ses vidéos et défis skate.",
       "statistics": {
@@ -36,7 +36,7 @@
       "handle": "@VINCENT_MATHERON",
       "name": "Vincent Matheron",
       "title": "Pro Park & Olympien",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/vincent_matheron.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/vincent.jpg",
       "tagline": "L'énergie pure du Bowl du Prado catapultée sur la scène mondiale.",
       "description": "Pur produit du mythique bowl de Marseille, Vincent est l'un des skateurs de park les plus spectaculaires et aériens au monde. Un style engagé, des lignes ultra-rapides et une énergie solaire communicative.",
       "statistics": {
@@ -52,7 +52,7 @@
       "handle": "@CHARLOTTE_HYM",
       "name": "Charlotte Hym",
       "title": "Pro Skater & Docteure en Neurosciences",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/charlotte_hym.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/charlotte.jpg",
       "tagline": "La science du mouvement au service d'un street chirurgical.",
       "description": "Championne de France de street, athlète olympique et docteure en neurosciences cognitives. Charlotte décortique la motricité et applique une précision millimétrée sur chaque curb et chaque marche.",
       "statistics": {
@@ -65,62 +65,14 @@
       "socials": ["Instagram", "YouTube"]
     },
     {
-      "handle": "@ROBINBOLIAN",
-      "name": "Robin Bolian",
-      "title": "Rider Park & Transition",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/robin_bolian.jpg",
-      "tagline": "Vitesse supersonique et carving tranchant dans le vertige.",
-      "description": "Habitué des grands contests internationaux, Robin ride les courbes avec une fluidité déconcertante et une vitesse ahurissante. Maître des transferts vertigineux et des airs puissants au-dessus du coping.",
-      "statistics": {
-        "divine": 3,
-        "force": 3,
-        "humor": 2,
-        "iq": 3
-      },
-      "link": "https://www.instagram.com/robinbolian/",
-      "socials": ["Instagram"]
-    },
-    {
-      "handle": "@FOFYSKATE",
-      "name": "Louise-Aïna Taboulet",
-      "title": "Prodige Vert & Park",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/louise_taboulet.jpg",
-      "tagline": "L'insolence de la jeunesse qui survole les rampes géantes.",
-      "description": "Révélation internationale du bowl et de la vert ramp sous le pseudo Fofy. À seulement quelques années de pratique, elle plaque des 540 avec une facilité déconcertante et bouscule la hiérarchie mondiale.",
-      "statistics": {
-        "divine": 4,
-        "force": 2,
-        "humor": 3,
-        "iq": 2
-      },
-      "link": "https://www.instagram.com/fofyskate/",
-      "socials": ["Instagram", "TikTok"]
-    },
-    {
-      "handle": "@TONYHAWK",
-      "name": "Tony Hawk",
-      "title": "Légende Vivante & Ambassadeur",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/tony_hawk.jpg",
-      "tagline": "Le parrain incontesté qui a propulsé le skate dans une autre dimension.",
-      "description": "Premier homme à plaquer le mythique 900 et visage intemporel de la culture skate. Tony continue de rider, d'innover et de transmettre l'esprit pur du skateboard à travers sa fondation et ses apparitions cultes.",
-      "statistics": {
-        "divine": 4,
-        "force": 3,
-        "humor": 3,
-        "iq": 4
-      },
-      "link": "https://www.instagram.com/tonyhawk/",
-      "socials": ["Instagram", "YouTube", "X"]
-    },
-    {
       "handle": "@NYJAH",
       "name": "Nyjah Huston",
       "title": "Prodige du Street & Recordman",
-      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/nyjah_huston.jpg",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/skate/nyjah.jpg",
       "tagline": "Le métronome du street qui transforme l'impossible en routine.",
       "description": "Athlète le plus titré de l'histoire du street skateboarding avec plus de 10 titres X Games et championnats mondiaux. Nyjah allie un contrôle mécanique absolu à une témérité légendaire sur les rails les plus intimidants.",
       "statistics": {
-        "divine": 4,
+        "divine": 3,
         "force": 4,
         "humor": 1,
         "iq": 3
