@@ -42,6 +42,15 @@
         box-shadow: 0 0 5px 0 #8f8156;
         animation: pulsate 1s infinite;
       }
+      .pulse-marker {
+        width: 40px;
+        height: 40px;
+        background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -20px;
+        margin-top: -40px;
+      }
       @keyframes pulsate {
         0% {
           transform: scale(0.1);
@@ -130,9 +139,9 @@
             "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
         },
       );
-      var pulseIcon = L.divIcon({
-        className: "css-icon",
-        html: '<img src="https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment.png" style="width: 40px; height: 40px; margin-left: -20px; margin-top: -40px;">',
+var pulseIcon = L.divIcon({
+        className: "",
+        html: '<div class="pulse-marker"></div>',
         iconSize: [40, 40],
         iconAnchor: [20, 40],
       });
