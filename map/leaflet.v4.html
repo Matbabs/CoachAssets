@@ -221,6 +221,9 @@
         if (marker.contact) {
           popup += `<br><br>${marker.contact}`;
         }
+        if (marker.type === "exploriders") {
+          return popup;
+        }
         popup += `<div class="actions">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
           popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">itinéraire</button>`;
