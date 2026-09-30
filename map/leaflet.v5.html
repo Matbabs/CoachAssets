@@ -33,6 +33,7 @@
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
         -ms-interpolation-mode: nearest-neighbor;
+        filter: grayscale(100%) brightness(1.1);
       }
       .pulse {
         border: 2px solid #7f5d00;
@@ -125,8 +126,8 @@
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
-      var classic = L.tileLayer(
-        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+var classic = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         { detectRetina: true },
       ).addTo(map);
       var isClassic = true;
@@ -141,7 +142,7 @@
         className: "css-icon",
         html: '<div class="pulse"></div>',
         iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
+        iconAnchor: [10.5, 20],
       });
       var markerIcon = L.divIcon({
         className: "css-icon",
@@ -313,6 +314,7 @@
           map.removeLayer(userMarker);
         }
         userMarker = L.marker(pos, { icon: pulseIcon }).addTo(map);
+        userMarker.bringToFront();
       }
       function setView(pos, zoom) {
         map.setView(pos, zoom);
