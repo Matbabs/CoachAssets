@@ -82,6 +82,13 @@
         border-radius: 100%;
         box-shadow: 0 0 5px 0 #8f8156;
       }
+      .marker-exploriders {
+        background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 40px;
+        width: 40px;
+      }
       .actions {
         margin-top: 7.5px;
         display: flex;
@@ -162,9 +169,9 @@
       });
       var exploridersIcon = L.divIcon({
         className: "css-icon",
-        html: '<img src="https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment.png" style="width:30px;height:30px;">',
-        iconSize: [30, 30],
-        iconAnchor: [15, 15],
+        html: '<div class="marker-exploriders"></div>',
+        iconSize: [40, 40],
+        iconAnchor: [20, 20],
       });
 
       // LOCAL FUNCTIONS
@@ -277,7 +284,9 @@
               ? markerIconUser
               : markerIcon;
         }
-        const marker = L.marker(pos, { icon }).addTo(map);
+        const marker = L.marker(pos, {
+          icon: icon,
+        }).addTo(map);
         marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
         markers.push(marker);
         document
