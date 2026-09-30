@@ -126,7 +126,7 @@
       var userMarker = undefined;
       var markers = [];
       var classic = L.tileLayer(
-        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        "https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
         { detectRetina: true },
       ).addTo(map);
       var isClassic = true;
