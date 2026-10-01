@@ -315,7 +315,8 @@ var classic = L.tileLayer(
         if (userMarker) {
           map.removeLayer(userMarker);
         }
-        userMarker = L.marker(pos, { icon: pulseIcon }).addTo(map);
+        userMarker = L.marker(pos, { icon: pulseIcon });
+        userMarker.addTo(map);
         userMarker.bringToFront();
       }
       function setView(pos, zoom) {
