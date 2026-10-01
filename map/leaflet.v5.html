@@ -142,7 +142,22 @@
       }
       .marker-spot i {
         color: white;
-        font-size: 12px;
+        font-size: 11px;
+      }
+      .marker-spot-visited {
+        background: #1976D2;
+        border: 2px solid #ffc000;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-spot-visited i {
+        color: white;
+        font-size: 11px;
       }
       .marker-bivouac {
         background: #F44336;
@@ -251,7 +266,13 @@ var classic = L.tileLayer(
       });
       var spotIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-spot"><i class="fa fa-crosshairs"></i></div>',
+        html: '<div class="marker-spot"><i class="fa fa-compass"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+      });
+      var spotVisitedIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-spot-visited"><i class="fa fa-compass"></i></div>',
         iconSize: [24, 24],
         iconAnchor: [12, 12],
       });
@@ -364,7 +385,7 @@ var classic = L.tileLayer(
         if (markerObj.type === "exploriders") {
           icon = markerObj.flipped ? exploridersIconFlipped : exploridersIcon;
         } else if (markerObj.type === "spots") {
-          icon = spotIcon;
+          icon = distanceToUser === -2 ? spotVisitedIcon : spotIcon;
         } else if (markerObj.type === "bivouacs") {
           icon = bivouacIcon;
         } else {
