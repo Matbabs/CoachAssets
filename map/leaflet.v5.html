@@ -346,7 +346,16 @@ var classic = L.tileLayer(
         });
         postMessage(msg);
       }
-function addAlertMarker(pos, alertObj) {
+function signalAlert(alertId) {
+        msg = JSON.stringify({
+          type: "signalAlert",
+          data: {
+            id: alertId,
+          },
+        });
+        postMessage(msg);
+      }
+      function addAlertMarker(pos, alertObj) {
         const alertTypeLabels = {
           danger: "Danger",
           works: "Travaux",
@@ -381,15 +390,6 @@ function addAlertMarker(pos, alertObj) {
           iconSize: [20, 20],
           iconAnchor: [10.5, 10.5],
         });
-        function signalAlert(alertId) {
-        msg = JSON.stringify({
-          type: "signalAlert",
-          data: {
-            id: alertId,
-          },
-        });
-        postMessage(msg);
-      }
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
         let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
         if (alertObj.type === "custom" && alertObj.userId) {
