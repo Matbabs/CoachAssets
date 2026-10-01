@@ -346,13 +346,15 @@ var classic = L.tileLayer(
         });
         postMessage(msg);
       }
-      function addAlertMarker(pos, alertObj) {
+function addAlertMarker(pos, alertObj) {
         const alertTypeLabels = {
           danger: "Danger",
           works: "Travaux",
           animal: "Animal",
           route_closed: "Route fermée",
           flood: "Inondation",
+          wind: "Vent",
+          storm: "Orage",
           police: "Contrôle",
           custom: "Autre",
         };
@@ -362,10 +364,12 @@ var classic = L.tileLayer(
           animal: "#84ca3a",
           route_closed: "#1976D2",
           flood: "#FFCC32",
+          wind: "#87CEEB",
+          storm: "#4B0082",
           police: "#C27BA0",
           custom: "#ffb5f5",
         };
-        const label = alertTypeLabels[alertObj.type] || "Alerte";
+        const label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
         const color = alertColors[alertObj.type] || "#F44336";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
