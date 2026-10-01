@@ -57,34 +57,62 @@
       .marker {
         border: 2px solid white;
         background: #ffc000;
-        height: 18px;
-        width: 18px;
+        height: 24px;
+        width: 24px;
         border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker i {
+        color: white;
+        font-size: 12px;
       }
       .marker-visited {
         border: 2px solid #ffc000;
         background: #ffc000;
-        height: 18px;
-        width: 18px;
+        height: 24px;
+        width: 24px;
         border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-visited i {
+        color: white;
+        font-size: 12px;
       }
       .marker-user {
         border: 2px solid white;
         background: #ffc000;
-        height: 18px;
-        width: 18px;
+        height: 24px;
+        width: 24px;
         border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-user i {
+        color: white;
+        font-size: 12px;
       }
       .marker-visited-user {
         border: 2px solid #ffc000;
         background: #ffc000;
-        height: 18px;
-        width: 18px;
+        height: 24px;
+        width: 24px;
         border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-visited-user i {
+        color: white;
+        font-size: 12px;
       }
 .marker-exploriders {
         background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment.png");
@@ -187,27 +215,27 @@ var classic = L.tileLayer(
       });
       var markerIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
+        html: '<div class="marker"><i class="fa fa-map-marker"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
       });
       var markerVisitedIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-visited"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
+        html: '<div class="marker-visited"><i class="fa fa-map-marker"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
       });
       var markerIconUser = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-user"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
+        html: '<div class="marker-user"><i class="fa fa-user"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
       });
       var markerVisitedIconUser = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-visited-user"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10.5, 10.5],
+        html: '<div class="marker-visited-user"><i class="fa fa-user"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
       });
       var exploridersIcon = L.divIcon({
         className: "css-icon",
