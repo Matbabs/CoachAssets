@@ -347,13 +347,6 @@ var classic = L.tileLayer(
         postMessage(msg);
       }
       function addAlertMarker(pos, alertObj) {
-        const alertIcon = L.divIcon({
-          className: "css-icon",
-          html: `<div style="background:${alertObj.color};width:30px;height:30px;border-radius:50%;border:2px solid white;display:flex;align-items:center;justify-content:center;font-size:16px;">⚠️</div>`,
-          iconSize: [30, 30],
-          iconAnchor: [15, 15],
-        });
-        const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
         const alertTypeLabels = {
           danger: "Danger",
           works: "Travaux",
@@ -365,7 +358,18 @@ var classic = L.tileLayer(
         };
         const label = alertTypeLabels[alertObj.type] || "Alerte";
         const description = alertObj.customText || label;
-        marker.bindPopup(`<b>⚠️ ${label}</b><br>${description}<br><small>Alerte globale - 24h</small>`);
+        const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
+        const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
+        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
+        const alertIcon = L.divIcon({
+          className: "css-icon",
+          html: `<div class="marker" style="background:${alertObj.color};border-color:${alertObj.color}"></div>`,
+          iconSize: [20, 20],
+          iconAnchor: [10.5, 10.5],
+        });
+        const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
+        marker.bindPopup(`<b>${label}</b><br>${description}<br><br>${timeLeft} restantes`);
         markers.push(marker);
       }
     </script>
