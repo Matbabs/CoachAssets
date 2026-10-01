@@ -13,6 +13,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
     <div id="map"></div>
@@ -357,38 +358,50 @@ function signalAlert(alertId) {
       }
       function addAlertMarker(pos, alertObj) {
         const alertTypeLabels = {
-          danger: "Danger",
           works: "Travaux",
           animal: "Animal",
           route_closed: "Route fermée",
           flood: "Inondation",
-          wind: "Vent",
+          wind: "Fort vent",
           storm: "Orage",
-          police: "Contrôle",
+          swell: "Houle",
+          snow: "Neige",
           custom: "Autre",
         };
         const alertColors = {
-          danger: "#F44336",
-          works: "#f57235",
-          animal: "#84ca3a",
-          route_closed: "#1976D2",
+          works: "#FFCC32",
+          animal: "#8B4513",
+          route_closed: "#424242",
           flood: "#FFCC32",
           wind: "#87CEEB",
           storm: "#4B0082",
-          police: "#C27BA0",
-          custom: "#ffb5f5",
+          swell: "#1976D2",
+          snow: "#1976D2",
+          custom: "#808080",
+        };
+        const alertIcons = {
+          works: "fa-wrench",
+          animal: "fa-paw",
+          route_closed: "fa-road",
+          flood: "fa-tint",
+          wind: "fa-cloud",
+          storm: "fa-bolt",
+          swell: "fa-life-ring",
+          snow: "fa-snowflake-o",
+          custom: "fa-comment",
         };
         const label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
         const color = alertColors[alertObj.type] || "#F44336";
+        const iconName = alertIcons[alertObj.type] || "fa-exclamation";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker" style="background:${color};border:2px solid white;"></div>`,
-          iconSize: [20, 20],
-          iconAnchor: [10.5, 10.5],
+          html: `<div class="marker" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
+          iconSize: [24, 24],
+          iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
         let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
