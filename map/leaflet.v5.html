@@ -357,19 +357,18 @@ var classic = L.tileLayer(
           custom: "Autre",
         };
         const label = alertTypeLabels[alertObj.type] || "Alerte";
-        const description = alertObj.customText || label;
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker" style="background:${alertObj.color};border-color:${alertObj.color}"></div>`,
+          html: `<div class="marker" style="background:${alertObj.color};border:2px solid white;"></div>`,
           iconSize: [20, 20],
           iconAnchor: [10.5, 10.5],
         });
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
-        marker.bindPopup(`<b>${label}</b><br>${description}<br><br>${timeLeft} restantes`);
+        marker.bindPopup(`<b>${label}</b><br>${timeLeft} restantes`);
         markers.push(marker);
       }
     </script>
