@@ -392,7 +392,7 @@ function addAlertMarker(pos, alertObj) {
       }
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
         let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
-        if (alertObj.user) {
+        if (alertObj.type === "custom" && alertObj.userId) {
           popup += `<div class="actions">`;
           popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
           popup += `</div>`;
