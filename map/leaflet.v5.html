@@ -356,14 +356,24 @@ var classic = L.tileLayer(
           police: "Contrôle",
           custom: "Autre",
         };
+        const alertColors = {
+          danger: "#F44336",
+          works: "#f57235",
+          animal: "#84ca3a",
+          route_closed: "#1976D2",
+          flood: "#FFCC32",
+          police: "#C27BA0",
+          custom: "#ffb5f5",
+        };
         const label = alertTypeLabels[alertObj.type] || "Alerte";
+        const color = alertColors[alertObj.type] || "#F44336";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker" style="background:${alertObj.color};border:2px solid white;"></div>`,
+          html: `<div class="marker" style="background:${color};border:2px solid white;"></div>`,
           iconSize: [20, 20],
           iconAnchor: [10.5, 10.5],
         });
