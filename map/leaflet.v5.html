@@ -382,7 +382,7 @@ function addAlertMarker(pos, alertObj) {
           iconAnchor: [10.5, 10.5],
         });
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
-        marker.bindPopup(`<b>${label}</b><br>${timeLeft} restantes`);
+        marker.bindPopup(`<b>${label}</b><br>il y a ${timeLeft}`);
         markers.push(marker);
       }
     </script>
