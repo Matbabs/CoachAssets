@@ -378,7 +378,7 @@ var classic = L.tileLayer(
         } else if (distanceToUser >= 0) {
           popup += `<button disabled class="button disabled">+10 points</button>`;
         }
-        if (marker.user) {
+        if (marker.type !== "exploriders") {
           popup += `<button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
         }
         popup += "</div>";
@@ -547,7 +547,7 @@ function signalAlert(alertId) {
         });
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
         let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
-        if (alertObj.type === "custom" && alertObj.userId) {
+        if (alertObj.userId) {
           popup += `<div class="actions">`;
           popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
           popup += `</div>`;
