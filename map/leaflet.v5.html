@@ -381,8 +381,23 @@ function addAlertMarker(pos, alertObj) {
           iconSize: [20, 20],
           iconAnchor: [10.5, 10.5],
         });
+        function signalAlert(alertId) {
+        msg = JSON.stringify({
+          type: "signalAlert",
+          data: {
+            id: alertId,
+          },
+        });
+        postMessage(msg);
+      }
         const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
-        marker.bindPopup(`<b>${label}</b><br>il y a ${timeLeft}`);
+        let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
+        if (alertObj.user) {
+          popup += `<div class="actions">`;
+          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
+          popup += `</div>`;
+        }
+        marker.bindPopup(popup);
         markers.push(marker);
       }
     </script>
