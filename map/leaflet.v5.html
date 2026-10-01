@@ -101,6 +101,36 @@
         width: 60px;
         transform: scaleX(-1);
       }
+      .marker-spot {
+        background: #1976D2;
+        border: 2px solid white;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-spot i {
+        color: white;
+        font-size: 12px;
+      }
+      .marker-bivouac {
+        background: #F44336;
+        border: 2px solid white;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-bivouac i {
+        color: white;
+        font-size: 12px;
+      }
       .actions {
         margin-top: 7.5px;
         display: flex;
@@ -184,6 +214,24 @@ var classic = L.tileLayer(
         html: '<div class="marker-exploriders"></div>',
         iconSize: [60, 60],
         iconAnchor: [30, 60],
+      });
+      var exploridersIconFlipped = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-exploriders-flipped"></div>',
+        iconSize: [60, 60],
+        iconAnchor: [30, 60],
+      });
+      var spotIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-spot"><i class="fa fa-crosshairs"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+      });
+      var bivouacIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-bivouac"><i class="fa fa-fire"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
       });
 
       // LOCAL FUNCTIONS
@@ -286,7 +334,11 @@ var classic = L.tileLayer(
       function addMarker(pos, markerObj, color, distanceToUser) {
         let icon;
         if (markerObj.type === "exploriders") {
-          icon = exploridersIcon;
+          icon = markerObj.flipped ? exploridersIconFlipped : exploridersIcon;
+        } else if (markerObj.type === "spots") {
+          icon = spotIcon;
+        } else if (markerObj.type === "bivouacs") {
+          icon = bivouacIcon;
         } else {
           icon = distanceToUser === -2
             ? markerObj.user
