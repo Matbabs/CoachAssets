@@ -269,14 +269,29 @@
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
+var currentClusterColor = '#ffc000';
+var currentUsername = '';
 var markerClusterGroup = L.markerClusterGroup({
   maxClusterRadius: 50,
   spiderfyOnMaxZoom: true,
   showCoverageOnHover: false,
   zoomToBoundsOnClick: true,
   disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    var size = 'small';
+    if (count > 50) size = 'large';
+    else if (count > 10) size = 'medium';
+    return L.divIcon({
+      html: '<div style="background:' + currentClusterColor + ';width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
+      className: '',
+      iconSize: L.point(36, 36)
+    });
+  },
+  chunkedLoading: true
 });
 map.addLayer(markerClusterGroup);
+var unclusteredGroup = L.layerGroup().addTo(map);
 var classic = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         { detectRetina: true },
@@ -474,8 +489,28 @@ var classic = L.tileLayer(
           icon: icon,
         });
         marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
-        markerClusterGroup.addLayer(marker);
+        
+        // User's own marker stays unclustered
+        const isUserMarker = markerObj.name === "ExploRider" && 
+          (markerObj.description === "Moi" || markerObj.description === currentUsername);
+        if (isUserMarker) {
+          unclusteredGroup.addLayer(marker);
+        } else {
+          markerClusterGroup.addLayer(marker);
+        }
         markers.push(marker);
+        
+        // Update cluster color based on marker type
+        if (markerObj.type === "spots") {
+          currentClusterColor = "#1976D2";
+        } else if (markerObj.type === "bivouacs") {
+          currentClusterColor = "#F44336";
+        } else if (markerObj.type === "sessions") {
+          currentClusterColor = "#7CB342";
+        } else {
+          currentClusterColor = color;
+        }
+        
         document
           .querySelectorAll(".marker")
           .forEach((e) => (e.style.background = color));
@@ -503,7 +538,15 @@ var classic = L.tileLayer(
       }
       function removeAllMarkers() {
         markerClusterGroup.clearLayers();
+        unclusteredGroup.clearLayers();
         markers = [];
+        currentClusterColor = '#ffc000';
+      }
+      function setClusterColor(color) {
+        currentClusterColor = color;
+      }
+      function setUsername(name) {
+        currentUsername = name;
       }
       function locate(pos) {
         if (userMarker) {
@@ -511,7 +554,6 @@ var classic = L.tileLayer(
         }
         userMarker = L.marker(pos, { icon: pulseIcon });
         userMarker.addTo(map);
-        userMarker.bringToFront();
       }
       function setView(pos, zoom) {
         map.setView(pos, zoom);
