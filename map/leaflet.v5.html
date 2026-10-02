@@ -555,6 +555,26 @@ var classic = L.tileLayer(
         document.querySelectorAll('.marker-exploriders-flipped').forEach(el => {
           el.style.backgroundImage = `url("${url}")`;
         });
+        // Recreate icons with new image
+        exploridersIcon = L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker-exploriders" style="background-image: url(\'' + url + '\');"></div>',
+          iconSize: [60, 60],
+          iconAnchor: [30, 60],
+        });
+        exploridersIconFlipped = L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker-exploriders-flipped" style="background-image: url(\'' + url + '\');"></div>',
+          iconSize: [60, 60],
+          iconAnchor: [30, 60],
+        });
+        // Update existing markers on the map
+        markers.forEach(function(m) {
+          if (m.options.icon && m.options.icon.options.html && m.options.icon.options.html.includes('marker-exploriders')) {
+            const isFlipped = m.options.icon.options.html.includes('flipped');
+            m.setIcon(isFlipped ? exploridersIconFlipped : exploridersIcon);
+          }
+        });
       }
       function locate(pos) {
         if (userMarker) {
