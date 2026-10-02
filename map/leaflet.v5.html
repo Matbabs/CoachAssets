@@ -13,6 +13,9 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
   <body>
@@ -209,6 +212,47 @@
         border: 1px solid grey;
         color: grey;
       }
+      .marker-cluster {
+        background: rgba(255, 192, 0, 0.6);
+      }
+      .marker-cluster div {
+        background: rgba(255, 192, 0, 0.8);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+      }
+      .marker-cluster-small {
+        background: rgba(255, 192, 0, 0.6);
+      }
+      .marker-cluster-small div {
+        background: rgba(255, 192, 0, 0.8);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+      .marker-cluster-medium {
+        background: rgba(255, 192, 0, 0.6);
+      }
+      .marker-cluster-medium div {
+        background: rgba(255, 192, 0, 0.8);
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+      }
+      .marker-cluster-large {
+        background: rgba(255, 192, 0, 0.6);
+      }
+      .marker-cluster-large div {
+        background: rgba(255, 192, 0, 0.8);
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+      }
     </style>
     <script>
       const MARKER_RADIUS_LIMIT = 50;
@@ -225,6 +269,14 @@
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
+var markerClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+});
+map.addLayer(markerClusterGroup);
 var classic = L.tileLayer(
         "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         { detectRetina: true },
@@ -420,8 +472,9 @@ var classic = L.tileLayer(
         }
         const marker = L.marker(pos, {
           icon: icon,
-        }).addTo(map);
+        });
         marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
+        markerClusterGroup.addLayer(marker);
         markers.push(marker);
         document
           .querySelectorAll(".marker")
@@ -449,9 +502,7 @@ var classic = L.tileLayer(
           .forEach((e) => (e.style.background = "#F44336"));
       }
       function removeAllMarkers() {
-        markers.forEach((marker) => {
-          map.removeLayer(marker);
-        });
+        markerClusterGroup.clearLayers();
         markers = [];
       }
       function locate(pos) {
@@ -545,7 +596,7 @@ function signalAlert(alertId) {
           iconSize: [24, 24],
           iconAnchor: [12, 12],
         });
-        const marker = L.marker(pos, { icon: alertIcon }).addTo(map);
+        const marker = L.marker(pos, { icon: alertIcon });
         let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
@@ -553,6 +604,7 @@ function signalAlert(alertId) {
           popup += `</div>`;
         }
         marker.bindPopup(popup);
+        markerClusterGroup.addLayer(marker);
         markers.push(marker);
       }
     </script>
