@@ -548,6 +548,14 @@ var classic = L.tileLayer(
       function setUsername(name) {
         currentUsername = name;
       }
+      function setMarkerImage(url) {
+        document.querySelectorAll('.marker-exploriders').forEach(el => {
+          el.style.backgroundImage = `url("${url}")`;
+        });
+        document.querySelectorAll('.marker-exploriders-flipped').forEach(el => {
+          el.style.backgroundImage = `url("${url}")`;
+        });
+      }
       function locate(pos) {
         if (userMarker) {
           map.removeLayer(userMarker);
