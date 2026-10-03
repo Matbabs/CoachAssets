@@ -556,6 +556,13 @@ var classic = L.tileLayer(
         markers = [];
         currentClusterColor = '#ffc000';
       }
+      function removeUserMarker() {
+        const userMarkers = markers.filter(m => {
+          try { return unclusteredGroup.hasLayer(m); } catch(e) { return false; }
+        });
+        userMarkers.forEach(m => unclusteredGroup.removeLayer(m));
+        markers = markers.filter(m => !userMarkers.includes(m));
+      }
       function setClusterColor(color) {
         currentClusterColor = color;
       }
