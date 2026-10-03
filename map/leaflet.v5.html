@@ -292,8 +292,9 @@ var markerClusterGroup = L.markerClusterGroup({
 });
 map.addLayer(markerClusterGroup);
 var unclusteredGroup = L.layerGroup().addTo(map);
+// "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
 var classic = L.tileLayer(
-        "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
         { detectRetina: true },
       ).addTo(map);
       var isClassic = true;
