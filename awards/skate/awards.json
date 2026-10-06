@@ -1,0 +1,24 @@
+{
+  "awards": [
+    {
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/awards/skate/1.jpg",
+      "link": "https://www.instagram.com/p/Db6AXtagLai/?img_index=1",
+      "account": "@teddymorellec"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/awards/skate/2.jpg",
+      "link": "https://www.instagram.com/legallout/p/DdmI7NXiJUb/?img_index=1",
+      "account": "@legallout"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/awards/skate/3.jpg",
+      "link": "https://www.instagram.com/p/DatDAo7Dbnr/?img_index=1",
+      "account": "@dongrego"
+    },
+    {
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/awards/skate/4.jpg",
+      "link": "https://www.instagram.com/p/Dctg6VFDMO4/?img_index=1",
+      "account": "@pal_photo"
+    }
+  ]
+}
