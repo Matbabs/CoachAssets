@@ -162,6 +162,21 @@
         color: white;
         font-size: 9px;
       }
+      .marker-live-story {
+        background: #C27BA0;
+        border: 2px solid white;
+        height: 24px;
+        width: 24px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #8f8156;
+      }
+      .marker-live-story i {
+        color: white;
+        font-size: 12px;
+      }
       .marker-bivouac {
         background: #F44336;
         border: 2px solid white;
@@ -371,6 +386,12 @@ var classic = L.tileLayer(
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
+      var liveStoryIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-live-story"><i class="fa fa-camera"></i></div>',
+        iconSize: [24, 24],
+        iconAnchor: [12, 12],
+      });
 
       // LOCAL FUNCTIONS
       function postMessage(msg) {
@@ -423,6 +444,9 @@ var classic = L.tileLayer(
       }
       function generatePopup(marker, distanceToUser) {
         let popup = `<b>${marker.name}</b><br>${marker.description}`;
+        if (marker.imageUrl) {
+          popup = `<b>${marker.name}</b><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;">${marker.description}`;
+        }
         if (marker.dateIn && marker.timeIn) {
           popup += `<br><br>Début: ${marker.dateIn} - ${marker.timeIn}`;
         }
@@ -488,7 +512,11 @@ var classic = L.tileLayer(
           });
           icon = markerObj.flipped ? customIconFlipped : customIcon;
         } else if (markerObj.type === "spots") {
-          icon = distanceToUser === -2 ? spotVisitedIcon : spotIcon;
+          if (markerObj.imageUrl) {
+            icon = liveStoryIcon;
+          } else {
+            icon = distanceToUser === -2 ? spotVisitedIcon : spotIcon;
+          }
         } else if (markerObj.type === "bivouacs") {
           icon = distanceToUser === -2 ? bivouacVisitedIcon : bivouacIcon;
         } else {
@@ -517,7 +545,11 @@ var classic = L.tileLayer(
         
         // Update cluster color based on marker type
         if (markerObj.type === "spots") {
-          currentClusterColor = "#1976D2";
+          if (markerObj.imageUrl) {
+            currentClusterColor = "#C27BA0";
+          } else {
+            currentClusterColor = "#1976D2";
+          }
         } else if (markerObj.type === "bivouacs") {
           currentClusterColor = "#F44336";
         } else if (markerObj.type === "sessions") {
