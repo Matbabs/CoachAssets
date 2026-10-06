@@ -20,7 +20,7 @@
   </head>
   <body>
     <div id="map"></div>
-    <style>
+    <spa>
       html,
       body {
         height: 100%;
@@ -476,7 +476,7 @@ var classic = L.tileLayer(
           const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
           const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
-          popup = `<b>Live Spot Story de ${authorName}</b><br>il y a ${timeLeft}<br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}')">`;
+          popup = `<b>Live Spot Story de <span style="color: #ffc000;">${authorName}</span></b><br>il y a ${timeLeft}<br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}')">`;
           popup += `<div class="actions">`;
           popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
           popup += `</div>`;
