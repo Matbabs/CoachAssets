@@ -165,8 +165,8 @@
       .marker-live-story {
         background: #C27BA0;
         border: 2px solid white;
-        height: 24px;
-        width: 24px;
+        height: 18px;
+        width: 18px;
         border-radius: 100%;
         display: flex;
         align-items: center;
@@ -175,7 +175,7 @@
       }
       .marker-live-story i {
         color: white;
-        font-size: 12px;
+        font-size: 9px;
       }
       .marker-bivouac {
         background: #F44336;
@@ -406,8 +406,8 @@ var classic = L.tileLayer(
       var liveStoryIcon = L.divIcon({
         className: "css-icon",
         html: '<div class="marker-live-story"><i class="fa fa-camera"></i></div>',
-        iconSize: [24, 24],
-        iconAnchor: [12, 12],
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
       });
 
       // LOCAL FUNCTIONS
@@ -463,7 +463,11 @@ var classic = L.tileLayer(
         let popup;
         if (marker.imageUrl) {
           const authorName = marker.username || "Anonyme";
-          popup = `<b>Live Spot Story de ${authorName}</b><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;">`;
+          const expiresIn = Math.max(0, marker.expiresAt - Date.now());
+          const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
+          const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
+          const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
+          popup = `<b>Live Spot Story de ${authorName}</b><br>il y a ${timeLeft}<br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="window.open('${marker.imageUrl}', '_blank')">`;
           return popup;
         }
         popup = `<b>${marker.name}</b><br>${marker.description}`;
