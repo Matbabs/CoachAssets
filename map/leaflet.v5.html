@@ -305,7 +305,24 @@ var markerClusterGroup = L.markerClusterGroup({
   },
   chunkedLoading: true
 });
+var liveStoryClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    return L.divIcon({
+      html: '<div style="background:#C27BA0;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
+      className: '',
+      iconSize: L.point(36, 36)
+    });
+  },
+  chunkedLoading: true
+});
 map.addLayer(markerClusterGroup);
+map.addLayer(liveStoryClusterGroup);
 var unclusteredGroup = L.layerGroup().addTo(map);
 // "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
 var classic = L.tileLayer(
@@ -443,10 +460,13 @@ var classic = L.tileLayer(
         postMessage(msg);
       }
       function generatePopup(marker, distanceToUser) {
-        let popup = `<b>${marker.name}</b><br>${marker.description}`;
+        let popup;
         if (marker.imageUrl) {
-          popup = `<b>${marker.name}</b><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;">${marker.description}`;
+          const authorName = marker.username || "Anonyme";
+          popup = `<b>Live Spot Story de ${authorName}</b><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;">`;
+          return popup;
         }
+        popup = `<b>${marker.name}</b><br>${marker.description}`;
         if (marker.dateIn && marker.timeIn) {
           popup += `<br><br>Début: ${marker.dateIn} - ${marker.timeIn}`;
         }
@@ -528,28 +548,29 @@ var classic = L.tileLayer(
               ? markerIconUser
               : markerIcon;
         }
-        const marker = L.marker(pos, {
+const marker = L.marker(pos, {
           icon: icon,
         });
-        marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
+        marker.bindPopup(generatePopup(markerObj, distanceToUser));
         
-        // User's own marker stays unclustered
-        const isUserMarker = markerObj.name === "ExploRider" && 
-          (markerObj.description === "Moi" || markerObj.description === currentUsername);
-        if (isUserMarker) {
-          unclusteredGroup.addLayer(marker);
+        // Live stories go to their own cluster group
+        if (markerObj.imageUrl) {
+          liveStoryClusterGroup.addLayer(marker);
         } else {
-          markerClusterGroup.addLayer(marker);
+          // User's own marker stays unclustered
+          const isUserMarker = markerObj.name === "ExploRider" && 
+            (markerObj.description === "Moi" || markerObj.description === currentUsername);
+          if (isUserMarker) {
+            unclusteredGroup.addLayer(marker);
+          } else {
+            markerClusterGroup.addLayer(marker);
+          }
         }
         markers.push(marker);
         
         // Update cluster color based on marker type
         if (markerObj.type === "spots") {
-          if (markerObj.imageUrl) {
-            currentClusterColor = "#C27BA0";
-          } else {
-            currentClusterColor = "#1976D2";
-          }
+          currentClusterColor = "#1976D2";
         } else if (markerObj.type === "bivouacs") {
           currentClusterColor = "#F44336";
         } else if (markerObj.type === "sessions") {
@@ -585,6 +606,7 @@ var classic = L.tileLayer(
       }
       function removeAllMarkers() {
         markerClusterGroup.clearLayers();
+        liveStoryClusterGroup.clearLayers();
         unclusteredGroup.clearLayers();
         markers = [];
         currentClusterColor = '#ffc000';
