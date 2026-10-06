@@ -581,8 +581,8 @@ const marker = L.marker(pos, {
         }
         markers.push(marker);
         
-        // Update cluster color based on marker type
-        if (markerObj.type === "spots") {
+        // Update cluster color based on marker type (skip live stories)
+        if (markerObj.type === "spots" && !markerObj.imageUrl) {
           currentClusterColor = "#1976D2";
         } else if (markerObj.type === "bivouacs") {
           currentClusterColor = "#F44336";
