@@ -479,7 +479,7 @@ var classic = L.tileLayer(
           const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
           const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
-          popup = `<b>Live Spot Story de <span class="story-author">${authorName}</span></b><br>il y a ${timeLeft}<br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}')">`;
+          popup = `<b>Live Spot Story de <span class="story-author">${authorName}</span></b><br><span style="color:grey">il y a ${timeLeft}</span><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}')">`;
           popup += `<div class="actions">`;
           popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
           popup += `</div>`;
@@ -783,7 +783,7 @@ function signalAlert(alertId) {
           iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon });
-        let popup = `<b>${label}</b><br>il y a ${timeLeft}`;
+        let popup = `<b>${label}</b><br><span style="color:grey">il y a ${timeLeft}</span>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
           popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
