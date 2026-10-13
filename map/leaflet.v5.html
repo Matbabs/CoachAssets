@@ -772,7 +772,7 @@ function signalAlert(alertId) {
           pollution: "fa-leaf",
           custom: "fa-comment",
         };
-        const label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
+        let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
         label += alertObj.customText ? ": " + alertObj.customText : "";
         const color = alertColors[alertObj.type] || "#F44336";
         const iconName = alertIcons[alertObj.type] || "fa-exclamation";
