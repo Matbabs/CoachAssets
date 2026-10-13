@@ -737,6 +737,7 @@ function signalAlert(alertId) {
           flood_river: "Crue",
           hunting: "Chasse en cours",
           prefectoral: "Arrêté préfectoral",
+          pollution: "Pollution",
           custom: "Autre",
         };
         const alertColors = {
@@ -752,6 +753,7 @@ function signalAlert(alertId) {
           flood_river: "#9C27B0",
           hunting: "#8B4513",
           prefectoral: "#4A4A4A",
+          pollution: "#6B8E23",
           custom: "#808080",
         };
         const alertIcons = {
@@ -767,6 +769,7 @@ function signalAlert(alertId) {
           flood_river: "fa-tint",
           hunting: "fa-crosshairs",
           prefectoral: "fa-gavel",
+          pollution: "fa-leaf",
           custom: "fa-comment",
         };
         const label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
