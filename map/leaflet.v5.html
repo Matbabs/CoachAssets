@@ -773,6 +773,7 @@ function signalAlert(alertId) {
           custom: "fa-comment",
         };
         const label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
+        label += alertObj.customText ? ": " + alertObj.customText : "";
         const color = alertColors[alertObj.type] || "#F44336";
         const iconName = alertIcons[alertObj.type] || "fa-exclamation";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
