@@ -42,11 +42,11 @@
         /* filter: grayscale(100%) brightness(1.1); */
       }
       .pulse {
-        border: 2px solid #6D28D9;
+        border: 2px solid #1A0F2B;
         height: 18px;
         width: 18px;
         border-radius: 100%;
-        box-shadow: 0 0 5px 0 #6D28D9;
+        box-shadow: 0 0 5px 0 #1A0F2B;
         animation: pulsate 1s infinite;
       }
       @keyframes pulsate {
@@ -519,7 +519,7 @@ var classic = L.tileLayer(
         switch (color.toLowerCase()) {
           case "#3B82F6".toLowerCase():
             return "#60A5FA";
-          case "#84ca3a".toLowerCase():
+          case "#10B981".toLowerCase():
             return "#4ADE80";
           case "#EF4444".toLowerCase():
             return "#F87171";
@@ -593,7 +593,7 @@ const marker = L.marker(pos, {
         } else if (markerObj.type === "bivouacs") {
           currentClusterColor = "#EF4444";
         } else if (markerObj.type === "sessions") {
-          currentClusterColor = "#84ca3a";
+          currentClusterColor = "#10B981";
         } else {
           currentClusterColor = color;
         }
