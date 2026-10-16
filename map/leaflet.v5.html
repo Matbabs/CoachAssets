@@ -519,7 +519,7 @@ var classic = L.tileLayer(
         switch (color.toLowerCase()) {
           case "#3B82F6".toLowerCase():
             return "#60A5FA";
-          case "#22C55E".toLowerCase():
+          case "#84ca3a".toLowerCase():
             return "#4ADE80";
           case "#EF4444".toLowerCase():
             return "#F87171";
@@ -593,7 +593,7 @@ const marker = L.marker(pos, {
         } else if (markerObj.type === "bivouacs") {
           currentClusterColor = "#EF4444";
         } else if (markerObj.type === "sessions") {
-          currentClusterColor = "#22C55E";
+          currentClusterColor = "#84ca3a";
         } else {
           currentClusterColor = color;
         }
@@ -782,7 +782,7 @@ function signalAlert(alertId) {
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
+          html: `<div class="marker" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
           iconSize: [24, 24],
           iconAnchor: [12, 12],
         });
