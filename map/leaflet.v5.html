@@ -59,7 +59,7 @@
       }
       .marker {
         border: 2px solid white;
-        background: #E8C547;
+        background: #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -73,8 +73,8 @@
         font-size: 9px;
       }
       .marker-visited {
-        border: 2px solid #E8C547;
-        background: #E8C547;
+        border: 2px solid #FBBF24;
+        background: #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -89,7 +89,7 @@
       }
       .marker-user {
         border: 2px solid white;
-        background: #E8C547;
+        background: #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -103,8 +103,8 @@
         font-size: 9px;
       }
       .marker-visited-user {
-        border: 2px solid #E8C547;
-        background: #E8C547;
+        border: 2px solid #FBBF24;
+        background: #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -149,7 +149,7 @@
       }
       .marker-spot-visited {
         background: #3B82F6;
-        border: 2px solid #E8C547;
+        border: 2px solid #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -194,7 +194,7 @@
       }
       .marker-bivouac-visited {
         background: #EF4444;
-        border: 2px solid #E8C547;
+        border: 2px solid #FBBF24;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -214,8 +214,8 @@
         gap: 5px;
       }
       .button {
-        background: #E8C547;
-        border: 1px solid #E8C547;
+        background: #FBBF24;
+        border: 1px solid #FBBF24;
         padding: 10px;
         color: white;
         font-weight: bold;
@@ -269,7 +269,7 @@
         line-height: 46px;
       }
       .story-author {
-        color: #E8C547;
+        color: #FBBF24;
       }
     </style>
     <script>
@@ -287,7 +287,7 @@
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
       var markers = [];
-var currentClusterColor = '#E8C547';
+var currentClusterColor = '#FBBF24';
 var currentUsername = '';
 var markerClusterGroup = L.markerClusterGroup({
   maxClusterRadius: 50,
@@ -524,7 +524,7 @@ var classic = L.tileLayer(
           case "#EF4444".toLowerCase():
             return "#F87171";
           default:
-            return "#E8C547";
+            return "#FBBF24";
         }
       }
       map.on("move", updateCoords);
@@ -628,7 +628,7 @@ const marker = L.marker(pos, {
         liveStoryClusterGroup.clearLayers();
         unclusteredGroup.clearLayers();
         markers = [];
-        currentClusterColor = '#E8C547';
+        currentClusterColor = '#FBBF24';
       }
       function removeUserMarker() {
         const userMarkers = markers.filter(m => {
@@ -694,7 +694,7 @@ const marker = L.marker(pos, {
             if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
               document.styleSheets[i].rules[j].style.borderColor = !isClassic
                 ? "#6D28D9"
-               : "#E8C547";
+               : "#FBBF24";
             }
           }
         }
