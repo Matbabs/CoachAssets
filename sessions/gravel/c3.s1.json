@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "SV1 - Endurance de Force",
-      "description": "1h30 dont 3 x 15 min en zone SV1 (Haut de Z2 / Bas de Z3)\n\n📊 Protocole :\n → Échauffement : 20 min Z2.\n → Travail : 3 séries de 15 min à l'allure SV1 (respiration rythmée mais contrôlée, peut parler par phrases courtes).\n → Cadence : 70-80 RPM pour solliciter la force.\n → Récupération : 5 min entre les séries.\n\nObjectif : Repousser le premier seuil ventilatoire pour économiser le glycogène."
+      "description": "1h30 dont 3 x 15 min en zone SV1 (Haut de Z2 / Bas de Z3)\n\n📊 Protocole :\n → Échauffement: 20 min Z2.\n → Travail: 3 séries de 15 min à l'allure SV1 (respiration rythmée mais contrôlée, peut parler par phrases courtes).\n → Cadence: 70-80 RPM pour solliciter la force.\n → Récupération: 5 min entre les séries.\n\nObjectif: Repousser le premier seuil ventilatoire pour économiser le glycogène."
     },
     {
       "tag": "Z2 Fondamentale",
-      "description": "2h en Zone 2 stricte\n\n📊 Focus : Fluidité (90 RPM) et gestion de l'hydratation.\n\nObjectif : Maintenir le volume aérobie sans fatigue résiduelle pour la séance de SST."
+      "description": "2h en Zone 2 stricte\n\n📊 Focus: Fluidité (90 RPM) et gestion de l'hydratation.\n\nObjectif: Maintenir le volume aérobie sans fatigue résiduelle pour la séance de SST."
     },
     {
       "tag": "SST (Sweet Spot Training)",
-      "description": "1h15 dont 2 x 20 min en Sweet Spot (88-94% de la puissance critique)\n\n📊 Protocole :\n → Échauffement : 15 min progressif.\n → Travail : 2 x 20 min à l'intensité 'confortablement dur'. C'est la zone charnière entre le foncier et le seuil.\n → Récupération : 8 min en Z1 entre les blocs.\n\nObjectif : Augmenter la densité mitochondriale et la tolérance à l'effort prolongé."
+      "description": "1h15 dont 2 x 20 min en Sweet Spot (88-94% de la puissance critique)\n\n📊 Protocole :\n → Échauffement: 15 min progressif.\n → Travail: 2 x 20 min à l'intensité 'confortablement dur'. C'est la zone charnière entre le foncier et le seuil.\n → Récupération: 8 min en Z1 entre les blocs.\n\nObjectif: Augmenter la densité mitochondriale et la tolérance à l'effort prolongé."
     }
   ]
 }

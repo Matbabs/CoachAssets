@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "SV2 - Seuil Anaérobie",
-      "description": "1h15 dont 4 x 8 min au Seuil (Z4)\n\n📊 Protocole :\n → Échauffement : 20 min avec 2 accélérations de 1 min.\n → Travail : 4 séries de 8 min précisément à votre puissance de test 12 min (SV2).\n → Récupération : 4 min (ratio 2:1).\n\nObjectif : Améliorer le recyclage des lactates et la puissance stable."
+      "description": "1h15 dont 4 x 8 min au Seuil (Z4)\n\n📊 Protocole :\n → Échauffement: 20 min avec 2 accélérations de 1 min.\n → Travail: 4 séries de 8 min précisément à votre puissance de test 12 min (SV2).\n → Récupération: 4 min (ratio 2:1).\n\nObjectif: Améliorer le recyclage des lactates et la puissance stable."
     },
     {
       "tag": "Z2 Endurance Active",
-      "description": "2h15 en Zone 2\n\n📊 Terrain : Vallonné si possible pour travailler les transitions de puissance naturelles.\n\nObjectif : Accumuler de la fatigue périphérique sur les fibres lentes."
+      "description": "2h15 en Zone 2\n\n📊 Terrain: Vallonné si possible pour travailler les transitions de puissance naturelles.\n\nObjectif: Accumuler de la fatigue périphérique sur les fibres lentes."
     },
     {
       "tag": "Intervalles CP (Puissance Critique)",
-      "description": "1h10 dont 5 x 5 min @105% CP\n\n📊 Protocole :\n → Travail : 5 séries de 5 min juste au-dessus de la puissance critique (légèrement au-dessus de l'allure test 12 min).\n → Récupération : 5 min en Z1 (récupération complète).\n\nObjectif : 'Tirer' la puissance critique vers le haut en travaillant légèrement en sur-régime."
+      "description": "1h10 dont 5 x 5 min @105% CP\n\n📊 Protocole :\n → Travail: 5 séries de 5 min juste au-dessus de la puissance critique (légèrement au-dessus de l'allure test 12 min).\n → Récupération: 5 min en Z1 (récupération complète).\n\nObjectif: 'Tirer' la puissance critique vers le haut en travaillant légèrement en sur-régime."
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Neuromusculaire : Sprints Arrêtés",
-      "description": "1h15 dont 10 sprints départ arrêté\n\n📊 Travail spécifique : 10 répétitions de 10 secondes à intensité MAXIMALE.\n → Protocole : À l'arrêt complet ou vitesse marche, grand braquet. Sprint de 10s en danseuse en tirant fort sur le cintre.\n → Récupération : 3 min en Zone 1 entre chaque effort.\n\n👉 Objectif : Recruter un maximum de fibres musculaires pour vaincre l'inertie du vélo chargé."
+      "tag": "Neuromusculaire: Sprints Arrêtés",
+      "description": "1h15 dont 10 sprints départ arrêté\n\n📊 Travail spécifique: 10 répétitions de 10 secondes à intensité MAXIMALE.\n → Protocole: À l'arrêt complet ou vitesse marche, grand braquet. Sprint de 10s en danseuse en tirant fort sur le cintre.\n → Récupération: 3 min en Zone 1 entre chaque effort.\n\n👉 Objectif: Recruter un maximum de fibres musculaires pour vaincre l'inertie du vélo chargé."
     },
     {
-      "tag": "Force Max : SFR (Seuil de Force de Réserve)",
-      "description": "1h30 dont 5 x 4 min en Force Basse Cadence\n\n📊 Travail spécifique : 5 répétitions de 4 min en Zone 3 (Tempo) à 40-50 RPM.\n → Terrain : Côte régulière (4-6%).\n → Consigne : Dos fixe, mains aux cocottes, pas de balancement du corps. Tout vient des jambes.\n\n👉 Objectif : Renforcer les tendons et la force musculaire brute spécifique à la grimpe lente."
+      "tag": "Force Max: Seuil de Force de Réserve",
+      "description": "1h30 dont 5 x 4 min en Force Basse Cadence\n\n📊 Travail spécifique: 5 répétitions de 4 min en Zone 3 (Tempo) à 40-50 RPM.\n → Terrain: Côte régulière (4-6%).\n → Consigne: Dos fixe, mains aux cocottes, pas de balancement du corps. Tout vient des jambes.\n\n👉 Objectif: Renforcer les tendons et la force musculaire brute spécifique à la grimpe lente."
     },
     {
-      "tag": "Explosivité : Sortie Vallonnée & Relances",
-      "description": "2h30 avec 12 relances explosives\n\n📊 Travail spécifique : Sur un parcours varié, à chaque sommet de bosse ou sortie de virage, faire un sprint de 15s.\n → Intensité : Zone 6 (Anaérobie).\n → Cadence : Passer de 50 à 110 RPM le plus vite possible.\n\n👉 Objectif : Travailler la capacité à changer de rythme malgré la fatigue et le poids du matériel."
+      "tag": "Explosivité: Vallonné & Relances",
+      "description": "2h30 avec 12 relances explosives\n\n📊 Travail spécifique: Sur un parcours varié, à chaque sommet de bosse ou sortie de virage, faire un sprint de 15s.\n → Intensité: Zone 6 (Anaérobie).\n → Cadence: Passer de 50 à 110 RPM le plus vite possible.\n\n👉 Objectif: Travailler la capacité à changer de rythme malgré la fatigue et le poids du matériel."
     }
   ]
 }

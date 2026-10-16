@@ -42,7 +42,7 @@
         /* filter: grayscale(100%) brightness(1.1); */
       }
       .pulse {
-        border: 2px solid #7f5d00;
+        border: 2px solid #6D28D9;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -478,7 +478,7 @@ var classic = L.tileLayer(
           const expiresIn = Math.max(0, marker.expiresAt - Date.now());
           const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
-          const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
+          const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
           popup = `<b>Live Spot Story de <span class="story-author">${authorName}</span></b><br><span style="color:grey">il y a ${timeLeft}</span><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}')">`;
           popup += `<div class="actions">`;
           popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
@@ -549,23 +549,23 @@ var classic = L.tileLayer(
             iconSize: [60, 60],
             iconAnchor: [30, 60],
           });
-          icon = markerObj.flipped ? customIconFlipped : customIcon;
+          icon = markerObj.flipped ? customIconFlipped: customIcon;
         } else if (markerObj.type === "spots") {
           if (markerObj.imageUrl) {
             icon = liveStoryIcon;
           } else {
-            icon = distanceToUser === -2 ? spotVisitedIcon : spotIcon;
+            icon = distanceToUser === -2 ? spotVisitedIcon: spotIcon;
           }
         } else if (markerObj.type === "bivouacs") {
-          icon = distanceToUser === -2 ? bivouacVisitedIcon : bivouacIcon;
+          icon = distanceToUser === -2 ? bivouacVisitedIcon: bivouacIcon;
         } else {
           icon = distanceToUser === -2
             ? markerObj.user
               ? markerVisitedIconUser
-              : markerVisitedIcon
-            : markerObj.user
+             : markerVisitedIcon
+           : markerObj.user
               ? markerIconUser
-              : markerIcon;
+             : markerIcon;
         }
 const marker = L.marker(pos, {
           icon: icon,
@@ -667,7 +667,7 @@ const marker = L.marker(pos, {
         markers.forEach(function(m) {
           if (m.options.icon && m.options.icon.options.html && m.options.icon.options.html.includes('marker-exploriders')) {
             const isFlipped = m.options.icon.options.html.includes('flipped');
-            m.setIcon(isFlipped ? exploridersIconFlipped : exploridersIcon);
+            m.setIcon(isFlipped ? exploridersIconFlipped: exploridersIcon);
           }
         });
       }
@@ -693,8 +693,8 @@ const marker = L.marker(pos, {
           for (let j = 0; j < document.styleSheets[i].rules.length; j++) {
             if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
               document.styleSheets[i].rules[j].style.borderColor = !isClassic
-                ? "#7f5d00"
-                : "#E8C547";
+                ? "#6D28D9"
+               : "#E8C547";
             }
           }
         }
@@ -772,14 +772,14 @@ function signalAlert(alertId) {
           pollution: "fa-leaf",
           custom: "fa-comment",
         };
-        let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
-        label += alertObj.customText ? ": " + alertObj.customText : "";
+        let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText: (alertTypeLabels[alertObj.type] || "Alerte");
+        label += alertObj.customText ? ": " + alertObj.customText: "";
         const color = alertColors[alertObj.type] || "#F44336";
         const iconName = alertIcons[alertObj.type] || "fa-exclamation";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
-        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
+        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
           html: `<div class="marker" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,

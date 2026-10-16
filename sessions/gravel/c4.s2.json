@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Micro-Intervalles (40/20)",
-      "description": "1h20 dont 2 séries de (8 x 40s Z5 / 20s Z1)\n\n📊 Échauffement : 20 min Z2.\n → Travail : 2 blocs de 8 répétitions (40 sec à 115% PMA / 20 sec de récup active).\n → Récupération entre les blocs : 8 min Z1.\n\n👉 Objectif : Réduire le temps de récupération pour forcer le système cardio-respiratoire à rester 'haut'."
+      "description": "1h20 dont 2 séries de (8 x 40s Z5 / 20s Z1)\n\n📊 Échauffement: 20 min Z2.\n → Travail: 2 blocs de 8 répétitions (40 sec à 115% PMA / 20 sec de récup active).\n → Récupération entre les blocs: 8 min Z1.\n\n👉 Objectif: Réduire le temps de récupération pour forcer le système cardio-respiratoire à rester 'haut'."
     },
     {
       "tag": "PMA Longue (Intervalles cibles)",
-      "description": "1h30 dont 4 x 4 min en Z5\n\n📊 Échauffement : 25 min Z2.\n → Travail : 4 répétitions de 4 min en Z5 (PMA).\n → Récupération : 4 min en Z1-Z2 entre chaque.\n\n👉 Objectif : Travailler la puissance aérobie sur des durées critiques pour les montées raides."
+      "description": "1h30 dont 4 x 4 min en Z5\n\n📊 Échauffement: 25 min Z2.\n → Travail: 4 répétitions de 4 min en Z5 (PMA).\n → Récupération: 4 min en Z1-Z2 entre chaque.\n\n👉 Objectif: Travailler la puissance aérobie sur des durées critiques pour les montées raides."
     },
     {
       "tag": "Sortie Longue Spécifique",
-      "description": "3h Z2 avec rappels de PMA\n\n📊 Sortie endurance (Z2).\n → Travail : Toutes les 45 min, effectuer 2 min à bloc (Z5) assis, cadence stable.\n → Retour immédiat en Z2 sans s'arrêter.\n\n👉 Objectif : Capacité à produire de la haute intensité sur un état de fatigue de fond."
+      "description": "3h Z2 avec rappels de PMA\n\n📊 Sortie endurance (Z2).\n → Travail: Toutes les 45 min, effectuer 2 min à bloc (Z5) assis, cadence stable.\n → Retour immédiat en Z2 sans s'arrêter.\n\n👉 Objectif: Capacité à produire de la haute intensité sur un état de fatigue de fond."
     }
   ]
 }

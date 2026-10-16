@@ -1,11 +1,11 @@
-# 🏔️ DOSSIER PRODUIT & FICHE DE VENTE : *ABLOC* -> Waze x Snap
+# 🏔️ DOSSIER PRODUIT & FICHE DE VENTE: *ABLOC* -> Waze x Snap
 *L'alliance de la sécurité collaborative, de la technologie sans friction et de la culture outdoor.*
 
 ---
 
-## 🤝 LE SOCLE : UNE COMMUNAUTÉ SOLIDAIRE POUR LA SÉCURITÉ DE TOUS
+## 🤝 LE SOCLE: UNE COMMUNAUTÉ SOLIDAIRE POUR LA SÉCURITÉ DE TOUS
 
-L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cordée**. Sur le terrain, la sécurité n'est pas individuelle, elle dépend de la vigilance collective.
+L'outdoor et la montagne reposent sur une valeur universelle: **l'esprit de cordée**. Sur le terrain, la sécurité n'est pas individuelle, elle dépend de la vigilance collective.
 
 * **La force du nombre :** Aucun organisme météo ou gestionnaire de parc ne peut surveiller chaque couloir, chaque sentier ou chaque point d'ancrage en temps réel. **Les sentinelles, ce sont les pratiquants eux-mêmes.**
 * **L'entraide bienveillante (Trust & Care) :**
@@ -39,7 +39,7 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 
 ### ⏳ Phase 3 — Contrôle Vocal & Écouteurs (Objectif 3 ans)
 * Commandes natives (*« Dis Siri, signale une coulée de neige sur ABLOC »*).
-* Note vocale de 5 secondes au double-tap d'écouteur : l'IA catégorise automatiquement (*ex. « Relais du secteur Grande Face desserré »* → catégorie *Escalade / Matériel défectueux*).
+* Note vocale de 5 secondes au double-tap d'écouteur: l'IA catégorise automatiquement (*ex. « Relais du secteur Grande Face desserré »* → catégorie *Escalade / Matériel défectueux*).
 
 ---
 
@@ -81,7 +81,7 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 
 ![Cycles](../presentation/img/cycle.png)
 * **4-5 cycles par sport** avec sélection de semaine → *Implémenté*
-* Sous-onglets : Sessions, Talk (crux), Story, Health, Report → *Implémenté*
+* Sous-onglets: Sessions, Talk (crux), Story, Health, Report → *Implémenté*
 * Préparation physique spécifique :
   * *Escalade :* Suspensions sur poutre, gainage inversé, mobilité épaules/doigts.
   * *Ski de rando :* Renforcement quadriceps excentrique, travail cardio en montée continue.
@@ -104,9 +104,9 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 
 * **Leaderboard :** Classement par points → *Implémenté*
 * **Système de points :**
-  * +10 points : Visite d'un marker
-  * +20 points : Ajout d'un marker
-  * +30 points : Création d'alerte
+  * +10 points: Visite d'un marker
+  * +20 points: Ajout d'un marker
+  * +30 points: Création d'alerte
 * **Récompenses :** Confetti, popup de points, niveaux de grade → *Implémenté*
 * **Badges & titres :** *À implémenter*
 
@@ -117,7 +117,7 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 ---
 
 ### 1. La Proposition de Valeur Unique (UVP)
-> **« Le Waze des sports outdoor : une communauté de passionnés unis pour la sécurité, l'information en direct et l'esprit d'aventure de chacun. »**
+> **« Le Waze des sports outdoor: une communauté de passionnés unis pour la sécurité, l'information en direct et l'esprit d'aventure de chacun. »**
 
 ---
 
@@ -125,8 +125,8 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 
 | Sport | Le problème sans l'app | Le bénéfice immédiat avec la communauté ABLOC |
 | :--- | :--- | :--- |
-| **🧗 Escalade** | Arriver au pied d'une falaise détrempée, interdite pour nidification ou avec un point rouillé. | Partir serein : la communauté remonte l'état de l'équipement, la fréquentation et la sécheresse du rocher le matin même. |
-| **⛷️ Ski (Rando / Freeride)** | Partir avec des topos obsolètes et douter de la stabilité de la neige ou de l'enneigement réel. | Bénéficier de la vigilance partagée : couloirs tracés, zones glacées et alertes plaques signalées par les premiers partis. |
+| **🧗 Escalade** | Arriver au pied d'une falaise détrempée, interdite pour nidification ou avec un point rouillé. | Partir serein: la communauté remonte l'état de l'équipement, la fréquentation et la sécheresse du rocher le matin même. |
+| **⛷️ Ski (Rando / Freeride)** | Partir avec des topos obsolètes et douter de la stabilité de la neige ou de l'enneigement réel. | Bénéficier de la vigilance partagée: couloirs tracés, zones glacées et alertes plaques signalées par les premiers partis. |
 | **🏃 Trail / Rando** | Tomber sur un patou agressif, une battue de chasse surprise ou un sentier emporté. | Contourner les imprévus grâce aux alertes posées vocalement par les runners passés quelques minutes avant toi. |
 | **🚴 VTT / Gravel** | Arriver pleine vitesse sur un arbre en travers du single ou une piste défoncée par des travaux forestiers. | Rouler en confiance avec des avertissements audio et visuels synchronisés sur ta montre par les autres riders. |
 | **🛹 Skate** | Ne pas connaître les spots, leurs difficultés et les tricks à maîtriser. | Découvrir les spots locaux, leur niveau et les tricks à travailler. |
@@ -140,7 +140,7 @@ L'outdoor et la montagne reposent sur une valeur universelle : **l'esprit de cor
 * **Pour les Stations de Ski & Domaines de Montagne :**
   * *Argument :* Un outil moderne d'auto-régulation pour sécuriser le hors-piste/rando et protéger les zones naturelles sensibles.
 * **Pour les Marques Outdoor & Équipementiers :**
-  * *Argument :* S'associer aux valeurs les plus nobles de la montagne : solidarité, engagement et sécurité partagée.
+  * *Argument :* S'associer aux valeurs les plus nobles de la montagne: solidarité, engagement et sécurité partagée.
 
 ---
 

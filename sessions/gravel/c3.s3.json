@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Over-Under (Fluctuations de Seuil)",
-      "description": "1h30 dont 3 x (2 min Over / 2 min Under)\n\n📊 Protocole :\n → Bloc de 12 min répété 3 fois :\n   - 2 min à 105% CP (Over)\n   - 2 min à 90% CP (Under)\n → Récupération : 6 min entre les blocs de 12 min.\n\nObjectif : Apprendre au corps à récupérer de l'acide lactique tout en restant à une intensité élevée (spécifique aux relances en bikepacking)."
+      "description": "1h30 dont 3 x (2 min Over / 2 min Under)\n\n📊 Protocole :\n → Bloc de 12 min répété 3 fois :\n   - 2 min à 105% CP (Over)\n   - 2 min à 90% CP (Under)\n → Récupération: 6 min entre les blocs de 12 min.\n\nObjectif: Apprendre au corps à récupérer de l'acide lactique tout en restant à une intensité élevée (spécifique aux relances en bikepacking)."
     },
     {
       "tag": "Z2 Longue (Soutien)",
-      "description": "3h en Zone 2\n\n📊 Focus : Tester l'alimentation de course sur une sortie de 3h après les séances d'intervalles de début de semaine.\n\nObjectif : Capacité à maintenir la Z2 sur fatigue musculaire."
+      "description": "3h en Zone 2\n\n📊 Focus: Tester l'alimentation de course sur une sortie de 3h après les séances d'intervalles de début de semaine.\n\nObjectif: Capacité à maintenir la Z2 sur fatigue musculaire."
     },
     {
       "tag": "SST Intensif",
-      "description": "1h45 dont 3 x 20 min en Sweet Spot\n\n📊 Protocole :\n → 3 blocs de 20 min à 90% de la CP.\n → Récupération courte : 5 min entre les blocs.\n\nObjectif : Volume maximal à haute intensité sous-critique avant la semaine de récupération."
+      "description": "1h45 dont 3 x 20 min en Sweet Spot\n\n📊 Protocole :\n → 3 blocs de 20 min à 90% de la CP.\n → Récupération courte: 5 min entre les blocs.\n\nObjectif: Volume maximal à haute intensité sous-critique avant la semaine de récupération."
     }
   ]
 }

@@ -1,16 +1,16 @@
 {
   "days": [
     {
-      "tag": "Force & Couple : Le Mur en Force",
-      "description": "1h30 dont 6 x 2 min Force Max\n\n📊 Travail spécifique : Sur une pente raide (>8%), 6 répétitions de 2 min.\n → Intensité : Zone 4 (Seuil) à 35-45 RPM.\n → Transition : Finir les 10 dernières secondes de chaque répétition par un sprint violent en danseuse.\n → Récupération : 4 min de descente/plat.\n\n👉 Objectif : Développer le couple (Torque) nécessaire pour franchir des passages techniques chargés."
+      "tag": "Force & Couple: Le Mur en Force",
+      "description": "1h30 dont 6 x 2 min Force Max\n\n📊 Travail spécifique: Sur une pente raide (>8%), 6 répétitions de 2 min.\n → Intensité: Zone 4 (Seuil) à 35-45 RPM.\n → Transition: Finir les 10 dernières secondes de chaque répétition par un sprint violent en danseuse.\n → Récupération: 4 min de descente/plat.\n\n👉 Objectif: Développer le couple (Torque) nécessaire pour franchir des passages techniques chargés."
     },
     {
-      "tag": "Sprint : Puissance Longue",
-      "description": "1h30 dont 6 x 30s Sprint Long\n\n📊 Travail spécifique : 6 répétitions de 30 secondes en Zone 7 (Intensité Max).\n → Protocole : Sprint lancé à 25km/h. Maintenir la puissance la plus haute possible jusqu'au bout.\n → Récupération : 5 min en Zone 1.\n\n👉 Objectif : Augmenter le pic de puissance et la tolérance à l'acide lactique lors d'efforts violents."
+      "tag": "Sprint: Puissance Longue",
+      "description": "1h30 dont 6 x 30s Sprint Long\n\n📊 Travail spécifique: 6 répétitions de 30 secondes en Zone 7 (Intensité Max).\n → Protocole: Sprint lancé à 25km/h. Maintenir la puissance la plus haute possible jusqu'au bout.\n → Récupération: 5 min en Zone 1.\n\n👉 Objectif: Augmenter le pic de puissance et la tolérance à l'acide lactique lors d'efforts violents."
     },
     {
-      "tag": "Endurance de Force : Combo Mixte",
-      "description": "3h00 dont 3 blocs de (8 min Force / 2 min Vélocité)\n\n📊 Travail spécifique : Dans chaque bloc de 10 min :\n → 8 min en Z3 à 50 RPM (Gros braquet).\n → 2 min en Z2 à 110 RPM (Petit braquet).\n\n👉 Objectif : Apprendre au muscle à rester efficace après un effort de force pure en évacuant les toxines par la cadence."
+      "tag": "Endurance de Force: Combo Mixte",
+      "description": "3h00 dont 3 blocs de (8 min Force / 2 min Vélocité)\n\n📊 Travail spécifique: Dans chaque bloc de 10 min :\n → 8 min en Z3 à 50 RPM (Gros braquet).\n → 2 min en Z2 à 110 RPM (Petit braquet).\n\n👉 Objectif: Apprendre au muscle à rester efficace après un effort de force pure en évacuant les toxines par la cadence."
     }
   ]
 }

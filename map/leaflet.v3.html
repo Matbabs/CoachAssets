@@ -35,7 +35,7 @@
         -ms-interpolation-mode: nearest-neighbor;
       }
       .pulse {
-        border: 2px solid #7f5d00;
+        border: 2px solid #6D28D9;
         height: 18px;
         width: 18px;
         border-radius: 100%;
@@ -243,10 +243,10 @@
             distanceToUser === -2
               ? markerObj.user
                 ? markerVisitedIconUser
-                : markerVisitedIcon
-              : markerObj.user
+               : markerVisitedIcon
+             : markerObj.user
                 ? markerIconUser
-                : markerIcon,
+               : markerIcon,
         }).addTo(map);
         marker.bindPopup(generatePopup(markerObj, Number(distanceToUser)));
         markers.push(marker);
@@ -290,8 +290,8 @@
           for (let j = 0; j < document.styleSheets[i].rules.length; j++) {
             if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
               document.styleSheets[i].rules[j].style.borderColor = !isClassic
-                ? "#7f5d00"
-                : "#ffc000";
+                ? "#6D28D9"
+               : "#ffc000";
             }
           }
         }

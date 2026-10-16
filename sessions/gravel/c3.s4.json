@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "SV1 Entretien",
-      "description": "1h dont 2 x 10 min en SV1\n\n📊 Séance légère pour garder le moteur en marche sans accumuler de fatigue.\n\nObjectif : Rappel physiologique du seuil aérobie."
+      "description": "1h dont 2 x 10 min en SV1\n\n📊 Séance légère pour garder le moteur en marche sans accumuler de fatigue.\n\nObjectif: Rappel physiologique du seuil aérobie."
     },
     {
       "tag": "Récupération Active",
-      "description": "45 min en Zone 1 (Moulinage)\n\n📊 Cadence haute (>95 RPM), aucune pression sur les pédales.\n\nObjectif : Éliminer les tensions musculaires et favoriser la circulation sanguine."
+      "description": "45 min en Zone 1 (Moulinage)\n\n📊 Cadence haute (>95 RPM), aucune pression sur les pédales.\n\nObjectif: Éliminer les tensions musculaires et favoriser la circulation sanguine."
     },
     {
       "tag": "Rappel de Puissance (CP)",
-      "description": "1h dont 3 x 3 min @CP\n\n📊 Protocole :\n → 3 efforts courts à puissance critique pour ne pas perdre l'influx nerveux.\n → Récupération longue : 6 min entre les efforts.\n\nObjectif : Valider la fraîcheur physique et préparer le bloc suivant."
+      "description": "1h dont 3 x 3 min @CP\n\n📊 Protocole :\n → 3 efforts courts à puissance critique pour ne pas perdre l'influx nerveux.\n → Récupération longue: 6 min entre les efforts.\n\nObjectif: Valider la fraîcheur physique et préparer le bloc suivant."
     }
   ]
 }

@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Micro-Intervalles (30/30)",
-      "description": "1h15 dont 2 séries de (10 x 30s Z5 / 30s Z1)\n\n📊 Échauffement : 20 min Z2.\n → Travail : 2 blocs de 10 répétitions (30 sec à 110-120% PMA / 30 sec de récupération pédalage léger).\n → Récupération entre les blocs : 5 min Z1.\n\n👉 Objectif : Augmenter la consommation d'oxygène sans accumuler trop de fatigue lactique."
+      "description": "1h15 dont 2 séries de (10 x 30s Z5 / 30s Z1)\n\n📊 Échauffement: 20 min Z2.\n → Travail: 2 blocs de 10 répétitions (30 sec à 110-120% PMA / 30 sec de récupération pédalage léger).\n → Récupération entre les blocs: 5 min Z1.\n\n👉 Objectif: Augmenter la consommation d'oxygène sans accumuler trop de fatigue lactique."
     },
     {
       "tag": "PMA Soutenue (Intervalles courts)",
-      "description": "1h20 dont 5 x 3 min en Z5\n\n📊 Échauffement : 20 min progressive.\n → Travail : 5 répétitions de 3 min en Z5 (PMA), cadence élevée (95+ RPM).\n → Récupération : 3 min en Z2 entre chaque effort.\n\n👉 Objectif : Apprendre au corps à maintenir un débit d'oxygène maximal sur une durée intermédiaire."
+      "description": "1h20 dont 5 x 3 min en Z5\n\n📊 Échauffement: 20 min progressive.\n → Travail: 5 répétitions de 3 min en Z5 (PMA), cadence élevée (95+ RPM).\n → Récupération: 3 min en Z2 entre chaque effort.\n\n👉 Objectif: Apprendre au corps à maintenir un débit d'oxygène maximal sur une durée intermédiaire."
     },
     {
       "tag": "Endurance active + Bosses",
-      "description": "2h30 en Z2 avec 4 bosses explosives\n\n📊 Sortie de fond en Z2.\n → Travail : Sur le parcours, choisir 4 bosses de 1 à 2 min et les monter au sprint (Z6) pour finir en haut à bloc.\n → Récupération : Totale entre les bosses (min 15 min Z2).\n\n👉 Objectif : Simuler les relances nécessaires en bikepacking lors de changements de topographie."
+      "description": "2h30 en Z2 avec 4 bosses explosives\n\n📊 Sortie de fond en Z2.\n → Travail: Sur le parcours, choisir 4 bosses de 1 à 2 min et les monter au sprint (Z6) pour finir en haut à bloc.\n → Récupération: Totale entre les bosses (min 15 min Z2).\n\n👉 Objectif: Simuler les relances nécessaires en bikepacking lors de changements de topographie."
     }
   ]
 }
