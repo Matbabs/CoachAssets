@@ -42,11 +42,11 @@
         /* filter: grayscale(100%) brightness(1.1); */
       }
       .pulse {
-        border: 2px solid #B45309;
+        border: 2px solid #7f5d00;
         height: 18px;
         width: 18px;
         border-radius: 100%;
-        box-shadow: 0 0 5px 0 #B45309;
+        box-shadow: 0 0 5px 0 #8f8156;
         animation: pulsate 1s infinite;
       }
       @keyframes pulsate {
@@ -628,7 +628,7 @@ const marker = L.marker(pos, {
         liveStoryClusterGroup.clearLayers();
         unclusteredGroup.clearLayers();
         markers = [];
-        currentClusterColor = '#ffc000';
+        currentClusterColor = '#E8C547';
       }
       function removeUserMarker() {
         const userMarkers = markers.filter(m => {
@@ -693,7 +693,7 @@ const marker = L.marker(pos, {
           for (let j = 0; j < document.styleSheets[i].rules.length; j++) {
             if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
               document.styleSheets[i].rules[j].style.borderColor = !isClassic
-                ? "#B45309"
+                ? "#7f5d00"
                 : "#E8C547";
             }
           }
