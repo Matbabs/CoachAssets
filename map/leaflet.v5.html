@@ -268,6 +268,47 @@
         height: 46px;
         line-height: 46px;
       }
+      .marker-cluster-alert {
+        background: rgba(251, 191, 36, 0.6);
+      }
+      .marker-cluster-alert div {
+        background: rgba(251, 191, 36, 0.8);
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+      }
+      .marker-cluster-alert-small {
+        background: rgba(251, 191, 36, 0.6);
+      }
+      .marker-cluster-alert-small div {
+        background: rgba(251, 191, 36, 0.8);
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+      .marker-cluster-alert-medium {
+        background: rgba(251, 191, 36, 0.6);
+      }
+      .marker-cluster-alert-medium div {
+        background: rgba(251, 191, 36, 0.8);
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+      }
+      .marker-cluster-alert-large {
+        background: rgba(251, 191, 36, 0.6);
+      }
+      .marker-cluster-alert-large div {
+        background: rgba(251, 191, 36, 0.8);
+        width: 46px;
+        height: 46px;
+        line-height: 46px;
+      }
       .story-author {
         color: #FBBF24;
       }
@@ -324,8 +365,28 @@ var liveStoryClusterGroup = L.markerClusterGroup({
   },
   chunkedLoading: true
 });
+var alertClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    var size = 'small';
+    if (count > 50) size = 'large';
+    else if (count > 10) size = 'medium';
+    return L.divIcon({
+      html: '<div style="background:#FBBF24;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
+      className: 'marker-cluster-alert',
+      iconSize: L.point(36, 36)
+    });
+  },
+  chunkedLoading: true
+});
 map.addLayer(markerClusterGroup);
 map.addLayer(liveStoryClusterGroup);
+map.addLayer(alertClusterGroup);
 var unclusteredGroup = L.layerGroup().addTo(map);
 // "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
 var classic = L.tileLayer(
@@ -594,6 +655,8 @@ const marker = L.marker(pos, {
           currentClusterColor = "#EF4444";
         } else if (markerObj.type === "sessions") {
           currentClusterColor = "#10B981";
+        } else if (markerObj.type === "exploriders") {
+          currentClusterColor = "#6D28D9";
         } else {
           currentClusterColor = color;
         }
@@ -626,6 +689,7 @@ const marker = L.marker(pos, {
       function removeAllMarkers() {
         markerClusterGroup.clearLayers();
         liveStoryClusterGroup.clearLayers();
+        alertClusterGroup.clearLayers();
         unclusteredGroup.clearLayers();
         markers = [];
         currentClusterColor = '#FBBF24';
@@ -794,7 +858,7 @@ function signalAlert(alertId) {
           popup += `</div>`;
         }
         marker.bindPopup(popup);
-        markerClusterGroup.addLayer(marker);
+        alertClusterGroup.addLayer(marker);
         markers.push(marker);
       }
     </script>
