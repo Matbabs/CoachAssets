@@ -336,9 +336,9 @@ var alertClusterGroup = L.markerClusterGroup({
     if (count > 50) size = 'large';
     else if (count > 10) size = 'medium';
     return L.divIcon({
-      html: '<div style="background:rgba(251,191,36,0.8);width:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;height:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;line-height:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
-      className: 'marker-cluster',
-      iconSize: L.point(size === 'small' ? 30 : size === 'medium' ? 36 : 46, size === 'small' ? 30 : size === 'medium' ? 36 : 46)
+      html: '<div style="background:#FBBF24;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
+      className: '',
+      iconSize: L.point(36, 36)
     });
   },
   chunkedLoading: true
