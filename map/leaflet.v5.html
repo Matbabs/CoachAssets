@@ -268,47 +268,6 @@
         height: 46px;
         line-height: 46px;
       }
-      .marker-cluster-alert {
-        background: rgba(251, 191, 36, 0.6);
-      }
-      .marker-cluster-alert div {
-        background: rgba(251, 191, 36, 0.8);
-        color: white;
-        font-weight: bold;
-        font-size: 14px;
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        text-align: center;
-      }
-      .marker-cluster-alert-small {
-        background: rgba(251, 191, 36, 0.6);
-      }
-      .marker-cluster-alert-small div {
-        background: rgba(251, 191, 36, 0.8);
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-      }
-      .marker-cluster-alert-medium {
-        background: rgba(251, 191, 36, 0.6);
-      }
-      .marker-cluster-alert-medium div {
-        background: rgba(251, 191, 36, 0.8);
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-      }
-      .marker-cluster-alert-large {
-        background: rgba(251, 191, 36, 0.6);
-      }
-      .marker-cluster-alert-large div {
-        background: rgba(251, 191, 36, 0.8);
-        width: 46px;
-        height: 46px;
-        line-height: 46px;
-      }
       .story-author {
         color: #FBBF24;
       }
@@ -377,9 +336,9 @@ var alertClusterGroup = L.markerClusterGroup({
     if (count > 50) size = 'large';
     else if (count > 10) size = 'medium';
     return L.divIcon({
-      html: '<div style="background:#FBBF24;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
-      className: 'marker-cluster-alert',
-      iconSize: L.point(36, 36)
+      html: '<div style="background:rgba(251,191,36,0.8);width:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;height:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;line-height:' + (size === 'small' ? 30 : size === 'medium' ? 36 : 46) + 'px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
+      className: 'marker-cluster',
+      iconSize: L.point(size === 'small' ? 30 : size === 'medium' ? 36 : 46, size === 'small' ? 30 : size === 'medium' ? 36 : 46)
     });
   },
   chunkedLoading: true
