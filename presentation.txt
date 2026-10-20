@@ -1,31 +1,38 @@
 A BLOC
 
-L'application des ExploRiders sans limites !
+ExploRidez en confiance :
+Les sports outdoor reposent sur une valeur universelle : l'esprit de cordée. Avec A BLOC, la sécurité n'est pas individuelle, elle dépend de la vigilance collective. Chaque pratiquant devient une sentinelle : un grimpeur qui signale une écaille instable, un skieur qui prévient d'une plaque friable, un traileur qui alerte sur un troupeau avec patous. Ensemble, on va plus loin.
 
-Explorez, défiez-vous, dépassez-vous:
-- Découvrez les meilleurs spots, sessions et bivouacs partagés par une communauté d’aventuriers passionnés. Que vous cherchiez l’adrénaline, la sérénité ou le défi, trouvez les lieux les plus inspirants pour vivre des expériences uniques, où que vous soyez.
+Signalement en temps réel :
+Alertez la communauté instantanément avec des alertes. Que vous soyez sur votre vélo, en falaise ou sur un sentier de trail, votre alerte peut sauver ceux qui suivent.
 
-Devenez plus fort, plus endurant, plus audacieux:
-- A BLOC est votre coach d’aventure, conçu pour ceux qui refusent les limites. Que vous visiez un sommet, un sentier inconnu ou une nuit sous les étoiles, nous vous accompagnons pour progresser et performer, à votre rythme.
+Carte sociale vivante :
+Visualisez en direct où se trouve la communauté ExploRiders et les zones à risques. Découvrez les spots, sessions et bivouacs partagés par des aventuriers passionnés. Trouvez l'inspiration pour votre prochaine sortie, où que vous soyez.
 
-Connaissez vos forces, identifiez vos défis:
-- Testez votre niveau avec nos outils d’évaluation spécialement conçus pour les aventuriers. Déterminez vos points forts et vos axes de progression pour devenir une version plus puissante de vous-même.
+Devenez plus fort, plus endurant, plus audacieux :
+A BLOC est votre coach d'aventure, conçu pour ceux qui refusent les limites. Testez votre niveau avec nos outils d'évaluation spécialisés : escalade, trail, bikepacking et skate. Déterminez vos points forts et vos axes de progression.
 
-Des entraînements qui s’adaptent à vous.
-Suivez des cycles personnalisés, conçus pour vos objectifs et votre niveau. Que vous prépariez une expédition ou que vous cherchiez simplement à vous améliorer, nos programmes évoluent avec vous pour des résultats concrets.
+Entraînements sur mesure :
+Suivez des cycles d'entraînement, conçus pour vos objectifs et votre niveau. Préparation physique spécifique : suspensions et gainage pour l'escalade, renforcement, endurance fondamentale pour le trail et le vélo.
 
-Votre progression, votre histoire:
-- Renseignez vos sessions, analysez vos performances et visualisez votre évolution. Avec A BLOC, chaque sortie devient une étape vers l’excellence.
+Assistant IA dédié :
+Besoin d'un conseil, ou d'un ajustement d'entraînement ? Notre intelligence artificielle, spécialisée dans l'aventure, répond à toutes vos questions.
 
-Votre assistant IA, toujours à vos côtés:
-- Besoin d’un conseil, d’un itinéraire ou d’un ajustement d’entraînement ? Notre intelligence artificielle, spécialisée dans l’aventure, répond à toutes vos questions pour que vous restiez concentré sur l’essentiel: l’exploration.
+Basecamp  Le hub des communautés :
+Découvrez les plus belles publications, les créateurs de contenu, et des équipementiers partenaires.
+
+Gamification & reconnaissance :
+Gagnez des points en visitant des spots, en ajoutant des spots, en créant des alertes. Montrez votre engagement et grimpez au classement.
 
 Fonctionnalités clés :
-✅ Carte interactive – Trouvez les meilleurs spots, sessions et bivouacs partagés par la communauté.
-✅ Évaluation complète – Testez votre niveau et identifiez vos axes de progression.
-✅ Cycles d’entraînement sur mesure – Des programmes adaptés à vos objectifs.
-✅ Suivi de performance – Analysez vos progrès et optimisez vos sorties.
-✅ IA spécialisée aventure – Réponses intelligentes pour vos défis.
-✅ Interface intuitive – Conçue pour les explorateurs, simple et efficace.
+- Signalement multi-sports: Alertes en temps réel pour votre sécurité
+- Carte interactive: Spots, sessions et bivouacs partagés par la communauté
+- Évaluation complète: Tests de niveau pour chaque sport
+- Cycles d'entraînement sur mesure: Programmes adaptés à vos objectifs
+- Suivi de performance: Analysez vos progrès
+- IA spécialisée aventure: Conseils personnalisés
+- Basecamp: Créateurs, shops et tribes
+- Leaderboard & points: Votre contribution recompensée
+- Interface intuitive: Conçue pour les explorateurs
 
-Rejoignez la communauté des aventuriers et vivez chaque instant à bloc ! 🚀🌍
+Rejoignez la communauté des ExplorRiders et vivez chaque instant A BLOC ! 
