@@ -1,7 +1,8 @@
 A BLOC
 
-ExploRidez en confiance :
-Les sports outdoor reposent sur une valeur universelle : l'esprit de cordée. Avec A BLOC, la sécurité n'est pas individuelle, elle dépend de la vigilance collective. Chaque pratiquant devient une sentinelle : un grimpeur qui signale une écaille instable, un skieur qui prévient d'une plaque friable, un traileur qui alerte sur un troupeau avec patous. Ensemble, on va plus loin.
+Deviens ExploRider 🤙🏼 sans limites !
+
+Les sports outdoor reposent sur une valeur universelle : l'esprit de cordée. Avec A BLOC, la sécurité n'est pas individuelle, elle dépend de la vigilance collective. Chaque pratiquant devient une sentinelle : un grimpeur qui signale une roche instable, un skieur qui prévient d'une plaque friable, un traileur qui alerte sur un troupeau de patous… Ensemble, on va plus loin.
 
 Signalement en temps réel :
 Alertez la communauté instantanément avec des alertes. Que vous soyez sur votre vélo, en falaise ou sur un sentier de trail, votre alerte peut sauver ceux qui suivent.
@@ -10,10 +11,10 @@ Carte sociale vivante :
 Visualisez en direct où se trouve la communauté ExploRiders et les zones à risques. Découvrez les spots, sessions et bivouacs partagés par des aventuriers passionnés. Trouvez l'inspiration pour votre prochaine sortie, où que vous soyez.
 
 Devenez plus fort, plus endurant, plus audacieux :
-A BLOC est votre coach d'aventure, conçu pour ceux qui refusent les limites. Testez votre niveau avec nos outils d'évaluation spécialisés : escalade, trail, bikepacking et skate. Déterminez vos points forts et vos axes de progression.
+A BLOC est votre coach d'aventure, conçu pour ceux qui refusent les limites. Testez votre niveau avec nos outils d'évaluation spécialisés : escalade, trail, bikepacking, skate…. Déterminez vos points forts et vos axes d’amélioration.
 
 Entraînements sur mesure :
-Suivez des cycles d'entraînement, conçus pour vos objectifs et votre niveau. Préparation physique spécifique : suspensions et gainage pour l'escalade, renforcement, endurance fondamentale pour le trail et le vélo.
+Suivez des cycles d'entraînements, conçus pour vos objectifs et votre niveau. Préparation physique spécifique : suspensions et gainage pour l'escalade, renforcement, endurance fondamentale pour le trail, le vélo…
 
 Assistant IA dédié :
 Besoin d'un conseil, ou d'un ajustement d'entraînement ? Notre intelligence artificielle, spécialisée dans l'aventure, répond à toutes vos questions.
@@ -35,4 +36,4 @@ Fonctionnalités clés :
 - Leaderboard & points: Votre contribution recompensée
 - Interface intuitive: Conçue pour les explorateurs
 
-Rejoignez la communauté des ExplorRiders et vivez chaque instant A BLOC ! 
+Rejoignez la communauté des ExplorRiders et vivez chaque instant A BLOC !
