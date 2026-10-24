@@ -286,6 +286,7 @@
         attributionControl: false,
       }).setView([46.6061, 1.8753], 5);
       var userMarker = undefined;
+      var userMapMarker = undefined;
       var markers = [];
 var currentClusterColor = '#FBBF24';
 var currentUsername = '';
@@ -552,7 +553,7 @@ var classic = L.tileLayer(
       updateCoords();
 
       // BRIDGE FUNCTIONS
-      function addMarker(pos, markerObj, color, distanceToUser) {
+      function getIcon(markerObj, distanceToUser) {
         let icon;
         if (markerObj.type === "exploriders") {
           // Use custom marker image if provided, otherwise use default
@@ -587,6 +588,10 @@ var classic = L.tileLayer(
               ? markerIconUser
              : markerIcon;
         }
+        return icon;
+      }
+      function addMarker(pos, markerObj, color, distanceToUser) {
+        const icon = getIcon(markerObj, distanceToUser);
 const marker = L.marker(pos, {
           icon: icon,
         });
@@ -645,12 +650,23 @@ const marker = L.marker(pos, {
           .querySelectorAll(".marker-bivouac-visited")
           .forEach((e) => (e.style.background = "#EF4444"));
       }
+      function updateUserMarker(pos, markerObj, color, distanceToUser) {
+        if (userMapMarker) {
+          unclusteredGroup.removeLayer(userMapMarker);
+          markers = markers.filter(function (m) { return m !== userMapMarker; });
+        }
+        userMapMarker = L.marker(pos, { icon: getIcon(markerObj, distanceToUser) });
+        userMapMarker.bindPopup(generatePopup(markerObj, distanceToUser));
+        unclusteredGroup.addLayer(userMapMarker);
+        markers.push(userMapMarker);
+      }
       function removeAllMarkers() {
         markerClusterGroup.clearLayers();
         liveStoryClusterGroup.clearLayers();
         alertClusterGroup.clearLayers();
         unclusteredGroup.clearLayers();
         markers = [];
+        userMapMarker = undefined;
         currentClusterColor = '#FBBF24';
       }
       function removeUserMarker() {
