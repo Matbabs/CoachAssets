@@ -20,7 +20,7 @@ L'outdoor et la montagne reposent sur une valeur universelle: **l'esprit de cord
 
 ![Signalement](../presentation/img/event.png)
 
-### ✅ Phase 1 — Smartphone (Déployé)
+### ✅ Phase 1 - Smartphone (Déployé)
 
 * **Alertes en temps réel :** 4 types d'alertes disponibles (Danger, Faune, Eau, Personnalisé)
   * *Ski :* Alertes danger, conditions dangereuses
@@ -29,7 +29,7 @@ L'outdoor et la montagne reposent sur une valeur universelle: **l'esprit de cord
 
 ![Signalement](../presentation/img/event2.png)
 
-### ⏳ Phase 2 — Écosystème Montres & Wearables (Objectif 2 ans)
+### ⏳ Phase 2 - Écosystème Montres & Wearables (Objectif 2 ans)
 * **Widget 2 clics (adapté aux gants de ski / vélo) :** 4 gros boutons intuitifs :
   1. *Danger / Sentier coupé / Chute de pierres / Plaque à vent*
   2. *Faune / Chasse / Patou / Nidification*
@@ -37,7 +37,7 @@ L'outdoor et la montagne reposent sur une valeur universelle: **l'esprit de cord
   4. *Note vocale rapide*
 * **Bouton physique (Apple Watch Ultra / Garmin) :** Appui long pour poser un repère instantané au relais en falaise ou en pleine descente de ski, à qualifier à l'arrivée.
 
-### ⏳ Phase 3 — Contrôle Vocal & Écouteurs (Objectif 3 ans)
+### ⏳ Phase 3 - Contrôle Vocal & Écouteurs (Objectif 3 ans)
 * Commandes natives (*« Dis Siri, signale une coulée de neige sur ABLOC »*).
 * Note vocale de 5 secondes au double-tap d'écouteur: l'IA catégorise automatiquement (*ex. « Relais du secteur Grande Face desserré »* → catégorie *Escalade / Matériel défectueux*).
 
