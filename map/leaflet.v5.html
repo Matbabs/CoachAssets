@@ -496,7 +496,7 @@ var classic = L.tileLayer(
       function generatePopup(marker, distanceToUser) {
         let popup;
         if (marker.imageUrl) {
-          const authorName = marker.username || "Anonyme";
+          const authorName = marker.username.replace("›", "").replace(">", "") || "Anonyme";
           const expiresIn = Math.max(0, marker.expiresAt - Date.now());
           const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
