@@ -504,6 +504,7 @@ var classic = L.tileLayer(
           const storyTitle = encodeURIComponent(`Live spot story de ${authorName}`);
           popup = `<b>Live spot story de <span class="story-author">${authorName}</span></b><br><span style="color:grey">${timeLeft}</span><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;border-radius:10px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
           popup += `<div class="actions">`;
+          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button">voir</button>`;
           popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
           popup += `</div>`;
           return popup;
