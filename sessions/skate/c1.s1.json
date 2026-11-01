@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "STREET | Ollie",
-      "description": "L'ollie est la base de tout le skateboard. C'est le premier trick que tu dois maîtriser pour progresser.\n\n📊 3 séries & 5 répétitions, avec 2min de récup. entre les séries"
+      "description": "L'ollie est la base de tout le skateboard. C'est le premier trick que tu dois maîtriser pour progresser.\n\n💡 Conseil : Claque sec le tail de cheville et monte le genou avant en grattant vers le nose pour niveler."
     },
     {
       "tag": "PARK | Drop In",
-      "description": "Le drop in est essentiel pour rider dans les parks. Il te permet de descendre une rampe en confiance.\n\n📊 3 séries & 5 répétitions, avec 2min de récup. entre les séries"
+      "description": "Le drop in est essentiel pour rider dans les parks. Il te permet de descendre une rampe en confiance.\n\n💡 Conseil : Ne retiens rien : claque immédiatement tout ton poids sur les vis avant en fléchissant les genoux."
     },
     {
       "tag": "LEDGE | 50-50 Grind",
-      "description": "Le 50-50 grind est ton premier grind. Tu glisses sur les deux trucks simultanément.\n\n📊 3 séries & 3 répétitions, avec 2min de récup. entre les séries"
+      "description": "Le 50-50 grind est ton premier grind. Tu glisses sur les deux trucks simultanément.\n\n💡 Conseil : Approche avec 15-20° d'angle, pop bien au-dessus du ledge et verrouille les deux trucks sur l'arête."
     }
   ]
 }
