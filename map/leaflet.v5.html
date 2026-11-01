@@ -839,6 +839,50 @@ function signalAlert(alertId) {
         alertClusterGroup.addLayer(marker);
         markers.push(marker);
       }
+
+      // GPX TRACK
+      // Calque indépendant : removeAllMarkers() ne l'efface pas.
+      var trackLayer = L.layerGroup().addTo(map);
+      var trackHighlightLayer = L.layerGroup().addTo(map);
+      function trackEndpointIcon(iconName, color) {
+        return L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';"><i class="fa ' + iconName + '" style="color:white;font-size:11px;"></i></div>',
+          iconSize: [26, 26],
+          iconAnchor: [13, 13],
+        });
+      }
+      function escapeHtml(s) {
+        return String(s || "").replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      function showTrack(points, name, fit) {
+        trackLayer.clearLayers();
+        if (!points || points.length < 2) return;
+        L.polyline(points, { color: "#FFFFFF", weight: 8, opacity: 0.9, interactive: false }).addTo(trackLayer);
+        var line = L.polyline(points, { color: "#6D28D9", weight: 4, opacity: 1 }).addTo(trackLayer);
+        if (name) line.bindPopup("<b>" + escapeHtml(name) + "</b>");
+        L.marker(points[0], { icon: trackEndpointIcon("fa-flag", "#10B981"), zIndexOffset: 500 })
+          .bindPopup("<b>Départ</b>")
+          .addTo(trackLayer);
+        L.marker(points[points.length - 1], { icon: trackEndpointIcon("fa-flag-checkered", "#1A0F2B"), zIndexOffset: 500 })
+          .bindPopup("<b>Arrivée</b>")
+          .addTo(trackLayer);
+        if (fit !== false) {
+          map.fitBounds(line.getBounds(), { padding: [40, 40], maxZoom: 16 });
+        }
+      }
+      function highlightTrackAlerts(positions) {
+        trackHighlightLayer.clearLayers();
+        (positions || []).forEach(function (p) {
+          L.circleMarker(p, { radius: 18, color: "#EF4444", weight: 3, fill: false, interactive: false }).addTo(trackHighlightLayer);
+        });
+      }
+      function clearTrack() {
+        trackLayer.clearLayers();
+        trackHighlightLayer.clearLayers();
+      }
     </script>
   </body>
 </html>
