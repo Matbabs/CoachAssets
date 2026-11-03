@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "OCÉAN | Pumping",
+      "description": "Le pumping consiste à générer de la vitesse par de petits mouvements de haut en bas sur la vague. Indispensable pour passer les sections molles.\n\n💡 Conseil : Le mouvement vient des jambes qui se compriment et se déplient, pas des bras qui battent l'air."
+    },
+    {
+      "tag": "TECHNIQUE | Surfskate: carving",
+      "description": "Le surfskate reproduit les sensations du surf sur le bitume. C'est l'outil idéal pour travailler tes virages entre deux sessions.\n\n💡 Conseil : Engage tes épaules en premier: le surfskate punit les virages faits uniquement avec les pieds."
+    },
+    {
+      "tag": "OCÉAN | Top turn",
+      "description": "Le top turn est le virage en haut de la vague, qui te renvoie vers le bas. Associé au bottom turn, il forme la base de ton surf.\n\n💡 Conseil : Arrive en haut avec de la vitesse et tourne avant que la lèvre ne te dépasse."
+    }
+  ]
+}

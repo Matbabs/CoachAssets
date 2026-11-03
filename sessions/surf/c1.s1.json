@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "PRÉPA | Pop-up au sol",
+      "description": "Le pop-up est le geste qui te fait passer d'allongé à debout sur la planche. Avant d'aller à l'eau, il doit devenir un réflexe sur le sable.\n\n💡 Conseil : Pose les mains à plat sous la poitrine, jamais sur les rails, et regarde loin devant pendant tout le mouvement."
+    },
+    {
+      "tag": "OCÉAN | Sécurité et baïnes",
+      "description": "Avant de surfer, apprends à lire la plage: zones de baignade, drapeaux, courants de baïne. C'est la base de ta sécurité et de celle des autres.\n\n💡 Conseil : Si un courant t'emporte, ne lutte jamais contre lui: rame parallèlement à la plage ou laisse-toi porter jusqu'à ce qu'il faiblisse."
+    },
+    {
+      "tag": "OCÉAN | Ramer et trouver l'équilibre",
+      "description": "La rame représente plus de la moitié de ta session. Bien placé sur la planche, tu glisses plus vite et tu te fatigues moins.\n\n💡 Conseil : Le nose doit dépasser de 2 à 3 cm de la surface de l'eau: trop en avant tu piques, trop en arrière tu freines."
+    }
+  ]
+}

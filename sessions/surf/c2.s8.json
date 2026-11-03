@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "OCÉAN | Bottom turn frontside",
+      "description": "Le bottom turn est le virage en bas de la vague. C'est le geste le plus important du surf: il prépare toutes les manœuvres.\n\n💡 Conseil : Fléchis bien les genoux avant de tourner: c'est la compression qui génère la puissance."
+    },
+    {
+      "tag": "PRÉPA | Rotation du tronc",
+      "description": "La puissance des virages vient de la rotation du tronc et des hanches. Travaille-la avec des exercices de rotation contrôlée.\n\n💡 Conseil : La rotation part des hanches, pas des bras: garde les bras comme un prolongement du buste."
+    },
+    {
+      "tag": "OCÉAN | Bottom turn backside",
+      "description": "Dos à la vague, le bottom turn se fait sur les talons. C'est plus difficile car tu ne vois pas la vague aussi bien.\n\n💡 Conseil : Tourne la tête par-dessus ton épaule arrière pour garder la lèvre en vue pendant tout le virage."
+    }
+  ]
+}

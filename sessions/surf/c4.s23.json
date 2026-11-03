@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "OCÉAN | Stratégie de heat",
+      "description": "En compétition, la stratégie compte autant que le surf: priorité, timing, sélection de vagues.\n\n💡 Conseil : Quand tu as la priorité, n'utilise-la que pour une vague qui peut améliorer ton score."
+    },
+    {
+      "tag": "PRÉPA | Préparation mentale",
+      "description": "Le mental fait la différence dans le gros et en compétition. Visualisation et routine sont tes outils.\n\n💡 Conseil : Construis une routine courte avant chaque session: elle installe le calme et la confiance."
+    },
+    {
+      "tag": "OCÉAN | Choisir sous pression",
+      "description": "Sélectionner les bonnes vagues rapidement est une compétence qui se travaille.\n\n💡 Conseil : Décide vite et engage-toi: une vague prise avec hésitation est une vague perdue."
+    }
+  ]
+}
