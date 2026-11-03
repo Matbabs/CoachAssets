@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Gimenez",
+      "description": "1h dont 2 x 6 x (15 sec Z5+ / 45 sec Z4)\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 séries de 6 x (15 sec très fort / 45 sec en Z4 (FC 80-92% | VAMc 95-105%))\n → Récupération: 6 min entre les séries\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Améliorer la tolérance aux variations d'intensité à haut niveau."
+    },
+    {
+      "tag": "Intervalles Pyramidaux",
+      "description": "1h10 avec pyramide 1-2-3-4-3-2-1 min\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → Pyramide en Z5 (FC > 92% | VAMc > 105%): 1-2-3-4-3-2-1 min\n → Récupération: égale à la moitié du temps d'effort\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Varier les stimuli pour développer la VO2max."
+    },
+    {
+      "tag": "Simulation Course Skimo",
+      "description": "1h45 avec 3 montées + 3 descentes\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 montées de 12 min en Z4 (FC 80-92% | VAMc 95-105%)\n → Transitions chronométrées + descentes rapides en contrôle\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Assembler tous les éléments d'une compétition ou d'une sortie rapide."
+    }
+  ]
+}

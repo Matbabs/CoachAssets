@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Rappel PMA léger",
+      "description": "50 min dont 5 x 1 min en Z5\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 5 x 1 min en Z5 (FC > 92% | VAMc > 105%)\n → Récupération: 2 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Garder le corps éveillé pendant la récupération."
+    },
+    {
+      "tag": "Endurance de Récupération",
+      "description": "1h en Z1-Z2\n\n📊 Protocole :\n → 1h en Z1 (FC 50-60% | VAMc < 60%)-Z2 (FC 60-70% | VAMc 60-80%)\n → Mobilité 10 min\n\nObjectif: Récupérer activement."
+    },
+    {
+      "tag": "Sortie Plaisir / Test",
+      "description": "Sortie libre ou retest\n\n📊 Protocole :\n → Option A: sortie plaisir de 2h en Z2\n → Option B: refais le test VAM 3 min et le test VAM 12 min pour mettre à jour ta VAMc\n\nObjectif: Mesurer la progression ou récupérer en plaisir."
+    }
+  ]
+}

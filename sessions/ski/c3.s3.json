@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Over-Under",
+      "description": "1h15 dont 3 x 9 min en over-under\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 x 9 min: alterner 2 min à 95% VAMc / 1 min à 110% VAMc\n → Récupération: 5 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Apprendre à récupérer en restant proche du seuil."
+    },
+    {
+      "tag": "Z2 Longue (Soutien)",
+      "description": "Sortie de 2h30 en Z2\n\n📊 Protocole :\n → 2h30 en Z2 (FC 60-70% | VAMc 60-80%)\n → Itinéraire avec une belle descente\n → Ravitaillement toutes les 45 min\n\nObjectif: Maintenir le socle aérobie pendant le bloc seuil."
+    },
+    {
+      "tag": "SST Intensif",
+      "description": "1h20 dont 2 x 20 min à 90-94% VAMc\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 x 20 min au Sweet Spot (90-94% VAMc)\n → Récupération: 6 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Consolider la capacité à tenir un effort soutenu longtemps."
+    }
+  ]
+}

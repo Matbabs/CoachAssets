@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "SV1 Entretien",
+      "description": "1h dont 2 x 12 min au SV1\n\n📊 Protocole :\n → Échauffement: 15 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 x 12 min au SV1 (80% VAMc)\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Entretenir le seuil aérobie pendant la récupération."
+    },
+    {
+      "tag": "Récupération Active",
+      "description": "45 min en Z1\n\n📊 Protocole :\n → 45 min en Z1 (FC 50-60% | VAMc < 60%)\n → Mobilité: 10 min (hanches, chevilles, dos)\n\nObjectif: Récupérer activement."
+    },
+    {
+      "tag": "Rappel de VAMc",
+      "description": "1h dont 3 x 4 min à la VAMc\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 x 4 min en Z4 (FC 80-92% | VAMc 95-105%)\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Valider les acquis du bloc seuil."
+    }
+  ]
+}

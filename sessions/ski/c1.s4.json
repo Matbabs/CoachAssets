@@ -1,0 +1,16 @@
+{
+  "days": [
+    {
+      "tag": "Intervalles aérobies (Z3)",
+      "description": "1h15 dont 4 x 10 min en Z3\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 4 x 10 min en Z3 (FC 70-80% | VAMc 80-95%)\n → Récupération: 3 min en Z2 (FC 60-70% | VAMc 60-80%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Améliorer le rendement aérobie et la tolérance à un effort soutenu."
+    },
+    {
+      "tag": "Découverte PMA (Z5)",
+      "description": "1h dont 8 x 1 min en Z5\n\n📊 Protocole :\n → Échauffement: 25 min en Z2 (FC 60-70% | VAMc 60-80%) avec 3 accélérations\n → 8 x 1 min en Z5 (FC > 92% | VAMc > 105%) en montée\n → Récupération: 2 min en Z1 (FC 50-60% | VAMc < 60%) (descente lente ou marche)\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Éveiller la puissance maximale aérobie (VO2max)."
+    },
+    {
+      "tag": "Sortie mixte (Z3 + Z5)",
+      "description": "Sortie de 1h45 combinant tempo et accélérations\n\n📊 Protocole :\n → 1h45 au total, base en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 x 12 min en Z3 (FC 70-80% | VAMc 80-95%)\n → Puis 5 x 30 sec en Z5 (FC > 92% | VAMc > 105%) (récup 1 min 30)\n → Termine par 2 transitions chronométrées\n\nObjectif: Combiner les filières et clôturer le bloc de découverte."
+    }
+  ]
+}
