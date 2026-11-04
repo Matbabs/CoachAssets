@@ -1,1 +1,115 @@
-{ "studios": [] }
+{
+  "studios": [
+    {
+      "handle": "@KAULIVAAST",
+      "name": "Kauli Vaast",
+      "title": "Champion Olympique de Surf",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/kaulivaast.jpg",
+      "tagline": "Le prince de Teahupo'o, couronné d'or dans son jardin.",
+      "description": "Médaillé d'or aux Jeux Olympiques de Paris 2024 sur la vague mythique de Teahupo'o, Kauli est un maître des tubes polynésiens au style aussi fluide qu'engagé.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/kaulivaast/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@JOHANNEDEFAY",
+      "name": "Johanne Defay",
+      "title": "Surfeuse Pro & Médaillée Olympique",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/johannedefay.jpg",
+      "tagline": "La Réunionnaise qui fait trembler le Championship Tour.",
+      "description": "Vainqueure d'étapes du CT et médaillée de bronze à Paris 2024, Johanne conjugue puissance, régularité et maternité avec une détermination rare.",
+      "statistics": {
+        "divine": 3,
+        "force": 4,
+        "humor": 2,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/johannedefay/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@VAHINEFIERRO",
+      "name": "Vahine Fierro",
+      "title": "Surfeuse Pro",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/vahinefierro.jpg",
+      "tagline": "La Tahitienne qui ne recule devant aucun tube.",
+      "description": "Spécialiste des vagues lourdes de Huahine et Teahupo'o, Vahine a remporté le Tahiti Pro sur le CT et s'impose comme l'une des surfeuses les plus engagées au monde.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/vahinefierro/",
+      "socials": [
+        "Instagram"
+      ]
+    },
+    {
+      "handle": "@JUSTINEDUPONT33",
+      "name": "Justine Dupont",
+      "title": "Big Wave Surfeuse & Waterwoman",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/justinedupont33.jpg",
+      "tagline": "Celle qui surfe les montagnes d'eau de Nazaré.",
+      "description": "Multiple championne du monde et pionnière du gros surf, Justine affronte les vagues géantes de Nazaré et inspire par son mental hors norme dans ses conférences et vidéos.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/justinedupont33/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@JOANDURU",
+      "name": "Joan Duru",
+      "title": "Surfeur Pro & Champion du Monde ISA",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/joanduru.jpg",
+      "tagline": "Le Landais au backside tranchant comme une lame.",
+      "description": "Champion du monde ISA 2021 et 5e des Jeux Olympiques de Paris 2024, Joan est un pilier du surf français, aussi à l'aise sur les beach-breaks d'Hossegor que dans les tubes du Pacifique.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 3,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/joanduru/",
+      "socials": [
+        "Instagram"
+      ]
+    },
+    {
+      "handle": "@BENTHOUARD",
+      "name": "Ben Thouard",
+      "title": "Photographe Océan",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/surf/benthouard.jpg",
+      "tagline": "L'œil sous-marin qui fige la vague parfaite.",
+      "description": "Installé à Tahiti, Ben photographie les vagues de l'intérieur, au ras des récifs de Teahupo'o. Ses images, publiées dans le monde entier, révèlent la beauté brute de l'océan.",
+      "statistics": {
+        "divine": 3,
+        "force": 2,
+        "humor": 2,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/benthouard/",
+      "socials": [
+        "Instagram"
+      ]
+    }
+  ]
+}

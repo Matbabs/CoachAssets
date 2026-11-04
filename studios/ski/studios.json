@@ -1,1 +1,136 @@
-{ "studios": [] }
+{
+  "studios": [
+    {
+      "handle": "@KILIANJORNET",
+      "name": "Kilian Jornet",
+      "title": "Alpiniste & Skieur-Alpiniste",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/kilianjornet.jpg",
+      "tagline": "Le cyborg des montagnes qui avale les dénivelés comme d'autres les cafés.",
+      "description": "Multiple champion du monde de ski-alpinisme et recordman de vitesse sur les plus grands sommets. Kilian explore la montagne sous toutes ses formes et milite pour protéger les terrains de jeu qui l'ont façonné.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 1,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/kilianjornet/",
+      "socials": [
+        "Instagram",
+        "YouTube",
+        "Strava"
+      ]
+    },
+    {
+      "handle": "@VIVIANBRUCHEZ",
+      "name": "Vivian Bruchez",
+      "title": "Skieur de Pente Raide & Guide",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/vivianbruchez.jpg",
+      "tagline": "Le funambule de Chamonix qui trace là où les autres posent des cordes.",
+      "description": "Guide de haute montagne et spécialiste de la pente raide, Vivian enchaîne les premières descentes dans le massif du Mont-Blanc avec une élégance et une précision rares.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 2,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/vivianbruchez/",
+      "socials": [
+        "Instagram"
+      ]
+    },
+    {
+      "handle": "@JEREMIEHEITZ",
+      "name": "Jérémie Heitz",
+      "title": "Freerider & Guide UIAGM",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/jeremieheitz.jpg",
+      "tagline": "Le Valaisan qui skie les faces nord à la vitesse d'une descente de Coupe du Monde.",
+      "description": "Révélé par La Liste, Jérémie a redéfini la pente raide en y ajoutant la vitesse. Guide de montagne, il vise les lignes les plus engagées des Alpes et d'ailleurs.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 1,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/jeremieheitz/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@SAMFAVRET",
+      "name": "Sam Favret",
+      "title": "Skieur Pro & Guide",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/samfavret.jpg",
+      "tagline": "Le freestyler chamoniard qui transforme les glaciers en skatepark.",
+      "description": "Guide à Chamonix et créatif hors pair, Sam mélange freeride, freestyle et ski de rando dans des vidéos où la montagne devient un immense terrain de jeu.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 3,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/samfavret/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@XAVIERDELERUE",
+      "name": "Xavier de Le Rue",
+      "title": "Snowboarder Freeride & Explorateur",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/xavierdelerue.jpg",
+      "tagline": "Triple champion du Freeride World Tour parti chercher l'aventure au bout du monde.",
+      "description": "Légende du freeride, Xavier troque désormais les compétitions contre des expéditions en splitboard, de l'Antarctique aux Alpes, en partageant ses réflexions sur le risque et la montagne.",
+      "statistics": {
+        "divine": 4,
+        "force": 4,
+        "humor": 2,
+        "iq": 4
+      },
+      "link": "https://www.instagram.com/xavierdelerue/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
+    },
+    {
+      "handle": "@LOU_BARIN",
+      "name": "Lou Barin",
+      "title": "Freerideuse & Championne du Monde",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/lou_barin.jpg",
+      "tagline": "La skieuse de Val Thorens qui a troqué les bosses pour les faces du FWT.",
+      "description": "Olympienne en ski de bosses puis championne du monde du Freeride World Tour, Lou envoie des lignes engagées avec une énergie et une bonne humeur communicatives.",
+      "statistics": {
+        "divine": 3,
+        "force": 3,
+        "humor": 3,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/lou_barin/",
+      "socials": [
+        "Instagram"
+      ]
+    },
+    {
+      "handle": "@AXELLEMOLLARET",
+      "name": "Axelle Mollaret",
+      "title": "Skieuse-Alpiniste",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/axellemollaret.jpg",
+      "tagline": "La skimoqueuse savoyarde qui grimpe plus vite qu'on ne descend.",
+      "description": "Membre de l'équipe de France de ski-alpinisme et vice-championne du monde, Axelle allie endurance, technique de conversion et transitions éclair sur les courses les plus exigeantes.",
+      "statistics": {
+        "divine": 2,
+        "force": 4,
+        "humor": 2,
+        "iq": 3
+      },
+      "link": "https://www.instagram.com/axellemollaret/",
+      "socials": [
+        "Instagram",
+        "Strava"
+      ]
+    }
+  ]
+}
