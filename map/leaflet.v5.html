@@ -272,7 +272,6 @@
         color: #FBBF24;
       }
       /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
-      .markers-appearing .leaflet-marker-icon > div:not(.pulse),
       .leaflet-marker-icon.marker-pop > div {
         animation: marker-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
       }
@@ -644,7 +643,6 @@ const marker = L.marker(pos, {
       var pendingReset = false;
       var flushTimer = null;
       var lastMarkerColor = null;
-      var appearTimer = null;
       function queueLayer(group, layer) {
         if (!pendingLayers.has(group)) pendingLayers.set(group, []);
         pendingLayers.get(group).push(layer);
@@ -663,24 +661,26 @@ const marker = L.marker(pos, {
         var p = l.getLatLng();
         return p.lat.toFixed(5) + "," + p.lng.toFixed(5) + "|" + l.options.icon.options.html;
       }
-      function popIn(e) {
-        var icon = e.target._icon;
-        // ignore markers that only reach the DOM later (zoom/uncluster)
-        if (!icon || !icon.firstElementChild || Date.now() - flushAt > 600) return;
-        var pt = map.latLngToContainerPoint(e.target.getLatLng());
-        var d = pt.distanceTo(map.getSize().divideBy(2));
-        icon.firstElementChild.style.animationDelay = Math.min(250, d / 3) + "ms";
+      function popEl(icon, containerPoint) {
+        var child = icon.firstElementChild;
+        if (!child || child.classList.contains("pulse")) return;
+        var d = containerPoint.distanceTo(map.getSize().divideBy(2));
+        child.style.animationDelay = Math.min(250, d / 3) + "ms";
         icon.classList.add("marker-pop");
         // re-inserted icons would replay the animation, so drop the class once done
         setTimeout(function () {
           icon.classList.remove("marker-pop");
-          icon.firstElementChild.style.animationDelay = "";
+          child.style.animationDelay = "";
         }, 700);
+      }
+      function popIn(e) {
+        // ignore markers that only reach the DOM later (zoom/uncluster)
+        if (!e.target._icon || Date.now() - flushAt > 600) return;
+        popEl(e.target._icon, map.latLngToContainerPoint(e.target.getLatLng()));
       }
       function flushMarkers() {
         flushTimer = null;
         flushAt = Date.now();
-        var container = map.getContainer();
         var nextKeys = pendingReset ? new Set() : new Set(prevKeys);
         var total = 0, fresh = 0;
         pendingLayers.forEach(function (layers) {
@@ -695,12 +695,14 @@ const marker = L.marker(pos, {
           });
         });
         prevKeys = nextKeys;
-        // Sport/filter change (mostly new markers): clusters pop as well
-        if (total > 0 && fresh / total > 0.5) container.classList.add("markers-appearing");
         if (pendingReset) {
           markerClusterGroup.clearLayers();
           liveStoryClusterGroup.clearLayers();
           alertClusterGroup.clearLayers();
+          // the user's own marker survives resets (updateUserMarker replaces it)
+          unclusteredGroup.eachLayer(function (l) {
+            if (l !== userMapMarker) unclusteredGroup.removeLayer(l);
+          });
           pendingReset = false;
         }
         pendingLayers.forEach(function (layers, group) {
@@ -709,10 +711,13 @@ const marker = L.marker(pos, {
         });
         pendingLayers.clear();
         if (lastMarkerColor) applyMarkerColors(lastMarkerColor);
-        clearTimeout(appearTimer);
-        appearTimer = setTimeout(function () {
-          container.classList.remove("markers-appearing");
-        }, 400);
+        // Sport/filter change (mostly new markers): pop every icon present right now,
+        // clusters included; elements recreated by later waves are left alone.
+        if (total > 0 && fresh / total > 0.5) {
+          map.getPane("markerPane").querySelectorAll(".leaflet-marker-icon").forEach(function (el) {
+            popEl(el, map.layerPointToContainerPoint(L.DomUtil.getPosition(el)));
+          });
+        }
       }
       function applyMarkerColors(color) {
         document
@@ -754,9 +759,7 @@ const marker = L.marker(pos, {
         // Cluster groups are cleared at flush time, right before the new markers land
         pendingReset = true;
         pendingLayers.clear();
-        unclusteredGroup.clearLayers();
-        markers = [];
-        userMapMarker = undefined;
+        markers = userMapMarker ? [userMapMarker] : [];
         currentClusterColor = '#FBBF24';
         scheduleFlush();
       }
