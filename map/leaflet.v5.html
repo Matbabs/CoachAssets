@@ -271,6 +271,14 @@
       .story-author {
         color: #FBBF24;
       }
+      /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
+      .markers-appearing .leaflet-marker-icon > div:not(.pulse) {
+        animation: marker-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+      @keyframes marker-pop {
+        from { opacity: 0; scale: 0.3; }
+        to { opacity: 1; scale: 1; }
+      }
     </style>
     <script>
       const MARKER_RADIUS_LIMIT = 50;
@@ -599,18 +607,18 @@ const marker = L.marker(pos, {
           icon: icon,
         });
         marker.bindPopup(generatePopup(markerObj, distanceToUser));
-        
+
         // Live stories go to their own cluster group
         if (markerObj.imageUrl) {
-          liveStoryClusterGroup.addLayer(marker);
+          queueLayer(liveStoryClusterGroup, marker);
         } else {
           // User's own marker stays unclustered
-          const isUserMarker = markerObj.name === "ExploRider" && 
+          const isUserMarker = markerObj.name === "ExploRider" &&
             (markerObj.description === "Moi" || markerObj.description === currentUsername);
           if (isUserMarker) {
-            unclusteredGroup.addLayer(marker);
+            queueLayer(unclusteredGroup, marker);
           } else {
-            markerClusterGroup.addLayer(marker);
+            queueLayer(markerClusterGroup, marker);
           }
         }
         markers.push(marker);
@@ -627,9 +635,49 @@ const marker = L.marker(pos, {
         } else {
           currentClusterColor = color;
         }
-        
+        lastMarkerColor = color;
+      }
+      // BATCHING: removeAllMarkers + N addMarker calls are coalesced into one
+      // clear + addLayers pass, so clusters are computed once and nothing flashes.
+      var pendingLayers = new Map();
+      var pendingReset = false;
+      var flushTimer = null;
+      var lastMarkerColor = null;
+      var appearTimer = null;
+      function queueLayer(group, layer) {
+        if (!pendingLayers.has(group)) pendingLayers.set(group, []);
+        pendingLayers.get(group).push(layer);
+        scheduleFlush();
+      }
+      function scheduleFlush() {
+        clearTimeout(flushTimer);
+        // 60ms debounce also merges bursts from several React effects in a row
+        flushTimer = setTimeout(flushMarkers, 60);
+      }
+      function flushMarkers() {
+        flushTimer = null;
+        var container = map.getContainer();
+        container.classList.add("markers-appearing");
+        if (pendingReset) {
+          markerClusterGroup.clearLayers();
+          liveStoryClusterGroup.clearLayers();
+          alertClusterGroup.clearLayers();
+          pendingReset = false;
+        }
+        pendingLayers.forEach(function (layers, group) {
+          if (group.addLayers) group.addLayers(layers);
+          else layers.forEach(function (l) { group.addLayer(l); });
+        });
+        pendingLayers.clear();
+        if (lastMarkerColor) applyMarkerColors(lastMarkerColor);
+        clearTimeout(appearTimer);
+        appearTimer = setTimeout(function () {
+          container.classList.remove("markers-appearing");
+        }, 400);
+      }
+      function applyMarkerColors(color) {
         document
-          .querySelectorAll(".marker")
+          .querySelectorAll(".marker:not(.marker-fixed)")
           .forEach((e) => (e.style.background = color));
         document
           .querySelectorAll(".marker-visited")
@@ -664,13 +712,14 @@ const marker = L.marker(pos, {
         markers.push(userMapMarker);
       }
       function removeAllMarkers() {
-        markerClusterGroup.clearLayers();
-        liveStoryClusterGroup.clearLayers();
-        alertClusterGroup.clearLayers();
+        // Cluster groups are cleared at flush time, right before the new markers land
+        pendingReset = true;
+        pendingLayers.clear();
         unclusteredGroup.clearLayers();
         markers = [];
         userMapMarker = undefined;
         currentClusterColor = '#FBBF24';
+        scheduleFlush();
       }
       function removeUserMarker() {
         const userMarkers = markers.filter(m => {
@@ -824,7 +873,7 @@ function signalAlert(alertId) {
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
+          html: `<div class="marker marker-fixed" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
           iconSize: [24, 24],
           iconAnchor: [12, 12],
         });
@@ -836,7 +885,7 @@ function signalAlert(alertId) {
           popup += `</div>`;
         }
         marker.bindPopup(popup);
-        alertClusterGroup.addLayer(marker);
+        queueLayer(alertClusterGroup, marker);
         markers.push(marker);
       }
 
@@ -847,7 +896,7 @@ function signalAlert(alertId) {
       function trackEndpointIcon(iconName, color) {
         return L.divIcon({
           className: "css-icon",
-          html: '<div class="marker" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';"><i class="fa ' + iconName + '" style="color:white;font-size:11px;"></i></div>',
+          html: '<div class="marker marker-fixed" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';"><i class="fa ' + iconName + '" style="color:white;font-size:11px;"></i></div>',
           iconSize: [26, 26],
           iconAnchor: [13, 13],
         });
