@@ -561,6 +561,22 @@ var classic = L.tileLayer(
       }
       map.on("move", updateCoords);
       map.on("click", closeWindows);
+      // iOS WKWebView ne déclenche pas dblclick avec touch-action:none (Leaflet ≥1.8)
+      var isIOS =
+        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      if (isIOS) {
+        var lastTap = 0;
+        map.on("click", function (e) {
+          var now = Date.now();
+          if (now - lastTap < 300) {
+            map.setZoomAround(e.latlng, map.getZoom() + 1);
+            lastTap = 0;
+          } else {
+            lastTap = now;
+          }
+        });
+      }
       updateCoords();
 
       // BRIDGE FUNCTIONS
