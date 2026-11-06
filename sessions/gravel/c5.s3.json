@@ -6,11 +6,11 @@
     },
     {
       "tag": "Force Maximale: Over-Torque",
-      "description": "1h45 dont 4 x 6 min Force Critique\n\n📊 Travail spécifique: 4 répétitions de 6 min en Zone 4 (Seuil).\n → Cadence: La plus basse possible sans douleur (entre 35 et 45 RPM).\n → Récupération: 6 min en Zone 1.\n\n👉 Objectif: Recrutement des fibres de type II (rapides) pour les situations critiques en bikepacking."
+      "description": "1h45 dont 4 x 6 min Force Critique\n\n📊 Travail spécifique: 4 répétitions de 6 min en Zone 4 (Seuil).\n → Cadence: La plus basse possible sans douleur (entre 35 et 45 RPM).\n → Récupération: 6 min en Zone 1.\n\n👉 Objectif: Recrutement des fibres de type II (rapides) pour les situations critiques en gravel."
     },
     {
-      "tag": "Simulation: Charge & Relances",
-      "description": "4h00 Sortie Longue avec 1 sprint par heure\n\n📊 Travail spécifique: Sortie en mode bikepacking.\n → Chaque début d'heure: Faire un sprint de 15s départ arrêté (simulant un redémarrage après une pause).\n → Le reste: Zone 2 constante.\n\n👉 Objectif: Maintenir l'influx nerveux et la capacité de sprint sur une longue durée de selle."
+      "tag": "Simulation: Endurance & Relances",
+      "description": "4h00 Sortie Longue avec 1 sprint par heure\n\n📊 Travail spécifique: Sortie longue en mode gravel.\n → Chaque début d'heure: Faire un sprint de 15s départ arrêté (simulant un redémarrage après une pause).\n → Le reste: Zone 2 constante.\n\n👉 Objectif: Maintenir l'influx nerveux et la capacité de sprint sur une longue durée de selle."
     }
   ]
 }

@@ -2,7 +2,7 @@
   "days": [
     {
       "tag": "Over-Under (Fluctuations de Seuil)",
-      "description": "1h30 dont 3 x (2 min Over / 2 min Under)\n\n📊 Protocole :\n → Bloc de 12 min répété 3 fois :\n   - 2 min à 105% CP (Over)\n   - 2 min à 90% CP (Under)\n → Récupération: 6 min entre les blocs de 12 min.\n\nObjectif: Apprendre au corps à récupérer de l'acide lactique tout en restant à une intensité élevée (spécifique aux relances en bikepacking)."
+      "description": "1h30 dont 3 x (2 min Over / 2 min Under)\n\n📊 Protocole :\n → Bloc de 12 min répété 3 fois :\n   - 2 min à 105% CP (Over)\n   - 2 min à 90% CP (Under)\n → Récupération: 6 min entre les blocs de 12 min.\n\nObjectif: Apprendre au corps à récupérer de l'acide lactique tout en restant à une intensité élevée (spécifique aux relances en gravel)."
     },
     {
       "tag": "Z2 Longue (Soutien)",

@@ -1,12 +1,12 @@
 {
   "days": [
     {
-      "tag": "Endurance active (Charge légère)",
-      "description": "1h30 en Z2 avec sacoches\n\n📊 Protocole :\n → 1h30 en Z2.\n → Équipement: Vélo légèrement chargé (sacoche de selle ou de cadre).\n → Focus: Stabilité du vélo et répartition du poids.\n\n👉 Objectif: S'habituer au comportement du vélo sous charge modérée."
+      "tag": "Endurance active (Terrain mixte)",
+      "description": "1h30 en Z2 sur chemins\n\n📊 Protocole :\n → 1h30 en Z2.\n → Équipement: Parcours mixte avec un maximum de chemins roulants.\n → Focus: Stabilité du vélo et pression des pneus adaptée au terrain.\n\n👉 Objectif: S'habituer au comportement du vélo sur gravier."
     },
     {
-      "tag": "Tempo Bikepacking (Z3)",
-      "description": "2h00 incluant 3 x 15 min en Z3\n\n📊 Protocole :\n → 2 heures au total.\n → Travail: 3 blocs de 15 min en Zone 3 (allure de voyage soutenue).\n → Récupération: 5 min en Z2 entre les blocs.\n\n👉 Objectif: Travailler le rythme de croisière que l'on tient sur de longues ascensions."
+      "tag": "Tempo Gravel (Z3)",
+      "description": "2h00 incluant 3 x 15 min en Z3\n\n📊 Protocole :\n → 2 heures au total.\n → Travail: 3 blocs de 15 min en Zone 3 (allure gravel soutenue).\n → Récupération: 5 min en Z2 entre les blocs.\n\n👉 Objectif: Travailler le rythme de croisière que l'on tient sur de longues ascensions."
     },
     {
       "tag": "Sortie longue (Volume)",
