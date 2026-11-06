@@ -132,6 +132,13 @@
         width: 60px;
         transform: scaleX(-1);
       }
+      .marker-pro {
+        position: absolute;
+        right: -4px;
+        bottom: -4px;
+        width: 22px;
+        height: 22px;
+      }
       .marker-spot {
         background: #3B82F6;
         border: 2px solid white;
@@ -585,19 +592,12 @@ var classic = L.tileLayer(
         if (markerObj.type === "exploriders") {
           // Use custom marker image if provided, otherwise use default
           const markerImg = markerObj.markerImage || "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment-1.png";
-          const customIcon = L.divIcon({
+          icon = L.divIcon({
             className: "css-icon",
-            html: '<div class="marker-exploriders" style="background-image: url(\'' + markerImg + '\');"></div>',
+            html: exploriderHtml(markerImg, markerObj.flipped, markerObj.isPro),
             iconSize: [60, 60],
             iconAnchor: [30, 60],
           });
-          const customIconFlipped = L.divIcon({
-            className: "css-icon",
-            html: '<div class="marker-exploriders-flipped" style="background-image: url(\'' + markerImg + '\');"></div>',
-            iconSize: [60, 60],
-            iconAnchor: [30, 60],
-          });
-          icon = markerObj.flipped ? customIconFlipped: customIcon;
         } else if (markerObj.type === "spots") {
           if (markerObj.imageUrl) {
             icon = liveStoryIcon;
@@ -792,6 +792,12 @@ const marker = L.marker(pos, {
       function setUsername(name) {
         currentUsername = name;
       }
+      // Badge PRO en bas à droite, hors du div retourné (sinon il suit le flip)
+      function exploriderHtml(url, flipped, isPro) {
+        const avatar = '<div class="marker-exploriders' + (flipped ? '-flipped' : '') + '" style="background-image: url(\'' + url + '\');"></div>';
+        if (!isPro) return avatar;
+        return '<div style="position: relative; width: 60px; height: 60px;">' + avatar + '<img class="marker-pro" src="https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/pro.png" /></div>';
+      }
       function setMarkerImage(url) {
         document.querySelectorAll('.marker-exploriders').forEach(el => {
           el.style.backgroundImage = `url("${url}")`;
@@ -815,8 +821,13 @@ const marker = L.marker(pos, {
         // Update existing markers on the map
         markers.forEach(function(m) {
           if (m.options.icon && m.options.icon.options.html && m.options.icon.options.html.includes('marker-exploriders')) {
-            const isFlipped = m.options.icon.options.html.includes('flipped');
-            m.setIcon(isFlipped ? exploridersIconFlipped: exploridersIcon);
+            const html = m.options.icon.options.html;
+            m.setIcon(L.divIcon({
+              className: "css-icon",
+              html: exploriderHtml(url, html.includes('flipped'), html.includes('marker-pro')),
+              iconSize: [60, 60],
+              iconAnchor: [30, 60],
+            }));
           }
         });
       }
