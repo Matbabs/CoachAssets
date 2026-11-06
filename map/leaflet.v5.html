@@ -272,7 +272,8 @@
         color: #FBBF24;
       }
       /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
-      .markers-appearing .leaflet-marker-icon > div:not(.pulse) {
+      .markers-appearing .leaflet-marker-icon > div:not(.pulse),
+      .leaflet-marker-icon.marker-pop > div {
         animation: marker-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
       }
       @keyframes marker-pop {
@@ -654,10 +655,48 @@ const marker = L.marker(pos, {
         // 60ms debounce also merges bursts from several React effects in a row
         flushTimer = setTimeout(flushMarkers, 60);
       }
+      // Only markers absent from the previous flush pop in (key includes icon html,
+      // so a marker turning "visited" pops too); data refreshes leave the rest still.
+      var prevKeys = new Set();
+      var flushAt = 0;
+      function markerKey(l) {
+        var p = l.getLatLng();
+        return p.lat.toFixed(5) + "," + p.lng.toFixed(5) + "|" + l.options.icon.options.html;
+      }
+      function popIn(e) {
+        var icon = e.target._icon;
+        // ignore markers that only reach the DOM later (zoom/uncluster)
+        if (!icon || !icon.firstElementChild || Date.now() - flushAt > 600) return;
+        var pt = map.latLngToContainerPoint(e.target.getLatLng());
+        var d = pt.distanceTo(map.getSize().divideBy(2));
+        icon.firstElementChild.style.animationDelay = Math.min(250, d / 3) + "ms";
+        icon.classList.add("marker-pop");
+        // re-inserted icons would replay the animation, so drop the class once done
+        setTimeout(function () {
+          icon.classList.remove("marker-pop");
+          icon.firstElementChild.style.animationDelay = "";
+        }, 700);
+      }
       function flushMarkers() {
         flushTimer = null;
+        flushAt = Date.now();
         var container = map.getContainer();
-        container.classList.add("markers-appearing");
+        var nextKeys = pendingReset ? new Set() : new Set(prevKeys);
+        var total = 0, fresh = 0;
+        pendingLayers.forEach(function (layers) {
+          layers.forEach(function (l) {
+            var key = markerKey(l);
+            total++;
+            if (!prevKeys.has(key)) {
+              fresh++;
+              l.once("add", popIn);
+            }
+            nextKeys.add(key);
+          });
+        });
+        prevKeys = nextKeys;
+        // Sport/filter change (mostly new markers): clusters pop as well
+        if (total > 0 && fresh / total > 0.5) container.classList.add("markers-appearing");
         if (pendingReset) {
           markerClusterGroup.clearLayers();
           liveStoryClusterGroup.clearLayers();
