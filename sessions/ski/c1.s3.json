@@ -2,7 +2,7 @@
   "days": [
     {
       "tag": "Technique de montée",
-      "description": "1h15 en Z2 avec ateliers techniques\n\n📊 Protocole :\n → 15 min d'échauffement en Z2 (FC 60-70% | VAMc 60-80%)\n → Atelier 1 (15 min): trace régulière, pente constante, pas glissés sans soulever le ski\n → Atelier 2 (15 min): conversions amont et aval, des deux côtés\n → Atelier 3 (10 min): mise en place et utilisation des couteaux sur neige dure\n → Fin de séance: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n\nObjectif: Gagner en efficacité gestuelle: chaque watt économisé en technique est un watt de plus pour monter."
+      "description": "1h15 en Z2 avec ateliers techniques\n\n📊 Protocole :\n → 15 min d'échauffement en Z2 (FC 60-70% | VAMc 60-80%)\n → Atelier 1 (15 min): trace régulière, pente constante, pas glissés sans soulever le ski\n → Atelier 2 (15 min): conversions amont et aval, des deux côtés\n → Atelier 3 (10 min): mise en place et utilisation des couteaux sur neige dure\n → Fin de séance: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Gagner en efficacité gestuelle: chaque watt économisé en technique est un watt de plus pour monter."
     },
     {
       "tag": "Force et Seuil (VAMc)",
@@ -10,7 +10,7 @@
     },
     {
       "tag": "Sortie type \"Course\"",
-      "description": "Sortie de 2h avec 2 blocs tempo et 3 transitions\n\n📊 Protocole :\n → 2h au total, base en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 x 15 min en Z3 (FC 70-80% | VAMc 80-95%) en montée\n → Insère 3 transitions chronométrées (montée → descente → montée)\n → Compare ton chrono de transition à celui du test\n\nObjectif: Assembler endurance, rythme et transitions dans une même sortie."
+      "description": "Sortie de 2h avec 2 blocs tempo et 3 transitions\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 2h au total, base en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 x 15 min en Z3 (FC 70-80% | VAMc 80-95%) en montée\n → Insère 3 transitions chronométrées (montée → descente → montée)\n → Compare ton chrono de transition à celui du test\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Assembler endurance, rythme et transitions dans une même sortie."
     }
   ]
 }

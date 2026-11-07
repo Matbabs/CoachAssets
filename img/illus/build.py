@@ -18,6 +18,9 @@ W_CARD = 340
 
 
 def esc(s):
+    import re
+
+    s = re.sub("[\U0001F000-\U0001FFFF\u2600-\u27BF\uFE0F\u200D]", "", s).strip()  # Inter has no emoji
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
@@ -410,13 +413,14 @@ def rep(n, *segs, between=None):
     return out
 
 
-def profile(groups, total=None, title="Profil de la séance"):
+def profile(groups, total=None, title="Profil de la séance", show_total=True):
     """groups: [(label, [(minutes, zone), ...])]. zone 1-5, up to 5.5 for all-out.
     total: session length in minutes; the rest is drawn as easy riding (Z1-Z2)."""
     groups = [(l, list(sg)) for l, sg in groups]
     done = sum(m for _, sg in groups for m, _ in sg)
-    if total and total - done >= 5:
-        groups.append(("Fin Z1-Z2", [(total - done, 1.5)]))
+    if total and total - done >= 5:  # free riding fills the session, before the cool-down
+        at = len(groups) - 1 if groups[-1][0].startswith("Calme") else len(groups)
+        groups.insert(at, ("Z1-Z2", [(total - done, 1.5)]))
     x0, x1, base, unit, minw = 40, 324, 128, 17, 2.4
     segs = [(m, z) for _, sg in groups for m, z in sg]
     k = (x1 - x0) / sum(m for m, _ in segs)
@@ -426,12 +430,13 @@ def profile(groups, total=None, title="Profil de la séance"):
         short = sum(w for w in widths if w <= minw)
         k = (x1 - x0 - short) / long_
     body = text(16, 24, title, 13, BOLD, D, "start")
-    body += text(x1, 24, "≈ " + fmt(round(total or done)), 11, SEMI, P, "end")
+    if show_total:
+        body += text(x1, 24, "≈ " + fmt(round(total or done)), 11, SEMI, P, "end")
     for z in range(1, 6):
         y = base - z * unit
         body += f'<line x1="{x0}" y1="{y}" x2="{x1}" y2="{y}" stroke="{P2}" stroke-width="1" stroke-dasharray="2 4"/>'
         body += text(x0 - 10, y + 4, f"Z{z}", 10, SEMI, P, "end")
-    x, last = x0, 0
+    x, last = x0, [0, 0]  # right edge of the last label on each row
     for label, sg in groups:
         gx = x
         for m, z in sg:
@@ -442,15 +447,39 @@ def profile(groups, total=None, title="Profil de la séance"):
         body += f'<line x1="{gx + 1:.1f}" y1="{base + 7}" x2="{x - 1:.1f}" y2="{base + 7}" stroke="{P2}" stroke-width="2" stroke-linecap="round"/>'
         half = len(label) * 2.9
         cx = min(max((gx + x) / 2, 12 + half), W_CARD - 12 - half)
-        if cx - half > last + 6:  # skip a label that would collide with the previous one
-            body += text(cx, base + 22, label, 10, SEMI, D)
-            last = cx + half
+        row = 0 if cx - half > last[0] + 6 else 1  # second row when it would collide
+        if cx - half > last[row] + 6:
+            body += text(cx, base + 22 + 13 * row, label, 10, SEMI, D)
+            last[row] = cx + half
+        else:
+            print("label dropped:", label)
     body += f'<line x1="{x0}" y1="{base}" x2="{x1}" y2="{base}" stroke="{D}" stroke-width="1.5"/>'
-    return card(base + 34, body)
+    return card(base + (47 if last[1] else 34), body)
+
+
+# Warm-ups and cool-downs written into the sessions' content (minutes): (warm, cool).
+EXTRA = {'gravel-c1.s1.d2': (10, 10), 'gravel-c1.s2.d1': (10, 10), 'gravel-c1.s2.d2': (10, 10), 'gravel-c1.s2.d3': (10, 10), 'gravel-c1.s3.d1': (10, 10), 'gravel-c1.s3.d3': (10, 10), 'gravel-c1.s4.d1': (10, 10), 'gravel-c2.s1.d1': (0, 10), 'gravel-c2.s1.d2': (10, 10), 'gravel-c2.s1.d3': (10, 10), 'gravel-c2.s2.d1': (10, 10), 'gravel-c2.s2.d3': (10, 10), 'gravel-c2.s3.d1': (10, 10), 'gravel-c2.s3.d2': (10, 10), 'gravel-c2.s3.d3': (10, 10), 'gravel-c2.s4.d1': (5, 5), 'gravel-c2.s4.d2': (10, 10), 'gravel-c2.s4.d3': (5, 5), 'gravel-c3.s1.d2': (10, 10), 'gravel-c3.s2.d2': (10, 10), 'gravel-c3.s3.d1': (0, 15), 'gravel-c3.s3.d2': (10, 10), 'gravel-c3.s4.d2': (5, 5), 'gravel-c4.s1.d3': (10, 10), 'gravel-c4.s2.d3': (10, 10), 'gravel-c4.s3.d1': (0, 15), 'gravel-c4.s3.d2': (0, 15), 'gravel-c4.s3.d3': (10, 10), 'gravel-c4.s4.d2': (5, 5), 'gravel-c4.s4.d3': (10, 10), 'gravel-c5.s1.d1': (0, 10), 'gravel-c5.s1.d2': (10, 10), 'gravel-c5.s1.d3': (10, 10), 'gravel-c5.s2.d1': (10, 15), 'gravel-c5.s2.d3': (10, 10), 'gravel-c5.s3.d2': (10, 10), 'gravel-c5.s3.d3': (10, 10), 'gravel-c5.s4.d3': (10, 10), 'ski-c1.s1.d2': (10, 10), 'ski-c1.s2.d1': (10, 10), 'ski-c1.s2.d3': (10, 10), 'ski-c1.s3.d1': (0, 10), 'ski-c1.s3.d3': (10, 10), 'ski-c1.s4.d3': (10, 10), 'ski-c2.s1.d1': (10, 10), 'ski-c2.s1.d2': (10, 10), 'ski-c2.s1.d3': (10, 10), 'ski-c2.s2.d1': (10, 10), 'ski-c2.s2.d3': (10, 10), 'ski-c2.s3.d2': (10, 10), 'ski-c2.s3.d3': (10, 10), 'ski-c2.s4.d1': (5, 5), 'ski-c2.s4.d2': (10, 10), 'ski-c2.s4.d3': (5, 5), 'ski-c3.s1.d2': (10, 10), 'ski-c3.s2.d2': (10, 10), 'ski-c3.s3.d2': (10, 10), 'ski-c3.s4.d2': (5, 5), 'ski-c4.s1.d3': (10, 10), 'ski-c4.s2.d3': (10, 10), 'ski-c4.s4.d2': (5, 5), 'ski-c4.s4.d3': (10, 10), 'ski-c5.s1.d2': (0, 5), 'ski-c5.s1.d3': (0, 10), 'ski-c5.s2.d1': (0, 5), 'ski-c5.s2.d3': (10, 10), 'ski-c5.s3.d1': (0, 10), 'ski-c5.s3.d2': (10, 5), 'ski-c5.s3.d3': (10, 10), 'ski-c5.s4.d1': (10, 5), 'ski-c5.s4.d2': (10, 10), 'ski-c5.s4.d3': (5, 5), 'trail-c1.s1.d2': (10, 10), 'trail-c1.s1.d3': (10, 10), 'trail-c1.s2.d1': (10, 10), 'trail-c1.s2.d2': (10, 10), 'trail-c1.s2.d3': (10, 10), 'trail-c1.s3.d1': (10, 10), 'trail-c1.s3.d3': (10, 10), 'trail-c1.s4.d1': (5, 5), 'trail-c1.s4.d2': (5, 5), 'trail-c1.s4.d3': (10, 10), 'trail-c2.s1.d1': (10, 10), 'trail-c2.s1.d3': (10, 10), 'trail-c2.s2.d1': (10, 10), 'trail-c2.s2.d3': (10, 10), 'trail-c2.s3.d1': (10, 10), 'trail-c2.s3.d3': (10, 10), 'trail-c2.s4.d1': (5, 5), 'trail-c2.s4.d3': (10, 10), 'trail-c3.s1.d1': (10, 10), 'trail-c3.s1.d3': (10, 10), 'trail-c3.s2.d1': (10, 10), 'trail-c3.s2.d3': (10, 10), 'trail-c3.s3.d1': (10, 10), 'trail-c3.s3.d3': (10, 10), 'trail-c3.s4.d1': (5, 5), 'trail-c3.s4.d3': (10, 10), 'trail-c4.s1.d1': (10, 10), 'trail-c4.s1.d3': (10, 10), 'trail-c4.s2.d1': (10, 10), 'trail-c4.s2.d3': (10, 10), 'trail-c4.s3.d1': (10, 10), 'trail-c4.s3.d3': (10, 10), 'trail-c4.s4.d1': (5, 5), 'trail-c4.s4.d3': (10, 10), 'trail-c5.s1.d1': (10, 10), 'trail-c5.s1.d3': (10, 10), 'trail-c5.s2.d1': (10, 10), 'trail-c5.s2.d3': (10, 10), 'trail-c5.s3.d1': (10, 10), 'trail-c5.s3.d3': (10, 10), 'trail-c5.s4.d1': (5, 5), 'trail-c5.s4.d3': (0, 10), 'trail-c1.s3.d2': (0, 10), 'trail-c2.s1.d2': (0, 15), 'trail-c2.s2.d2': (0, 10), 'trail-c2.s3.d2': (0, 10), 'trail-c3.s1.d2': (0, 15), 'trail-c3.s2.d2': (0, 10), 'trail-c3.s3.d2': (0, 15), 'trail-c4.s1.d2': (0, 15), 'trail-c4.s2.d2': (0, 15), 'trail-c4.s3.d2': (0, 10), 'trail-c5.s1.d2': (0, 15), 'trail-c5.s2.d2': (0, 10), 'trail-c5.s3.d2': (0, 15), 'trail-c5.s4.d2': (0, 10), 'ski-c3.s2.d1': (0, 10), 'gravel-c1.s4.d2': (0, 15), 'gravel-c1.s4.d3': (0, 15), 'gravel-c2.s2.d2': (0, 10), 'gravel-c3.s1.d1': (0, 10), 'gravel-c3.s1.d3': (0, 10), 'gravel-c3.s2.d1': (0, 10), 'gravel-c3.s2.d3': (0, 15), 'gravel-c3.s3.d3': (0, 10), 'gravel-c3.s4.d1': (0, 10), 'gravel-c4.s1.d1': (0, 15), 'gravel-c4.s1.d2': (0, 15), 'gravel-c4.s2.d1': (0, 15), 'gravel-c4.s2.d2': (0, 15), 'gravel-c5.s2.d2': (0, 15), 'gravel-c5.s3.d1': (0, 15), 'gravel-c5.s4.d2': (0, 10)}
+
+
+# Sessions whose text gives no duration: no total in the header.
+NO_TOTAL = {"gravel-c4.s3.d3", "gravel-c4.s4.d2", "gravel-c4.s4.d3", "gravel-c5.s1.d3", "gravel-c5.s2.d3", "gravel-c5.s4.d3"}
 
 
 def prof(name, groups, total=None, title="Profil de la séance"):
-    ILLUS[name] = lambda: profile(groups, total, title)
+    """A Z1-Z2 block at the start/end absorbs the added warm-up/cool-down ("compris dans la durée")."""
+    warm, cool = EXTRA.get(name, (0, 0))
+    groups = [(l, list(sg)) for l, sg in groups]
+    if warm:
+        (l, sg) = groups[0]
+        if sg[0][1] <= 2 and sg[0][0] > warm + 5:
+            groups[0] = (l, [(sg[0][0] - warm, sg[0][1])] + sg[1:])
+        groups.insert(0, (f"Échauf. {warm}′", [(warm, 1.5)]))
+    if cool:
+        (l, sg) = groups[-1]
+        if sg[-1][1] <= 2 and sg[-1][0] > cool + 5:
+            groups[-1] = (l, sg[:-1] + [(sg[-1][0] - cool, sg[-1][1])])
+        groups.append((f"Calme {cool}′", [(cool, 1)]))
+    ILLUS[name] = lambda: profile(groups, total, title, name not in NO_TOTAL)
 
 
 W20, W15, W25 = ("Échauf. 20′", [(20, 2)]), ("Échauf. 15′", [(15, 2)]), ("Échauf. 25′", [(25, 2)])
@@ -484,7 +513,7 @@ prof("ski-c1.s3.d2", [W20, ("3 × 8′ Z4 / 4′", rep(3, (8, 4), (4, 1))), C15]
 prof("ski-c1.s3.d3", [("Z2", [(30, 2)]), ("15′ Z3", [(15, 3)]), ("Z2", [(30, 2)]), ("15′ Z3", [(15, 3)]), ("Z2", [(30, 2)])])
 prof("ski-c1.s4.d1", [W20, ("4 × 10′ Z3 / 3′", rep(4, (10, 3), (3, 2))), C10])
 prof("ski-c1.s4.d2", [W25, ("8 × 1′ Z5 / 2′", rep(8, (1, 5), (2, 1))), C15])
-prof("ski-c1.s4.d3", [("Z2", [(25, 2)]), ("2 × 12′ Z3", [(12, 3), (10, 2), (12, 3)]), ("Z2", [(15, 2)]), ("5 × 30″", rep(5, (0.5, 5), (1.5, 2))), ("Z2", [(21, 2)])])
+prof("ski-c1.s4.d3", [("Z2", [(25, 2)]), ("2 × 12′ Z3", [(12, 3), (10, 2), (12, 3)]), ("Z2", [(15, 2)]), ("5 × 30″", rep(5, (0.5, 5), (1.5, 2)) + [(21, 2)])])
 prof("ski-c2.s2.d2", [W20, ("3 × 12′ Z3 / 4′", rep(3, (12, 3), (4, 2))), C10])
 prof("ski-c2.s3.d1", [W20, ("4 × 10′ pente raide", rep(4, (10, 3), (3, 1))), C10])
 prof("ski-c2.s4.d2", [("Z2", [(30, 2)]), ("6 × 20″ Z4", rep(6, (0.33, 4), (2, 2))), ("Z2", [(16, 2)])])
@@ -508,10 +537,10 @@ prof("ski-c5.s2.d2", [W20, ("6 × 30″ à fond / 3′", rep(6, (0.5, 5.5), (3, 
 prof("ski-c5.s2.d3", [("4 boucles : 15′ Z3 en montée + descente", rep(4, (15, 3), (15, 1)))])
 
 # Gravel
-prof("gravel-c1.s3.d2", [("5 × 3′ à la PC / 3′ souple", rep(5, (3, 4), (3, 1)))])
+prof("gravel-c1.s3.d2", [W20, ("5 × 3′ à la PC / 3′ souple", rep(5, (3, 4), (3, 1))), C15])
 prof("gravel-c1.s4.d1", [("6 × 3′ Z3 / 2′ Z1", rep(6, (3, 3), (2, 1)))])
-prof("gravel-c1.s4.d2", [("8 × 15″ all-out / 4′ Z1", rep(8, (0.25, 5.5), (4, 1)))])
-prof("gravel-c1.s4.d3", [("2h Z2", [(120, 2)]), ("20′ Z3", [(20, 3)]), ("5 × 1′", rep(5, (1, 5), (3, 1)))])
+prof("gravel-c1.s4.d2", [W25, ("8 × 15″ all-out / 4′ Z1", rep(8, (0.25, 5.5), (4, 1)))])
+prof("gravel-c1.s4.d3", [("Échauf. : 2h Z2", [(120, 2)]), ("20′ Z3", [(20, 3)]), ("5 × 1′", rep(5, (1, 5), (3, 1)))])
 prof("gravel-c2.s2.d2", [W20, ("3 × 15′ Z3 / 5′ Z2", rep(3, (15, 3), (5, 2)))], total=120)
 prof("gravel-c3.s1.d1", [W20, ("3 × 15′ SV1 / 5′", rep(3, (15, 2.6), (5, 1)))], total=90)
 prof("gravel-c3.s1.d3", [W15, ("2 × 20′ sweet spot / 8′", rep(2, (20, 3.6), (8, 1)))], total=75)
@@ -530,14 +559,108 @@ prof("gravel-c5.s2.d1", [("6 × 2′ force Z4 + sprint / 4′", rep(6, (1.83, 4)
 prof("gravel-c5.s2.d2", [W20, ("6 × 30″ max / 5′", rep(6, (0.5, 5.5), (5, 1)))], total=90)
 prof("gravel-c5.s3.d1", [W25, ("10 × 20″ sprint en côte", rep(10, (1 / 3, 5.5), (2, 1)))], total=90)
 prof("gravel-c5.s3.d2", [("4 × 6′ force Z4 / 6′", rep(4, (6, 4), (6, 1)))], total=105)
-prof("gravel-c5.s4.d1", [W20, ("3 × 3′ Z3 / 5′", rep(3, (3, 3), (5, 1)))], total=60)
+prof("gravel-c5.s4.d1", [W20, ("3 × 3′ Z3 / 5′", rep(3, (3, 3), (5, 1))), ("Calme Z1-Z2", [(16, 1.5)])])
 prof("gravel-c5.s4.d2", [W20, ("5 × 6″ sprint / 5′", rep(5, (0.1, 5.5), (5, 1)))], total=60)
+
+# Endurance sessions (steady rides/runs/climbs, with their accelerations and blocks where the text places them)
+def steady(name, minutes, label, zone=2):
+    prof(name, [(label, [(minutes, zone)])])
+
+
+def accel(name, before, n, sec, every, after, zone=4.5, label=None):
+    """Z2 with n accelerations of sec seconds, `every` minutes apart (recovery in Z2)."""
+    groups = [("Z2", [(before, 2)]), (label or f"{n} × {sec}″", rep(n, (sec / 60, zone), (every, 2)))]
+    prof(name, groups + ([("Z2", [(after, 2)])] if after else []))  # after=0: accelerations end the session
+
+
+for k, m, l, z in [
+    ("trail-c1.s1.d2", 45, "45′ endurance fondamentale", 2), ("trail-c1.s2.d2", 45, "45′ Z2 stricte", 2),
+    ("trail-c1.s2.d3", 75, "1h15 Z2, terrain varié", 2), ("trail-c1.s3.d1", 60, "1h Z2, cadence 170+", 2),
+    ("trail-c1.s3.d3", 90, "1h30 Z2, montées en marche active", 2), ("trail-c1.s4.d1", 40, "40′ Z1 / début de Z2", 1.5),
+    ("trail-c1.s4.d2", 40, "30 à 45′ vélo ou natation en Z1 (optionnel)", 1), ("trail-c2.s1.d1", 60, "1h Z2, pose de pied précise", 2),
+    ("trail-c2.s1.d3", 90, "1h30 Z2, transition course/marche", 2), ("trail-c2.s2.d1", 70, "1h10 Z2", 2),
+    ("trail-c2.s2.d3", 105, "1h45 Z2 avec dénivelé", 2), ("trail-c2.s3.d1", 75, "1h15 Z2 technique", 2),
+    ("trail-c2.s3.d3", 150, "2h30 Z2 avec équipement complet", 2), ("trail-c2.s4.d1", 45, "45′ Z1 très lent", 1),
+    ("trail-c3.s1.d3", 120, "2h Z2 sur terrain varié", 2), ("trail-c3.s2.d1", 75, "1h15 Z2 technique", 2),
+    ("trail-c3.s2.d3", 135, "2h15 Z2, longue ascension régulière", 2), ("trail-c3.s3.d3", 180, "3h Z2 en montagne", 2),
+    ("trail-c3.s4.d1", 45, "45′ Z1 très lent", 1), ("trail-c3.s4.d3", 60, "1h Z2 sur le plat", 2),
+    ("trail-c4.s1.d1", 75, "1h15 Z2, sentiers vallonnés", 2), ("trail-c4.s1.d3", 135, "2h15 Z2, relance en haut des côtes", 2),
+    ("trail-c4.s2.d3", 165, "2h45 Z2 sur sentiers techniques", 2), ("trail-c4.s3.d3", 210, "3h30 en montagne, > 1000 m D+", 2),
+    ("trail-c4.s4.d1", 45, "45′ Z1 très lent", 1), ("trail-c5.s1.d1", 60, "1h Z2", 2), ("trail-c5.s1.d3", 120, "2h Z2 stricte", 2),
+    ("trail-c5.s2.d1", 60, "1h Z2, rythme et cadence", 2), ("trail-c5.s2.d3", 90, "1h30 en configuration course", 2),
+    ("trail-c5.s3.d1", 50, "50′ Z2, terrain souple", 2), ("trail-c5.s3.d3", 75, "1h15 Z2 au feeling", 2),
+    ("trail-c5.s4.d1", 30, "30′ Z1 très très lent", 1),
+    ("ski-c1.s1.d2", 105, "1h45 Z2 stricte en montée", 2), ("ski-c1.s2.d3", 150, "2h30 Z2 avec conversions", 2),
+    ("ski-c2.s1.d2", 90, "1h30 Z2, 15 conversions sur la partie raide", 2), ("ski-c2.s1.d3", 150, "2h30 Z2", 2),
+    ("ski-c2.s2.d1", 75, "1h15 Z2 avec sac de 5 kg", 2), ("ski-c2.s2.d3", 180, "3h Z2, 2 transitions complètes", 2),
+    ("ski-c2.s4.d3", 120, "2h Z1, sortie plaisir", 1), ("ski-c3.s1.d2", 120, "2h Z2", 2), ("ski-c3.s2.d2", 135, "2h15 Z2, 2 transitions", 2),
+    ("ski-c3.s3.d2", 150, "2h30 Z2", 2), ("ski-c3.s4.d2", 45, "45′ Z1", 1), ("ski-c4.s4.d3", 120, "Option A : 2h Z2 plaisir", 2),
+    ("ski-c5.s4.d3", 90, "1h30 Z1, belle descente", 1),
+    ("gravel-c1.s1.d2", 120, "2h Z2 stricte", 2), ("gravel-c2.s1.d2", 90, "1h30 Z2 dans les bosses", 2),
+    ("gravel-c2.s1.d3", 180, "3h d'endurance pure", 2), ("gravel-c2.s2.d1", 90, "1h30 Z2 sur chemins roulants", 2),
+    ("gravel-c2.s2.d3", 240, "4h Z2 avec dénivelé", 2), ("gravel-c2.s3.d1", 105, "1h45 Z2, gros braquet, cadence basse", 2),
+    ("gravel-c2.s3.d3", 330, "5 à 6 h en Z2", 2), ("gravel-c2.s4.d1", 60, "1h Z1 sur le plat", 1),
+    ("gravel-c2.s4.d3", 120, "2h allure balade (Z1-Z2 basse)", 1.5), ("gravel-c3.s1.d2", 120, "2h Z2, cadence 90 rpm", 2),
+    ("gravel-c3.s2.d2", 135, "2h15 Z2 sur relief", 2), ("gravel-c3.s3.d2", 180, "3h Z2", 2), ("gravel-c3.s4.d2", 45, "45′ Z1, sans résistance", 1),
+    ("gravel-c4.s4.d2", 60, "Z1-Z2, jamais au-dessus de Z2", 1.5),
+]:
+    steady(k, m, l, z)
+prof("ski-c2.s4.d1", [("45′ Z1", [(45, 1)]), ("Étirements 10′", [(10, 1)])])
+prof("ski-c4.s4.d2", [("1h Z1", [(60, 1)]), ("Mobilité 10′", [(10, 1)])])
+
+accel("trail-c1.s1.d3", 47, 3, 15, 0.75, 0)
+accel("trail-c1.s4.d3", 20, 4, 10, 1, 21)
+accel("trail-c2.s4.d3", 34, 3, 20, 1.5, 0, 4)
+accel("trail-c3.s1.d1", 25, 4, 15, 1.5, 29)
+accel("trail-c4.s2.d1", 25, 6, 20, 2, 31)
+accel("trail-c4.s4.d3", 35, 3, 15, 1.5, 0)
+accel("ski-c2.s1.d1", 57, 4, 20, 1.5, 0, 4.5, "4 × 20″ pas rapides")
+accel("gravel-c1.s2.d2", 30, 6, 30, 2.5, 42)
+prof("trail-c3.s3.d1", [("Z2", [(20, 2)]), ("15′ de gammes", [(15, 3)]), ("Z2", [(25, 2)])])
+prof("trail-c4.s3.d1", [("Z2", [(30, 2)]), ("15′ de gammes", [(15, 3)]), ("Z2", [(30, 2)])])
+prof("ski-c1.s2.d1", [("1h Z2 en montée", [(60, 2)]), ("Renfo 3 tours", [(25, 3)])])
+prof("ski-c1.s2.d2", [W20, ("35′ de jeu d'allure", rep(7, (2, 3.5), (3, 2))), C15])
+prof("ski-c1.s3.d1", [W15, ("Trace", [(15, 2)]), ("Conversions", [(15, 2)]), ("Couteaux", [(10, 1.5)]), ("Z2", [(20, 2)])])
+prof("ski-c2.s3.d2", [("Z2", [(60, 2)]), ("Portage 10′", [(10, 3)]), ("Z2 avec sac complet", [(50, 2)])])
+prof("ski-c2.s3.d3", [("3h30 Z2", [(200, 2)]), ("20′ Z3 dans la dernière montée", [(20, 3), (25, 2)])])
+prof("ski-c4.s1.d3", [("Z2", [(20, 2)]), ("Relances 1′ Z4 sur les bosses", rep(5, (1, 4), (14, 2))), ("Z2", [(10, 2)])])
+prof("ski-c4.s2.d3", [("Z2", [(30, 2)]), ("3 montées de 10′ Z3-Z4", rep(3, (10, 3.5), (20, 2))), ("Z2", [(30, 2)])])
+prof("ski-c4.s3.d2", [W20, ("Pyramide 1-2-3-4-3-2-1′ en Z5", [x for m in (1, 2, 3, 4, 3, 2, 1) for x in ((m, 5), (m / 2, 1))]), C15])
+prof("ski-c5.s1.d3", [W15, ("Pliométrie", [(15, 4)]), ("45′ Z2, virages courts", [(45, 2)])])
+prof("ski-c5.s2.d3", [("4 boucles : 15′ Z3 en montée + descente", rep(4, (15, 3), (15, 1)))])
+prof("ski-c5.s3.d1", [W25, ("3 × 6 bonds", rep(3, (1, 5.5), (2, 1))), ("20′ Z2 + 5 accél.", rep(5, (0.25, 4.5), (3.75, 2)))])
+prof("ski-c5.s3.d3", [("Grande montée Z2-Z3", [(120, 2.5)]), ("Descente en neige variée", [(60, 1)])])
+prof("ski-c5.s4.d2", [("30′ Z2", [(30, 2)]), ("5 × 15″", rep(5, (0.25, 4.5), (1.5, 2))), ("5 transitions", rep(5, (1, 3), (1, 1)))])
+prof("gravel-c1.s1.d3", [W20, ("12′ à bloc", [(12, 5)]), C15])
+prof("gravel-c1.s2.d1", [("2h Z2", [(120, 2)]), ("Renfo 10′", [(10, 3)])])
+prof("gravel-c1.s2.d3", [("Z2", [(60, 2)]), ("3 × 5′ en danseuse", rep(3, (5, 3), (5, 2))), ("Z2", [(90, 2)])])
+prof("gravel-c1.s3.d1", [("Slalom", [(15, 1.5)]), ("Freinages", [(15, 2)]), ("Trajectoires et relances", [(30, 2)])])
+prof("gravel-c1.s3.d3", [("80 % en Z2, montées en Z3", [(20, 2), (8, 3), (15, 2), (10, 3), (20, 2), (6, 3), (25, 2), (10, 3), (36, 2)])])
+prof("gravel-c2.s1.d1", [("Échauf. 10′ Z1", [(10, 1)]), ("Z2 + 3 accél. 30″", [(20, 2), (0.5, 4), (20, 2), (0.5, 4), (20, 2), (0.5, 4), (3.5, 2)])])
+prof("gravel-c2.s3.d2", [("Z2 avec rappels Z3 dans les bosses", [(30, 2), (5, 3), (30, 2), (5, 3), (30, 2), (5, 3), (30, 2)])])
+prof("gravel-c2.s4.d2", [("Z1-Z2", [(30, 1.5)]), ("4 sprints de 6″", rep(4, (0.1, 5.5), (3.5, 1.5))), ("Z1-Z2", [(31, 1.5)])])
+prof("gravel-c3.s3.d1", [W20, ("3 × 12′ over-under / 6′", rep(3, *rep(3, (2, 4.6), (2, 3.8)), (6, 1)))])
+prof("gravel-c4.s1.d3", [("Z2", [(30, 2)]), ("4 bosses au sprint / 15′", rep(4, (1.5, 5.5), (15, 2))), ("Z2", [(54, 2)])])
+prof("gravel-c4.s2.d3", [("3h Z2, 2′ à bloc toutes les 45′", [(45, 2), (2, 5), (43, 2), (2, 5), (43, 2), (2, 5), (43, 2)])])
+prof("gravel-c4.s3.d1", [W20, ("9 × (1′ Z5 / 4′ Z3)", rep(9, (1, 5), (4, 3)))])
+prof("gravel-c4.s3.d2", [W20, ("2 pyramides 1-2-3-2-1′ en Z5", [x for _ in range(2) for m in (1, 2, 3, 2, 1) for x in ((m, 5), (m, 1))])])
+prof("gravel-c4.s3.d3", [("Z2", [(30, 2)]), ("3 montées 4 × (30″ / 1′)", rep(3, *rep(4, (0.5, 5), (1, 4)), (20, 2))), ("Z2", [(30, 2)])])
+prof("gravel-c4.s4.d3", [("Z2 au feeling, 3 sprints de 15″", [(30, 2), (0.25, 5.5), (30, 2), (0.25, 5.5), (30, 2), (0.25, 5.5), (30, 2)])])
+prof("gravel-c5.s1.d1", [W20, ("10 × 10″ sprint arrêté / 3′", rep(10, (1 / 6, 5.5), (3, 1)))])
+prof("gravel-c5.s1.d3", [("Z2 vallonné, relances 15″ / 8-10′", [(20, 2)] + rep(6, (0.25, 5.5), (9, 2)) + [(10, 2)])])
+prof("gravel-c5.s2.d3", [("Z2", [(30, 2)]), ("3 blocs 8′ Z3 + 2′ vélocité", rep(3, (8, 3), (2, 2.4), (20, 2))), ("Z2", [(30, 2)])])
+prof("gravel-c5.s3.d3", [("4h Z2, sprint 15″ au début de chaque heure", [(0.25, 5.5), (49.75, 2)] + rep(3, (0.25, 5.5), (59.75, 2)))])
+prof("gravel-c5.s4.d3", [("Très souple, relances en danseuse", [(20, 1.5), (0.15, 4), (20, 1.5), (0.15, 4), (20, 1.5), (0.15, 4), (20, 1.5)])])
+
+# Tests
+prof("test-pmax", [W20, ("Sprint all-out 5-10″", [(0.15, 5.5)]), C10], title=TEST)
+prof("test-sprint", [W20, ("100 m à fond", [(0.25, 5.5)]), C10], title=TEST)
 
 # Escalade : 30-30 à la corde
 prof("puissance-cardiaque", [("10′ de 30-30 à la corde à sauter", rep(10, (0.5, 4), (0.5, 2)))], title="30″ vif / 30″ calme")
 
 
-prof("test-12min", [W20, ("12′ réguliers, finis à fond", [(4, 4.4), (4, 4.6), (4, 5)])], title=TEST)
+prof("test-12min", [W20, ("12′ réguliers, finis à fond", [(4, 4.4), (4, 4.6), (4, 5)]), C15], title=TEST)
 
 
 def weight(x, y):

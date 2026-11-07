@@ -2,7 +2,7 @@
   "days": [
     {
       "tag": "Maniabilité et Stabilité (Pilotage gravel)",
-      "description": "Travail d'équilibre et de trajectoire (1h sur chemin roulant ou parking gravillonné)\n\n📊 Exercices :\n → Slalom serré à basse vitesse: Apprendre à gérer l'adhérence sur le gravier.\n → Freinages d'urgence: Maîtriser la distance d'arrêt sur terrain meuble (répartition avant/arrière).\n → Trajectoires en descente: Anticiper les virages et choisir la ligne la plus fluide pour conserver l'élan.\n\n👉 Objectif: Gagner en confiance sur terrain gravel et optimiser la sécurité en descente."
+      "description": "Travail d'équilibre et de trajectoire (1h sur chemin roulant ou parking gravillonné)\n\n📊 Exercices :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n → Slalom serré à basse vitesse: Apprendre à gérer l'adhérence sur le gravier.\n → Freinages d'urgence: Maîtriser la distance d'arrêt sur terrain meuble (répartition avant/arrière).\n → Trajectoires en descente: Anticiper les virages et choisir la ligne la plus fluide pour conserver l'élan.\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n\n👉 Objectif: Gagner en confiance sur terrain gravel et optimiser la sécurité en descente."
     },
     {
       "tag": "Force et Seuil (Gestion de la PC)",
@@ -10,7 +10,7 @@
     },
     {
       "tag": "Sortie longue gravel (Endurance et Tempo)",
-      "description": "2h30 sur chemins et routes avec variations de relief\n\n📊 Structure :\n → Base: 80% du temps en Z2 (60-80% PC) pour l'économie d'énergie.\n → Bosses: Passer les montées en Z3 (80-95% PC) sans jamais dépasser la PC pour protéger le glycogène.\n → Descentes: Travail de l'aérodynamisme et du relâchement musculaire.\n\n👉 Objectif: Simuler une longue sortie gravel en gérant son allure sur la durée et en optimisant l'inertie du vélo."
+      "description": "2h30 sur chemins et routes avec variations de relief\n\n📊 Structure :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n → Base: 80% du temps en Z2 (60-80% PC) pour l'économie d'énergie.\n → Bosses: Passer les montées en Z3 (80-95% PC) sans jamais dépasser la PC pour protéger le glycogène.\n → Descentes: Travail de l'aérodynamisme et du relâchement musculaire.\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n\n👉 Objectif: Simuler une longue sortie gravel en gérant son allure sur la durée et en optimisant l'inertie du vélo."
     }
   ]
 }

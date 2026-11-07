@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Affûtage: Rappel de Force",
-      "description": "40 min de renforcement léger\n\n📊 Protocole :\n → 2 x 6 squats à 70%\n → 2 x 8 fentes\n → 2 x 40 sec de gainage\n → 10 min de mobilité\n\nObjectif: Entretenir la force sans fatigue."
+      "description": "40 min de renforcement léger\n\n📊 Protocole :\n → Échauffement: 10 min de cardio léger + mobilité\n → 2 x 6 squats à 70%\n → 2 x 8 fentes\n → 2 x 40 sec de gainage\n → 10 min de mobilité\n → Retour au calme: 5 min d'étirements doux\n\nObjectif: Entretenir la force sans fatigue."
     },
     {
       "tag": "Affûtage: Vitesse & Transitions",
-      "description": "50 min avec accélérations et transitions\n\n📊 Protocole :\n → 30 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 5 x 15 sec rapides\n → 5 transitions chronométrées\n\nObjectif: Arriver frais et rapide."
+      "description": "50 min avec accélérations et transitions\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 30 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 5 x 15 sec rapides\n → 5 transitions chronométrées\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Arriver frais et rapide."
     },
     {
       "tag": "Sortie Libre: Agilité & Vérification",
-      "description": "Sortie libre de 1h30\n\n📊 Protocole :\n → 1h30 en Z1 (FC 50-60% | VAMc < 60%)-Z2 (FC 60-70% | VAMc 60-80%)\n → Vérifie le matériel: peaux, couteaux, DVA (piles), fixations\n → Profite d'une belle descente\n\nObjectif: Clôturer le programme et préparer l'objectif."
+      "description": "Sortie libre de 1h30\n\n📊 Protocole :\n → Échauffement: 5 min de marche très souple\n → 1h30 en Z1 (FC 50-60% | VAMc < 60%)-Z2 (FC 60-70% | VAMc 60-80%)\n → Vérifie le matériel: peaux, couteaux, DVA (piles), fixations\n → Profite d'une belle descente\n → Retour au calme: 5 min de marche très souple\n\nObjectif: Clôturer le programme et préparer l'objectif."
     }
   ]
 }

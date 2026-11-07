@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Endurance active (Terrain mixte)",
-      "description": "1h30 en Z2 sur chemins\n\n📊 Protocole :\n → 1h30 en Z2.\n → Équipement: Parcours mixte avec un maximum de chemins roulants.\n → Focus: Stabilité du vélo et pression des pneus adaptée au terrain.\n\n👉 Objectif: S'habituer au comportement du vélo sur gravier."
+      "description": "1h30 en Z2 sur chemins\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n → 1h30 en Z2.\n → Équipement: Parcours mixte avec un maximum de chemins roulants.\n → Focus: Stabilité du vélo et pression des pneus adaptée au terrain.\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n\n👉 Objectif: S'habituer au comportement du vélo sur gravier."
     },
     {
       "tag": "Tempo Gravel (Z3)",
-      "description": "2h00 incluant 3 x 15 min en Z3\n\n📊 Protocole :\n → 2 heures au total.\n → Travail: 3 blocs de 15 min en Zone 3 (allure gravel soutenue).\n → Récupération: 5 min en Z2 entre les blocs.\n\n👉 Objectif: Travailler le rythme de croisière que l'on tient sur de longues ascensions."
+      "description": "2h00 incluant 3 x 15 min en Z3\n\n📊 Protocole :\n → 2 heures au total.\n → Travail: 3 blocs de 15 min en Zone 3 (allure gravel soutenue).\n → Récupération: 5 min en Z2 entre les blocs.\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%)\n\n👉 Objectif: Travailler le rythme de croisière que l'on tient sur de longues ascensions."
     },
     {
       "tag": "Sortie longue (Volume)",
-      "description": "4h sur terrain varié\n\n📊 Protocole :\n → 4 heures en Z2 dominante.\n → Terrain: Inclure du dénivelé si possible.\n → Gestion: Rester sous le seuil d'essoufflement, même en haut des cols.\n\n👉 Objectif: Augmenter la capacité de résistance à la fatigue."
+      "description": "4h sur terrain varié\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n → 4 heures en Z2 dominante.\n → Terrain: Inclure du dénivelé si possible.\n → Gestion: Rester sous le seuil d'essoufflement, même en haut des cols.\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n\n👉 Objectif: Augmenter la capacité de résistance à la fatigue."
     }
   ]
 }

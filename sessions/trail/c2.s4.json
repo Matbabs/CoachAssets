@@ -2,7 +2,7 @@
   "days": [
     {
       "tag": "Récupération active",
-      "description": "45 min en Zone 1 (Très lent)\n\n📊 Allure: Rester sous les 65% de FC max\n\nObjectif: Drainer les toxines et cicatriser les fibres."
+      "description": "45 min en Zone 1 (Très lent)\n\n📊 Allure: Rester sous les 65% de FC max\n → Échauffement: 5 min de marche\n → Retour au calme: 5 min de marche\n\nObjectif: Drainer les toxines et cicatriser les fibres."
     },
     {
       "tag": "Repos complet",
@@ -10,7 +10,7 @@
     },
     {
       "tag": "Footing tonique",
-      "description": "50 min en Zone 2 (FC 60-75%)\n\n📊 Inclure 3 lignes droites dynamiques de 20 sec\n\nObjectif: Garder un pied dynamique avant le cycle suivant."
+      "description": "50 min en Zone 2 (FC 60-75%)\n\n📊 Inclure 3 lignes droites dynamiques de 20 sec\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Garder un pied dynamique avant le cycle suivant."
     }
   ]
 }
