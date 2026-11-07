@@ -17,10 +17,31 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
   </head>
   <body>
     <div id="map"></div>
     <style>
+      /* Mirrors app/(tabs)/styles/styles.tsx: keep both in sync. */
+      :root {
+        --space-xxs: 2px;
+        --space-xs: 5px;
+        --space-s: 8px;
+        --space-m: 10px;
+        --space-l: 15px;
+        --space-xl: 20px;
+        --font-xs: 11px;
+        --font-s: 13px;
+        --font-m: 15px;
+        --line-m: 22px;
+        --radius: 15px;
+        --primary: #fbbf24;
+        --dark: #1a0f2b;
+        --dark-yellow: #b45309;
+        --gray: grey;
+      }
       html,
       body {
         height: 100%;
@@ -37,6 +58,46 @@
         image-rendering: -webkit-optimize-contrast;
         image-rendering: crisp-edges;
         -ms-interpolation-mode: nearest-neighbor;
+      }
+      .leaflet-container {
+        font-family: "Inter", sans-serif;
+      }
+      .leaflet-popup-content-wrapper {
+        border-radius: var(--radius);
+      }
+      /* Right margin leaves room for the close button. */
+      .leaflet-popup-content {
+        margin: var(--space-l) var(--space-xl) var(--space-l) var(--space-l);
+        font-size: var(--font-m);
+        line-height: var(--line-m);
+        color: var(--dark);
+      }
+      .leaflet-popup-content b {
+        font-weight: 700;
+      }
+      .meta {
+        color: var(--gray);
+        font-size: var(--font-s);
+      }
+      .story-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        object-position: center;
+        border-radius: var(--radius);
+        margin: var(--space-s) 0;
+        cursor: pointer;
+      }
+      .cluster {
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        border-radius: 50%;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: var(--font-s);
+        text-align: center;
       }
       .leaflet-tile-pane {
         /* filter: grayscale(100%) brightness(1.1); */
@@ -208,18 +269,21 @@
         font-size: 9px;
       }
       .actions {
-        margin-top: 7.5px;
+        margin-top: var(--space-s);
         display: flex;
-        flex-flow: "row wrap";
-        gap: 5px;
+        flex-wrap: wrap;
+        gap: var(--space-xs);
       }
+      /* DARK on yellow: white on #FBBF24 is ~1.7:1. */
       .button {
-        background: #FBBF24;
-        border: 1px solid #FBBF24;
-        padding: 10px;
-        color: white;
-        font-weight: bold;
-        border-radius: 15px;
+        background: var(--primary);
+        border: 1px solid var(--primary);
+        padding: var(--space-m);
+        color: var(--dark);
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: var(--font-m);
+        border-radius: var(--radius);
         text-transform: uppercase;
       }
       .disabled {
@@ -227,49 +291,8 @@
         border: 1px solid grey;
         color: grey;
       }
-      .marker-cluster {
-        background: rgba(232, 197, 71, 0.6);
-      }
-      .marker-cluster div {
-        background: rgba(232, 197, 71, 0.8);
-        color: white;
-        font-weight: bold;
-        font-size: 14px;
-        border-radius: 50%;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-        text-align: center;
-      }
-      .marker-cluster-small {
-        background: rgba(232, 197, 71, 0.6);
-      }
-      .marker-cluster-small div {
-        background: rgba(232, 197, 71, 0.8);
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-      }
-      .marker-cluster-medium {
-        background: rgba(232, 197, 71, 0.6);
-      }
-      .marker-cluster-medium div {
-        background: rgba(232, 197, 71, 0.8);
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-      }
-      .marker-cluster-large {
-        background: rgba(232, 197, 71, 0.6);
-      }
-      .marker-cluster-large div {
-        background: rgba(232, 197, 71, 0.8);
-        width: 46px;
-        height: 46px;
-        line-height: 46px;
-      }
       .story-author {
-        color: #FBBF24;
+        color: var(--dark-yellow);
       }
       /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
       .leaflet-marker-icon.marker-pop > div {
@@ -298,6 +321,25 @@
       var markers = [];
 var currentClusterColor = '#FBBF24';
 var currentUsername = '';
+// Picks DARK or white, whichever contrasts more with the cluster background.
+function readableOn(hex) {
+  var m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
+  if (!m) return "white";
+  var lum = [0, 2, 4].map(function (i) {
+    var c = parseInt(m[1].substr(i, 2), 16) / 255;
+    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+  });
+  var L = 0.2126 * lum[0] + 0.7152 * lum[1] + 0.0722 * lum[2];
+  // contrast vs white = 1.05/(L+.05), vs DARK (L≈0.008) = (L+.05)/0.058
+  return 1.05 / (L + 0.05) >= (L + 0.05) / 0.058 ? "white" : "#1A0F2B";
+}
+function clusterIcon(count, bg) {
+  return L.divIcon({
+    html: '<div class="cluster" style="background:' + bg + ';color:' + readableOn(bg) + ';">' + count + '</div>',
+    className: '',
+    iconSize: L.point(36, 36)
+  });
+}
 var markerClusterGroup = L.markerClusterGroup({
   maxClusterRadius: 50,
   spiderfyOnMaxZoom: true,
@@ -309,11 +351,7 @@ var markerClusterGroup = L.markerClusterGroup({
     var size = 'small';
     if (count > 50) size = 'large';
     else if (count > 10) size = 'medium';
-    return L.divIcon({
-      html: '<div style="background:' + currentClusterColor + ';width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
-      className: '',
-      iconSize: L.point(36, 36)
-    });
+    return clusterIcon(count, currentClusterColor);
   },
   chunkedLoading: true
 });
@@ -325,11 +363,7 @@ var liveStoryClusterGroup = L.markerClusterGroup({
   disableClusteringAtZoom: 17,
   iconCreateFunction: function(cluster) {
     var count = cluster.getChildCount();
-    return L.divIcon({
-      html: '<div style="background:#A855F7;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
-      className: '',
-      iconSize: L.point(36, 36)
-    });
+    return clusterIcon(count, "#A855F7");
   },
   chunkedLoading: true
 });
@@ -344,11 +378,7 @@ var alertClusterGroup = L.markerClusterGroup({
     var size = 'small';
     if (count > 50) size = 'large';
     else if (count > 10) size = 'medium';
-    return L.divIcon({
-      html: '<div style="background:#FBBF24;width:36px;height:36px;line-height:36px;border-radius:50%;color:white;font-weight:bold;font-size:14px;text-align:center;">' + count + '</div>',
-      className: '',
-      iconSize: L.point(36, 36)
-    });
+    return clusterIcon(count, "#FBBF24");
   },
   chunkedLoading: true
 });
@@ -510,7 +540,7 @@ var classic = L.tileLayer(
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
           const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
           const storyTitle = encodeURIComponent(`Live spot story de ${authorName}`);
-          popup = `<b>Live spot story de <span class="story-author">${authorName}</span></b><br><span style="color:grey">${timeLeft}</span><br><img src="${marker.imageUrl}" style="width:100%;aspect-ratio:1;object-fit: cover;object-position: center;border-radius:15px;margin:5px 0;cursor:pointer;" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
+          popup = `<b>Live spot story de <span class="story-author">${authorName}</span></b><br><span class="meta">${timeLeft}</span><img src="${marker.imageUrl}" class="story-img" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
           popup += `<div class="actions">`;
           popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button">voir</button>`;
           popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
@@ -936,7 +966,7 @@ function signalAlert(alertId) {
           iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon });
-        let popup = `<b>${label}</b><br><span style="color:grey">${timeLeft}</span>`;
+        let popup = `<b>${label}</b><br><span class="meta">${timeLeft}</span>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
           popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
