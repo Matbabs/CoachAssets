@@ -39,7 +39,6 @@
         --radius: 15px;
         --primary: #fbbf24;
         --dark: #1a0f2b;
-        --dark-yellow: #b45309;
         --gray: grey;
       }
       html,
@@ -274,12 +273,11 @@
         flex-wrap: wrap;
         gap: var(--space-xs);
       }
-      /* DARK on yellow: white on #FBBF24 is ~1.7:1. */
       .button {
         background: var(--primary);
         border: 1px solid var(--primary);
         padding: var(--space-m);
-        color: var(--dark);
+        color: white;
         font-family: "Inter", sans-serif;
         font-weight: 700;
         font-size: var(--font-m);
@@ -292,7 +290,7 @@
         color: grey;
       }
       .story-author {
-        color: var(--dark-yellow);
+        color: var(--primary);
       }
       /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
       .leaflet-marker-icon.marker-pop > div {
@@ -321,21 +319,9 @@
       var markers = [];
 var currentClusterColor = '#FBBF24';
 var currentUsername = '';
-// Picks DARK or white, whichever contrasts more with the cluster background.
-function readableOn(hex) {
-  var m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
-  if (!m) return "white";
-  var lum = [0, 2, 4].map(function (i) {
-    var c = parseInt(m[1].substr(i, 2), 16) / 255;
-    return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-  });
-  var L = 0.2126 * lum[0] + 0.7152 * lum[1] + 0.0722 * lum[2];
-  // contrast vs white = 1.05/(L+.05), vs DARK (L≈0.008) = (L+.05)/0.058
-  return 1.05 / (L + 0.05) >= (L + 0.05) / 0.058 ? "white" : "#1A0F2B";
-}
 function clusterIcon(count, bg) {
   return L.divIcon({
-    html: '<div class="cluster" style="background:' + bg + ';color:' + readableOn(bg) + ';">' + count + '</div>',
+    html: '<div class="cluster" style="background:' + bg + ';color:white;">' + count + '</div>',
     className: '',
     iconSize: L.point(36, 36)
   });
