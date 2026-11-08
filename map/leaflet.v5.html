@@ -65,14 +65,15 @@
       }
       .leaflet-popup-content-wrapper {
         border-radius: var(--radius);
-        padding: 0;
+        /* Padding here, not margin on the content: a child margin collapses through a 0-padding parent. */
+        padding: var(--space-l);
         box-shadow: 0 8px 24px rgba(26, 15, 43, 0.18);
       }
       .leaflet-popup-tip {
         box-shadow: none;
       }
       .leaflet-popup-content {
-        margin: var(--space-l);
+        margin: 0;
         font-size: var(--font-s);
         line-height: 19px;
         color: var(--dark);
