@@ -630,9 +630,11 @@ var classic = L.tileLayer(
         } else {
           popup += `<button disabled class="button disabled"><i class="fa-solid fa-route"></i>itinéraire</button>`;
         }
-        if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
+        // Bivouacs can't be visited for points.
+        const canVisit = marker.type !== "bivouacs";
+        if (canVisit && distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
           popup += `<button onclick="visitMarker('${marker.id}')" class="button"><i class="fa-solid fa-star"></i>+10 pts</button>`;
-        } else if (distanceToUser >= 0) {
+        } else if (canVisit && distanceToUser >= 0) {
           popup += `<button disabled class="button disabled" title="Approchez-vous à moins de ${MARKER_RADIUS_LIMIT} m"><i class="fa-solid fa-lock"></i>+10 pts</button>`;
         }
         popup += reportButton(`signalMarker('${marker.id}')`);
