@@ -37,6 +37,8 @@
         --font-m: 15px;
         --line-m: 22px;
         --radius: 15px;
+        --radius-s: 10px;
+        --flat: #f2f2f2;
         --primary: #fbbf24;
         --dark: #1a0f2b;
         --gray: grey;
@@ -63,29 +65,77 @@
       }
       .leaflet-popup-content-wrapper {
         border-radius: var(--radius);
+        padding: 0;
+        box-shadow: 0 8px 24px rgba(26, 15, 43, 0.18);
       }
-      /* Right margin leaves room for the close button. */
+      .leaflet-popup-tip {
+        box-shadow: none;
+      }
       .leaflet-popup-content {
-        margin: var(--space-l) var(--space-xl) var(--space-l) var(--space-l);
-        font-size: var(--font-m);
-        line-height: var(--line-m);
+        margin: var(--space-l);
+        font-size: var(--font-s);
+        line-height: 19px;
         color: var(--dark);
       }
       .leaflet-popup-content b {
         font-weight: 700;
       }
+      /* 32px round close target, clear of the title (which reserves its width). */
+      .leaflet-container a.leaflet-popup-close-button {
+        top: var(--space-s);
+        right: var(--space-s);
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        font-size: 22px;
+        border-radius: 50%;
+        background: var(--flat);
+        color: var(--gray);
+        text-align: center;
+      }
+      .pop-title {
+        font-weight: 700;
+        font-size: var(--font-m);
+        line-height: 20px;
+        padding-right: 36px;
+        min-height: 32px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        overflow-wrap: anywhere;
+      }
+      /* Long user descriptions scroll inside the card instead of growing it. */
+      .pop-body {
+        margin-top: var(--space-xs);
+        max-height: 114px;
+        overflow-y: auto;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
+      }
       .meta {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-s);
+        margin-top: var(--space-xs);
         color: var(--gray);
         font-size: var(--font-s);
+        overflow-wrap: anywhere;
+      }
+      .meta i {
+        width: 14px;
+        text-align: center;
+        flex-shrink: 0;
       }
       .story-img {
         display: block;
         width: 100%;
-        aspect-ratio: 1;
+        aspect-ratio: 4 / 3;
         object-fit: cover;
         object-position: center;
-        border-radius: var(--radius);
-        margin: var(--space-s) 0;
+        border-radius: var(--radius-s);
+        margin-top: var(--space-s);
+        background: var(--flat);
         cursor: pointer;
       }
       .cluster {
@@ -267,27 +317,48 @@
         color: white;
         font-size: 9px;
       }
+      /* One row: main actions share the width, report is a quiet square at the end. */
       .actions {
-        margin-top: var(--space-s);
+        margin-top: var(--space-m);
         display: flex;
-        flex-wrap: wrap;
         gap: var(--space-xs);
       }
       .button {
+        flex: 1;
+        min-width: 0;
+        height: 40px;
+        padding: 0 var(--space-s);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
         background: var(--primary);
-        border: 1px solid var(--primary);
-        padding: var(--space-m);
+        border: none;
         color: white;
         font-family: "Inter", sans-serif;
         font-weight: 700;
-        font-size: var(--font-m);
-        border-radius: var(--radius);
+        font-size: var(--font-s);
+        white-space: nowrap;
+        border-radius: var(--radius-s);
         text-transform: uppercase;
+        cursor: pointer;
+      }
+      .button:active {
+        opacity: 0.8;
+      }
+      .icon-btn {
+        flex: 0 0 40px;
+        padding: 0;
+      }
+      .icon-btn,
+      .quiet {
+        background: var(--flat);
+        color: var(--gray);
       }
       .disabled {
-        background: white;
-        border: 1px solid grey;
-        color: grey;
+        background: var(--flat);
+        color: var(--gray);
+        cursor: default;
       }
       .story-author {
         color: var(--primary);
@@ -526,43 +597,58 @@ var classic = L.tileLayer(
           const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
           const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
           const storyTitle = encodeURIComponent(`Live spot story de ${authorName}`);
-          popup = `<b>Live spot story de <span class="story-author">${authorName}</span></b><br><span class="meta">${timeLeft}</span><img src="${marker.imageUrl}" class="story-img" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
+          popup = `<div class="pop-title">Live story de <span class="story-author">${escapeHtml(authorName)}</span></div>`;
+          popup += `<div class="meta"><i class="fa-regular fa-clock"></i>Encore ${timeLeft}</div>`;
+          popup += `<img src="${marker.imageUrl}" class="story-img" alt="" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
           popup += `<div class="actions">`;
-          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button">voir</button>`;
-          popup += `<button onclick="signalStory('${marker.id}')" class="button">signaler</button>`;
+          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button"><i class="fa-solid fa-expand"></i>voir</button>`;
+          popup += reportButton(`signalStory('${marker.id}')`);
           popup += `</div>`;
           return popup;
         }
-        popup = `<b>${marker.name}</b><br>${marker.description}`;
+        // User-typed text: escaped so it can't inject markup into the WebView.
+        popup = `<div class="pop-title">${escapeHtml(marker.name)}</div>`;
+        if (marker.description) {
+          popup += `<div class="pop-body">${escapeHtml(marker.description)}</div>`;
+        }
         if (marker.dateIn && marker.timeIn) {
-          popup += `<br><br>Début: ${marker.dateIn} - ${marker.timeIn}`;
+          popup += `<div class="meta"><i class="fa-regular fa-calendar"></i>Début ${escapeHtml(marker.dateIn)} · ${escapeHtml(marker.timeIn)}</div>`;
         }
         if (marker.dateOut && marker.timeOut) {
-          popup += `<br>Fin: ${marker.dateOut} - ${marker.timeOut}`;
+          popup += `<div class="meta"><i class="fa-regular fa-calendar-check"></i>Fin ${escapeHtml(marker.dateOut)} · ${escapeHtml(marker.timeOut)}</div>`;
         }
         if (marker.contact) {
-          popup += `<br><br>${marker.contact}`;
+          popup += `<div class="meta"><i class="fa-regular fa-envelope"></i>${escapeHtml(marker.contact)}</div>`;
         }
         if (marker.type === "exploriders") {
           return popup;
         }
         popup += `<div class="actions">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">itinéraire</button>`;
+          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button"><i class="fa-solid fa-route"></i>itinéraire</button>`;
         } else {
-          popup += `<button disabled class="button disabled">itinéraire</button>`;
+          popup += `<button disabled class="button disabled"><i class="fa-solid fa-route"></i>itinéraire</button>`;
         }
         if (distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="visitMarker('${marker.id}')" class="button">+10 points</button>`;
+          popup += `<button onclick="visitMarker('${marker.id}')" class="button"><i class="fa-solid fa-star"></i>+10 pts</button>`;
         } else if (distanceToUser >= 0) {
-          popup += `<button disabled class="button disabled">+10 points</button>`;
+          popup += `<button disabled class="button disabled" title="Approchez-vous à moins de ${MARKER_RADIUS_LIMIT} m"><i class="fa-solid fa-lock"></i>+10 pts</button>`;
         }
-        if (marker.type !== "exploriders") {
-          popup += `<button onclick="signalMarker('${marker.id}')" class="button">signaler</button>`;
-        }
+        popup += reportButton(`signalMarker('${marker.id}')`);
         popup += "</div>";
         return popup;
       }
+      function reportButton(onclick) {
+        return `<button onclick="${onclick}" class="button icon-btn" aria-label="Signaler" title="Signaler"><i class="fa-regular fa-flag"></i></button>`;
+      }
+      // Fixed width + pan padding keep cards clear of the RN overlays
+      // (filters/search on top, round buttons on the right, navbar below).
+      var POPUP_OPTIONS = {
+        minWidth: 240,
+        maxWidth: 240,
+        autoPanPaddingTopLeft: L.point(16, 140),
+        autoPanPaddingBottomRight: L.point(72, 96),
+      };
       function userColor(color) {
         switch (color.toLowerCase()) {
           case "#3B82F6".toLowerCase():
@@ -638,7 +724,7 @@ var classic = L.tileLayer(
 const marker = L.marker(pos, {
           icon: icon,
         });
-        marker.bindPopup(generatePopup(markerObj, distanceToUser));
+        marker.bindPopup(generatePopup(markerObj, distanceToUser), POPUP_OPTIONS);
 
         // Live stories go to their own cluster group
         if (markerObj.imageUrl) {
@@ -783,7 +869,7 @@ const marker = L.marker(pos, {
           markers = markers.filter(function (m) { return m !== userMapMarker; });
         }
         userMapMarker = L.marker(pos, { icon: getIcon(markerObj, distanceToUser) });
-        userMapMarker.bindPopup(generatePopup(markerObj, distanceToUser));
+        userMapMarker.bindPopup(generatePopup(markerObj, distanceToUser), POPUP_OPTIONS);
         unclusteredGroup.addLayer(userMapMarker);
         markers.push(userMapMarker);
       }
@@ -952,13 +1038,14 @@ function signalAlert(alertId) {
           iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon });
-        let popup = `<b>${label}</b><br><span class="meta">${timeLeft}</span>`;
+        let popup = `<div class="pop-title">${escapeHtml(label)}</div>`;
+        popup += `<div class="meta"><i class="fa-regular fa-clock"></i>Encore ${timeLeft}</div>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
-          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button">signaler</button>`;
+          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button quiet"><i class="fa-regular fa-flag"></i>signaler</button>`;
           popup += `</div>`;
         }
-        marker.bindPopup(popup);
+        marker.bindPopup(popup, POPUP_OPTIONS);
         queueLayer(alertClusterGroup, marker);
         markers.push(marker);
       }
