@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "SV2 - Seuil Anaérobie",
-      "description": "1h15 dont 4 x 8 min au Seuil (Z4)\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%) avec 2 accélérations de 1 min\n → 4 x 8 min en Z4 (FC 80-92% | VAMc 95-105%), précisément à ta VAMc\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)\n → Terrain: pente régulière de 20-25%\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Améliorer le recyclage des lactates et la vitesse de montée stable."
+      "description": "📊 1h15 dont 4 x 8 min au Seuil (Z4)\n → 4 x 8 min en Z4 (FC 80-92% | VAMc 95-105%), précisément à ta VAMc\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)\n → Terrain: pente régulière de 20-25%"
     },
     {
       "tag": "Z2 Endurance Active",
-      "description": "Sortie de 2h15 en Z2\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 2h15 en Z2 (FC 60-70% | VAMc 60-80%)\n → Terrain vallonné, avec quelques descentes\n → Inclure 2 transitions\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Accumuler du volume sur les fibres lentes."
+      "description": "📊 Sortie de 2h15 en Z2\n → 2h15 en Z2 (FC 60-70% | VAMc 60-80%)\n → Terrain vallonné, avec quelques descentes\n → Inclure 2 transitions"
     },
     {
       "tag": "Intervalles VAMc",
-      "description": "1h10 dont 5 x 5 min à 105% VAMc\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 5 x 5 min juste au-dessus de la VAMc (bas de Z5, 105-108% VAMc)\n → Récupération: 5 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Tirer la VAM critique vers le haut."
+      "description": "📊 1h10 dont 5 x 5 min à 105% VAMc\n → 5 x 5 min juste au-dessus de la VAMc (bas de Z5, 105-108% VAMc)\n → Récupération: 5 min en Z1 (FC 50-60% | VAMc < 60%)"
     }
   ]
 }

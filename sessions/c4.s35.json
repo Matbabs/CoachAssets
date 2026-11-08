@@ -2,17 +2,15 @@
   "days": [
     {
       "tag": "Isométrique Totale",
-      "description": "Circuits Blocs ou Voies Bras \n\n 📊 3 séries de 3 circuits, avec 10min de récup. entre les séries et 5min de récup. entre les circuits"
+      "description": "Circuits Blocs ou Voies Bras\n\n📊 3 séries de 3 circuits · 10 min de récup. entre les séries · 5 min de récup. entre les circuits"
     },
     {
       "tag": "Concentrique Maximal + Proprioception",
-      "description": "Concentrique Max. Bras \n\n 📊 3 série & 3 répétitions, avec 10min de récup. entre les séries et 3min de récup. entre les répétitions \n\n Fente yeux fermés + rotation lente \n\n 📊 2 séries de 30 secondes par jambe avec 1min de récup. entre les séries"
+      "description": "Concentrique Max. Bras\n\n📊 3 série × 3 répétitions · 10 min de récup. entre les séries et 3 min de récup. entre les répétitions\n\nFente yeux fermés + rotation lente\n\n📊 2 séries de 30 secondes par jambe · 1 min de récup. entre les séries"
     },
     {
       "tag": "Pliométrie Moyenne",
-      "description": "Pliométrie Moyenne \n\n 📊 7 séries & 5 répétitions, avec 5 à 7min de récup. entre les séries"
+      "description": "Pliométrie Moyenne\n\n📊 7 séries × 5 répétitions · 5 à 7 min de récup. entre les séries"
     }
   ]
 }
-
-

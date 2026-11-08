@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Test 3 min (PMA)",
-      "description": "Test de puissance maximale aérobie (3 min à fond)\n\n📊 Échauffement progressif (20 min en Z1-Z2)\n → 3 min à fond (effort maximal constant, idéal pour simuler un franchissement de côte raide sur gravier)\n → Retour au calme (15 min en Z1)\n\nObjectif: Mesurer la capacité explosive et la consommation maximale d'oxygène (VO2max)."
+      "description": "📊 Test de puissance maximale aérobie (3 min à fond)\n → 3 min à fond (effort maximal constant, idéal pour simuler un franchissement de côte raide sur gravier)"
     },
     {
       "tag": "Sortie Z2 (Endurance)",
-      "description": "Sortie 100% endurance fondamentale (2h)\n\n📊 Base: 2h en zone 2 (Z2) stricte (FC stable, conversation très facile).\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n → Retour au calme: 10 min en Z1 (FC 50-60% | PC < 60%), compris dans la durée\n\nObjectif: Construire la base aérobie sans générer de fatigue nerveuse."
+      "description": "📊 Sortie 100% endurance fondamentale (2h)\n → 2h en zone 2 (Z2) stricte (FC stable, conversation très facile)."
     },
     {
       "tag": "Test 12 min (Seuil)",
-      "description": "Test 12 min (Endurance de puissance)\n\n📊 Échauffement (20 min en Z2 + 3 accélérations progressives de 30 sec)\n → 12 min en effort maximal soutenu (allure la plus élevée possible maintenue de façon constante)\n → Analyse post-séance :\n   - Puissance moyenne et FC moyenne\n   - Capacité à maintenir un rythme élevé sous l'effet de la fatigue cumulée\n\nRetour au calme (15 min en Z1)."
+      "description": "📊 Test 12 min (Endurance de puissance)\n → 12 min en effort maximal soutenu (allure la plus élevée possible maintenue de façon constante)"
     }
   ]
 }

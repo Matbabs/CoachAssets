@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Footing technique",
-      "description": "1h00 en Zone 2 (FC 60-75%)\n\n📊 Terrain: Sentiers avec obstacles (racines, pierres)\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Focus: Pose de pied précise\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Affiner la lecture du sol et l'équilibre."
+      "description": "📊 1h00 en Zone 2 (FC 60-75%)\n → Terrain: Sentiers avec obstacles (racines, pierres)\n → Focus: Pose de pied précise"
     },
     {
       "tag": "Force explosive",
-      "description": "20 min Échauffement + 10 x 30s en côte (Z5)\n\n📊 Intensité: 95-100% de ton max (allure sprint)\n → Récup: Descente en marchant\n → Retour au calme: 15 min de trot très lent (Z1)\n\nObjectif: Améliorer le recrutement nerveux et la puissance."
+      "description": "📊 20 min Échauffement + 10 x 30s en côte (Z5)\n → Intensité: 95-100% de ton max (allure sprint)\n → Récup: Descente en marchant"
     },
     {
       "tag": "Sortie longue (1h30)",
-      "description": "1h30 sur terrain varié (Z2)\n\n📊 Allure: Endurance fondamentale\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Focus: Transition course/marche\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Adaptation musculaire au dénivelé."
+      "description": "📊 1h30 sur terrain varié (Z2)\n → Allure: Endurance fondamentale\n → Focus: Transition course/marche"
     }
   ]
 }

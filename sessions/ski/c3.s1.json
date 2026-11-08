@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "SV1 - Endurance de Force",
-      "description": "1h20 dont 3 x 15 min au SV1\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 x 15 min au seuil aérobie (haut de Z2, 80% VAMc) sur pente raide\n → Récupération: 5 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Repousser le seuil aérobie tout en renforçant les jambes."
+      "description": "📊 1h20 dont 3 x 15 min au SV1\n → 3 x 15 min au seuil aérobie (haut de Z2, 80% VAMc) sur pente raide\n → Récupération: 5 min en Z1 (FC 50-60% | VAMc < 60%)"
     },
     {
       "tag": "Z2 Fondamentale",
-      "description": "Sortie de 2h en Z2\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 2h en Z2 (FC 60-70% | VAMc 60-80%)\n → Terrain varié, montée régulière\n → Sans neige: marche rapide en côte avec bâtons, tapis incliné ou rando-course en montagne.\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Soutenir le travail de seuil par du volume aérobie."
+      "description": "📊 Sortie de 2h en Z2\n → 2h en Z2 (FC 60-70% | VAMc 60-80%)\n → Terrain varié, montée régulière\n → Sans neige: marche rapide en côte avec bâtons, tapis incliné ou rando-course en montagne."
     },
     {
       "tag": "Sweet Spot (SST)",
-      "description": "1h15 dont 3 x 12 min à 88-94% VAMc\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 x 12 min au Sweet Spot (haut de Z3, 88-94% VAMc)\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Faire monter ta VAMc avec un coût de fatigue modéré."
+      "description": "📊 1h15 dont 3 x 12 min à 88-94% VAMc\n → 3 x 12 min au Sweet Spot (haut de Z3, 88-94% VAMc)\n → Récupération: 4 min en Z1 (FC 50-60% | VAMc < 60%)"
     }
   ]
 }

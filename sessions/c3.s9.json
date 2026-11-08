@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Statodynamique",
-      "description": "Statodynamique Jambes\n\n📊 5 séries & 6 répétitions enchainées, avec 5min de récup. entre les séries"
+      "description": "Statodynamique Jambes\n\n📊 5 séries × 6 répétitions enchainées · 5 min de récup. entre les séries"
     },
     {
       "tag": "Proprioception",
-      "description": "Appuis croisés suspendus\n\n📊 3 séries de 3 répétitions par bras avec 1min30 de récup. entre les séries"
+      "description": "Appuis croisés suspendus\n\n📊 3 séries de 3 répétitions par bras · 1min30 de récup. entre les séries"
     },
     {
       "tag": "Isométrique Totale",
-      "description": "Circuits Blocs ou Voies Bras\n\n📊 3 série & 3 circuits, avec 10min de récup. entre les séries et 5min de récup. entre les circuits"
+      "description": "Circuits Blocs ou Voies Bras\n\n📊 3 série × 3 circuits · 10 min de récup. entre les séries et 5 min de récup. entre les circuits"
     }
   ]
 }

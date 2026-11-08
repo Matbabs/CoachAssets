@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Endurance active (Sac léger)",
-      "description": "1h15 en Z2 avec sac de 5 kg\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 1h15 en Z2 (FC 60-70% | VAMc 60-80%)\n → Sac de 5 kg (matériel de sécurité: DVA, pelle, sonde + eau + couche chaude)\n → Sans neige: marche rapide en côte avec bâtons, tapis incliné ou rando-course en montagne.\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: S'adapter à la charge réelle d'une sortie de ski de rando."
+      "description": "📊 1h15 en Z2 avec sac de 5 kg\n → 1h15 en Z2 (FC 60-70% | VAMc 60-80%)\n → Sac de 5 kg (matériel de sécurité: DVA, pelle, sonde + eau + couche chaude)\n → Sans neige: marche rapide en côte avec bâtons, tapis incliné ou rando-course en montagne."
     },
     {
       "tag": "Tempo en montée (Z3)",
-      "description": "1h20 dont 3 x 12 min en Z3\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 x 12 min en Z3 (FC 70-80% | VAMc 80-95%)\n → Récupération: 4 min en Z2 (FC 60-70% | VAMc 60-80%)\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Augmenter l'allure tenable sur de longues montées."
+      "description": "📊 1h20 dont 3 x 12 min en Z3\n → 3 x 12 min en Z3 (FC 70-80% | VAMc 80-95%)\n → Récupération: 4 min en Z2 (FC 60-70% | VAMc 60-80%)"
     },
     {
       "tag": "Sortie longue (Volume)",
-      "description": "Sortie de 3h (~1200 m D+)\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 3h en Z2 (FC 60-70% | VAMc 60-80%)\n → Prévoir 2 transitions complètes et un vrai ravitaillement\n → Descente technique en contrôle\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Augmenter la capacité à enchaîner du dénivelé."
+      "description": "📊 Sortie de 3h (~1200 m D+)\n → 3h en Z2 (FC 60-70% | VAMc 60-80%)\n → Prévoir 2 transitions complètes et un vrai ravitaillement\n → Descente technique en contrôle"
     }
   ]
 }

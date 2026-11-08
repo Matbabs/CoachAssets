@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Micro-Intervalles (40/20)",
-      "description": "1h dont 2 x 8 x 40/20\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 2 séries de 8 x (40 sec en Z5 (FC > 92% | VAMc > 105%) / 20 sec en Z1 (FC 50-60% | VAMc < 60%))\n → Récupération: 5 min entre les séries\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Prolonger le temps passé à VO2max."
+      "description": "📊 1h dont 2 x 8 x 40/20\n → 2 séries de 8 x (40 sec en Z5 (FC > 92% | VAMc > 105%) / 20 sec en Z1 (FC 50-60% | VAMc < 60%))\n → Récupération: 5 min entre les séries"
     },
     {
       "tag": "PMA Longue",
-      "description": "1h10 dont 4 x 4 min en Z5\n\n📊 Protocole :\n → Échauffement: 20 min en Z2 (FC 60-70% | VAMc 60-80%)\n → 4 x 4 min en Z5 (FC > 92% | VAMc > 105%)\n → Récupération: 3 min en Z1 (FC 50-60% | VAMc < 60%)\n → Retour au calme: 15 min en Z1 (FC 50-60% | VAMc < 60%)\n\nObjectif: Repousser le plafond aérobie."
+      "description": "📊 1h10 dont 4 x 4 min en Z5\n → 4 x 4 min en Z5 (FC > 92% | VAMc > 105%)\n → Récupération: 3 min en Z1 (FC 50-60% | VAMc < 60%)"
     },
     {
       "tag": "Sortie Longue Spécifique",
-      "description": "Sortie de 2h30 avec 3 montées rythmées\n\n📊 Protocole :\n → Échauffement: 10 min progressifs en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n → 2h30 au total, base en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 montées de 10 min en Z3 (FC 70-80% | VAMc 80-95%)-Z4 (FC 80-92% | VAMc 95-105%)\n → Transitions rapides entre chaque montée\n → Retour au calme: 10 min en Z1 (FC 50-60% | VAMc < 60%), compris dans la durée\n\nObjectif: Spécifier le travail aérobie au format ski de rando."
+      "description": "📊 Sortie de 2h30 avec 3 montées rythmées\n → 2h30 au total, base en Z2 (FC 60-70% | VAMc 60-80%)\n → 3 montées de 10 min en Z3 (FC 70-80% | VAMc 80-95%)-Z4 (FC 80-92% | VAMc 95-105%)\n → Transitions rapides entre chaque montée"
     }
   ]
 }

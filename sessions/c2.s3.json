@@ -3,15 +3,15 @@
   "days": [
     {
       "tag": "Demi-Traction",
-      "description": "Traction 1 bras départ 90°…\n\n📊 4 séries & 4 répétitions / bras, avec 5min de récup. entre les séries"
+      "description": "Traction 1 bras départ 90°…\n\n📊 4 séries × 4 répétitions / bras · 5 min de récup. entre les séries"
     },
     {
       "tag": "Départ sauté",
-      "description": "Traction 1 bras sauté\n\n📊 4 séries & 3 répétitions / bras, avec 5min de récup. entre les séries"
+      "description": "Traction 1 bras sauté\n\n📊 4 séries × 3 répétitions / bras · 5 min de récup. entre les séries"
     },
     {
       "tag": "Défi de la traction à un bras",
-      "description": "1 Tractions par bras\n\n📊 3 séries & 3 répétitions, avec 5min de récup. entre les séries"
+      "description": "1 Tractions par bras\n\n📊 3 séries × 3 répétitions · 5 min de récup. entre les séries"
     }
   ]
 }

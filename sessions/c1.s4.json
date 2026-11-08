@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Excentrique + Isométrique",
-      "description": "5 tractions isométriques\n\n📊 5 séries & 1 répétition tenue en haut 15 sec, avec 3min de récup. entre les séries\n\n2 tractions excentriques\n\n📊 3 séries & 2 répétitions, avec 1min de récup. entre les séries"
+      "description": "5 tractions isométriques\n\n📊 5 séries × 1 répétition tenue en haut 15 sec · 3 min de récup. entre les séries\n\n2 tractions excentriques\n\n📊 3 séries × 2 répétitions · 1 min de récup. entre les séries"
     },
     {
       "tag": "Isométrique + Complète",
-      "description": "Tractions complètes\n\n📊 1 série & 4 répétitions\n\n4 tractions isométriques\n\n📊 4 séries & 1 répétition tenue en haut 10 sec, avec 3min de récup. entre les séries"
+      "description": "Tractions complètes\n\n📊 1 série × 4 répétitions\n\n4 tractions isométriques\n\n📊 4 séries × 1 répétition tenue en haut 10 sec · 3 min de récup. entre les séries"
     },
     {
       "tag": "Complète",
-      "description": "Tractions complètes\n\n📊 3 séries & 2 répétitions, avec 5min de récup. entre les séries"
+      "description": "Tractions complètes\n\n📊 3 séries × 2 répétitions · 5 min de récup. entre les séries"
     }
   ]
 }

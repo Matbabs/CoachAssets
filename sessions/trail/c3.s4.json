@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Récupération",
-      "description": "45 min en Zone 1 (Footing très lent)\n\n📊 Terrain: Plat et stable\n → Échauffement: 5 min de marche\n → Retour au calme: 5 min de marche\n\nObjectif: Assimilation et repos articulaire."
+      "description": "📊 45 min en Zone 1 (Footing très lent)\n → Terrain: Plat et stable"
     },
     {
       "tag": "Repos total",
-      "description": "0h00 / Massage et Hydratation\n\n📊 Focus: Détente nerveuse\n\nObjectif: Consolider les acquis physiques."
+      "description": "📊 0h00 / Massage et Hydratation\n → Focus: Détente nerveuse"
     },
     {
       "tag": "Footing sensations",
-      "description": "1h00 en Zone 2 (FC 60-75%)\n\n📊 Terrain: Parc ou route forestière\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Retrouver de la fraîcheur et du rebond."
+      "description": "📊 1h00 en Zone 2 (FC 60-75%)\n → Terrain: Parc ou route forestière"
     }
   ]
 }

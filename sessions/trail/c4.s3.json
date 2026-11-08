@@ -2,15 +2,15 @@
   "days": [
     {
       "tag": "Footing spécifique",
-      "description": "1h15 en Zone 2 technique\n\n📊 Inclure 15 min de gammes au milieu\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Renforcer la puissance du pied et le rebond."
+      "description": "📊 1h15 en Zone 2 technique\n → Inclure 15 min de gammes au milieu"
     },
     {
       "tag": "Seuil en côte",
-      "description": "20 min Échauffement + 3 x 10 min Seuil (Z4) en côte\n\n📊 Allure: Soutenue (5-8%)\n → Récup: Redescente trot lent\n → Retour au calme: 10 min de trot très lent (Z1)\n\nObjectif: Améliorer la puissance spécifique ascensionnelle."
+      "description": "📊 20 min Échauffement + 3 x 10 min Seuil (Z4) en côte\n → Allure: Soutenue (5-8%)\n → Récup: Redescente trot lent"
     },
     {
       "tag": "Pic volume (3h30)",
-      "description": "3h30 de Trail (ou 20-25 km) en montagne\n\n📊 Dénivelé: >1000m D+\n → Échauffement: 10 min de footing progressif en Z1, compris dans la durée\n → Focus: Test nutrition et sac\n → Retour au calme: 10 min de trot très lent en Z1, compris dans la durée\n\nObjectif: Validation finale de la résistance longue."
+      "description": "📊 3h30 de Trail (ou 20-25 km) en montagne\n → Dénivelé: >1000m D+\n → Focus: Test nutrition et sac"
     }
   ]
 }
