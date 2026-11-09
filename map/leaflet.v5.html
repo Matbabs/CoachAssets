@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -104,7 +104,10 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-        overflow-wrap: anywhere;
+        /* Break between words; a word wider than the card is hyphenated, never cut at any letter. */
+        overflow-wrap: break-word;
+        hyphens: auto;
+        -webkit-hyphens: auto;
       }
       /* Long user descriptions scroll inside the card instead of growing it. */
       .pop-body {
