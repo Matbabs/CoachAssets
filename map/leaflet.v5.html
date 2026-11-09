@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
@@ -142,6 +141,20 @@
         background: var(--flat);
         cursor: pointer;
       }
+      .ico {
+        display: inline-flex;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+      }
+      .ico svg {
+        width: 100%;
+        height: 100%;
+      }
+      /* Small marker glyphs need a heavier stroke to stay legible. */
+      [class^="marker"] .ico svg {
+        stroke-width: 2.5;
+      }
       .cluster {
         width: 36px;
         height: 36px;
@@ -186,7 +199,7 @@
       }
       .marker i {
         color: #1A0F2B;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-visited {
         border: 2px solid #FBBF24;
@@ -201,7 +214,7 @@
       }
       .marker-visited i {
         color: #1A0F2B;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-user {
         border: 2px solid white;
@@ -216,7 +229,7 @@
       }
       .marker-user i {
         color: #1A0F2B;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-visited-user {
         border: 2px solid #FBBF24;
@@ -231,7 +244,7 @@
       }
       .marker-visited-user i {
         color: #1A0F2B;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-exploriders {
         background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment-1.png");
@@ -261,7 +274,7 @@
       }
       .marker-spot i {
         color: white;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-spot-visited {
         background: #3B82F6;
@@ -276,7 +289,7 @@
       }
       .marker-spot-visited i {
         color: white;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-live-story {
         background: #A855F7;
@@ -291,7 +304,7 @@
       }
       .marker-live-story i {
         color: white;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-bivouac {
         background: #EF4444;
@@ -306,7 +319,7 @@
       }
       .marker-bivouac i {
         color: white;
-        font-size: 9px;
+        font-size: 11px;
       }
       .marker-bivouac-visited {
         background: #EF4444;
@@ -321,7 +334,7 @@
       }
       .marker-bivouac-visited i {
         color: white;
-        font-size: 9px;
+        font-size: 11px;
       }
       /* One row: main actions share the width, report is a quiet square at the end. */
       .actions {
@@ -379,6 +392,40 @@
       }
     </style>
     <script>
+      // Lucide icons (lucide-static 0.460.0, the app's icon set): inline SVG sized 1em, coloured by currentColor.
+      var LUCIDE = {
+        "calendar": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+        "calendar-check": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>',
+        "camera": '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>',
+        "circle-alert": '<circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/>',
+        "clock": '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+        "cloud-lightning": '<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="m13 12-3 5h4l-3 5"/>',
+        "construction": '<rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/>',
+        "crosshair": '<circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/>',
+        "droplet": '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+        "flag": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/>',
+        "flame": '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+        "gavel": '<path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/>',
+        "goal": '<path d="M12 13V2l8 4-8 4"/><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/>',
+        "leaf": '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
+        "lock": '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+        "mail": '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+        "map-pin": '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+        "maximize-2": '<polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/>',
+        "message-circle": '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+        "mountain-snow": '<path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/>',
+        "paw-print": '<circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/>',
+        "route": '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+        "snowflake": '<line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/>',
+        "star": '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+        "user": '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+        "waves": '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
+        "wind": '<path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/>',
+        "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>'
+      };
+      function ico(name, style) {
+        return '<i class="ico"' + (style ? ' style="' + style + '"' : "") + '><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (LUCIDE[name] || LUCIDE["circle-alert"]) + "</svg></i>";
+      }
       const MARKER_RADIUS_LIMIT = 50;
       var map = L.map("map", {
         zoomControl: false,
@@ -471,25 +518,25 @@ var classic = L.tileLayer(
       });
       var markerIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker"><i class="fa fa-map-marker"></i></div>',
+        html: '<div class="marker">' + ico("map-pin") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var markerVisitedIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-visited"><i class="fa fa-map-marker"></i></div>',
+        html: '<div class="marker-visited">' + ico("map-pin") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var markerIconUser = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-user"><i class="fa fa-user"></i></div>',
+        html: '<div class="marker-user">' + ico("user") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var markerVisitedIconUser = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-visited-user"><i class="fa fa-user"></i></div>',
+        html: '<div class="marker-visited-user">' + ico("user") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
@@ -507,31 +554,31 @@ var classic = L.tileLayer(
       });
       var spotIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-spot"><i class="fa fa-map-pin"></i></div>',
+        html: '<div class="marker-spot">' + ico("map-pin") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var spotVisitedIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-spot-visited"><i class="fa fa-map-pin"></i></div>',
+        html: '<div class="marker-spot-visited">' + ico("map-pin") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var bivouacIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-bivouac"><i class="fa fa-fire"></i></div>',
+        html: '<div class="marker-bivouac">' + ico("flame") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var bivouacVisitedIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-bivouac-visited"><i class="fa fa-fire"></i></div>',
+        html: '<div class="marker-bivouac-visited">' + ico("flame") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
       var liveStoryIcon = L.divIcon({
         className: "css-icon",
-        html: '<div class="marker-live-story"><i class="fa fa-camera"></i></div>',
+        html: '<div class="marker-live-story">' + ico("camera") + '</div>',
         iconSize: [18, 18],
         iconAnchor: [9, 9],
       });
@@ -605,10 +652,10 @@ var classic = L.tileLayer(
           const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
           const storyTitle = encodeURIComponent(`Live spot story de ${authorName}`);
           popup = `<div class="pop-title">Live story de <span class="story-author">${escapeHtml(authorName)}</span></div>`;
-          popup += `<div class="meta"><i class="fa-regular fa-clock"></i>Encore ${timeLeft}</div>`;
+          popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
           popup += `<img src="${marker.imageUrl}" class="story-img" alt="" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
           popup += `<div class="actions">`;
-          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button"><i class="fa-solid fa-expand"></i>voir</button>`;
+          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button">${ico("maximize-2")}voir</button>`;
           popup += reportButton(`signalStory('${marker.id}')`);
           popup += `</div>`;
           return popup;
@@ -619,36 +666,36 @@ var classic = L.tileLayer(
           popup += `<div class="pop-body">${escapeHtml(marker.description)}</div>`;
         }
         if (marker.dateIn && marker.timeIn) {
-          popup += `<div class="meta"><i class="fa-regular fa-calendar"></i>Début ${escapeHtml(marker.dateIn)} · ${escapeHtml(marker.timeIn)}</div>`;
+          popup += `<div class="meta">${ico("calendar")}Début ${escapeHtml(marker.dateIn)} · ${escapeHtml(marker.timeIn)}</div>`;
         }
         if (marker.dateOut && marker.timeOut) {
-          popup += `<div class="meta"><i class="fa-regular fa-calendar-check"></i>Fin ${escapeHtml(marker.dateOut)} · ${escapeHtml(marker.timeOut)}</div>`;
+          popup += `<div class="meta">${ico("calendar-check")}Fin ${escapeHtml(marker.dateOut)} · ${escapeHtml(marker.timeOut)}</div>`;
         }
         if (marker.contact) {
-          popup += `<div class="meta"><i class="fa-regular fa-envelope"></i>${escapeHtml(marker.contact)}</div>`;
+          popup += `<div class="meta">${ico("mail")}${escapeHtml(marker.contact)}</div>`;
         }
         if (marker.type === "exploriders") {
           return popup;
         }
         popup += `<div class="actions">`;
         if (distanceToUser > MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button"><i class="fa-solid fa-route"></i>itinéraire</button>`;
+          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="button">${ico("route")}itinéraire</button>`;
         } else {
-          popup += `<button disabled class="button disabled"><i class="fa-solid fa-route"></i>itinéraire</button>`;
+          popup += `<button disabled class="button disabled">${ico("route")}itinéraire</button>`;
         }
         // Bivouacs can't be visited for points.
         const canVisit = marker.type !== "bivouacs";
         if (canVisit && distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
-          popup += `<button onclick="visitMarker('${marker.id}')" class="button"><i class="fa-solid fa-star"></i>+10 pts</button>`;
+          popup += `<button onclick="visitMarker('${marker.id}')" class="button">${ico("star")}+10 pts</button>`;
         } else if (canVisit && distanceToUser >= 0) {
-          popup += `<button disabled class="button disabled" title="Approchez-vous à moins de ${MARKER_RADIUS_LIMIT} m"><i class="fa-solid fa-lock"></i>+10 pts</button>`;
+          popup += `<button disabled class="button disabled" title="Approchez-vous à moins de ${MARKER_RADIUS_LIMIT} m">${ico("lock")}+10 pts</button>`;
         }
         popup += reportButton(`signalMarker('${marker.id}')`);
         popup += "</div>";
         return popup;
       }
       function reportButton(onclick) {
-        return `<button onclick="${onclick}" class="button icon-btn" aria-label="Signaler" title="Signaler"><i class="fa-regular fa-flag"></i></button>`;
+        return `<button onclick="${onclick}" class="button icon-btn" aria-label="Signaler" title="Signaler">${ico("flag")}</button>`;
       }
       // Fixed width + pan padding keep cards clear of the RN overlays
       // (filters/search on top, round buttons on the right, navbar below).
@@ -1017,41 +1064,41 @@ function signalAlert(alertId) {
           custom: "#808080",
         };
         const alertIcons = {
-          works: "fa-wrench",
-          animal: "fa-paw",
-          route_closed: "fa-road",
-          flood: "fa-tint",
-          wind: "fa-cloud",
-          storm: "fa-bolt",
-          swell: "fa-life-ring",
-          snow: "fa-snowflake",
-          avalanche: "fa-snowflake",
-          flood_river: "fa-tint",
-          hunting: "fa-crosshairs",
-          prefectoral: "fa-gavel",
-          pollution: "fa-leaf",
-          custom: "fa-comment",
+          works: "wrench",
+          animal: "paw-print",
+          route_closed: "construction",
+          flood: "droplet",
+          wind: "wind",
+          storm: "cloud-lightning",
+          swell: "waves",
+          snow: "snowflake",
+          avalanche: "mountain-snow",
+          flood_river: "droplet",
+          hunting: "crosshair",
+          prefectoral: "gavel",
+          pollution: "leaf",
+          custom: "message-circle",
         };
         let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText: (alertTypeLabels[alertObj.type] || "Alerte");
         label += alertObj.customText && alertObj.type !== "custom" ? ": " + alertObj.customText: "";
         const color = alertColors[alertObj.type] || "#F44336";
-        const iconName = alertIcons[alertObj.type] || "fa-exclamation";
+        const iconName = alertIcons[alertObj.type] || "circle-alert";
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
-          html: `<div class="marker marker-fixed" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};"><i class="fa ${iconName}" style="color:white;font-size:12px;"></i></div>`,
+          html: `<div class="marker marker-fixed" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};">${ico(iconName, "color:white;font-size:12px;")}</div>`,
           iconSize: [24, 24],
           iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon });
         let popup = `<div class="pop-title">${escapeHtml(label)}</div>`;
-        popup += `<div class="meta"><i class="fa-regular fa-clock"></i>Encore ${timeLeft}</div>`;
+        popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
-          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button quiet"><i class="fa-regular fa-flag"></i>signaler</button>`;
+          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button quiet">${ico("flag")}signaler</button>`;
           popup += `</div>`;
         }
         marker.bindPopup(popup, POPUP_OPTIONS);
@@ -1066,7 +1113,7 @@ function signalAlert(alertId) {
       function trackEndpointIcon(iconName, color) {
         return L.divIcon({
           className: "css-icon",
-          html: '<div class="marker marker-fixed" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';"><i class="fa ' + iconName + '" style="color:white;font-size:11px;"></i></div>',
+          html: '<div class="marker marker-fixed" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';">' + ico(iconName, "color:white;font-size:11px;") + '</div>',
           iconSize: [26, 26],
           iconAnchor: [13, 13],
         });
@@ -1082,10 +1129,10 @@ function signalAlert(alertId) {
         L.polyline(points, { color: "#FFFFFF", weight: 8, opacity: 0.9, interactive: false }).addTo(trackLayer);
         var line = L.polyline(points, { color: "#6D28D9", weight: 4, opacity: 1 }).addTo(trackLayer);
         if (name) line.bindPopup("<b>" + escapeHtml(name) + "</b>");
-        L.marker(points[0], { icon: trackEndpointIcon("fa-flag", "#10B981"), zIndexOffset: 500 })
+        L.marker(points[0], { icon: trackEndpointIcon("flag", "#10B981"), zIndexOffset: 500 })
           .bindPopup("<b>Départ</b>")
           .addTo(trackLayer);
-        L.marker(points[points.length - 1], { icon: trackEndpointIcon("fa-flag-checkered", "#1A0F2B"), zIndexOffset: 500 })
+        L.marker(points[points.length - 1], { icon: trackEndpointIcon("goal", "#1A0F2B"), zIndexOffset: 500 })
           .bindPopup("<b>Arrivée</b>")
           .addTo(trackLayer);
         if (fit !== false) {
