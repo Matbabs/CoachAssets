@@ -111,6 +111,25 @@
         "Instagram",
         "Strava"
       ]
+    },
+    {
+      "handle": "@WINTERACTIVITY_",
+      "name": "Winteractivity",
+      "title": "Crew Freeride & Vidéastes",
+      "uri": "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/studios/ski/winteractivity.jpg",
+      "tagline": "La bande de potes qui met de la joie dans chaque ligne de freeride.",
+      "description": "Collectif de skieurs freeride, Winteractivity partage ses sorties en montagne, ses épisodes YouTube et beaucoup d'autodérision, avec une seule règle : skier avec le sourire.",
+      "statistics": {
+        "divine": 2,
+        "force": 3,
+        "humor": 4,
+        "iq": 2
+      },
+      "link": "https://www.instagram.com/winteractivity_/",
+      "socials": [
+        "Instagram",
+        "YouTube"
+      ]
     }
   ]
 }
