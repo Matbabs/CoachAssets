@@ -1,0 +1,1182 @@
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+  </head>
+  <body>
+    <div id="map"></div>
+    <style>
+      /* Mirrors app/(tabs)/styles/styles.tsx: keep both in sync. */
+      :root {
+        --space-xxs: 2px;
+        --space-xs: 5px;
+        --space-s: 8px;
+        --space-m: 10px;
+        --space-l: 15px;
+        --space-xl: 20px;
+        --font-xs: 11px;
+        --font-s: 13px;
+        --font-m: 15px;
+        --line-m: 22px;
+        --radius: 15px;
+        --radius-s: 10px;
+        --flat: #f2f2f2;
+        --primary: #fbbf24;
+        --dark: #1a0f2b;
+        --gray: grey;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+        width: 100%;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: -o-crisp-edges;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+        -ms-interpolation-mode: nearest-neighbor;
+      }
+      .leaflet-container {
+        font-family: "Inter", sans-serif;
+      }
+      .leaflet-popup-content-wrapper {
+        border-radius: var(--radius);
+        /* Padding here, not margin on the content: a child margin collapses through a 0-padding parent. */
+        padding: var(--space-l);
+        box-shadow: 0 8px 24px rgba(26, 15, 43, 0.18);
+      }
+      .leaflet-popup-tip {
+        box-shadow: none;
+      }
+      .leaflet-popup-content {
+        margin: 0;
+        font-size: var(--font-s);
+        line-height: 19px;
+        color: var(--dark);
+      }
+      .leaflet-popup-content b {
+        font-weight: 700;
+      }
+      /* 32px round close target, clear of the title (which reserves its width). */
+      .leaflet-container a.leaflet-popup-close-button {
+        top: var(--space-s);
+        right: var(--space-s);
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        font-size: 22px;
+        border-radius: 50%;
+        background: var(--flat);
+        color: var(--gray);
+        text-align: center;
+      }
+      .pop-title {
+        font-weight: 700;
+        font-size: var(--font-m);
+        line-height: 20px;
+        padding-right: 36px;
+        min-height: 32px;
+        /* One line, ellipsis: a long place name never wraps or splits mid-word. */
+        line-height: 32px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      /* Long user descriptions scroll inside the card instead of growing it. */
+      .pop-body {
+        margin-top: var(--space-xs);
+        max-height: 114px;
+        overflow-y: auto;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
+      }
+      .meta {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-s);
+        margin-top: var(--space-xs);
+        color: var(--gray);
+        font-size: var(--font-s);
+        overflow-wrap: anywhere;
+      }
+      .meta i {
+        width: 14px;
+        text-align: center;
+        flex-shrink: 0;
+      }
+      .story-img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        border-radius: var(--radius-s);
+        margin-top: var(--space-s);
+        background: var(--flat);
+        cursor: pointer;
+      }
+      .ico {
+        display: inline-flex;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+      }
+      .ico svg {
+        width: 100%;
+        height: 100%;
+      }
+      /* Small marker glyphs need a heavier stroke to stay legible. */
+      [class^="marker"] .ico svg {
+        stroke-width: 2.5;
+      }
+      .cluster {
+        width: 36px;
+        height: 36px;
+        box-sizing: border-box;
+        border: 2px solid white;
+        line-height: 32px;
+        border-radius: 50%;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: var(--font-s);
+        text-align: center;
+      }
+      .leaflet-tile-pane {
+        /* filter: grayscale(100%) brightness(1.1); */
+      }
+      .pulse {
+        border: 2px solid #1A0F2B;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        box-shadow: 0 0 5px 0 #1A0F2B;
+        animation: pulsate 1s infinite;
+      }
+      @keyframes pulsate {
+        0% {
+          transform: scale(0.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      .marker {
+        border: 2px solid white;
+        background: #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B45309;
+      }
+      .marker i {
+        color: #1A0F2B;
+        font-size: 11px;
+      }
+      .marker-visited {
+        border: 2px solid #FBBF24;
+        background: #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B45309;
+      }
+      .marker-visited i {
+        color: #1A0F2B;
+        font-size: 11px;
+      }
+      .marker-user {
+        border: 2px solid white;
+        background: #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B45309;
+      }
+      .marker-user i {
+        color: #1A0F2B;
+        font-size: 11px;
+      }
+      .marker-visited-user {
+        border: 2px solid #FBBF24;
+        background: #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B45309;
+      }
+      .marker-visited-user i {
+        color: #1A0F2B;
+        font-size: 11px;
+      }
+      .marker-exploriders {
+        background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment-1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+      }
+      .marker-exploriders-flipped {
+        background-image: url("https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment-1.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 60px;
+        width: 60px;
+        transform: scaleX(-1);
+      }
+      .marker-spot {
+        background: #3B82F6;
+        border: 2px solid white;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #1D4ED8;
+      }
+      .marker-spot i {
+        color: white;
+        font-size: 11px;
+      }
+      .marker-spot-visited {
+        background: #3B82F6;
+        border: 2px solid #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #1D4ED8;
+      }
+      .marker-spot-visited i {
+        color: white;
+        font-size: 11px;
+      }
+      .marker-live-story {
+        background: #A855F7;
+        border: 2px solid white;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #7C3AED;
+      }
+      .marker-live-story i {
+        color: white;
+        font-size: 11px;
+      }
+      .marker-bivouac {
+        background: #EF4444;
+        border: 2px solid white;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B91C1C;
+      }
+      .marker-bivouac i {
+        color: white;
+        font-size: 11px;
+      }
+      .marker-bivouac-visited {
+        background: #EF4444;
+        border: 2px solid #FBBF24;
+        height: 18px;
+        width: 18px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 5px 0 #B91C1C;
+      }
+      .marker-bivouac-visited i {
+        color: white;
+        font-size: 11px;
+      }
+      /* One row: main actions share the width, report is a quiet square at the end. */
+      .actions {
+        margin-top: var(--space-m);
+        display: flex;
+        gap: var(--space-xs);
+      }
+      .button {
+        flex: 1;
+        min-width: 0;
+        height: 40px;
+        padding: 0 var(--space-s);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        background: var(--primary);
+        border: none;
+        color: #1A0F2B;
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        font-size: var(--font-s);
+        white-space: nowrap;
+        border-radius: var(--radius-s);
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      .button:active {
+        opacity: 0.8;
+      }
+      .icon-btn {
+        flex: 0 0 40px;
+        padding: 0;
+      }
+      .icon-btn,
+      .quiet {
+        background: var(--flat);
+        color: var(--gray);
+      }
+      .disabled {
+        background: var(--flat);
+        color: var(--gray);
+        cursor: default;
+      }
+      .story-author {
+        color: var(--primary);
+      }
+      /* Pop-in only during a batch flush; `scale` (not transform) keeps scaleX(-1) flips intact */
+      .leaflet-marker-icon.marker-pop > div {
+        animation: marker-pop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+      @keyframes marker-pop {
+        from { opacity: 0; scale: 0.3; }
+        to { opacity: 1; scale: 1; }
+      }
+    </style>
+    <script>
+      // Lucide icons (lucide-static 0.460.0, the app's icon set): inline SVG sized 1em, coloured by currentColor.
+      var LUCIDE = {
+        "book-open": '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+        "calendar": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
+        "calendar-check": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>',
+        "camera": '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>',
+        "circle-alert": '<circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/>',
+        "clock": '<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>',
+        "cloud-lightning": '<path d="M6 16.326A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 .5 8.973"/><path d="m13 12-3 5h4l-3 5"/>',
+        "construction": '<rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/>',
+        "crosshair": '<circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/>',
+        "droplet": '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+        "flag": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/>',
+        "flame": '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+        "gavel": '<path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/>',
+        "goal": '<path d="M12 13V2l8 4-8 4"/><path d="M20.561 10.222a9 9 0 1 1-12.55-5.29"/><path d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/>',
+        "leaf": '<path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>',
+        "lock": '<rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+        "mail": '<rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+        "map-pin": '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+        "maximize-2": '<polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" x2="14" y1="3" y2="10"/><line x1="3" x2="10" y1="21" y2="14"/>',
+        "message-circle": '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+        "mountain-snow": '<path d="m8 3 4 8 5-5 5 15H2L8 3z"/><path d="M4.14 15.08c2.62-1.57 5.24-1.43 7.86.42 2.74 1.94 5.49 2 8.23.19"/>',
+        "paw-print": '<circle cx="11" cy="4" r="2"/><circle cx="18" cy="8" r="2"/><circle cx="20" cy="16" r="2"/><path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z"/>',
+        "route": '<circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/>',
+        "snowflake": '<line x1="2" x2="22" y1="12" y2="12"/><line x1="12" x2="12" y1="2" y2="22"/><path d="m20 16-4-4 4-4"/><path d="m4 8 4 4-4 4"/><path d="m16 4-4 4-4-4"/><path d="m8 20 4-4 4 4"/>',
+        "star": '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
+        "user": '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+        "waves": '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
+        "wind": '<path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/>',
+        "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+        "sun": '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
+        "thermometer": '<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>',
+        "flower-2": '<path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/>'
+      };
+      function ico(name, style) {
+        return '<i class="ico"' + (style ? ' style="' + style + '"' : "") + '><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (LUCIDE[name] || LUCIDE["circle-alert"]) + "</svg></i>";
+      }
+      const MARKER_RADIUS_LIMIT = 50;
+      var map = L.map("map", {
+        zoomControl: false,
+        minZoom: 2,
+        maxZoom: 17,
+        maxBounds: L.latLngBounds([
+          [90, -180],
+          [-90, 180],
+        ]),
+        maxBoundsViscosity: 1.0,
+        attributionControl: false,
+      }).setView([46.6061, 1.8753], 5);
+      var userMarker = undefined;
+      var userMapMarker = undefined;
+      var markers = [];
+var currentClusterColor = '#FBBF24';
+var currentUsername = '';
+function clusterIcon(count, bg) {
+  return L.divIcon({
+    // white is unreadable on the brand yellow
+    html: '<div class="cluster" style="background:' + bg + ';color:' + (String(bg).toUpperCase() === '#FBBF24' ? '#1A0F2B' : 'white') + ';">' + count + '</div>',
+    className: '',
+    iconSize: L.point(36, 36)
+  });
+}
+var markerClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    var size = 'small';
+    if (count > 50) size = 'large';
+    else if (count > 10) size = 'medium';
+    return clusterIcon(count, currentClusterColor);
+  },
+  chunkedLoading: true
+});
+var liveStoryClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    return clusterIcon(count, "#A855F7");
+  },
+  chunkedLoading: true
+});
+var alertClusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 50,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  disableClusteringAtZoom: 17,
+  iconCreateFunction: function(cluster) {
+    var count = cluster.getChildCount();
+    var size = 'small';
+    if (count > 50) size = 'large';
+    else if (count > 10) size = 'medium';
+    return clusterIcon(count, "#FBBF24");
+  },
+  chunkedLoading: true
+});
+map.addLayer(markerClusterGroup);
+map.addLayer(liveStoryClusterGroup);
+map.addLayer(alertClusterGroup);
+var unclusteredGroup = L.layerGroup().addTo(map);
+// "https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}.png",
+var classic = L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        { detectRetina: true },
+      ).addTo(map);
+      var isClassic = true;
+      var satellite = L.tileLayer(
+        "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+        {
+          attribution:
+            "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+        },
+      );
+      var pulseIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="pulse"></div>',
+        iconSize: [20, 20],
+        iconAnchor: [10.5, 10.5],
+      });
+      var markerIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker">' + ico("map-pin") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var markerVisitedIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-visited">' + ico("map-pin") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var markerIconUser = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-user">' + ico("user") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var markerVisitedIconUser = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-visited-user">' + ico("user") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var exploridersIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-exploriders"></div>',
+        iconSize: [60, 60],
+        iconAnchor: [30, 60],
+      });
+      var exploridersIconFlipped = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-exploriders-flipped"></div>',
+        iconSize: [60, 60],
+        iconAnchor: [30, 60],
+      });
+      var spotIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-spot">' + ico("map-pin") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var spotVisitedIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-spot-visited">' + ico("map-pin") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var bivouacIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-bivouac">' + ico("flame") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var bivouacVisitedIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-bivouac-visited">' + ico("flame") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+      var liveStoryIcon = L.divIcon({
+        className: "css-icon",
+        html: '<div class="marker-live-story">' + ico("camera") + '</div>',
+        iconSize: [18, 18],
+        iconAnchor: [9, 9],
+      });
+
+      // LOCAL FUNCTIONS
+      function postMessage(msg) {
+        if (window.ReactNativeWebView) {
+          window.ReactNativeWebView.postMessage(msg);
+        } else if (window.parent) {
+          // parent, not top: the app itself may be framed (Cypress runner).
+          window.parent.postMessage(msg);
+        }
+      }
+      function updateCoords() {
+        msg = JSON.stringify({
+          type: "coords",
+          data: map.getCenter(),
+        });
+        postMessage(msg);
+      }
+      function closeWindows() {
+        msg = JSON.stringify({
+          type: "close",
+        });
+        postMessage(msg);
+      }
+      function visitMarker(markerId) {
+        msg = JSON.stringify({
+          type: "visit",
+          data: {
+            id: markerId,
+          },
+        });
+        postMessage(msg);
+      }
+      function signalMarker(markerId) {
+        msg = JSON.stringify({
+          type: "signal",
+          data: {
+            id: markerId,
+          },
+        });
+        postMessage(msg);
+      }
+      function openGps(lat, lng) {
+        msg = JSON.stringify({
+          type: "gps",
+          data: {
+            lat: lat,
+            lng: lng,
+          },
+        });
+        postMessage(msg);
+      }
+      function openFiche(markerId) {
+        postMessage(JSON.stringify({ type: "fiche", data: { id: markerId } }));
+      }
+      function openImagePopup(url, encodedTitle) {
+        msg = JSON.stringify({
+          type: "openImage",
+          data: {
+            url: url,
+            title: encodedTitle ? decodeURIComponent(encodedTitle) : "",
+          },
+        });
+        postMessage(msg);
+      }
+      function generatePopup(marker, distanceToUser) {
+        let popup;
+        if (marker.imageUrl) {
+          const authorName = marker.username.replace("›", "").replace(">", "") || "Anonyme";
+          const expiresIn = Math.max(0, marker.expiresAt - Date.now());
+          const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
+          const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
+          const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
+          const storyTitle = encodeURIComponent(`Live spot story de ${authorName}`);
+          popup = `<div class="pop-title">Live story de <span class="story-author">${escapeHtml(authorName)}</span></div>`;
+          popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
+          popup += `<img src="${marker.imageUrl}" class="story-img" alt="" onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')">`;
+          popup += `<div class="actions">`;
+          popup += `<button onclick="openImagePopup('${marker.imageUrl}', '${storyTitle}')" class="button">${ico("maximize-2")}voir</button>`;
+          popup += reportButton(`signalStory('${marker.id}')`);
+          popup += `</div>`;
+          return popup;
+        }
+        // User-typed text: escaped so it can't inject markup into the WebView.
+        popup = `<div class="pop-title">${escapeHtml(marker.name)}</div>`;
+        if (marker.description) {
+          popup += `<div class="pop-body">${escapeHtml(marker.description)}</div>`;
+        }
+        // Spots and bivouacs open a full fiche in the app.
+        const fiched = marker.type === "spots" || marker.type === "bivouacs";
+        if (fiched && marker.photo && marker.photo.url) {
+          popup += `<img src="${escapeHtml(marker.photo.url)}" class="story-img" alt="" onclick="openFiche('${marker.id}')">`;
+        }
+        if (marker.dateIn && marker.timeIn) {
+          popup += `<div class="meta">${ico("calendar")}Début ${escapeHtml(marker.dateIn)} · ${escapeHtml(marker.timeIn)}</div>`;
+        }
+        if (marker.dateOut && marker.timeOut) {
+          popup += `<div class="meta">${ico("calendar-check")}Fin ${escapeHtml(marker.dateOut)} · ${escapeHtml(marker.timeOut)}</div>`;
+        }
+        if (marker.contact) {
+          popup += `<div class="meta">${ico("mail")}${escapeHtml(marker.contact)}</div>`;
+        }
+        if (marker.type === "exploriders") {
+          return popup;
+        }
+        popup += `<div class="actions">`;
+        if (fiched) {
+          popup += `<button onclick="openFiche('${marker.id}')" class="button">${ico("book-open")}fiche</button>`;
+        }
+        // With a fiche button the GPS route shrinks to an icon to keep one row.
+        const routeClass = fiched ? "button icon-btn" : "button";
+        const routeLabel = fiched ? "" : "itinéraire";
+        if (distanceToUser > MARKER_RADIUS_LIMIT) {
+          popup += `<button onclick="openGps(${marker.lat}, ${marker.lng})" class="${routeClass}" aria-label="Itinéraire" title="Itinéraire">${ico("route")}${routeLabel}</button>`;
+        } else {
+          popup += `<button disabled class="${routeClass} disabled" aria-label="Itinéraire">${ico("route")}${routeLabel}</button>`;
+        }
+        // Bivouacs can't be visited for points.
+        const canVisit = marker.type !== "bivouacs";
+        if (canVisit && distanceToUser >= 0 && distanceToUser <= MARKER_RADIUS_LIMIT) {
+          popup += `<button onclick="visitMarker('${marker.id}')" class="button">${ico("star")}+10 pts</button>`;
+        } else if (canVisit && distanceToUser >= 0) {
+          popup += `<button disabled class="button disabled" title="Approchez-vous à moins de ${MARKER_RADIUS_LIMIT} m">${ico("lock")}+10 pts</button>`;
+        }
+        popup += reportButton(`signalMarker('${marker.id}')`);
+        popup += "</div>";
+        return popup;
+      }
+      function reportButton(onclick) {
+        return `<button onclick="${onclick}" class="button icon-btn" aria-label="Signaler" title="Signaler">${ico("flag")}</button>`;
+      }
+      // Fixed width + pan padding keep cards clear of the RN overlays
+      // (filters/search on top, round buttons on the right, navbar below).
+      var POPUP_OPTIONS = {
+        minWidth: 240,
+        maxWidth: 240,
+        autoPanPaddingTopLeft: L.point(16, 140),
+        autoPanPaddingBottomRight: L.point(72, 96),
+      };
+      function userColor(color) {
+        switch (color.toLowerCase()) {
+          case "#3B82F6".toLowerCase():
+            return "#60A5FA";
+          case "#10B981".toLowerCase():
+            return "#4ADE80";
+          case "#EF4444".toLowerCase():
+            return "#F87171";
+          default:
+            return "#FBBF24";
+        }
+      }
+      map.on("move", updateCoords);
+      map.on("click", closeWindows);
+      // iOS WKWebView ne déclenche pas dblclick avec touch-action:none (Leaflet ≥1.8)
+      var isIOS =
+        /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+        (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+      if (isIOS) {
+        var lastTap = 0;
+        map.on("click", function (e) {
+          var now = Date.now();
+          if (now - lastTap < 300) {
+            map.setZoomAround(e.latlng, map.getZoom() + 1);
+            lastTap = 0;
+          } else {
+            lastTap = now;
+          }
+        });
+      }
+      updateCoords();
+
+      // BRIDGE FUNCTIONS
+      function getIcon(markerObj, distanceToUser) {
+        let icon;
+        if (markerObj.type === "exploriders") {
+          // Use custom marker image if provided, otherwise use default
+          const markerImg = markerObj.markerImage || "https://raw.githubusercontent.com/Matbabs/CoachAssets/refs/heads/main/map/Piment-1.png";
+          const customIcon = L.divIcon({
+            className: "css-icon",
+            html: '<div class="marker-exploriders" style="background-image: url(\'' + markerImg + '\');"></div>',
+            iconSize: [60, 60],
+            iconAnchor: [30, 60],
+          });
+          const customIconFlipped = L.divIcon({
+            className: "css-icon",
+            html: '<div class="marker-exploriders-flipped" style="background-image: url(\'' + markerImg + '\');"></div>',
+            iconSize: [60, 60],
+            iconAnchor: [30, 60],
+          });
+          icon = markerObj.flipped ? customIconFlipped: customIcon;
+        } else if (markerObj.type === "spots") {
+          if (markerObj.imageUrl) {
+            icon = liveStoryIcon;
+          } else {
+            icon = distanceToUser === -2 ? spotVisitedIcon: spotIcon;
+          }
+        } else if (markerObj.type === "bivouacs") {
+          icon = distanceToUser === -2 ? bivouacVisitedIcon: bivouacIcon;
+        } else {
+          icon = distanceToUser === -2
+            ? markerObj.user
+              ? markerVisitedIconUser
+             : markerVisitedIcon
+           : markerObj.user
+              ? markerIconUser
+             : markerIcon;
+        }
+        return icon;
+      }
+      function addMarker(pos, markerObj, color, distanceToUser) {
+        const icon = getIcon(markerObj, distanceToUser);
+const marker = L.marker(pos, {
+          icon: icon,
+        });
+        marker.bindPopup(generatePopup(markerObj, distanceToUser), POPUP_OPTIONS);
+
+        // Live stories go to their own cluster group
+        if (markerObj.imageUrl) {
+          queueLayer(liveStoryClusterGroup, marker);
+        } else {
+          // User's own marker stays unclustered
+          const isUserMarker = markerObj.name === "ExploRider" &&
+            (markerObj.description === "Moi" || markerObj.description === currentUsername);
+          if (isUserMarker) {
+            queueLayer(unclusteredGroup, marker);
+          } else {
+            queueLayer(markerClusterGroup, marker);
+          }
+        }
+        markers.push(marker);
+        
+        // Update cluster color based on marker type (skip live stories)
+        if (markerObj.type === "spots" && !markerObj.imageUrl) {
+          currentClusterColor = "#3B82F6";
+        } else if (markerObj.type === "bivouacs") {
+          currentClusterColor = "#EF4444";
+        } else if (markerObj.type === "sessions") {
+          currentClusterColor = "#10B981";
+        } else if (markerObj.type === "exploriders") {
+          currentClusterColor = "#6D28D9";
+        } else {
+          currentClusterColor = color;
+        }
+        lastMarkerColor = color;
+      }
+      // BATCHING: removeAllMarkers + N addMarker calls are coalesced into one
+      // clear + addLayers pass, so clusters are computed once and nothing flashes.
+      var pendingLayers = new Map();
+      var pendingReset = false;
+      var flushTimer = null;
+      var lastMarkerColor = null;
+      function queueLayer(group, layer) {
+        if (!pendingLayers.has(group)) pendingLayers.set(group, []);
+        pendingLayers.get(group).push(layer);
+        scheduleFlush();
+      }
+      function scheduleFlush() {
+        clearTimeout(flushTimer);
+        // 60ms debounce also merges bursts from several React effects in a row
+        flushTimer = setTimeout(flushMarkers, 60);
+      }
+      // Only markers absent from the previous flush pop in (key includes icon html,
+      // so a marker turning "visited" pops too); data refreshes leave the rest still.
+      var prevKeys = new Set();
+      var flushAt = 0;
+      function markerKey(l) {
+        var p = l.getLatLng();
+        return p.lat.toFixed(5) + "," + p.lng.toFixed(5) + "|" + l.options.icon.options.html;
+      }
+      function popEl(icon, containerPoint) {
+        var child = icon.firstElementChild;
+        if (!child || child.classList.contains("pulse")) return;
+        var d = containerPoint.distanceTo(map.getSize().divideBy(2));
+        child.style.animationDelay = Math.min(250, d / 3) + "ms";
+        icon.classList.add("marker-pop");
+        // re-inserted icons would replay the animation, so drop the class once done
+        setTimeout(function () {
+          icon.classList.remove("marker-pop");
+          child.style.animationDelay = "";
+        }, 700);
+      }
+      function popIn(e) {
+        // ignore markers that only reach the DOM later (zoom/uncluster)
+        if (!e.target._icon || Date.now() - flushAt > 600) return;
+        popEl(e.target._icon, map.latLngToContainerPoint(e.target.getLatLng()));
+      }
+      function flushMarkers() {
+        flushTimer = null;
+        flushAt = Date.now();
+        var nextKeys = pendingReset ? new Set() : new Set(prevKeys);
+        var total = 0, fresh = 0;
+        pendingLayers.forEach(function (layers) {
+          layers.forEach(function (l) {
+            var key = markerKey(l);
+            total++;
+            if (!prevKeys.has(key)) {
+              fresh++;
+              l.once("add", popIn);
+            }
+            nextKeys.add(key);
+          });
+        });
+        prevKeys = nextKeys;
+        if (pendingReset) {
+          markerClusterGroup.clearLayers();
+          liveStoryClusterGroup.clearLayers();
+          alertClusterGroup.clearLayers();
+          // the user's own marker survives resets (updateUserMarker replaces it)
+          unclusteredGroup.eachLayer(function (l) {
+            if (l !== userMapMarker) unclusteredGroup.removeLayer(l);
+          });
+          pendingReset = false;
+        }
+        pendingLayers.forEach(function (layers, group) {
+          if (group.addLayers) group.addLayers(layers);
+          else layers.forEach(function (l) { group.addLayer(l); });
+        });
+        pendingLayers.clear();
+        if (lastMarkerColor) applyMarkerColors(lastMarkerColor);
+        // Sport/filter change (mostly new markers): pop every icon present right now,
+        // clusters included; elements recreated by later waves are left alone.
+        if (total > 0 && fresh / total > 0.5) {
+          map.getPane("markerPane").querySelectorAll(".leaflet-marker-icon").forEach(function (el) {
+            popEl(el, map.layerPointToContainerPoint(L.DomUtil.getPosition(el)));
+          });
+        }
+      }
+      function applyMarkerColors(color) {
+        document
+          .querySelectorAll(".marker:not(.marker-fixed)")
+          .forEach((e) => (e.style.background = color));
+        document
+          .querySelectorAll(".marker-visited")
+          .forEach((e) => (e.style.background = color));
+        document
+          .querySelectorAll(".marker-user")
+          .forEach((e) => (e.style.background = userColor(color)));
+        document
+          .querySelectorAll(".marker-visited-user")
+          .forEach((e) => (e.style.background = userColor(color)));
+        document
+          .querySelectorAll(".marker-spot")
+          .forEach((e) => (e.style.background = "#3B82F6"));
+        document
+          .querySelectorAll(".marker-spot-visited")
+          .forEach((e) => (e.style.background = "#3B82F6"));
+        document
+          .querySelectorAll(".marker-bivouac")
+          .forEach((e) => (e.style.background = "#EF4444"));
+        document
+          .querySelectorAll(".marker-bivouac-visited")
+          .forEach((e) => (e.style.background = "#EF4444"));
+      }
+      function updateUserMarker(pos, markerObj, color, distanceToUser) {
+        if (userMapMarker) {
+          unclusteredGroup.removeLayer(userMapMarker);
+          markers = markers.filter(function (m) { return m !== userMapMarker; });
+        }
+        userMapMarker = L.marker(pos, { icon: getIcon(markerObj, distanceToUser) });
+        userMapMarker.bindPopup(generatePopup(markerObj, distanceToUser), POPUP_OPTIONS);
+        unclusteredGroup.addLayer(userMapMarker);
+        markers.push(userMapMarker);
+      }
+      function removeAllMarkers() {
+        // Cluster groups are cleared at flush time, right before the new markers land
+        pendingReset = true;
+        pendingLayers.clear();
+        markers = userMapMarker ? [userMapMarker] : [];
+        currentClusterColor = '#FBBF24';
+        scheduleFlush();
+      }
+      function removeUserMarker() {
+        const userMarkers = markers.filter(m => {
+          try { return unclusteredGroup.hasLayer(m); } catch(e) { return false; }
+        });
+        userMarkers.forEach(m => unclusteredGroup.removeLayer(m));
+        markers = markers.filter(m => !userMarkers.includes(m));
+      }
+      function setClusterColor(color) {
+        currentClusterColor = color;
+      }
+      function setUsername(name) {
+        currentUsername = name;
+      }
+      function setMarkerImage(url) {
+        document.querySelectorAll('.marker-exploriders').forEach(el => {
+          el.style.backgroundImage = `url("${url}")`;
+        });
+        document.querySelectorAll('.marker-exploriders-flipped').forEach(el => {
+          el.style.backgroundImage = `url("${url}")`;
+        });
+        // Recreate icons with new image
+        exploridersIcon = L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker-exploriders" style="background-image: url(\'' + url + '\');"></div>',
+          iconSize: [60, 60],
+          iconAnchor: [30, 60],
+        });
+        exploridersIconFlipped = L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker-exploriders-flipped" style="background-image: url(\'' + url + '\');"></div>',
+          iconSize: [60, 60],
+          iconAnchor: [30, 60],
+        });
+        // Update existing markers on the map
+        markers.forEach(function(m) {
+          if (m.options.icon && m.options.icon.options.html && m.options.icon.options.html.includes('marker-exploriders')) {
+            const isFlipped = m.options.icon.options.html.includes('flipped');
+            m.setIcon(isFlipped ? exploridersIconFlipped: exploridersIcon);
+          }
+        });
+      }
+      function locate(pos) {
+        if (userMarker) {
+          map.removeLayer(userMarker);
+        }
+        userMarker = L.marker(pos, { icon: pulseIcon });
+        userMarker.addTo(map);
+      }
+      function setView(pos, zoom) {
+        map.setView(pos, zoom);
+      }
+      function switchMap() {
+        if (isClassic) {
+          map.removeLayer(classic);
+          satellite.addTo(map);
+        } else {
+          map.removeLayer(satellite);
+          classic.addTo(map);
+        }
+        for (let i = 0; i < document.styleSheets.length; i++) {
+          for (let j = 0; j < document.styleSheets[i].rules.length; j++) {
+            if (document.styleSheets[i].rules[j].selectorText === ".pulse") {
+              document.styleSheets[i].rules[j].style.borderColor = !isClassic
+                ? "#6D28D9"
+               : "#FBBF24";
+            }
+          }
+        }
+        isClassic = !isClassic;
+        let msg = JSON.stringify({
+          type: "isClassic",
+          data: isClassic,
+        });
+        postMessage(msg);
+      }
+function signalAlert(alertId) {
+        msg = JSON.stringify({
+          type: "signalAlert",
+          data: {
+            id: alertId,
+          },
+        });
+        postMessage(msg);
+      }
+      function signalStory(storyId) {
+        msg = JSON.stringify({
+          type: "signalStory",
+          data: {
+            id: storyId,
+          },
+        });
+        postMessage(msg);
+      }
+      function addAlertMarker(pos, alertObj) {
+        const alertTypeLabels = {
+          works: "Travaux",
+          animal: "Animal",
+          route_closed: "Route fermée",
+          flood: "Pluie inondation",
+          wind: "Vent fort",
+          storm: "Orages",
+          swell: "Vague submersion",
+          snow: "Neige verglas",
+          avalanche: "Avalanche",
+          flood_river: "Crue",
+          hunting: "Chasse en cours",
+          prefectoral: "Arrêté préfectoral",
+          pollution: "Pollution",
+          pollen: "Pollens",
+          heat: "Canicule",
+          cold: "Grand froid",
+          uv: "UV extrême",
+          custom: "Autre",
+        };
+        const alertColors = {
+          works: "#FF8C00",
+          animal: "#8B4513",
+          route_closed: "#424242",
+          flood: "#1976D2",
+          wind: "#87CEEB",
+          storm: "#4B0082",
+          swell: "#1976D2",
+          snow: "#1976D2",
+          avalanche: "#F44336",
+          flood_river: "#9C27B0",
+          hunting: "#8B4513",
+          prefectoral: "#4A4A4A",
+          pollution: "#6B8E23",
+          pollen: "#DB2777",
+          heat: "#DC2626",
+          cold: "#0EA5E9",
+          uv: "#F59E0B",
+          custom: "#808080",
+        };
+        const alertIcons = {
+          works: "wrench",
+          animal: "paw-print",
+          route_closed: "construction",
+          flood: "droplet",
+          wind: "wind",
+          storm: "cloud-lightning",
+          swell: "waves",
+          snow: "snowflake",
+          avalanche: "mountain-snow",
+          flood_river: "droplet",
+          hunting: "crosshair",
+          prefectoral: "gavel",
+          pollution: "leaf",
+          pollen: "flower-2",
+          heat: "thermometer",
+          cold: "thermometer",
+          uv: "sun",
+          custom: "message-circle",
+        };
+        let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText: (alertTypeLabels[alertObj.type] || "Alerte");
+        label += alertObj.customText && alertObj.type !== "custom" ? ": " + alertObj.customText: "";
+        const color = alertColors[alertObj.type] || "#F44336";
+        const iconName = alertIcons[alertObj.type] || "circle-alert";
+        const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
+        const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
+        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
+        const alertIcon = L.divIcon({
+          className: "css-icon",
+          html: `<div class="marker marker-fixed" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};">${ico(iconName, "color:white;font-size:12px;")}</div>`,
+          iconSize: [24, 24],
+          iconAnchor: [12, 12],
+        });
+        const marker = L.marker(pos, { icon: alertIcon });
+        let popup = `<div class="pop-title">${escapeHtml(label)}</div>`;
+        popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
+        if (alertObj.userId) {
+          popup += `<div class="actions">`;
+          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button quiet">${ico("flag")}signaler</button>`;
+          popup += `</div>`;
+        }
+        marker.bindPopup(popup, POPUP_OPTIONS);
+        queueLayer(alertClusterGroup, marker);
+        markers.push(marker);
+      }
+
+      // GPX TRACK
+      // Calque indépendant : removeAllMarkers() ne l'efface pas.
+      var trackLayer = L.layerGroup().addTo(map);
+      var trackHighlightLayer = L.layerGroup().addTo(map);
+      function trackEndpointIcon(iconName, color) {
+        return L.divIcon({
+          className: "css-icon",
+          html: '<div class="marker marker-fixed" style="background:' + color + ';border:2px solid white;width:22px;height:22px;box-shadow:0 0 5px 0 ' + color + ';">' + ico(iconName, "color:white;font-size:11px;") + '</div>',
+          iconSize: [26, 26],
+          iconAnchor: [13, 13],
+        });
+      }
+      function escapeHtml(s) {
+        return String(s || "").replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      function showTrack(points, name, fit) {
+        trackLayer.clearLayers();
+        if (!points || points.length < 2) return;
+        L.polyline(points, { color: "#FFFFFF", weight: 8, opacity: 0.9, interactive: false }).addTo(trackLayer);
+        var line = L.polyline(points, { color: "#6D28D9", weight: 4, opacity: 1 }).addTo(trackLayer);
+        if (name) line.bindPopup("<b>" + escapeHtml(name) + "</b>");
+        L.marker(points[0], { icon: trackEndpointIcon("flag", "#10B981"), zIndexOffset: 500 })
+          .bindPopup("<b>Départ</b>")
+          .addTo(trackLayer);
+        L.marker(points[points.length - 1], { icon: trackEndpointIcon("goal", "#1A0F2B"), zIndexOffset: 500 })
+          .bindPopup("<b>Arrivée</b>")
+          .addTo(trackLayer);
+        if (fit !== false) {
+          map.fitBounds(line.getBounds(), { padding: [40, 40], maxZoom: 16 });
+        }
+      }
+      function highlightTrackAlerts(positions) {
+        trackHighlightLayer.clearLayers();
+        (positions || []).forEach(function (p) {
+          L.circleMarker(p, { radius: 18, color: "#EF4444", weight: 3, fill: false, interactive: false }).addTo(trackHighlightLayer);
+        });
+      }
+      function clearTrack() {
+        trackLayer.clearLayers();
+        trackHighlightLayer.clearLayers();
+      }
+    </script>
+  </body>
+</html>
