@@ -418,7 +418,10 @@
         "user": '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
         "waves": '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
         "wind": '<path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/>',
-        "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>'
+        "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+        "sun": '<circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>',
+        "thermometer": '<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>',
+        "flower-2": '<path d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1"/><circle cx="12" cy="8" r="2"/><path d="M12 10v12"/><path d="M12 22c4.2 0 7-1.667 7-5-4.2 0-7 1.667-7 5Z"/><path d="M12 22c-4.2 0-7-1.667-7-5 4.2 0 7 1.667 7 5Z"/>'
       };
       function ico(name, style) {
         return '<i class="ico"' + (style ? ' style="' + style + '"' : "") + '><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + (LUCIDE[name] || LUCIDE["circle-alert"]) + "</svg></i>";
@@ -1042,6 +1045,10 @@ function signalAlert(alertId) {
           hunting: "Chasse en cours",
           prefectoral: "Arrêté préfectoral",
           pollution: "Pollution",
+          pollen: "Pollens",
+          heat: "Canicule",
+          cold: "Grand froid",
+          uv: "UV extrême",
           custom: "Autre",
         };
         const alertColors = {
@@ -1058,6 +1065,10 @@ function signalAlert(alertId) {
           hunting: "#8B4513",
           prefectoral: "#4A4A4A",
           pollution: "#6B8E23",
+          pollen: "#DB2777",
+          heat: "#DC2626",
+          cold: "#0EA5E9",
+          uv: "#F59E0B",
           custom: "#808080",
         };
         const alertIcons = {
@@ -1074,6 +1085,10 @@ function signalAlert(alertId) {
           hunting: "crosshair",
           prefectoral: "gavel",
           pollution: "leaf",
+          pollen: "flower-2",
+          heat: "thermometer",
+          cold: "thermometer",
+          uv: "sun",
           custom: "message-circle",
         };
         let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText: (alertTypeLabels[alertObj.type] || "Alerte");
