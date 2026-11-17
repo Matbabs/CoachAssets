@@ -391,6 +391,7 @@
     <script>
       // Lucide icons (lucide-static 0.460.0, the app's icon set): inline SVG sized 1em, coloured by currentColor.
       var LUCIDE = {
+        "file-text": '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>',
         "book-open": '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
         "calendar": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/>',
         "calendar-check": '<path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/>',
@@ -689,7 +690,7 @@ var classic = L.tileLayer(
         }
         popup += `<div class="actions">`;
         if (fiched) {
-          popup += `<button onclick="openFiche('${marker.id}')" class="button">${ico("book-open")}fiche</button>`;
+          popup += `<button onclick="openFiche('${marker.id}')" class="button">${ico("file-text")}fiche</button>`;
         }
         // With a fiche button the GPS route shrinks to an icon to keep one row.
         const routeClass = fiched ? "button icon-btn" : "button";
