@@ -1032,33 +1032,22 @@ const marker = L.marker(pos, {
       }
 const alertsById = {};
       const ALERT_DAY = 24 * 60 * 60 * 1000;
-      // null tant qu'un pouce peut encore prolonger l'alerte (une fois par 24h).
-      function alertNextExtension(alertObj) {
-        if (!(alertObj.extendedAt && Date.now() - alertObj.extendedAt < ALERT_DAY)) return null;
-        const next = new Date(alertObj.extendedAt + ALERT_DAY);
-        const day = next.toDateString() === new Date().toDateString() ? "aujourd'hui" : "demain";
-        return `${day} à ${next.getHours()}h${String(next.getMinutes()).padStart(2, "0")}`;
-      }
-      function alertExtensionLine(alertObj) {
-        const next = alertNextExtension(alertObj);
-        if (next) return `Prolongée de 24h. Prochaine prolongation possible ${next}`;
-        if (alertObj.thumbed) return "";
-        return "Toujours là ? Confirmez pour la prolonger de 24h";
+      // Même règle que handleAlertThumb : jamais prolongée, ou moins de 24h restantes.
+      function alertCanExtend(alertObj) {
+        return !alertObj.extendedAt || alertObj.expiresAt - Date.now() < ALERT_DAY;
       }
       function alertPopup(alertObj) {
         const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
         const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
         const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
         const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
-        const ext = alertExtensionLine(alertObj);
         let popup = `<div class="pop-title">${escapeHtml(alertObj.label)}</div>`;
         popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
-        if (ext) popup += `<div class="meta">${ico("thumbs-up")}${ext}</div>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
-          popup += alertObj.thumbed
-            ? `<button disabled class="button disabled">${ico("thumbs-up")}merci</button>`
-            : `<button onclick="thumbAlert('${alertObj.id}')" class="button">${ico("thumbs-up")}toujours là</button>`;
+          popup += alertCanExtend(alertObj)
+            ? `<button onclick="thumbAlert('${alertObj.id}')" class="button">${ico("thumbs-up")}toujours là</button>`
+            : `<button disabled class="button disabled">${ico("thumbs-up")}prolongée</button>`;
           popup += reportButton(`signalAlert('${alertObj.id}')`);
           popup += `</div>`;
         }
@@ -1066,13 +1055,10 @@ const alertsById = {};
       }
       function thumbAlert(alertId) {
         const alertObj = alertsById[alertId];
-        if (!alertObj) return;
-        // Même calcul que handleAlertThumb, pour répondre tout de suite.
-        if (!alertNextExtension(alertObj)) {
-          alertObj.expiresAt += ALERT_DAY;
-          alertObj.extendedAt = Date.now();
-        }
-        alertObj.thumbed = true;
+        if (!alertObj || !alertCanExtend(alertObj)) return;
+        // Affiche la prolongation tout de suite, la function fait la même chose en base.
+        alertObj.expiresAt += ALERT_DAY;
+        alertObj.extendedAt = Date.now();
         if (alertObj.marker) alertObj.marker.setPopupContent(() => alertPopup(alertObj));
         postMessage(JSON.stringify({ type: "thumbAlert", data: { id: alertId } }));
       }
