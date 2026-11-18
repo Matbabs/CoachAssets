@@ -402,6 +402,7 @@
         "construction": '<rect x="2" y="6" width="20" height="8" rx="1"/><path d="M17 14v7"/><path d="M7 14v7"/><path d="M17 3v3"/><path d="M7 3v3"/><path d="M10 14 2.3 6.3"/><path d="m14 6 7.7 7.7"/><path d="m8 6 8 8"/>',
         "crosshair": '<circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/>',
         "droplet": '<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/>',
+        "thumbs-up": '<path d="M7 10v12"/><path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2a3.13 3.13 0 0 1 3 3.88Z"/>',
         "flag": '<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" x2="4" y1="22" y2="15"/>',
         "flame": '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
         "gavel": '<path d="m14.5 12.5-8 8a2.119 2.119 0 1 1-3-3l8-8"/><path d="m16 16 6-6"/><path d="m8 8 6-6"/><path d="m9 7 8 8"/><path d="m21 11-8-8"/>',
@@ -1029,7 +1030,13 @@ const marker = L.marker(pos, {
         });
         postMessage(msg);
       }
-function signalAlert(alertId) {
+function thumbAlert(alertId, btn) {
+        btn.disabled = true;
+        btn.className = "button disabled";
+        btn.innerHTML = `${ico("thumbs-up")}merci`;
+        postMessage(JSON.stringify({ type: "thumbAlert", data: { id: alertId } }));
+      }
+      function signalAlert(alertId) {
         msg = JSON.stringify({
           type: "signalAlert",
           data: {
@@ -1127,7 +1134,8 @@ function signalAlert(alertId) {
         popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
         if (alertObj.userId) {
           popup += `<div class="actions">`;
-          popup += `<button onclick="signalAlert('${alertObj.id}')" class="button quiet">${ico("flag")}signaler</button>`;
+          popup += `<button onclick="thumbAlert('${alertObj.id}', this)" class="button" title="Prolonge l'alerte de 24h">${ico("thumbs-up")}toujours là</button>`;
+          popup += reportButton(`signalAlert('${alertObj.id}')`);
           popup += `</div>`;
         }
         marker.bindPopup(popup, POPUP_OPTIONS);
