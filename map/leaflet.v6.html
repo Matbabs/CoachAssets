@@ -1030,10 +1030,50 @@ const marker = L.marker(pos, {
         });
         postMessage(msg);
       }
-function thumbAlert(alertId, btn) {
-        btn.disabled = true;
-        btn.className = "button disabled";
-        btn.innerHTML = `${ico("thumbs-up")}merci`;
+const alertsById = {};
+      const ALERT_DAY = 24 * 60 * 60 * 1000;
+      // null tant qu'un pouce peut encore prolonger l'alerte (une fois par 24h).
+      function alertNextExtension(alertObj) {
+        if (!(alertObj.extendedAt && Date.now() - alertObj.extendedAt < ALERT_DAY)) return null;
+        const next = new Date(alertObj.extendedAt + ALERT_DAY);
+        const day = next.toDateString() === new Date().toDateString() ? "aujourd'hui" : "demain";
+        return `${day} à ${next.getHours()}h${String(next.getMinutes()).padStart(2, "0")}`;
+      }
+      function alertExtensionLine(alertObj) {
+        const next = alertNextExtension(alertObj);
+        if (next) return `Prolongée de 24h. Prochaine prolongation possible ${next}`;
+        if (alertObj.thumbed) return "";
+        return "Toujours là ? Confirmez pour la prolonger de 24h";
+      }
+      function alertPopup(alertObj) {
+        const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
+        const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
+        const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
+        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m` : `${minutesLeft}m`;
+        const ext = alertExtensionLine(alertObj);
+        let popup = `<div class="pop-title">${escapeHtml(alertObj.label)}</div>`;
+        popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
+        if (ext) popup += `<div class="meta">${ico("thumbs-up")}${ext}</div>`;
+        if (alertObj.userId) {
+          popup += `<div class="actions">`;
+          popup += alertObj.thumbed
+            ? `<button disabled class="button disabled">${ico("thumbs-up")}merci</button>`
+            : `<button onclick="thumbAlert('${alertObj.id}')" class="button">${ico("thumbs-up")}toujours là</button>`;
+          popup += reportButton(`signalAlert('${alertObj.id}')`);
+          popup += `</div>`;
+        }
+        return popup;
+      }
+      function thumbAlert(alertId) {
+        const alertObj = alertsById[alertId];
+        if (!alertObj) return;
+        // Même calcul que handleAlertThumb, pour répondre tout de suite.
+        if (!alertNextExtension(alertObj)) {
+          alertObj.expiresAt += ALERT_DAY;
+          alertObj.extendedAt = Date.now();
+        }
+        alertObj.thumbed = true;
+        if (alertObj.marker) alertObj.marker.setPopupContent(() => alertPopup(alertObj));
         postMessage(JSON.stringify({ type: "thumbAlert", data: { id: alertId } }));
       }
       function signalAlert(alertId) {
@@ -1115,14 +1155,8 @@ function thumbAlert(alertId, btn) {
           uv: "sun",
           custom: "message-circle",
         };
-        let label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText: (alertTypeLabels[alertObj.type] || "Alerte");
-        label += alertObj.customText && alertObj.type !== "custom" ? ": " + alertObj.customText: "";
         const color = alertColors[alertObj.type] || "#F44336";
         const iconName = alertIcons[alertObj.type] || "circle-alert";
-        const expiresIn = Math.max(0, alertObj.expiresAt - Date.now());
-        const hoursLeft = Math.floor(expiresIn / (1000 * 60 * 60));
-        const minutesLeft = Math.floor((expiresIn % (1000 * 60 * 60)) / (1000 * 60));
-        const timeLeft = hoursLeft > 0 ? `${hoursLeft}h${minutesLeft}m`: `${minutesLeft}m`;
         const alertIcon = L.divIcon({
           className: "css-icon",
           html: `<div class="marker marker-fixed" style="background:${color};border:2px solid white;display:flex;align-items:center;justify-content:center;box-shadow:0 0 5px 0 ${color};">${ico(iconName, "color:white;font-size:12px;")}</div>`,
@@ -1130,15 +1164,12 @@ function thumbAlert(alertId, btn) {
           iconAnchor: [12, 12],
         });
         const marker = L.marker(pos, { icon: alertIcon });
-        let popup = `<div class="pop-title">${escapeHtml(label)}</div>`;
-        popup += `<div class="meta">${ico("clock")}Encore ${timeLeft}</div>`;
-        if (alertObj.userId) {
-          popup += `<div class="actions">`;
-          popup += `<button onclick="thumbAlert('${alertObj.id}', this)" class="button" title="Prolonge l'alerte de 24h">${ico("thumbs-up")}toujours là</button>`;
-          popup += reportButton(`signalAlert('${alertObj.id}')`);
-          popup += `</div>`;
-        }
-        marker.bindPopup(popup, POPUP_OPTIONS);
+        alertObj.label = alertObj.type === "custom" && alertObj.customText ? alertObj.customText : (alertTypeLabels[alertObj.type] || "Alerte");
+        alertObj.label += alertObj.customText && alertObj.type !== "custom" ? ": " + alertObj.customText : "";
+        alertObj.marker = marker;
+        alertsById[alertObj.id] = alertObj;
+        // Fonction : le contenu est recalculé à chaque ouverture (temps restant, pouce).
+        marker.bindPopup(() => alertPopup(alertObj), POPUP_OPTIONS);
         queueLayer(alertClusterGroup, marker);
         markers.push(marker);
       }
